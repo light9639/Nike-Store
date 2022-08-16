@@ -29,23 +29,28 @@ export default function Section() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className="w-screen" style={{ backgroundColor: "#000" }}>
-                        <img src="https://kream-phinf.pstatic.net/MjAyMjA4MTBfMTA2/MDAxNjYwMTIxNjk0Mzg3.osnL3_KsM-VXnI-kQchpkzOXHJtQchxMK7Q0p3Edyiwg.Sb5n7oBEcH46pWHERF0InkTKpA_jyIM1a04s8GOThMcg.JPEG/a_5083211968eb456d8dd61198689b1da3.jpg" />
+                    <div className="w-screen" style={{ backgroundColor: "#0061bf" }}>
+                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner01.jpg" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#000" }}>
-                        <img src="https://kream-phinf.pstatic.net/MjAyMjA3MjlfMjk5/MDAxNjU5MDYzNjU5ODc4.TonFcfhSmIhezIckmLvRl7OFZFQLBKo9UPVGNj3uRBIg.hgW9mVxYIHi0xNIVtQTOPh19hUzHbU4jGPV6IPxTFL4g.JPEG/a_b10ebb01a12044e7a8a42c66caf22a0c.jpg?type=m_2560" />
+                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner02.jpg" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-screen" style={{ backgroundColor: "#000" }}>
-                        <img src="https://kream-phinf.pstatic.net/MjAyMjA3MjlfMjA5/MDAxNjU5MTA1NDA0NDU0.uEuYv3Nl2gbyzqrdJwmqWRXr62OMVIKhbCncJLFaGZ4g.uzOs01LvG8z0XWNebKF9faN-otgpd5qgMKCf3gZ3Qd0g.JPEG/a_2f919f0dd9b84a9cb1b1e56b9b67a396.jpg?type=m_2560" />
+                    <div className="w-screen" style={{ backgroundColor: "#dbfc31" }}>
+                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner03.jpg" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-screen" style={{ backgroundColor: "#000" }}>
-                        <img src="https://kream-phinf.pstatic.net/MjAyMjA4MTJfMzEg/MDAxNjYwMjcyMjg4MjY4.UAtYmWYdaIq-G9BKwMY1TU_nn99HT_ZgW87MP0jAy2cg.IoXbDJ1Hz36MTlGZqbcN1J2FGSl_b_Ztnkc5-ON7FFQg.JPEG/a_7d1484a9ca034871afdfab27aaff70ee.jpg?type=m_2560" />
+                    <div className="w-screen" style={{ backgroundColor: "#59ba73" }}>
+                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner04.jpg" />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="w-screen" style={{ backgroundColor: "#ffa800" }}>
+                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner05.jpg" />
                     </div>
                 </SwiperSlide>
             </Swiper>
