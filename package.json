@@ -11,13 +11,16 @@
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.5.7",
     "@reduxjs/toolkit": "^1.8.4",
-    "next": "12.2.5",
+    "next": "^12.2.5",
     "next-themes": "^0.2.0",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-lottie-player": "^1.4.3",
     "react-redux": "^8.0.2",
-    "swiper": "^8.3.2"
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.0",
+    "swiper": "^8.3.2",
+    "swiper-react": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "18.7.3",

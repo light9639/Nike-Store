@@ -14,7 +14,7 @@ function Nav() {
                     <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                         <div className="flex justify-start lg:w-0 lg:flex-1">
                             <Link href="/">
-                                <a href="#">
+                                <a href="">
                                     <span className="sr-only">Workflow</span>
                                     <img
                                         className="h-8 w-auto sm:h-10"
@@ -27,7 +27,7 @@ function Nav() {
                         <div className="-mr-2 -my-2 md:hidden">
                             <button
                                 type="button"
-                                className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                                className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                                 onClick={() => setOpen(!open)}
                             >
                                 <span className="sr-only">Open menu</span>
@@ -53,7 +53,7 @@ function Nav() {
                                 <button
                                     type="button"
                                     className="
-                     group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 pb-8'
+                     group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 pb-8'
                     "
                                     onClick={() => (setFlyer(!flyer), setFlyerTwo(false))}
                                 >
@@ -91,7 +91,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -120,7 +120,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -149,7 +149,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -168,7 +168,7 @@ function Nav() {
                                                         Security
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500">
-                                                        Your customers' data will be safe and secure.
+                                                        Your customers data will be safe and secure.
                                                     </p>
                                                 </div>
                                             </a>
@@ -177,7 +177,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -196,7 +196,7 @@ function Nav() {
                                                         Integrations
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500">
-                                                        Connect with third-party tools that you're already
+                                                        Connect with third-party tools that you are already
                                                         using.
                                                     </p>
                                                 </div>
@@ -206,7 +206,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -289,28 +289,28 @@ function Nav() {
                                 </div>
                             </div>
 
-                            <a
-                                href="#"
+                            <Link
+                                href="/Men"
                                 className="text-base font-medium text-gray-500 hover:text-gray-900"
                             >
                                 Men
-                            </a>
-                            <a
-                                href="#"
+                            </Link>
+                            <Link
+                                href="/Women"
                                 className="text-base font-medium text-gray-500 hover:text-gray-900"
                             >
                                 Women
-                            </a>
-                            <a
-                                href="#"
+                            </Link>
+                            <Link
+                                href="/Kids"
                                 className="text-base font-medium text-gray-500 hover:text-gray-900"
                             >
                                 Kids
-                            </a>
+                            </Link>
                             <div className="relative">
                                 <button
                                     type="button"
-                                    className="group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    className="group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                                     onClick={() => (setFlyerTwo(!flyerTwo), setFlyer(false))}
                                 >
                                     <span>Sale</span>
@@ -348,7 +348,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -377,7 +377,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -406,7 +406,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -435,7 +435,7 @@ function Nav() {
                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                             >
                                                 <svg
-                                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -495,7 +495,7 @@ function Nav() {
                                             <div className="mt-5 text-sm">
                                                 <a
                                                     href="#"
-                                                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                                                    className="font-medium text-blue-600 hover:text-blue-500"
                                                 >
                                                     {" "}
                                                     View all posts <span aria-hidden="true">→</span>
@@ -507,10 +507,11 @@ function Nav() {
                             </div>
                         </nav>
                         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                            <DarkModeToggleButton></DarkModeToggleButton>
                             <Link href="/login">
                                 <a
                                     href="#"
-                                    className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900 rounded-md px-4 py-2 border border-gray-500 shadow-sm"
+                                    className="whitespace-nowrap text-base font-medium text-white rounded-md px-4 py-2 border bg-blue-600 hover:bg-blue-700 shadow-sm"
                                 >
                                     로그인
                                 </a>
@@ -518,7 +519,7 @@ function Nav() {
                             <Link href="/login">
                                 <a
                                     href="#"
-                                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                                    className="ml-5 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                                 >
                                     회원가입
                                 </a>
@@ -539,14 +540,14 @@ function Nav() {
                                 <div>
                                     <img
                                         className="h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                        src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
                                         alt="Workflow"
                                     />
                                 </div>
                                 <div className="-mr-2">
                                     <button
                                         type="button"
-                                        className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                                        className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                                         onClick={() => setOpen(!open)}
                                     >
                                         <span className="sr-only">Close menu</span>
@@ -575,7 +576,7 @@ function Nav() {
                                         className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                                     >
                                         <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            className="flex-shrink-0 h-6 w-6 text-blue-600"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
@@ -598,7 +599,7 @@ function Nav() {
                                         className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                                     >
                                         <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            className="flex-shrink-0 h-6 w-6 text-blue-600"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
@@ -621,7 +622,7 @@ function Nav() {
                                         className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                                     >
                                         <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            className="flex-shrink-0 h-6 w-6 text-blue-600"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
@@ -644,7 +645,7 @@ function Nav() {
                                         className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                                     >
                                         <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            className="flex-shrink-0 h-6 w-6 text-blue-600"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
@@ -667,7 +668,7 @@ function Nav() {
                                         className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                                     >
                                         <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            className="flex-shrink-0 h-6 w-6 text-blue-600"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
@@ -745,7 +746,7 @@ function Nav() {
                                 <Link href="/login">
                                     <a
                                         href="#"
-                                        className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                                        className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
                                     >
                                         로그인
                                     </a>
@@ -753,7 +754,7 @@ function Nav() {
                                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                                     계정이 없으신가요?
                                     <Link href="/login">
-                                        <a href="#" className="text-indigo-600 hover:text-indigo-500 pl-1">
+                                        <a href="#" className="text-blue-600 hover:text-blue-500 pl-1">
                                             회원가입
                                         </a>
                                     </Link>
