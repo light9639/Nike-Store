@@ -1,5 +1,7 @@
 import Link from "next/link";
 import HeadInfo from "../components/HeadInfo";
+import React from 'react'
+
 export default function PageNotFound() {
     return (
         <>

@@ -30,27 +30,27 @@ export default function Section() {
             >
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#0061bf" }}>
-                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner01.jpg" />
+                        <img src="/img/mainBanner01.jpg" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#000" }}>
-                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner02.jpg" />
+                        <img src="/img/mainBanner02.jpg" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#dbfc31" }}>
-                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner03.jpg" />
+                        <img src="/img/mainBanner03.jpg" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#59ba73" }}>
-                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner04.jpg" />
+                        <img src="/img/mainBanner04.jpg" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#ffa800" }}>
-                        <img src="https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/img/mainBanner05.jpg" />
+                        <img src="/img/mainBanner05.jpg" />
                     </div>
                 </SwiperSlide>
             </Swiper>
