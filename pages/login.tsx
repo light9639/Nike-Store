@@ -8,46 +8,46 @@ export default function login() {
 
             <div className='py-36 md:py-40'>
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                    <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900 leading-9">
+                    <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900 dark:text-white leading-9">
                         Sign in to your account
                     </h2>
-                    <p className="mt-2 text-sm text-center text-gray-600 leading-5 max-w">
+                    <p className="mt-2 text-sm text-center text-gray-600 dark:text-white leading-5 max-w">
                         Or
                         <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">
-                            create a new account
+                            &nbsp; create a new account
                         </a>
                     </p>
                 </div>
 
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-                    <div className="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
+                    <div className="px-4 py-8 bg-white dark:bg-inherit shadow dark:shadow-slate-800 sm:rounded-lg sm:px-10">
                         <form>
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 leading-5">
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-white leading-5">
                                     Email address
                                 </label>
 
                                 <div className="mt-1 rounded-md shadow-sm">
-                                    <input id="email" name="email" type="email" required autoFocus className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 " />
+                                    <input id="email" name="email" type="email" required autoFocus className="appearance-none block w-full px-3 py-2 border border-gray-300 dark:border-transparent rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 " />
                                 </div>
 
                             </div>
 
                             <div className="mt-6">
-                                <label htmlFor="password" className="block text-sm font-medium text-gray-700 leading-5">
+                                <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-white leading-5">
                                     Password
                                 </label>
 
                                 <div className="mt-1 rounded-md shadow-sm">
-                                    <input id="password" type="password" required className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 " />
+                                    <input id="password" type="password" required className="appearance-none block w-full px-3 py-2 border border-gray-300 dark:border-transparent rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 " />
                                 </div>
 
                             </div>
 
                             <div className="flex items-center justify-between mt-6">
                                 <div className="flex items-center">
-                                    <input id="remember" type="checkbox" className="form-checkbox w-4 h-4 text-indigo-600 transition duration-150 ease-in-out" />
-                                    <label htmlFor="remember" className="block ml-2 text-sm text-gray-900 leading-5">
+                                    <input id="remember" type="checkbox" className="form-checkbox w-4 h-4 text-indigo-600 transition duration-150 ease-in-out dark:border-transparent" />
+                                    <label htmlFor="remember" className="block ml-2 text-sm text-gray-900 dark:text-white leading-5">
                                         Remember
                                     </label>
                                 </div>

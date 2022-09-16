@@ -16,11 +16,31 @@ const Home: NextPage = () => {
 
       <Shoe></Shoe>
 
-      <Minimal></Minimal>
+      <div className="flex py-16">
+        <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
+          <div className="max-w-lg m-auto">
+            <img className="h-10" src="https://i.picsum.photos/id/1001/5616/3744.jpg?hmac=38lkvX7tHXmlNbI0HzZbtkJ6_wpWyqvkX4Ty6vYElZE" alt="Workcation" />
+            <img className="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" src="https://i.picsum.photos/id/1001/5616/3744.jpg?hmac=38lkvX7tHXmlNbI0HzZbtkJ6_wpWyqvkX4Ty6vYElZE" alt="Woman workcationing on the beach" />
+            <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
+              You can work from anywhere.
+              <br className="hidden lg:inline" /><span className="text-indigo-500">Take advantage of it.</span>
+            </h1>
+            <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+              Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+            </p>
+            <div className="mt-4 sm:mt-6">
+              <a href="#" className="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold sm:text-base">Book your escape</a>
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg:block lg:w-1/2 lg:relative">
+          <img className="absolute inset-0 h-full w-full object-cover object-center" src="https://i.picsum.photos/id/1001/5616/3744.jpg?hmac=38lkvX7tHXmlNbI0HzZbtkJ6_wpWyqvkX4Ty6vYElZE" alt="Woman workcationing on the beach" />
+        </div>
+      </div>
 
-      <Card></Card>
+      {/* <Minimal></Minimal> */}
 
-      <Social></Social>
+      {/* <Card></Card> */}
 
       {/* <Stuff></Stuff> */}
 
@@ -229,98 +249,98 @@ function Card() {
   )
 }
 
-function Social() {
-  return (
-    <div className="container my-12 mx-auto px-4 md:px-12">
-      <div className="flex flex-wrap -mx-1 lg:-mx-4">
-        {/* <div className="container flex space-x-2 mx-auto relative"> */}
+// function Social() {
+//   return (
+//     <div className="container my-12 mx-auto px-4 md:px-12">
+//       <div className="flex flex-wrap -mx-1 lg:-mx-4">
+//         {/* <div className="container flex space-x-2 mx-auto relative"> */}
 
-        <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col group cursor-pointer relative">
-          <img className="w-full h-4/5 object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://raw.githubusercontent.com/shibbirweb/public-asset/master/shibbir.jpg" alt="MD. Shibbir Ahmed" />
-          <div className="bg-gray-800 relative flex-1 flex flex-col">
-            <div className="bg-blue-600 p-0.5 rounded-full border-4 border-gray-800 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </div>
-            <div className="flex-1 pb-1 text-white text-sm font-semibold capitalize flex justify-center items-end">
-              <p>
-                Create Story
-              </p>
-            </div>
-          </div>
+//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col group cursor-pointer relative">
+//           <img className="w-full h-4/5 object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://raw.githubusercontent.com/shibbirweb/public-asset/master/shibbir.jpg" alt="MD. Shibbir Ahmed" />
+//           <div className="bg-gray-800 relative flex-1 flex flex-col">
+//             <div className="bg-blue-600 p-0.5 rounded-full border-4 border-gray-800 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+//               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+//               </svg>
+//             </div>
+//             <div className="flex-1 pb-1 text-white text-sm font-semibold capitalize flex justify-center items-end">
+//               <p>
+//                 Create Story
+//               </p>
+//             </div>
+//           </div>
 
-          <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
-        </div>
+//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
+//         </div>
 
-        <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-          <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=1" alt="MD. Shibbir Ahmed" />
+//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
+//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=1" alt="MD. Shibbir Ahmed" />
 
-          <div className="w-8 h-8 border-4 box-content border-gray-800 rounded-full overflow-hidden absolute left-2.5 top-3">
-            <img className="w-full h-full object-cover" src="https://raw.githubusercontent.com/shibbirweb/public-asset/master/shibbir.jpg" alt="MD. Shibbir Ahmed" />
-          </div>
+//           <div className="w-8 h-8 border-4 box-content border-gray-800 rounded-full overflow-hidden absolute left-2.5 top-3">
+//             <img className="w-full h-full object-cover" src="https://raw.githubusercontent.com/shibbirweb/public-asset/master/shibbir.jpg" alt="MD. Shibbir Ahmed" />
+//           </div>
 
-          <div className="absolute inset-x-3 bottom-1">
-            <p className="text-white font-semibold">Your Story</p>
-          </div>
+//           <div className="absolute inset-x-3 bottom-1">
+//             <p className="text-white font-semibold">Your Story</p>
+//           </div>
 
-          <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
+//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
 
-        </div>
+//         </div>
 
-        <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-          <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=3" alt="MD. Shibbir Ahmed" />
+//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
+//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=3" alt="MD. Shibbir Ahmed" />
 
-          <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
-            <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=4" alt="MD. Shibbir Ahmed" />
-          </div>
+//           <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
+//             <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=4" alt="MD. Shibbir Ahmed" />
+//           </div>
 
-          <div className="absolute inset-x-3 bottom-1">
-            <p className="text-white font-semibold">Baky Billah</p>
-          </div>
+//           <div className="absolute inset-x-3 bottom-1">
+//             <p className="text-white font-semibold">Baky Billah</p>
+//           </div>
 
-          <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
+//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
 
-        </div>
+//         </div>
 
-        <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-          <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=5" alt="MD. Shibbir Ahmed" />
+//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
+//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=5" alt="MD. Shibbir Ahmed" />
 
-          <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
-            <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=6" alt="MD. Shibbir Ahmed" />
-          </div>
+//           <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
+//             <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=6" alt="MD. Shibbir Ahmed" />
+//           </div>
 
-          <div className="absolute inset-x-3 bottom-1">
-            <p className="text-white font-semibold">Mobarak Hossain Joy</p>
-          </div>
+//           <div className="absolute inset-x-3 bottom-1">
+//             <p className="text-white font-semibold">Mobarak Hossain Joy</p>
+//           </div>
 
-          <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
+//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
 
-        </div>
+//         </div>
 
-        <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-          <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=7" alt="MD. Shibbir Ahmed" />
+//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
+//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=7" alt="MD. Shibbir Ahmed" />
 
-          <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
-            <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=8" alt="MD. Shibbir Ahmed" />
-          </div>
+//           <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
+//             <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=8" alt="MD. Shibbir Ahmed" />
+//           </div>
 
-          <div className="absolute inset-x-3 bottom-1">
-            <p className="text-white font-semibold">Mahmudul Hasan</p>
-          </div>
+//           <div className="absolute inset-x-3 bottom-1">
+//             <p className="text-white font-semibold">Mahmudul Hasan</p>
+//           </div>
 
-          <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
-        </div>
+//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
+//         </div>
 
-        <div className="absolute bg-gray-700 hover:bg-gray-600 transition-colors ease-in-out duration-200 p-2 rounded-full right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  )
-}
+//         <div className="absolute bg-gray-700 hover:bg-gray-600 transition-colors ease-in-out duration-200 p-2 rounded-full right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 cursor-pointer">
+//           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+//           </svg>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
 
 
 
