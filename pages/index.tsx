@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Banner from '../components/Banner'
 import HeadInfo from '../components/HeadInfo'
@@ -38,7 +39,7 @@ function Icon() {
             [1, 2, 3, 4, 5].map(function (a, i: number) {
               return (
                 <>
-                  <div className="w-1/5 p-1 w-full">
+                  <div className="w-1/5 p-1">
                     <a href='#void' className="block relative rounded overflow-hidden">
                       <img src="/img/Sub_01.jpg" alt="Sub_Img" />
                     </a>
@@ -58,7 +59,7 @@ function Icon() {
             [1, 2, 3, 4, 5].map(function (a, i: number) {
               return (
                 <>
-                  <div className="w-1/5 p-1 w-full">
+                  <div className="w-1/5 p-1">
                     <a href='#void' className="block relative rounded overflow-hidden">
                       <img src="/img/Sub_01.jpg" alt="Sub_Img" />
                     </a>
@@ -375,6 +376,7 @@ function SNS() {
                   <img
                     className="w-full h-full object-cover transition group-hover:scale-125"
                     src="https://images.unsplash.com/photo-1649168916853-8bdb50116941?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0OTQ0MzY5Nw&ixlib=rb-1.2.1&q=80&w=400"
+                    alt=''
                   />
                 </figure>
                 <div className="p-4">

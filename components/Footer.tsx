@@ -49,8 +49,8 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-4 pt-6 text-gray-600 border-t border-gray-800 flex flex-col md:flex-row justify-center items-center">
-                <div>© 2020 Shoe Store Agency LLC.</div>
-                <div>&nbsp;All rights reserved.</div>
+                    <div>© 2020 Shoe Store Agency LLC.</div>
+                    <div>&nbsp;All rights reserved.</div>
                 </div>
             </footer>
         </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React from 'react'
 import DarkModeToggleButton from './DarkModeToggleButton';
@@ -530,7 +531,7 @@ function Nav() {
                 <div
                     className={
                         open
-                            ? "opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                            ? "opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transform origin-top-right md:hidden"
                             : "opacity-0 scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
                     }
                 >
@@ -764,7 +765,7 @@ function Nav() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

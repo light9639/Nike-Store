@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import HeadInfo from "../components/HeadInfo";
 import React from 'react'

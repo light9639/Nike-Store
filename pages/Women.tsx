@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import HeadInfo from '../components/HeadInfo'
 
@@ -14,7 +15,7 @@ export default function Women() {
                         </h1>
                     </div>
                     {
-                        [1,2,3,4,5,6,7,8,9,10,11,12].map(function (a, i: number) {
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(function (a, i: number) {
                             return (
                                 <>
                                     <div className="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mt-16 lg:pl-2 lg:pr-2">
