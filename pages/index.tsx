@@ -3,6 +3,12 @@ import type { NextPage } from 'next'
 import Banner from '../components/Banner'
 import HeadInfo from '../components/HeadInfo'
 import styles from '../styles/Home.module.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
+import { Scrollbar } from "swiper";
 
 const Home: NextPage = () => {
 
@@ -13,8 +19,6 @@ const Home: NextPage = () => {
       <Banner></Banner>
 
       <Stuff></Stuff>
-
-      {/* <Icon></Icon> */}
 
       {/* <Shoe></Shoe> */}
 
@@ -44,62 +48,8 @@ const Home: NextPage = () => {
 
       <Minimal></Minimal>
 
-      {/* <Card></Card> */}
-
       <Stuff></Stuff>
-
-      {/* <SNS></SNS> */}
-
     </>
-  )
-}
-
-function Icon() {
-  return (
-    <div>
-      <div className="container px-5 py-10 lg:pt-24 mx-auto">
-        <div className="flex justify-between">
-          {
-            [1, 2, 3, 4, 5].map(function (a, i: number) {
-              return (
-                <>
-                  <div className="w-1/5 p-1">
-                    <a href='#void' className="block relative rounded overflow-hidden">
-                      <img src="/img/Sub_01.jpg" alt="Sub_Img" />
-                    </a>
-                    <p className='text-center leading-5 pt-2'>
-                      <a href='#void' className="block relative rounded overflow-hidden">
-                        안녕하세요
-                      </a>
-                    </p>
-                  </div>
-                </>
-              )
-            })
-          }
-        </div>
-        <div className="flex justify-between">
-          {
-            [1, 2, 3, 4, 5].map(function (a, i: number) {
-              return (
-                <>
-                  <div className="w-1/5 p-1">
-                    <a href='#void' className="block relative rounded overflow-hidden">
-                      <img src="/img/Sub_01.jpg" alt="Sub_Img" />
-                    </a>
-                    <p className='text-center leading-5 pt-2'>
-                      <a href='#void' className="block relative rounded overflow-hidden">
-                        안녕하세요
-                      </a>
-                    </p>
-                  </div>
-                </>
-              )
-            })
-          }
-        </div>
-      </div>
-    </div>
   )
 }
 
@@ -167,228 +117,48 @@ function Minimal() {
           </div>
         </div>
       </section>
+
     </>
   )
 }
 
-function Card() {
-  return (
-    <div className="container my-12 mx-auto px-4 md:px-12">
-      <div className="flex flex-wrap -mx-1 lg:-mx-4">
-
-        {
-          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(function (a, i: number) {
-            return (
-              <>
-                <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/5">
-
-                  <article className="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                      <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random" />
-                    </a>
-
-                    <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                      <h1 className="text-lg">
-                        <a className="no-underline hover:underline text-black" href="#">
-                          Article Title
-                        </a>
-                      </h1>
-                      <p className="text-grey-darker text-sm">
-                        11/1/19
-                      </p>
-                    </header>
-
-                    <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                      <a className="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random" />
-                        <p className="ml-2 text-sm">
-                          Author Name
-                        </p>
-                      </a>
-                      <a className="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span className="hidden">Like</span>
-                        <i className="fa fa-heart"></i>
-                      </a>
-                    </footer>
-
-                  </article>
-
-                </div>
-              </>
-            )
-          })
-        }
-
-      </div>
-    </div>
-  )
-}
-
-// function Social() {
-//   return (
-//     <div className="container my-12 mx-auto px-4 md:px-12">
-//       <div className="flex flex-wrap -mx-1 lg:-mx-4">
-//         {/* <div className="container flex space-x-2 mx-auto relative"> */}
-
-//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col group cursor-pointer relative">
-//           <img className="w-full h-4/5 object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://raw.githubusercontent.com/shibbirweb/public-asset/master/shibbir.jpg" alt="MD. Shibbir Ahmed" />
-//           <div className="bg-gray-800 relative flex-1 flex flex-col">
-//             <div className="bg-blue-600 p-0.5 rounded-full border-4 border-gray-800 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-//               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-//               </svg>
-//             </div>
-//             <div className="flex-1 pb-1 text-white text-sm font-semibold capitalize flex justify-center items-end">
-//               <p>
-//                 Create Story
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
-//         </div>
-
-//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=1" alt="MD. Shibbir Ahmed" />
-
-//           <div className="w-8 h-8 border-4 box-content border-gray-800 rounded-full overflow-hidden absolute left-2.5 top-3">
-//             <img className="w-full h-full object-cover" src="https://raw.githubusercontent.com/shibbirweb/public-asset/master/shibbir.jpg" alt="MD. Shibbir Ahmed" />
-//           </div>
-
-//           <div className="absolute inset-x-3 bottom-1">
-//             <p className="text-white font-semibold">Your Story</p>
-//           </div>
-
-//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
-
-//         </div>
-
-//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=3" alt="MD. Shibbir Ahmed" />
-
-//           <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
-//             <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=4" alt="MD. Shibbir Ahmed" />
-//           </div>
-
-//           <div className="absolute inset-x-3 bottom-1">
-//             <p className="text-white font-semibold">Baky Billah</p>
-//           </div>
-
-//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
-
-//         </div>
-
-//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=5" alt="MD. Shibbir Ahmed" />
-
-//           <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
-//             <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=6" alt="MD. Shibbir Ahmed" />
-//           </div>
-
-//           <div className="absolute inset-x-3 bottom-1">
-//             <p className="text-white font-semibold">Mobarak Hossain Joy</p>
-//           </div>
-
-//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
-
-//         </div>
-
-//         <div className="w-36 h-52 rounded-xl overflow-hidden flex flex-col relative group cursor-pointer">
-//           <img className="w-full h-full object-cover transition duration-300 ease-in-out transform group-hover:scale-105" src="https://picsum.photos/200/300?random=7" alt="MD. Shibbir Ahmed" />
-
-//           <div className="w-8 h-8 border-4 box-content border-blue-600 rounded-full overflow-hidden absolute left-2.5 top-3">
-//             <img className="w-full h-full object-cover" src="https://picsum.photos/200/300?random=8" alt="MD. Shibbir Ahmed" />
-//           </div>
-
-//           <div className="absolute inset-x-3 bottom-1">
-//             <p className="text-white font-semibold">Mahmudul Hasan</p>
-//           </div>
-
-//           <div className="absolute inset-0 bg-black opacity-0 transition duration-300 ease-in-out group-hover:opacity-20"></div>
-//         </div>
-
-//         <div className="absolute bg-gray-700 hover:bg-gray-600 transition-colors ease-in-out duration-200 p-2 rounded-full right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 cursor-pointer">
-//           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-//           </svg>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-
-
-
 function Stuff() {
   return (
-    <div className="text-gray-600 body-font text-left">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap -m-4">
-
-          {
-            [1, 2, 3].map(function (a, i: number) {
-              return (
-                <>
-                  <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
-                    <a className="block relative h-96 rounded overflow-hidden">
-                      <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.7/w_599,c_limit/445f83ed-9c01-4af8-bd2c-9127001afc47/air-max-270-womens-shoes-Pgb94t.png" />
-                    </a>
-                    <div className="mt-4">
-                      <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-                      <p className="mt-1">$16.00</p>
-                    </div>
-                  </div>
-                </>
-              )
-            })
-          }
-
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function SNS() {
-  return (
-    <div className="flex justify-between max-w-screen-2xl mx-auto mb-28 px-4 md:px-12">
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={30}
+      breakpoints={{
+        540: {
+          slidesPerView: 1,  //브라우저가 768보다 클 때
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 2,  //브라우저가 768보다 클 때
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,  //브라우저가 1024보다 클 때
+          spaceBetween: 50,
+        },
+      }}
+      scrollbar={{
+        hide: true,
+      }}
+      modules={[Scrollbar]}
+      className="mySwiper my-24 max-w-screen-2xl"
+    >
       {
-        [1, 2, 3, 4, 5].map(function (a, i: number) {
+        [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (a, i: number) {
           return (
             <>
-              <div className="
-                        group
-                        inline-block pb-4 bg-gradient-to-tr from-purple-600 to-orange-400 text-white overflow-hidden rounded-2xl shadow
-                        hover:shadow-md
-                        transition
-                    ">
-                <figure className="max-h-64 aspect-square overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover transition group-hover:scale-125"
-                    src="https://images.unsplash.com/photo-1649168916853-8bdb50116941?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0OTQ0MzY5Nw&ixlib=rb-1.2.1&q=80&w=400"
-                    alt=''
-                  />
-                </figure>
-                <div className="p-4">
-                  <h3 className="text-xl font-bold">Card Title</h3>
-                  <p className="font-serif">Lorem ipsum dolor sit amet</p>
-                </div>
-                <footer className="flex gap-2 px-4">
-                  <button className="text-blue-400 hover:text-red-400">
-                    <i className="fa-solid fa-heart"></i>
-                  </button>
-                  <button className="text-blue-400 hover:text-red-400">
-                    <i className="fa-solid fa-comment"></i>
-                  </button>
-                </footer>
-              </div>
+              <SwiperSlide className="">
+                <img alt="ecommerce" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.7/w_599,c_limit/445f83ed-9c01-4af8-bd2c-9127001afc47/air-max-270-womens-shoes-Pgb94t.png" />
+              </SwiperSlide>
             </>
           )
         })
       }
-    </div>
+    </Swiper>
   )
 }
 

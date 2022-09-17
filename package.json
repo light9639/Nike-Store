@@ -25,6 +25,7 @@
     "react-scripts": "^5.0.1",
     "redux": "^4.2.0",
     "request": "^2.88.2",
+    "sass": "^1.54.9",
     "swiper": "^8.3.2",
     "swiper-react": "^1.0.0"
   },

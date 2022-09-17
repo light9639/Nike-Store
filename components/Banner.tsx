@@ -14,6 +14,7 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 export default function Section() {
     return (
         <>
+
             <Swiper
                 spaceBetween={30}
                 effect={"fade"}
@@ -27,7 +28,7 @@ export default function Section() {
                     clickable: true,
                 }}
                 modules={[Autoplay, EffectFade, Navigation, Pagination]}
-                className="mySwiper"
+                className="mySwiper banner-swiper"
             >
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#0061bf" }}>
@@ -55,7 +56,6 @@ export default function Section() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-
         </>
     )
 }

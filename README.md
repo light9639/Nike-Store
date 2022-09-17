@@ -26,7 +26,7 @@ yarn dev
 ### :zap: TypeScript
 - 타입스크립트를 이용하여 타입을 지정함으로써 오류의 가능성을
 ### :zap: Tailwind CSS
-- Tailwind CSS를 사용하여 디자인하였습니다.
+- Tailwind CSS를 이용하여 반응형 웹이 가능한 사이트를 디자인하였습니다.
 
 ## :tada: Vercel을 이용한 배포
 
