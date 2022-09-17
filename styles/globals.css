@@ -91,7 +91,7 @@ a {
 
 
 .showcase--grid {
-  height: 650px;
+  height: 850px;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, minmax(250px, 1fr));
@@ -103,17 +103,18 @@ a {
 
 .showcase--item__big {
   grid-area: a;
-  background-image: url("https://images.unsplash.com/photo-1514454923228-7ef54f9251c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+  background-image: url("https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_1824,c_limit/1ac1ef70-731b-41fe-9537-decd9f1584d7/nike-just-do-it.jpg");
 }
 
 .showcase--item__small_top {
   grid-area: b;
-  background-image: url("https://images.unsplash.com/photo-1504780361545-d1ce834be3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80");
+  background-image: url("https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_906,c_limit/b61e8381-4ea0-4ae4-a6eb-4df5889a0be9/nike-just-do-it.jpg");
+  background-position: 0% 25%;
 }
 
 .showcase--item__small_bottom {
   grid-area: c;
-  background-image: url("https://images.unsplash.com/photo-1492138786289-d35ea832da43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-image: url("https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_906,c_limit/d07a1c1f-2d1c-44a1-9874-c65af6ef593a/nike-just-do-it.jpg");
 }
 
 .showcase--item__overlay {

@@ -12,9 +12,11 @@ const Home: NextPage = () => {
 
       <Banner></Banner>
 
-      <Icon></Icon>
+      <Stuff></Stuff>
 
-      <Shoe></Shoe>
+      {/* <Icon></Icon> */}
+
+      {/* <Shoe></Shoe> */}
 
       <div className="flex py-16">
         <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
@@ -38,11 +40,13 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* <Minimal></Minimal> */}
+      <Stuff></Stuff>
+
+      <Minimal></Minimal>
 
       {/* <Card></Card> */}
 
-      {/* <Stuff></Stuff> */}
+      <Stuff></Stuff>
 
       {/* <SNS></SNS> */}
 
@@ -102,53 +106,25 @@ function Icon() {
 function Shoe() {
   return (
     <div className="container my-12 mx-auto px-4 md:px-12">
+      <h2 className='ml-8'>Today's Hot</h2>
       <div className="flex flex-wrap -mx-1 lg:-mx-4">
         {
-          [1, 2, 3, 4].map(function (a, i: number) {
+          [1, 2].map(function (a, i: number) {
             return (
               <>
-                <section className="flex flex-col md:flex-row gap-11 py-10 px-5 bg-white rounded-md shadow-lg w-11/12 md:max-w-2xl m-8">
+                <section className="flex flex-col md:flex-row gap-11 py-10 px-5 bg-white dark:bg-slate-900 rounded-md shadow-lg w-11/12 md:max-w-2xl m-8">
                   <div className="text-indigo-500 flex flex-col justify-between md:mt-10">
                     <img src="https://images.stockx.com/Nike-Epic-React-Flyknit-2-White-Pink-Foam-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1603481985" alt="" />
-                    {/* <div>
-                      <small className="uppercase">choose size</small>
-                      <div className="flex flex-wrap md:flex-nowrap gap-1">
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 hover:bg-indigo-500 hover:text-white transition">
-                          <small>5</small>
-                        </a>
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition">
-                          <small>6</small>
-                        </a>
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 hover:bg-indigo-500 hover:text-white transition">
-                          <small>7</small>
-                        </a>
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition">
-                          <small>8</small>
-                        </a>
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition">
-                          <small>9</small>
-                        </a>
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 hover:bg-indigo-500 hover:text-white transition">
-                          <small>10</small>
-                        </a>
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 hover:bg-indigo-500 hover:text-white transition">
-                          <small>11</small>
-                        </a>
-                        <a href="javascript:void(0);" className="grid place-items-center border px-3 py-2 hover:bg-indigo-500 hover:text-white transition">
-                          <small>12</small>
-                        </a>
-                      </div>
-                    </div> */}
                   </div>
                   <div className="text-indigo-500">
                     <small className="uppercase">Women running shoe</small>
-                    <h3 className="uppercase text-black text-2xl font-medium">nike epic react flyknit</h3>
+                    <h3 className="uppercase text-black dark:text-white text-2xl font-medium">nike epic react flyknit</h3>
                     <h3 className="text-2xl font-semibold mb-7">$150</h3>
-                    <small className="text-black">The Nike Epic React Flyknit 1 provides crazy comfort that lasts as long as you can run. Its Nike React foam cushioning is responsive yet lightweight, durable yet soft. This attraction of opposites creates a sensation that not only enhances the feeling of moving forwards, but makes running feel fun, too.</small>
+                    <small className="text-black dark:text-white">The Nike Epic React Flyknit 1 provides crazy comfort that lasts as long as you can run. Its Nike React foam cushioning is responsive yet lightweight, durable yet soft. This attraction of opposites creates a sensation that not only enhances the feeling of moving forwards, but makes running feel fun, too.</small>
                     <div className="flex gap-0.5 mt-4">
-                      <button id="addToCartButton" className="bg-indigo-600 hover:bg-indigo-500 focus:outline-none transition text-white uppercase px-8 py-3">add to cart</button>
-                      <button id="likeButton" className="bg-indigo-600 hover:bg-indigo-500 focus:outline-none transition text-white uppercase p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" className="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                      <button id="addToCartButton" className="bg-indigo-600 hover:bg-indigo-500 focus:outline-none transition text-white uppercase px-8 py-3 rounded">add to cart</button>
+                      <button id="likeButton" className="bg-indigo-600 hover:bg-indigo-500 focus:outline-none transition text-white uppercase px-5 py-3 ml-0.5 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                           <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
                         </svg>
                       </button>
@@ -168,7 +144,7 @@ function Shoe() {
 function Minimal() {
   return (
     <>
-      <section className="section--showcase min-h-screen py-20">
+      <section className="section--showcase min-h-full py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-center font-serif text-4xl text-black mb-4">Curated getaways, tailored to you.</h2>
           <p className="font-sans font-light text-lg text-center">Whether you are building a welcome mat for your SaaS or a clean, corporate portfolio, Stack <br /> has you design needs covered.</p>
@@ -352,20 +328,16 @@ function Stuff() {
         <div className="flex flex-wrap -m-4">
 
           {
-            [1, 2, 3, 4, 5, 6, 7, 8].map(function (a, i: number) {
+            [1, 2, 3].map(function (a, i: number) {
               return (
                 <>
-                  <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a className="block relative h-48 rounded overflow-hidden">
-                      <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260" />
+                  <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+                    <a className="block relative h-96 rounded overflow-hidden">
+                      <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.7/w_599,c_limit/445f83ed-9c01-4af8-bd2c-9127001afc47/air-max-270-womens-shoes-Pgb94t.png" />
                     </a>
                     <div className="mt-4">
-                      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
                       <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
                       <p className="mt-1">$16.00</p>
-                      <button className="mt-2 p-2 bg-blue-500 hover:bg-blue-600 border-2 border-blue-500 hover:border-blue-600 text-white rounded">Add to Order</button>
-                      <button className="mt-2 p-2 bg-white border-2 border-blue-500 hover:border-blue-600 text-blue-500 hover:text-blue-600 rounded">Customize</button>
-                      <p className="mt-2 text-xs font-sans">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit facilis architecto illo dolorem sapiente fuga impedit, nobis officiis aliquam, natus nemo a, praesentium tenetur deleniti. Aut cum nostrum ipsa molestiae!</p>
                     </div>
                   </div>
                 </>
