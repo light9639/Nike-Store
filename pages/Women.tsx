@@ -50,7 +50,7 @@ export default function Women() {
                                             </div>
                                         </div>
                                     </div> */}
-                                    <div className="w-full md:w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2">
+                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2">
                                         <div className="rounded-xl ml-3 hover:shadow-2xl transform hover:scale-105 duration-500">
                                             <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/FD5088-200/a118b1fd-5aac-4812-b3bc-8363591757cd_primary.jpg?browse" alt="product" className="w-full h-full object-cover" />
                                             <div className="dark:bg-slate-800 p-5 flex flex-col gap-2">
@@ -81,11 +81,11 @@ export default function Women() {
                                                 </span> */}
 
 
-                                                <div className="mt-5 flex gap-2">
+                                                {/* <div className="mt-5 flex gap-2">
                                                     <button className="bg-pink-500 px-6 py-2 text-white rounded-md hover:bg-pink-400 font-medium tracking-wider">Add to Cart</button>
                                                     <button className="flex flex-grow items-center rounded-md bg-gray-300 hover:bg-gray-400 dark:bg-slate-600 dark:hover:bg-slate-400"><FontAwesomeIcon icon={faHeart} className="w-6 m-auto" /></button>
                                                     <button className="flex flex-grow items-center rounded-md bg-gray-300 hover:bg-gray-400 dark:bg-slate-600 dark:hover:bg-slate-400"><FontAwesomeIcon icon={faEye} className="w-6 m-auto" /></button>
-                                                </div>
+                                                </div> */}
 
                                             </div>
                                         </div>

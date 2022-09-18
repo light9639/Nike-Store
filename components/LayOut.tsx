@@ -5,11 +5,11 @@ interface LayoutProps {
     children: JSX.Element;
 }
 
-const Layout: React.FC<LayoutProps> = ({children}) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div className="bg-primary overflow-hidden">
             <Header />
-                <div>{children}</div>
+            <div>{children}</div>
             <Footer />
         </div>
     )

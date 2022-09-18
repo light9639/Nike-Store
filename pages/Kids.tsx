@@ -20,7 +20,7 @@ export default function Kids() {
                         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(function (a, i: number) {
                             return (
                                 <>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2">
+                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2">
                                         <div className="rounded-xl ml-3 hover:shadow-2xl transform hover:scale-105 duration-500">
                                             <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ae2d0f59-8954-498c-aa2a-d6ee1a550fb5/air-force-1-premium-big-kids-shoes-wJCwFb.png" alt="product" className="w-full h-full object-cover" />
                                             <div className="dark:bg-slate-800 p-5 flex flex-col gap-2">
@@ -51,11 +51,11 @@ export default function Kids() {
                                                 </span> */}
 
 
-                                                <div className="mt-5 flex gap-2">
+                                                {/* <div className="mt-5 flex gap-2">
                                                     <button className="bg-red-500 px-6 py-2 text-white rounded-md hover:bg-red-400 font-medium tracking-wider">Add to Cart</button>
                                                     <button className="flex flex-grow items-center rounded-md bg-gray-300 hover:bg-gray-400 dark:bg-slate-600 dark:hover:bg-slate-400"><FontAwesomeIcon icon={faHeart} className="w-6 m-auto" /></button>
                                                     <button className="flex flex-grow items-center rounded-md bg-gray-300 hover:bg-gray-400 dark:bg-slate-600 dark:hover:bg-slate-400"><FontAwesomeIcon icon={faEye} className="w-6 m-auto" /></button>
-                                                </div>
+                                                </div> */}
 
                                             </div>
                                         </div>
