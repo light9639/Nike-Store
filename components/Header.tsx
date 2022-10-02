@@ -18,8 +18,13 @@ function Nav() {
                                 <a href="">
                                     <span className="sr-only">Workflow</span>
                                     <img
-                                        className="h-8 w-auto sm:h-10"
-                                        src="https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png"
+                                        className="dark:hidden h-8 w-auto sm:h-10"
+                                        src="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png"
+                                        alt="reactLogo"
+                                    />
+                                    <img
+                                        className="hidden dark:block h-8 w-auto sm:h-10"
+                                        src="https://cdn.aglty.io/bwql7jyk/Attachments/NewItems/image_20211214122557_0.png"
                                         alt="reactLogo"
                                     />
                                 </a>

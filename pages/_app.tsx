@@ -1,7 +1,7 @@
 import '../styles/globals.scss'
+import '../styles/Swiper.scss'
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
-// import store from './store'
 import { ThemeProvider } from 'next-themes'
 import Layout from "../components/LayOut";
 

@@ -32,29 +32,29 @@ export default function Section() {
             >
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#0061bf" }}>
-                        <img src="/img/mainBanner01.jpg" alt="mainBanner01" style={{ "maxHeight": "650px", "minHeight": "480px" }} />
+                        <img src="/220810_mlp_p3_bg.jpg" alt="mainBanner01" style={{ "maxHeight": "600px", "minHeight": "480px" }} />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#000" }}>
-                        <img src="/img/mainBanner02.jpg" alt="mainBanner02" style={{ "maxHeight": "650px", "minHeight": "480px" }} />
+                        <img src="/Intersect_3.png" alt="mainBanner02" style={{ "maxHeight": "600px", "minHeight": "480px" }} />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#dbfc31" }}>
-                        <img src="/img/mainBanner03.jpg" alt="mainBanner03" style={{ "maxHeight": "650px", "minHeight": "480px" }} />
+                        <img src="/Intersect_1.png" alt="mainBanner03" style={{ "maxHeight": "600px", "minHeight": "480px" }} />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#59ba73" }}>
-                        <img src="/img/mainBanner04.jpg" alt="mainBanner04" style={{ "maxHeight": "650px", "minHeight": "480px" }} />
+                        <img src="/Intersect_2.png" alt="mainBanner04" style={{ "maxHeight": "600px", "minHeight": "480px" }} />
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <div className="w-screen" style={{ backgroundColor: "#ffa800" }}>
                         <img src="/img/mainBanner05.jpg" alt="mainBanner05" style={{ "maxHeight": "650px", "minHeight": "480px" }} />
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
             </Swiper>
         </>
     )
