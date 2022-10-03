@@ -3,6 +3,7 @@ import { faStar, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import HeadInfo from '../components/HeadInfo'
+import ShoesJson from './data/Shoes.json';
 
 export default function Women() {
     const [span, setSpan] = React.useState(['신상품순', '가격 높은 순', '가격 낮은 순', '리뷰 많은 순']);
@@ -28,42 +29,42 @@ export default function Women() {
                         </div>
                     </div>
                     {
-                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(function (a, i: number) {
+                        ShoesJson.Women.map(function (a, i: number) {
                             return (
                                 <>
                                     <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2">
                                         <div className="rounded-xl ml-3 sm:ml-1 hover:shadow-2xl dark:hover:shadow-slate-700 transform hover:scale-105 duration-500">
-                                            <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/FD5088-200/a118b1fd-5aac-4812-b3bc-8363591757cd_primary.jpg?browse" alt="product" className="w-full h-full object-cover" />
+                                            <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />
                                             <div className=" pt-5 px-2 flex flex-col gap-2">
 
                                                 <h2 className="tracking-tighter text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap" title="Best Headphone Ever">
-                                                    Best Headphone Ever
+                                                    {a.name}
                                                 </h2>
 
                                                 <div className='tracking-tighter'>
-                                                    <p className='pb-2'>여성 로드 신발</p>
-                                                    <span className="text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0 xl:-mt-1">$ 159.99</span>
+                                                    <p className='pb-2'>{a.info}</p>
+                                                    <span className="text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0 xl:-mt-1">{a.price}</span>
                                                 </div>
 
                                             </div>
                                             <div className="block md:flex pl-2 pb-2">
                                                 <span className="flex items-center my-3 md:my-0">
-                                                    <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a.star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a.star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a.star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <span className="text-gray-600 dark:text-white ml-3">4 Reviews</span>
+                                                    <span className="text-gray-600 dark:text-white ml-3">{a.Review} Reviews</span>
                                                 </span>
                                                 <span className="flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
                                                     <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">

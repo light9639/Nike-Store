@@ -3,7 +3,6 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar, Navigation } from "swiper";
 import css from 'styled-jsx/css';
-import SlideData from "../pages/data/SlideData";
 
 const product = {
     detail: [

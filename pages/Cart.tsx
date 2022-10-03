@@ -11,10 +11,10 @@ function Cart() {
                             <h2 className="font-semibold text-2xl">3 Items</h2>
                         </div>
                         <div className="flex mt-10 mb-5">
-                            <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
-                            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Quantity</h3>
-                            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Price</h3>
-                            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Total</h3>
+                            <h3 className="font-semibold text-gray-600 dark:text-white text-xs uppercase w-2/5">Product Details</h3>
+                            <h3 className="font-semibold text-center text-gray-600 dark:text-white text-xs uppercase w-1/5">Quantity</h3>
+                            <h3 className="font-semibold text-center text-gray-600 dark:text-white text-xs uppercase w-1/5">Price</h3>
+                            <h3 className="font-semibold text-center text-gray-600 dark:text-white text-xs uppercase w-1/5">Total</h3>
                         </div>
 
                         {

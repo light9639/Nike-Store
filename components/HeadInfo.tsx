@@ -2,8 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 
 interface HeadInfoProps {
-	title: string;
-	contents: string;
+    title: string;
+    contents: string;
 }
 
 const HeadInfo: React.FC<HeadInfoProps> = ({ title, contents }) => {

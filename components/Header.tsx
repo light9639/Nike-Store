@@ -114,7 +114,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Analytics
+                                                        About us
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Get a better understanding of where your traffic is
@@ -143,7 +143,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Engagement
+                                                        New & Featured
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Speak directly to your customers in a more
@@ -172,7 +172,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Security
+                                                        New for Men
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Your customers data will be safe and secure.
@@ -200,7 +200,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Integrations
+                                                        New for Women
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Connect with third-party tools that you are already
@@ -229,7 +229,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Automations
+                                                        New for Kids
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Build strategic funnels that will drive your
@@ -371,7 +371,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Help Center
+                                                        Sale
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Get all of your questions answered in our forums or
@@ -400,7 +400,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Guides
+                                                        Men's Sale
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Learn how to maximize our platform to get the most
@@ -429,7 +429,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Events
+                                                        Women's Sale
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         See what meet-ups and other events we might be
@@ -458,7 +458,7 @@ function Nav() {
                                                 </svg>
                                                 <div className="ml-4">
                                                     <p className="text-base font-medium text-gray-900 dark:text-white">
-                                                        Security
+                                                        Kid's Sale
                                                     </p>
                                                     <p className="mt-1 text-sm text-gray-500 dark:text-white">
                                                         Understand how we take your privacy seriously.
@@ -477,7 +477,7 @@ function Nav() {
                                                             href="#"
                                                             className="font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                                         >
-                                                            Boost your conversion rate
+                                                            대한민국 축구 국가대표팀 저지
                                                         </a>
                                                     </li>
                                                     <li className="text-base truncate">
@@ -485,8 +485,7 @@ function Nav() {
                                                             href="#"
                                                             className="font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                                         >
-                                                            How to use search engine optimization to drive
-                                                            traffic to your site
+                                                            나이키 줌 X 제가마
                                                         </a>
                                                     </li>
                                                     <li className="text-base truncate">
@@ -494,7 +493,7 @@ function Nav() {
                                                             href="#"
                                                             className="font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                                         >
-                                                            Improve your customer experience
+                                                            조던 X 파리 생제르맹 컬렉션
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -535,9 +534,10 @@ function Nav() {
                     </div>
                 </div>
                 <div
+                    onClick={() => setOpen(!open)}
                     className={
                         open
-                            ? "opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transform origin-top-right md:hidden z-10"
+                            ? "mobile opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transform origin-top-right md:hidden z-10"
                             : "opacity-0 scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden -z-10"
                     }
                 >
@@ -545,11 +545,13 @@ function Nav() {
                         <div className="pt-5 pb-6 px-5">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <img
-                                        className="h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
-                                        alt="Workflow"
-                                    />
+                                    <Link href="/">
+                                        <img
+                                            className="h-8 w-auto cursor-pointer hover:opacity-75"
+                                            src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
+                                            alt="Workflow"
+                                        />
+                                    </Link>
                                 </div>
                                 <div className="-mr-2">
                                     <button
@@ -597,9 +599,11 @@ function Nav() {
                                                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                                             />
                                         </svg>
-                                        <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
-                                            Analytics
-                                        </span>
+                                        <Link href="/">
+                                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
+                                                New Release
+                                            </span>
+                                        </Link>
                                     </a>
                                     <a
                                         href="#"
@@ -620,9 +624,11 @@ function Nav() {
                                                 d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                                             />
                                         </svg>
-                                        <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
-                                            Engagement
-                                        </span>
+                                        <Link href="/Men">
+                                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
+                                                Men Shoes
+                                            </span>
+                                        </Link>
                                     </a>
                                     <a
                                         href="#"
@@ -643,9 +649,11 @@ function Nav() {
                                                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                                             />
                                         </svg>
-                                        <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
-                                            Security
-                                        </span>
+                                        <Link href="/Women">
+                                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
+                                                Women Shoes
+                                            </span>
+                                        </Link>
                                     </a>
                                     <a
                                         href="#"
@@ -666,9 +674,11 @@ function Nav() {
                                                 d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
                                             />
                                         </svg>
-                                        <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
-                                            Integrations
-                                        </span>
+                                        <Link href="/Kids">
+                                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
+                                                Kids shoes
+                                            </span>
+                                        </Link>
                                     </a>
                                     <a
                                         href="#"
@@ -689,9 +699,11 @@ function Nav() {
                                                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                                             />
                                         </svg>
-                                        <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
-                                            Automations
-                                        </span>
+                                        <Link href='/'>
+                                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
+                                                Sale
+                                            </span>
+                                        </Link>
                                     </a>
                                 </nav>
                             </div>
@@ -702,49 +714,49 @@ function Nav() {
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Pricing
+                                    이용안내
                                 </a>
                                 <a
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Docs
+                                    고객지원
                                 </a>
                                 <a
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Enterprise
+                                    판매물품
                                 </a>
                                 <a
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Blog
+                                    가격안내
                                 </a>
                                 <a
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Help Center
+                                    검수기준
                                 </a>
                                 <a
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Guides
+                                    이용정책
                                 </a>
                                 <a
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Security
+                                    커뮤니티 가이드라인
                                 </a>
                                 <a
                                     href="#"
                                     className="text-base font-medium text-gray-900 dark:text-white hover:text-gray-700"
                                 >
-                                    Events
+                                    공지사항
                                 </a>
                             </div>
                             <div>
