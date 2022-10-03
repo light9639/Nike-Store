@@ -1,7 +1,7 @@
 # :zap: Shoe Store 프로젝트 소개
 :octocat: 바로가기 https://shoe-store-lemon.vercel.app/
 
-![화면 캡처 2022-09-30]()
+![localhost_3000_](https://user-images.githubusercontent.com/95972251/193599963-a78bac7c-87c1-46bd-b030-4854e636826d.png)
 
 :sparkles: Shoe Store 사이트입니다. :sparkles:
 
