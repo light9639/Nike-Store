@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import HeadInfo from '../components/HeadInfo'
 import ShoesJson from './data/Shoes.json';
+import Dropdowns from "../components/Dropdowns";
 
 export default function Men() {
-    const [span, setSpan] = React.useState(['신상품순', '가격 높은 순', '가격 낮은 순', '리뷰 많은 순']);
+    const [span, setSpan] = React.useState(['전체보기', '스니커즈', '런닝화', '농구화']);
 
     return (
         <>
@@ -22,10 +23,11 @@ export default function Men() {
                             {
                                 span.map(function (a: string, i: number) {
                                     return (
-                                        <span className='px-2 py-2 sm:px-4 sm:py-3 bg-gray-300 m-1 text-slate-900 rounded text-xs lg:text-base'><a href='#void'>{a}</a></span>
+                                        <span className='px-2 py-2 sm:px-3 sm:py-2 bg-blue-600 m-1 text-white rounded text-xs lg:text-base'><a href='#void'>{a}</a></span>
                                     )
                                 })
                             }
+                            <Dropdowns></Dropdowns>
                         </div>
                     </div>
                     {
@@ -33,17 +35,17 @@ export default function Men() {
                             return (
                                 <>
                                     <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2">
-                                        <div className="rounded-xl ml-3 sm:ml-1 hover:shadow-2xl dark:hover:shadow-slate-700 transform hover:scale-105 duration-500">
+                                        <div className="rounded-xl ml-3 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
                                             <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />
-                                            <div className=" pt-5 px-2 flex flex-col gap-2">
+                                            <div className="pt-5 px-2 flex flex-col gap-2">
 
-                                                <h2 className="tracking-tighter text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap" title="Best Headphone Ever">
+                                                <h2 className="tracking-tighter text-base md:text-xl overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 md:mb-0" title="Best Headphone Ever">
                                                     {a.name}
                                                 </h2>
 
                                                 <div className='tracking-tighter'>
-                                                    <p className='pb-2'>{a.info}</p>
-                                                    <span className="text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0 xl:-mt-1">{a.price}</span>
+                                                    <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{a.info}</p>
+                                                    <span className="text-base md:text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0 xl:-mt-1">{a.price}</span>
                                                 </div>
 
                                             </div>
@@ -90,7 +92,9 @@ export default function Men() {
                             )
                         })
                     }
-                    <span className="px-8 py-3 font-semibold rounded bg-blue-600 text-white cursor-pointer transition hover:opacity-75 mx-auto mt-14">더보기</span>
+                    <div className='w-full mx-auto mt-14 text-center'>
+                        <span className="px-8 py-3 font-semibold rounded bg-blue-600 text-white cursor-pointer transition hover:opacity-75">더보기</span>
+                    </div>
                 </div>
             </div>
         </>

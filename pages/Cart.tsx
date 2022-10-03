@@ -1,8 +1,11 @@
 import React from 'react'
+import HeadInfo from '../components/HeadInfo'
 
 function Cart() {
     return (
         <>
+            <HeadInfo title="Cart Page" contents="Cart Page"></HeadInfo>
+
             <div className="container mx-auto mt-10">
                 <div className="block md:flex shadow-md my-10 p-4 md:p-0">
                     <div className="w-full md:w-3/4 bg-white dark:bg-slate-900 px-10 py-10">

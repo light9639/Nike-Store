@@ -12,7 +12,7 @@ function Nav() {
         <div className='w-screen border-b-2 border-gray-100 dark:border-slate-900 text-left'>
             <div className="relative bg-white dark:bg-slate-900">
                 <div className="max-w-screen-2xl mx-auto px-4 sm:px-6">
-                    <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+                    <div className="flex justify-between items-center py-6 lg:justify-start lg:space-x-10">
                         <div className="flex justify-start lg:w-0 lg:flex-1">
                             <Link href="/">
                                 <a href="">
@@ -30,7 +30,7 @@ function Nav() {
                                 </a>
                             </Link>
                         </div>
-                        <div className="-mr-2 -my-2 -mt-5 md:hidden">
+                        <div className="-mr-2 -my-2 -mt-5 lg:hidden">
                             <DarkModeToggleButton></DarkModeToggleButton>
                             <button
                                 type="button"
@@ -55,7 +55,7 @@ function Nav() {
                                 </svg>
                             </button>
                         </div>
-                        <nav className="hidden md:flex space-x-10">
+                        <nav className="hidden lg:flex space-x-10">
                             <div className="relative">
                                 <button
                                     type="button"
@@ -512,7 +512,7 @@ function Nav() {
                                 </div>
                             </div>
                         </nav>
-                        <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                        <div className="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
                             <DarkModeToggleButton></DarkModeToggleButton>
                             <Link href="/login">
                                 <a
@@ -537,8 +537,8 @@ function Nav() {
                     onClick={() => setOpen(!open)}
                     className={
                         open
-                            ? "mobile opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transform origin-top-right md:hidden z-10"
-                            : "opacity-0 scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden -z-10"
+                            ? "mobile opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transform origin-top-right lg:hidden z-10"
+                            : "opacity-0 scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden -z-10"
                     }
                 >
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-slate-900 divide-y-2 divide-gray-50">

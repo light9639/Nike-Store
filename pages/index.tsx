@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <Slide_kids></Slide_kids>
 
       <div className="container mx-auto px-4 -mt-20" style={{ "maxWidth": "98%" }}>
-        <img className='mx-auto max-w-full p-2 md:p-0 sm:max-w-md mb-10' src="/dfdfd.png" alt="Nike" />
+        <img className='mx-auto max-w-full p-2 md:p-0 sm:max-w-md mb-10' src="/Kids.png" alt="Nike" />
         {/* <img className='mx-auto max-w-md mb-10' src="https://static-breeze.nike.co.kr/kr/ko_kr/https://static-breeze.nike.co.kr/kr/ko_kr//cmsstatic/structured-content/65250/220121_kids_p12_bg.jpg" alt="Nike" /> */}
         <p className="font-sans font-light text-lg text-center">더 많은 키즈 신발을 만나보세요. <br />간단한 설문을 통해 아이에게 꼭 맞는 신발을 추천해 드립니다.</p>
         <div className="mt-4 sm:mt-6 text-center ">
@@ -305,26 +305,20 @@ function Minimal(): JSX.Element {
         <div className="container mx-auto px-4">
           <div className="showcase--grid my-20">
             <div className="showcase--item__big relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95">
-              <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8">
+              <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
                 <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
               </div>
             </div>
             <div className="showcase--item__small_top relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95">
-              <div className="showcase--item__overlay absolute  flex h-full w-full items-end p-8">
+              <div className="showcase--item__overlay absolute  flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
                 <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
               </div>
             </div>
             <div className="showcase--item__small_bottom relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-90">
-              <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8">
+              <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
                 <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
               </div>
             </div>
-          </div>
-          <h2 className="text-center font-serif text-4xl text-black mb-4 dark:text-white">Curated getaways, tailored to you.</h2>
-          <p className="font-sans font-light text-lg text-center">Whether you are building a welcome mat for your SaaS or a clean, corporate portfolio, Stack <br /> has you design needs covered.</p>
-          <div className="mt-4 sm:mt-6 text-center ">
-            <a href="#" className="inline-block px-5 py-3 rounded-lg border border-gray-900 dark:border-white text-gray-900 dark:text-white text-sm uppercase tracking-wider font-semibold sm:text-base mr-3">더 알아보기</a>
-            <a href="#" className="inline-block px-5 py-3 rounded-lg shadow-lg bg-black dark:bg-white text-sm text-white dark:text-black uppercase tracking-wider font-semibold sm:text-base">구매하기</a>
           </div>
         </div>
       </section>

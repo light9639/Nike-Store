@@ -1,10 +1,13 @@
 import React from 'react'
+import HeadInfo from '../components/HeadInfo'
 
 function Detail() {
     return (
         <div>
+            <HeadInfo title="Detail Page" contents="Detail Page"></HeadInfo>
+
             <div>
-                <div id="progress" className="h-1 bg-white shadow" style={{ "background": "linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0)" }}></div>
+                <div id="progress" className="h-1 bg-white shadow hidden" style={{ "background": "linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0)" }}></div>
             </div>
 
             <div className="text-center mt-28">
