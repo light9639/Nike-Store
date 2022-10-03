@@ -14,7 +14,6 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 export default function Section() {
     return (
         <>
-
             <Swiper
                 spaceBetween={30}
                 effect={"fade"}
@@ -50,11 +49,6 @@ export default function Section() {
                         <img src="/Intersect_2.png" alt="mainBanner04" style={{ "maxHeight": "600px", "minHeight": "480px" }} />
                     </div>
                 </SwiperSlide>
-                {/* <SwiperSlide>
-                    <div className="w-screen" style={{ backgroundColor: "#ffa800" }}>
-                        <img src="/img/mainBanner05.jpg" alt="mainBanner05" style={{ "maxHeight": "650px", "minHeight": "480px" }} />
-                    </div>
-                </SwiperSlide> */}
             </Swiper>
         </>
     )

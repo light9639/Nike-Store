@@ -64,6 +64,12 @@ const style = css`
         left: auto;
         transform: translateX(-125%);
     }
+    @media screen and (max-width: 640px) {
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 14px;
+        }
+    }
 `;
 
 export default function Stuff(): JSX.Element {
@@ -93,7 +99,7 @@ export default function Stuff(): JSX.Element {
                 modules={[Scrollbar, Navigation]}
                 className="mySwiper Shoes_swiper pt-10"
             >
-                <h2 className='mb-10 top-3 absolute text-3xl dark:text-white z-50'>Popular Women Shoes</h2>
+                <h2 className='mb-10 top-5 sm:top-3 absolute text-2xl sm:text-3xl dark:text-white z-50'>Popular Women Shoes</h2>
                 {
                     product.detail.map(function (a, i: number) {
                         return (
@@ -101,9 +107,9 @@ export default function Stuff(): JSX.Element {
                                 <SwiperSlide className="pt-20 pb-10">
                                     <a href='#void' className='text-left tracking-tighter'>
                                         <img className="max-h-full" src={a.img} alt={a.name} />
-                                        <h2 className='dark:text-white mt-4 text-xl '>{a.name}</h2>
-                                        <p>{a.section}</p>
-                                        <span className='relative xl:absolute right-0 translate-y-0 lg:mt-1 lg:-translate-y-14'>{a.price}</span>
+                                        <h2 className='dark:text-white mt-4 text-xl'>{a.name}</h2>
+                                        <p className="text-base text-gray-600 dark:text-white mt-1">{a.section}</p>
+                                        <span className='relative xl:absolute right-0 translate-y-0 lg:mt-0 lg:-translate-y-14'>{a.price}</span>
                                     </a>
                                 </SwiperSlide>
                             </>
