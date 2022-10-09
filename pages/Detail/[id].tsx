@@ -1,7 +1,14 @@
-import React from 'react'
-import HeadInfo from '../components/HeadInfo'
+import React, { useState } from 'react'
+import HeadInfo from '../../components/HeadInfo'
+import Details from '../data/Detail.json';
+import { useRouter } from 'next/router'
 
 function Detail() {
+    const [Detail, setDetail] = React.useState(Details)
+    const router = useRouter()
+    const pid = router.query
+    const Id: any = pid.id
+
     return (
         <div>
             <HeadInfo title="Detail Page" contents="Detail Page"></HeadInfo>

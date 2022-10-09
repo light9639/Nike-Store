@@ -1,13 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { faStar, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import HeadInfo from '../components/HeadInfo'
 import ShoesJson from './data/Shoes.json';
 import Dropdowns from "../components/Dropdowns";
+import PageStyle from '../styles/PageStyle';
+import { useRouter } from 'next/router';
 
 export default function Kids() {
     const [span, setSpan] = React.useState(['전체보기', '리틀키즈 신발', '베이비 신발', '주니어 신발']);
+    const router = useRouter()
 
     return (
         <>
@@ -20,23 +21,29 @@ export default function Kids() {
                             Kids Best Sellers
                         </h1>
                         <div className='mt-8 lg:mt-3 float-none lg:float-right'>
-                            {
-                                span.map(function (a: string, i: number) {
-                                    return (
-                                        <span className='px-2 py-2 sm:px-3 sm:py-2 bg-blue-600 m-1 text-white rounded text-xs lg:text-base'><a href='#void'>{a}</a></span>
-                                    )
-                                })
-                            }
                             <Dropdowns></Dropdowns>
                         </div>
+                    </div>
+                    <div className='w-full text-center mt-7 lg:mt-5 mx-auto mb-7 lg:mb-0'>
+                        {
+                            span.map(function (a: string, i: number) {
+                                return (
+                                    <span className='px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-600 m-1 text-white font-semibold rounded text-xs lg:text-base' key={i}>
+                                        <a href='#void'>{a}</a>
+                                    </span>
+                                )
+                            })
+                        }
                     </div>
                     {
                         ShoesJson.Kids.map(function (a, i: number) {
                             return (
                                 <>
-                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2">
+                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2" key={a.index} onClick={() => router.push(`/view/${a.index}`)}>
                                         <div className="rounded-xl ml-3 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
-                                            <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />
+                                            <div className='ImgBox'>
+                                                <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />
+                                            </div>
                                             <div className=" pt-5 px-2 flex flex-col gap-2">
 
                                                 <h2 className="tracking-tighter text-base md:text-xl overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 md:mb-0" title="Best Headphone Ever">
@@ -45,7 +52,7 @@ export default function Kids() {
 
                                                 <div className='tracking-tighter'>
                                                     <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{a.info}</p>
-                                                    <span className="text-base md:text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0 xl:-mt-1">{a.price}</span>
+                                                    <span className="text-base md:text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0">{a.price}</span>
                                                 </div>
 
                                             </div>
@@ -66,7 +73,7 @@ export default function Kids() {
                                                     <svg fill={a.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <span className="text-gray-600 dark:text-white ml-3">{a.Review} Reviews</span>
+                                                    <span className="bg-purple-100 text-purple-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">{a.Review} Reviews</span>
                                                 </span>
                                                 <span className="flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
                                                     <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
@@ -97,6 +104,7 @@ export default function Kids() {
                     </div>
                 </div>
             </div>
+            <style jsx>{PageStyle}</style>
         </>
     )
 }

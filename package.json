@@ -16,6 +16,7 @@
     "@heroicons/react": "^2.0.11",
     "@lottiefiles/lottie-player": "^1.5.7",
     "@reduxjs/toolkit": "^1.8.4",
+    "axios": "^1.0.0",
     "babel": "^6.23.0",
     "next": "^12.2.5",
     "next-images": "^1.8.4",

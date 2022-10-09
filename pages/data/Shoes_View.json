@@ -1,5 +1,5 @@
 {
-    "Men": [
+    "Every": [
         {
             "index": "0",
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ7679-001/d6687028-5e77-4bc7-99c9-7d3a41e73e5f_primary.jpg?browse",
@@ -719,9 +719,7 @@
                 "five": "none"
             },
             "Review": "4"
-        }
-    ],
-    "Women": [
+        },
         {
             "index": "40",
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DZ7338-001/305f6bc9-a772-4971-9d4f-082fbaa1a824_primary.jpg?browse",
@@ -1441,9 +1439,7 @@
                 "five": "none"
             },
             "Review": "4"
-        }
-    ],
-    "Kids": [
+        },
         {
             "index": "80",
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DA4075-101/bda79d29-0b7d-48b5-a248-06ecec6a82b1_primary.jpg?browse",
@@ -2163,26 +2159,6 @@
                 "five": "none"
             },
             "Review": "4"
-        }
-    ],
-    "ShopAll": [
-        {
-            "name": "Men",
-            "img": "https://image.nbkorea.com/NBRB_Site/20220530/NB20220530105612881001.jpg",
-            "href": "/Men",
-            "text": "Let's meet The Shoes for Men"
-        },
-        {
-            "name": "Women",
-            "img": "https://image.nbkorea.com/NBRB_Site/20220530/NB20220530105655778001.jpg",
-            "href": "/Women",
-            "text": "Let's meet The Shoes for Women"
-        },
-        {
-            "name": "Kids",
-            "img": "https://image.nbkorea.com/NBRB_Site/20220824/NB20220824185333197001.jpg",
-            "href": "/Kids",
-            "text": "Let's meet The Shoes for Kids"
         }
     ]
 }

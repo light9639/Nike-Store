@@ -9,11 +9,13 @@ import css from 'styled-jsx/css';
 import { useState } from 'react';
 import Shoes from './data/Shoes.json';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Header2 from '../components/Header2'
 
 const Home: NextPage = () => {
   return (
     <>
-      <HeadInfo title="나이키. Just Do It. Nike.com" contents="Nike next js"></HeadInfo>
+      <HeadInfo title="Shoe-Store. Just Do It." contents="Shoe-Store Next.js"></HeadInfo>
 
       <Banner></Banner>
 
@@ -46,6 +48,7 @@ const Home: NextPage = () => {
 }
 
 function Photos(): JSX.Element {
+  const router = useRouter()
   return (
     <>
       <div className="py-16">
@@ -53,7 +56,7 @@ function Photos(): JSX.Element {
         <div className="block lg:w-full max-w-screen-2xl m-auto lg:relative">
           <img className="inset-0 h-full w-full object-cover object-center" src="https://static-breeze.nike.co.kr/kr/ko_kr//cmsstatic/structured-content/65250/220905_mlp_p6_bg.jpg" alt="Woman workcationing on the beach" />
         </div>
-        <div className="px-8 py-6 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:px-12">
+        <div className="px-8 py-6 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:px-12" onClick={() => router.push(`/Detail/${1}`)}>
           <div className="max-w-lg m-auto text-center">
             <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl dark:text-white tracking-tighter">
               조던 X 파리 생제르맹 컬렉션
@@ -63,7 +66,7 @@ function Photos(): JSX.Element {
               새로운 조던 X 파리 생제르맹 컬렉션을 만나보세요.
             </p>
             <div className="mt-4 sm:mt-6">
-              <a href="#" className="inline-block px-5 py-3 rounded-lg border border-gray-900 dark:border-white text-gray-900 dark:text-white text-sm uppercase tracking-wider font-semibold sm:text-base mr-3">더 알아보기</a>
+              <a href="#" className="inline-block px-5 py-3 rounded-lg border border-gray-900 hover:bg-gray-900 dark:border-white dark:hover:bg-white text-gray-900 hover:text-white dark:text-white dark:hover:text-gray-900 text-sm uppercase tracking-wider font-semibold sm:text-base mr-3 transition">더 알아보기</a>
               <a href="#" className="inline-block px-5 py-3 rounded-lg shadow-lg bg-black dark:bg-white text-sm text-white dark:text-black uppercase tracking-wider font-semibold sm:text-base">구매하기</a>
             </div>
           </div>
@@ -93,7 +96,7 @@ function Photos2(): JSX.Element {
               템포 러닝, 인터벌 러닝, 베이스 러닝, 프로그레션 러닝 등의 다양한 러닝과 함께 즐겨보세요.
             </p>
             <div className="mt-4 sm:mt-6">
-              <a href="#" className="inline-block px-5 py-3 rounded-lg border border-gray-900 dark:border-white text-gray-900 dark:text-white text-sm uppercase tracking-wider font-semibold sm:text-base mr-3">더 알아보기</a>
+              <a href="#" className="inline-block px-5 py-3 rounded-lg border border-gray-900 hover:bg-gray-900 dark:border-white dark:hover:bg-white text-gray-900 hover:text-white dark:text-white dark:hover:text-gray-900 text-sm uppercase tracking-wider font-semibold sm:text-base mr-3 transition">더 알아보기</a>
               <a href="#" className="inline-block px-5 py-3 rounded-lg shadow-lg bg-black dark:bg-white text-sm text-white dark:text-black uppercase tracking-wider font-semibold sm:text-base">구매하기</a>
             </div>
           </div>
@@ -187,19 +190,19 @@ function Trending(): JSX.Element {
           <div className="showcase--grid my-20">
             <div className="showcase--item__big relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95">
               <div className="showcase--item__overlay absolute  flex h-full w-full items-end p-8">
-                <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
+                <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Dunk Shoes</h1>
               </div>
             </div>
             <div className="showcase--item__big2 relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95">
               <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8">
-                <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
+                <h1 className="text-white font-serif font-regular text-4xl text-center">ACG Collection</h1>
               </div>
             </div>
           </div>
-          <h2 className="text-center font-serif text-4xl text-black mb-4 dark:text-white">Curated getaways, tailored to you.</h2>
-          <p className="font-sans font-light text-lg text-center">Whether you are building a welcome mat for your SaaS or a clean, corporate portfolio, Stack <br /> has you design needs covered.</p>
+          <h2 className="text-center font-serif text-4xl text-black mb-4 dark:text-white">NEW ARRIVAL  PLATFORMS</h2>
+          <p className="font-sans font-light text-lg text-center">가을에 어울리는 차분한 컬러로 새롭게 출시된 <br /> 플랫폼 제품을 만나보세요.</p>
           <div className="mt-4 sm:mt-6 text-center ">
-            <a href="#" className="inline-block px-5 py-3 rounded-lg border border-gray-900 dark:border-white text-gray-900 dark:text-white text-sm uppercase tracking-wider font-semibold sm:text-base mr-3">더 알아보기</a>
+            <a href="#" className="inline-block px-5 py-3 rounded-lg border border-gray-900 hover:bg-gray-900 dark:border-white dark:hover:bg-white text-gray-900 hover:text-white dark:text-white dark:hover:text-gray-900 text-sm uppercase tracking-wider font-semibold sm:text-base mr-3 transition">더 알아보기</a>
             <a href="#" className="inline-block px-5 py-3 rounded-lg shadow-lg bg-black dark:bg-white text-sm text-white dark:text-black uppercase tracking-wider font-semibold sm:text-base">구매하기</a>
           </div>
         </div>
@@ -306,17 +309,17 @@ function Minimal(): JSX.Element {
           <div className="showcase--grid my-20">
             <div className="showcase--item__big relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95">
               <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
-                <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
+                <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Soccer Shoes</h1>
               </div>
             </div>
             <div className="showcase--item__small_top relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95">
               <div className="showcase--item__overlay absolute  flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
-                <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
+                <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Running Shoes</h1>
               </div>
             </div>
             <div className="showcase--item__small_bottom relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-90">
               <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
-                <h1 className="text-white font-serif font-regular text-4xl text-center">Minimal</h1>
+                <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Minimal Shoes</h1>
               </div>
             </div>
           </div>
@@ -338,7 +341,7 @@ function Shop(): JSX.Element {
           {
             Shop.map(function (a, i: number) {
               return (
-                <div className="md:w-1/3 rounded overflow-hidden mx-auto my-8 p-3 text-center">
+                <div className="md:w-1/3 rounded overflow-hidden mx-auto my-8 p-3 text-center" key={i}>
                   <Link href={a.href}>
                     <img className="w-full cursor-pointer hover:opacity-75 transition" src={a.img} alt="Sunset in the mountains" />
                   </Link>

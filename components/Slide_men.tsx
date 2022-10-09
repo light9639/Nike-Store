@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar, Navigation } from "swiper";
-import css from 'styled-jsx/css';
+import SlideStyled from "../styles/SlideStyled";
 
 const product = {
     detail: [
@@ -45,33 +45,6 @@ const product = {
     ]
 }
 
-const style = css`
-    .swiper-button-prev,
-    .swiper-button-next {
-        background-color: #333;
-        padding: 22.5px;
-        border-radius: 50%;
-        top: 5%;
-        right: 0%;
-    }
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-        color: #fff;
-        font-size: 16px;
-        font-weight: 600;
-    }
-    .swiper-button-prev {
-        left: auto;
-        transform: translateX(-125%);
-    }
-    @media screen and (max-width: 640px) {
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
-            font-size: 14px;
-        }
-    }
-`;
-
 export default function Stuff(): JSX.Element {
     return (
         <div className='max-w-screen-2xl my-24 m-auto p-6 lg:p-0'>
@@ -104,7 +77,7 @@ export default function Stuff(): JSX.Element {
                     product.detail.map(function (a, i: number) {
                         return (
                             <>
-                                <SwiperSlide className="pt-20 pb-10">
+                                <SwiperSlide className="pt-20 pb-10" key={i}>
                                     <a href='#void' className='text-left tracking-tighter'>
                                         <img className="max-h-full" src={a.img} alt={a.name} />
                                         <h2 className='dark:text-white mt-4 text-xl'>{a.name}</h2>
@@ -119,7 +92,7 @@ export default function Stuff(): JSX.Element {
                 <div className="swiper-button-next"></div>
                 <div className="swiper-button-prev"></div>
             </Swiper>
-            <style jsx>{style}</style>
+            <style jsx>{SlideStyled}</style>
         </div>
     )
 }

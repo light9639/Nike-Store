@@ -1,15 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import React from 'react'
+import React, { useState } from 'react'
 import DarkModeToggleButton from './DarkModeToggleButton';
 
 function Nav() {
-    const [open, setOpen] = React.useState(false);
-    const [flyer, setFlyer] = React.useState(false);
-    const [flyerTwo, setFlyerTwo] = React.useState(false);
+    const [open, setOpen] = useState<boolean>(false);
+    const [flyer, setFlyer] = useState<boolean>(false);
+    const [flyerTwo, setFlyerTwo] = useState<boolean>(false);
+    const [advertise, setAdvertise] = useState<boolean>(true);
 
     return (
         <div className='w-screen border-b-2 border-gray-100 dark:border-slate-900 text-left'>
+            {
+                advertise === true ?
+                    <div>
+                        <p className="flex h-10 items-center justify-center bg-blue-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+                            배송료가 10만원 이상일 경우 배송료는 무료입니다. &nbsp;
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5 cursor-pointer hover:opacity-75"
+                                onClick={() => {
+                                    setAdvertise(advertise == false)
+                                }}>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </p>
+                    </div>
+                    :
+                    null
+            }
+            
             <div className="relative bg-white dark:bg-slate-900">
                 <div className="max-w-screen-2xl mx-auto px-4 sm:px-6">
                     <div className="flex justify-between items-center py-6 lg:justify-start lg:space-x-10">
@@ -18,19 +36,20 @@ function Nav() {
                                 <a href="">
                                     <span className="sr-only">Workflow</span>
                                     <img
-                                        className="dark:hidden h-8 w-auto sm:h-10"
-                                        src="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png"
+                                        className="h-8 w-auto sm:h-10"
+                                        // src="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png"
+                                        src='/S_logo.png'
                                         alt="reactLogo"
                                     />
-                                    <img
+                                    {/* <img
                                         className="hidden dark:block h-8 w-auto sm:h-10"
                                         src="https://cdn.aglty.io/bwql7jyk/Attachments/NewItems/image_20211214122557_0.png"
                                         alt="reactLogo"
-                                    />
+                                    /> */}
                                 </a>
                             </Link>
                         </div>
-                        <div className="-mr-2 -my-2 -mt-5 lg:hidden">
+                        <div className="-mr-2 -my-2 lg:hidden">
                             <DarkModeToggleButton></DarkModeToggleButton>
                             <button
                                 type="button"
@@ -548,7 +567,7 @@ function Nav() {
                                     <Link href="/">
                                         <img
                                             className="h-8 w-auto cursor-pointer hover:opacity-75"
-                                            src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
+                                            src="/S_logo.png"
                                             alt="Workflow"
                                         />
                                     </Link>

@@ -1,0 +1,103 @@
+{
+    "Post": [
+        {
+            "index": "1",
+            "src": "/mainBanner01.png",
+            "alt": "mainBanner01",
+            "h2": "한계 없는 플레이, 끝 없는 즐거움",
+            "p1": "득점이 쏟아지는 NIKELAND 농구를 친구들과 함께 즐겨보세요.",
+            "p2": "새로운 팀 그리고 장비를 통해 정면 승부를 펼치거나 덩크슛 콘테스트에 도전해 보세요.",
+            "date": "2022년 4월 19일"
+        },
+        {
+            "index": "2",
+            "src": "/mainBanner02.png",
+            "alt": "mainBanner02",
+            "h2": "나이키 패스트 팩",
+            "p1": "탁월한 에너지 반환력으로 최상의 스피드를 위해 탄생한 레이싱화.",
+            "p2": "나만의 최고 기록을 향한 여정을 나이키 패스트 팩과 함께 시작해 보세요.",
+            "date": "2022년 8월 20일"
+        },
+        {
+            "index": "3",
+            "src": "/mainBanner03.png",
+            "alt": "mainBanner03",
+            "h2": "나이키 줌 X 제가마",
+            "p1": "험준한 지형의 오르막길과 내리막길에서도 탁월한 접지력으로",
+            "p2": "안정감을 제공하는 나이키 줌X 제가마를 경험해 보세요.",
+            "date": "2022년 9월 10일"
+        },
+        {
+            "index": "4",
+            "src": "/mainBanner04.png",
+            "alt": "mainBanner04",
+            "h2": "에어 조던 37",
+            "p1": "최첨단의 혁신과 소재를 더한 에어 조던 37과 함께",
+            "p2": "더 높이, 더 멀리 나아가 보세요.",
+            "date": "2022년 5월 5일"
+        },
+        {
+            "index": "5",
+            "src": "https://static-breeze.nike.co.kr/kr/ko_kr//cmsstatic/structured-content/65250/220905_mlp_p6_bg.jpg",
+            "alt": "Dunk",
+            "h2": "조던 X 파리 생제르맹 컬렉션",
+            "p1": "스포츠와 스트리트 룩의 만남.",
+            "p2": "새로운 조던 X 파리 생제르맹 컬렉션을 만나보세요.",
+            "date": "2022년 1월 29일"
+        },
+        {
+            "index": "6",
+            "src": "https://www.weloveadidas.com/wp-content/uploads/2021/05/adidas-4DFWD-8.jpg",
+            "alt": "Adidas",
+            "h2": "아디다스 4DFWD",
+            "p1": "스피드 러닝을 위해 태어난 아디다스 4DFWD 모든 걸음에 탄력을 더하는 탁월한 반응성으로",
+            "p2": "템포 러닝, 인터벌 러닝, 베이스 러닝, 프로그레션 러닝 등의 다양한 러닝과 함께 즐겨보세요.",
+            "date": "2022년 1월 29일"
+        },
+        {
+            "index": "7",
+            "src": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHdvbWVuJTIwbmlrZXxlbnwwfDF8MHx8&auto=format&fit=crop&w=1000&q=60",
+            "alt": "Dunk",
+            "h2": "Nike 신발",
+            "p1": "Nike 신발",
+            "p2": "Nike 신발",
+            "date": "2022년 8월 12일"
+        },
+        {
+            "index": "8",
+            "src": "/Exercise.jpg",
+            "alt": "Exercise",
+            "h2": "Nike Exercise",
+            "p1": "Nike Exercise",
+            "p2": "Nike Exercise",
+            "date": "2022년 10월 12일"
+        },
+        {
+            "index": "9",
+            "src": "https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_1824,c_limit/1ac1ef70-731b-41fe-9537-decd9f1584d7/nike-just-do-it.jpg",
+            "alt": "Nike Soccer",
+            "h2": "Nike Soccer",
+            "p1": "Nike Soccer",
+            "p2": "Nike Soccer",
+            "date": "2022년 7월 25일"
+        },
+        {
+            "index": "10",
+            "src": "https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_906,c_limit/b61e8381-4ea0-4ae4-a6eb-4df5889a0be9/nike-just-do-it.jpg",
+            "alt": "Nike Running",
+            "h2": "Nike Running",
+            "p1": "Nike Running",
+            "p2": "Nike Running",
+            "date": "2022년 7월 25일"
+        },
+        {
+            "index": "11",
+            "src": "https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_906,c_limit/d07a1c1f-2d1c-44a1-9874-c65af6ef593a/nike-just-do-it.jpg",
+            "alt": "Nike Running Shoes",
+            "h2": "Nike Running Shoes",
+            "p1": "Nike Running Shoes",
+            "p2": "Nike Running Shoes",
+            "date": "2022년 7월 25일"
+        }
+    ]
+}
