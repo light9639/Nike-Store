@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { faStar, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import HeadInfo from '../components/HeadInfo'
 import ShoesJson from './data/Shoes.json';
@@ -29,7 +27,7 @@ export default function Women() {
                         {
                             span.map(function (a: string, i: number) {
                                 return (
-                                    <span className='px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-600 m-1 text-white font-semibold rounded text-xs lg:text-base' key={i}>
+                                    <span className='px-4 py-2 sm:px-5 sm:py-2.5 bg-slate-300 m-1 text-white font-semibold rounded text-xs lg:text-base' key={i}>
                                         <a href='#void'>{a}</a>
                                     </span>
                                 )
@@ -40,8 +38,8 @@ export default function Women() {
                         ShoesJson.Women.map(function (a, i: number) {
                             return (
                                 <>
-                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 pr-5 lg:pr-2" key={a.index} onClick={() => router.push(`/view/${a.index}`)}>
-                                        <div className="rounded-xl ml-3 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
+                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 lg:pr-2" key={a.index} onClick={() => router.push(`/view/${a.index}`)}>
+                                        <div className="rounded-xl m-2 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
                                             <div className='ImgBox'>
                                                 <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />
                                             </div>
@@ -76,7 +74,7 @@ export default function Women() {
                                                     </svg>
                                                     <span className="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{a.Review} Reviews</span>
                                                 </span>
-                                                <span className="flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
+                                                <span className="hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
                                                     <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
                                                         <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                                             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>

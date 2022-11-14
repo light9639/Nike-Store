@@ -8,13 +8,17 @@ export default function DarkModeToggleButton() {
 
     return (
         <>
-            <span
+            {/* <span
                 className='mr-7'
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
 
-                {/* 라이트 모드 */}
-                <button className="dark:hidden relative inline-flex items-center py-1.5 px-2 rounded-full transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus:outline-none bg-sky-500 text-sky-200 focus-visible:ring-sky-600" id="headlessui-switch-5" role="switch" type="button" aria-checked="false" data-headlessui-state="">
+                <button className="dark:hidden relative inline-flex items-center py-2 px-2.5 rounded-full transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus:outline-none text-red focus-visible:ring-sky-600 hover:bg-gray-200" id="headlessui-switch-5" role="switch" type="button" aria-checked="false" data-headlessui-state="">
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"></path>
+                    </svg>
+
                     <svg width="24" height="24" fill="none" aria-hidden="true" className="transform transition-transform scale-0 duration-500">
                         <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         </path>
@@ -39,8 +43,12 @@ export default function DarkModeToggleButton() {
                     </span>
                 </button>
 
-                {/* 다크 모드 */}
-                <button className="hidden dark:inline-flex relative items-center py-1.5 px-2 rounded-full transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus:outline-none bg-slate-700 text-slate-400 focus-visible:ring-slate-500" id="headlessui-switch-5" role="switch" type="button" aria-checked="true" data-headlessui-state="checked">
+                <button className="hidden dark:inline-flex relative items-center py-2 px-2.5 rounded-full transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus:outline-none text-white focus-visible:ring-slate-500 hover:bg-gray-700" id="headlessui-switch-5" role="switch" type="button" aria-checked="true" data-headlessui-state="checked">
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6144 14.6145C19.787 14.8653 18.9093 15.0001 18 15.0001C13.0294 15.0001 9 10.9707 9 6.00013C9 5.09088 9.13484 4.21311 9.3856 3.38574C5.69007 4.50583 3 7.93883 3 12.0001C3 16.9707 7.02944 21.0001 12 21.0001C16.0613 21.0001 19.4943 18.3101 20.6144 14.6145Z" fill="currentColor"></path>
+                    </svg>
+
                     <span className="sr-only"></span>
                     <svg width="24" height="24" fill="none" aria-hidden="true" className="transform transition-transform scale-100 duration-300">
                         <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -65,36 +73,54 @@ export default function DarkModeToggleButton() {
                         </svg>
                     </span>
                 </button>
-            </span>
-            {/* <button
+            </span> */}
+            {/* inline-flex items-center
+            rounded-lg text-base mr-2
+            py-1.5 px-2
+            focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 focus:outline-none
+            bg-white dark:bg-gray-800
+            border-2
+            hover:opacity-75 */}
+            <button
                 className="
-                inline-flex items-center
-                py-2 px-3 rounded-full text-base mt-4 md:mt-0 mr-5
-                focus:outline-none
-                hover:bg-slate-300
-                dark:hover:bg-slate-700
+                inline-flex items-center py-1.5 px-2 mr-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200
+                toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500
+                dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700
                 "
-                type="button"
+                type='button'
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
-                라이트 모드
                 <span className='dark:hidden'>
-                    <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="stroke-sky-400 dark:stroke-sky-500"></path>
-                        <path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" className="stroke-sky-400 dark:stroke-sky-500"></path>
-                    </svg>
+                    <span className="w-8 h-8 rounded-full flex items-center justify-center transition duration-500">
+                        <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none transition duration-500 transform text-blue-500 opacity-100 scale-100">
+                            <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                        <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none -ml-6 transition duration-500 transform text-slate-700 opacity-0 scale-0">
+                            <path d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </span>
                 </span>
 
-                다크모드
                 <span className='hidden dark:inline'>
-                    <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" className="fill-sky-400/20"></path>
-                        <path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" className="fill-sky-500"></path>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" className="fill-sky-500"></path>
-                    </svg>
+                    <span className="w-8 h-8 rounded flex items-center justify-center transition duration-500">
+                        <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none transition duration-500 transform text-blue-500 opacity-0 scale-0">
+                            <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                        <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none -ml-6 transition duration-500 transform text-blue-500 opacity-100 scale-100">
+                            <path d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </span>
                 </span>
 
-            </button> */}
+            </button>
         </>
     );
 }

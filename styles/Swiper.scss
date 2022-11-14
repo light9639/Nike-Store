@@ -46,3 +46,14 @@
 .swiper-button-next:hover:after {
     color: #646cff;
 }
+
+.swiper-pagination-bullet {
+    background-color: white !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #1d4ed8 !important;
+    transform: scale(1.2);
+}
+

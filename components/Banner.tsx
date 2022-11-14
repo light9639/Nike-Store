@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import css from 'styled-jsx/css';
 import { useRouter } from 'next/router';
 
@@ -72,46 +72,48 @@ const style = css`
 `;
 
 export default function Section() {
-    const router = useRouter()
+    const router = useRouter();
 
     return (
         <>
-            <Swiper
-                spaceBetween={30}
-                effect={"fade"}
-                loop={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                navigation={true}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Autoplay, EffectFade, Navigation, Pagination]}
-                className="mySwiper banner-swiper"
-            >
-                {
-                    product.detail.map(function (a, i: number) {
-                        return (
-                            <SwiperSlide key={i}>
-                                <div className="Banner w-screen">
-                                    <img src={a.src} alt={a.alt} />
-                                    <div className="Banner_text absolute left-1/2 lg:left-1/3 bottom-1/2 z-20">
-                                        <h2 className="text-white text-left text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 tracking-tighter">{a.h2}</h2>
-                                        <p className="text-white text-left text-lg lg:text-xl tracking-tighter">{a.p1}<br />{a.p2}</p>
-                                        <a
-                                            href=""
-                                            className="absolute left-0 hover:bg-white hover:text-black transition px-5 py-3 rounded-lg border border-white text-white tracking-wider font-semibold text-sm sm:text-base mt-8"
-                                            onClick={() => router.push(`/Detail/${i + 1}`)}
-                                        >더 알아보기</a>
+            <div>
+                <Swiper
+                    spaceBetween={30}
+                    effect={"fade"}
+                    loop={true}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    }}
+                    navigation={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Autoplay, EffectFade, Navigation, Pagination]}
+                    className="mySwiper banner-swiper"
+                >
+                    {
+                        product.detail.map(function (a, i: number) {
+                            return (
+                                <SwiperSlide key={i}>
+                                    <div className="Banner w-screen">
+                                        <img src={a.src} alt={a.alt} />
+                                        <div className="Banner_text absolute left-1/2 lg:left-1/3 bottom-1/2 z-20">
+                                            <h2 className="text-white text-left text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 tracking-tighter">{a.h2}</h2>
+                                            <p className="text-white text-left text-lg lg:text-xl tracking-tighter">{a.p1}<br />{a.p2}</p>
+                                            <a
+                                                className="absolute left-0 hover:bg-white hover:text-black transition px-5 py-3 rounded-lg border border-white text-white tracking-wider font-semibold text-sm sm:text-base mt-8 cursor-pointer"
+                                                onClick={() => router.push(`/Detail/${i}`)}
+                                            >더 알아보기</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                        )
-                    })
-                }
-            </Swiper>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
+            </div>
             <style jsx>{style}</style>
         </>
     )

@@ -1,7 +1,9 @@
 import Link from 'next/link'
-import { status, Res } from './TypeBox'
-
+import HeadInfo from '../components/HeadInfo'
+import { status, Res } from './api/TypeBox'
 function Error({ statusCode }: status) {
+    <HeadInfo title="Error Page" contents="Error Page"></HeadInfo>
+
     return (
         <>
             <section className="flex items-center h-full pt-16 pb-28 dark:bg-black dark:text-gray-100">

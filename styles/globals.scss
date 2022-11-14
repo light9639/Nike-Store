@@ -19,6 +19,23 @@ a {
   box-sizing: border-box;
 }
 
+.Black_border {
+  @apply inline-block px-5 py-3 rounded-lg border border-gray-900 hover:bg-gray-900 dark:border-white dark:hover:bg-white text-gray-900 hover:text-white dark:text-white dark:hover:text-gray-900 text-sm uppercase tracking-wider font-semibold sm:text-base mr-3 transition
+}
+
+.Black_box {
+  @apply inline-block px-5 py-3 rounded-lg shadow-lg dark:bg-white bg-black text-sm text-white dark:text-black uppercase tracking-wider font-semibold sm:text-base
+}
+
+.Login_border {
+  @apply transition duration-300 ease-in-out mr-2 last:mr-0 py-2 px-4 bg-transparent rounded text-blue-700 font-medium focus:outline-none hover:bg-blue-700 hover:border-blue-700 hover:text-white dark:text-white
+}
+
+
+.Sign_Box {
+  @apply transition duration-300 ease-in-out py-2 px-4 bg-blue-700 rounded text-white font-normal focus:outline-none hover:bg-blue-900
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

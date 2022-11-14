@@ -4,6 +4,7 @@ import { RadioGroup } from '@headlessui/react'
 import HeadInfo from '../../components/HeadInfo'
 import ShoeAll from "../data/Shoes_View.json";
 import { useRouter } from 'next/router'
+import Modal from '../../components/Modal';
 
 const product = {
     name: 'Men',
@@ -40,9 +41,9 @@ const product = {
         },
     ],
     colors: [
-        { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-        { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-        { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
+        { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400', inStock: false },
+        { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400', inStock: false },
+        { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900', inStock: false },
     ],
     sizes: [
         { name: '230', inStock: false },
@@ -74,7 +75,7 @@ const product = {
         유통중 손상되었거나 품질에 이상이 있는 제품에 한하여 소비자피해보상규정 에 의거 보상하여 드립니다.
         단, 제품에 부착되어 있는 사용방법 및 취급시주의사항에 따라 제품을 관리해 주시고, 소비자 부주의로 인한 품질 이상 및 변형에 대해서는 책임을 지지 않습니다.`,
 }
-const reviews = { href: '#', average: 4, totalCount: 4 }
+const reviews = { href: '#void', average: 4, totalCount: 4 }
 
 function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
@@ -82,23 +83,50 @@ function classNames(...classes: any) {
 
 export default function Example() {
     <HeadInfo title="제품 상세페이지" contents="제품 상세페이지" />
+
     const [selectedColor, setSelectedColor] = useState(product.colors[0])
     const [selectedSize, setSelectedSize] = useState(product.sizes[2])
-    const [Shoe, setShoeAll] = React.useState(ShoeAll)
+    const [Shoe, setShoeAll] = useState(ShoeAll)
+    const [Show, setShow] = useState(false)
+    const [number, setNumber] = useState()
     const router = useRouter()
     const pid = router.query
     const ID: any = pid.id
+    const Shoes = Shoe.Every[ID];
+
+    var ImgUI: any = {
+        1: <img src={Shoes?.src.first} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        2: <img src={Shoes?.src.second} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        3: <img src={Shoes?.src.third} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        4: <img src={Shoes?.src.four} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        5: <img src={Shoes?.src.five} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        6: <img src={Shoes?.src.six} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+    }
 
     return (
-        <div className="bg-white dark:bg-black ">
+        <div className="bg-white dark:bg-black">
+
+            {
+                Show == false ?
+                <div id="modal"
+                    className="fixed top-0 left-0 z-50 w-screen h-screen bg-black/70 flex justify-center items-center">
+                    <a className="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
+                            onClick={() => { setShow(!Show) }}>&times;</a>
+                        {
+
+                        }
+                </div>
+                : null
+            }
+
             <div className="pt-6">
                 <nav aria-label="Breadcrumb">
                     <ol role="list" className="mx-auto flex max-w-2xl space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
 
                         <li>
                             <div className="flex items-center">
-                                <a href="#void" className="mr-2 text-sm font-medium text-gray-900 dark:text-white" onClick={() => router.push(Shoe.Every[ID].href)}>
-                                    {Shoe.Every[ID].Gender}
+                                <a href="#void" className="mr-2 text-sm font-medium text-gray-900 dark:text-white" onClick={() => router.push(Shoes.href)}>
+                                    {Shoes?.Gender}
                                 </a>
                                 <svg
                                     width={16}
@@ -116,7 +144,7 @@ export default function Example() {
                         <li>
                             <div className="flex items-center">
                                 <a href="#void" className="mr-2 text-sm font-medium text-gray-900 dark:text-white">
-                                    {Shoe.Every[ID].info}
+                                    {Shoes?.info}
                                 </a>
                                 <svg
                                     width={16}
@@ -134,7 +162,7 @@ export default function Example() {
 
                         <li className="text-sm">
                             <a href={product.href} aria-current="page" className="font-medium text-gray-500 dark:text-white hover:text-gray-600">
-                                {Shoe.Every[ID].name}
+                                {Shoes?.name}
                             </a>
                         </li>
                     </ol>
@@ -142,29 +170,67 @@ export default function Example() {
 
                 {/* Image gallery */}
                 <div className="mx-auto mt-6 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-                    {
-                        product.images.map((a, i: number) => (
-                            <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3" key={i}>
-                                <img
-                                    src={product.images[i].src}
-                                    alt={product.images[i].alt}
-                                    className="h-full w-full object-cover object-center"
-                                />
-                            </div>
-                        ))
-                    }
+                    <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
+                        <img
+                            src={Shoes?.src.first}
+                            alt={Shoes?.alt}
+                            className="h-full w-full object-cover object-center"
+                            onClick={() => { setShow(!Show)}}
+                            // onClick={() => { setNumber(number == 1)}}
+                        />
+                    </div>
+                    <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
+                        <img
+                            src={Shoes?.src.second}
+                            alt={Shoes?.alt}
+                            className="h-full w-full object-cover object-center"
+                            onClick={() => { setShow(!Show)}}
+                        />
+                    </div>
+                    <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
+                        <img
+                            src={Shoes?.src.third}
+                            alt={Shoes?.alt}
+                            className="h-full w-full object-cover object-center"
+                            onClick={() => { setShow(!Show)}}
+                        />
+                    </div>
+                    <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
+                        <img
+                            src={Shoes?.src.four}
+                            alt={Shoes?.alt}
+                            className="h-full w-full object-cover object-center"
+                            onClick={() => { setShow(!Show)}}
+                        />
+                    </div>
+                    <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
+                        <img
+                            src={Shoes?.src.five}
+                            alt={Shoes?.alt}
+                            className="h-full w-full object-cover object-center"
+                            onClick={() => { setShow(!Show)}}
+                        />
+                    </div>
+                    <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
+                        <img
+                            src={Shoes?.src.six}
+                            alt={Shoes?.alt}
+                            className="h-full w-full object-cover object-center"
+                            onClick={() => { setShow(!Show)}}
+                        />
+                    </div>
                 </div>
 
                 {/* Product info */}
                 <div className="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24">
                     <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                        <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{Shoe.Every[ID].name}</h1>
+                        <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{Shoes?.name}</h1>
                     </div>
 
                     {/* Options */}
                     <div className="mt-4 lg:row-span-3 lg:mt-0">
                         <h2 className="sr-only">Product information</h2>
-                        <p className="text-3xl tracking-tight text-gray-900 dark:text-white">{Shoe.Every[ID].price}</p>
+                        <p className="text-3xl tracking-tight text-gray-900 dark:text-white">{Shoes?.price}</p>
 
                         {/* Reviews */}
                         <div className="mt-6">
@@ -184,27 +250,27 @@ export default function Example() {
                                         ))
                                     } */}
                                     <span className="flex items-center my-3 md:my-0">
-                                        <svg fill={Shoe.Every[ID].star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoes?.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoe.Every[ID].star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoes?.star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoe.Every[ID].star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoes?.star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoe.Every[ID].star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoes?.star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoe.Every[ID].star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoes?.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        {/* <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{Shoe.Every[ID].Review} Reviews</span> */}
+                                        {/* <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{Shoes?.Review} Reviews</span> */}
                                     </span>
                                 </div>
                                 <p className="sr-only">{reviews.average} out of 5 stars</p>
                                 <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                                    {Shoe.Every[ID].Review} reviews
+                                    {Shoes?.Review} reviews
                                 </a>
                             </div>
                         </div>
@@ -222,12 +288,16 @@ export default function Example() {
                                                 <RadioGroup.Option
                                                     key={color.name}
                                                     value={color}
+                                                    disabled={!color.inStock}
                                                     className={({ active, checked }) =>
                                                         classNames(
                                                             color.selectedClass,
                                                             active && checked ? 'ring ring-offset-1' : '',
                                                             !active && checked ? 'ring-2' : '',
-                                                            '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none'
+                                                            '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none',
+                                                            color.inStock ?
+                                                                '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none'
+                                                                :' -m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-not-allowed focus:outline-none'
                                                         )
                                                     }
                                                 >
@@ -242,6 +312,19 @@ export default function Example() {
                                                             'h-8 w-8 border border-black border-opacity-10 rounded-full'
                                                         )}
                                                     />
+                                                    <span
+                                                        aria-hidden="true"
+                                                        className="bg-white opacity-50 pointer-events-none absolute -inset-px border-2 border-gray-200 rounded-full overflow-hidden"
+                                                    >
+                                                        <svg
+                                                            className="absolute inset-0 h-full w-full stroke-2 text-gray-200"
+                                                            viewBox="0 0 100 100"
+                                                            preserveAspectRatio="none"
+                                                            stroke="currentColor"
+                                                        >
+                                                            <line x1={0} y1={100} x2={100} y2={0} vectorEffect="non-scaling-stroke" />
+                                                        </svg>
+                                                    </span>
                                                 </RadioGroup.Option>
                                             ))
                                         }
@@ -253,7 +336,7 @@ export default function Example() {
                             <div className="mt-10">
                                 <div className="flex items-center justify-between">
                                     <h3 className="text-sm font-medium text-gray-900 dark:text-white">Size</h3>
-                                    <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                                    <a href="#void" className="text-sm font-medium text-blue-600 hover:text-blue-500">
                                         Size guide
                                     </a>
                                 </div>
@@ -313,13 +396,12 @@ export default function Example() {
                                 </RadioGroup>
                             </div>
 
-                            <button
-                                type="submit"
-                                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                            <span
+                                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 py-3 px-8 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
                                 onClick={() => router.push('/Cart')}
                             >
                                 카트에 추가
-                            </button>
+                            </span>
                         </form>
                     </div>
 

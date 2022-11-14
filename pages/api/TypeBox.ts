@@ -6,3 +6,7 @@ export interface Res {
     res: any,
     err: any
 }
+
+export interface RouteType {
+    router: any
+}
