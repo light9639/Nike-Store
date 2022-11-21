@@ -1,7 +1,7 @@
 import React from 'react'
 import HeadInfo from '../components/HeadInfo';
 
-export default function login() {
+export default function Login() {
     return (
         <>
             <HeadInfo title="login page" contents="login page" />

@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
 import HeadInfo from '../../components/HeadInfo'
 import ShoeAll from "../data/Shoes_View.json";
 import { useRouter } from 'next/router'
-import Modal from '../../components/Modal';
 
 const product = {
     name: 'Men',
@@ -88,11 +86,14 @@ export default function Example() {
     const [selectedSize, setSelectedSize] = useState(product.sizes[2])
     const [Shoe, setShoeAll] = useState(ShoeAll)
     const [Show, setShow] = useState(false)
-    const [number, setNumber] = useState()
+    const [number, setNumber] = useState('')
     const router = useRouter()
     const pid = router.query
     const ID: any = pid.id
     const Shoes = Shoe.Every[ID];
+
+    const DetailShow = () => { setShow(!Show) }
+    const chooseNumber = (a: any) => { setNumber(a) }
 
     var ImgUI: any = {
         1: <img src={Shoes?.src.first} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
@@ -107,16 +108,20 @@ export default function Example() {
         <div className="bg-white dark:bg-black">
 
             {
-                Show == false ?
-                <div id="modal"
-                    className="fixed top-0 left-0 z-50 w-screen h-screen bg-black/70 flex justify-center items-center">
-                    <a className="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
-                            onClick={() => { setShow(!Show) }}>&times;</a>
-                        {
-
-                        }
-                </div>
-                : null
+                Show == true ?
+                    <div>
+                        <div
+                            id="modal"
+                            className="fixed top-0 left-0 z-50 w-screen h-screen bg-black/70 flex justify-center items-center"
+                            onClick={() => { DetailShow() }}
+                        >
+                            <a className="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)">&times;</a>
+                            {
+                                ImgUI[number]
+                            }
+                        </div>
+                    </div>
+                    : null
             }
 
             <div className="pt-6">
@@ -175,8 +180,10 @@ export default function Example() {
                             src={Shoes?.src.first}
                             alt={Shoes?.alt}
                             className="h-full w-full object-cover object-center"
-                            onClick={() => { setShow(!Show)}}
-                            // onClick={() => { setNumber(number == 1)}}
+                            onClick={() => {
+                                DetailShow()
+                                chooseNumber(1)
+                            }}
                         />
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
@@ -184,7 +191,10 @@ export default function Example() {
                             src={Shoes?.src.second}
                             alt={Shoes?.alt}
                             className="h-full w-full object-cover object-center"
-                            onClick={() => { setShow(!Show)}}
+                            onClick={() => {
+                                DetailShow()
+                                chooseNumber(2)
+                            }}
                         />
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
@@ -192,7 +202,10 @@ export default function Example() {
                             src={Shoes?.src.third}
                             alt={Shoes?.alt}
                             className="h-full w-full object-cover object-center"
-                            onClick={() => { setShow(!Show)}}
+                            onClick={() => {
+                                DetailShow()
+                                chooseNumber(3)
+                            }}
                         />
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
@@ -200,7 +213,10 @@ export default function Example() {
                             src={Shoes?.src.four}
                             alt={Shoes?.alt}
                             className="h-full w-full object-cover object-center"
-                            onClick={() => { setShow(!Show)}}
+                            onClick={() => {
+                                DetailShow()
+                                chooseNumber(4)
+                            }}
                         />
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
@@ -208,7 +224,10 @@ export default function Example() {
                             src={Shoes?.src.five}
                             alt={Shoes?.alt}
                             className="h-full w-full object-cover object-center"
-                            onClick={() => { setShow(!Show)}}
+                            onClick={() => {
+                                DetailShow()
+                                chooseNumber(5)
+                            }}
                         />
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
@@ -216,7 +235,10 @@ export default function Example() {
                             src={Shoes?.src.six}
                             alt={Shoes?.alt}
                             className="h-full w-full object-cover object-center"
-                            onClick={() => { setShow(!Show)}}
+                            onClick={() => {
+                                DetailShow()
+                                chooseNumber(6)
+                            }}
                         />
                     </div>
                 </div>
@@ -237,18 +259,6 @@ export default function Example() {
                             <h3 className="sr-only">Reviews</h3>
                             <div className="flex items-center">
                                 <div className="flex items-center">
-                                    {/* {
-                                        [0, 1, 2, 3, 4].map((rating) => (
-                                            <StarIcon
-                                                key={rating}
-                                                className={classNames(
-                                                    reviews.average > rating ? 'text-yellow-400' : 'text-gray-300',
-                                                    'h-5 w-5 flex-shrink-0'
-                                                )}
-                                                aria-hidden="true"
-                                            />
-                                        ))
-                                    } */}
                                     <span className="flex items-center my-3 md:my-0">
                                         <svg fill={Shoes?.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
@@ -265,7 +275,6 @@ export default function Example() {
                                         <svg fill={Shoes?.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        {/* <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{Shoes?.Review} Reviews</span> */}
                                     </span>
                                 </div>
                                 <p className="sr-only">{reviews.average} out of 5 stars</p>

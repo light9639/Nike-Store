@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import css from 'styled-jsx/css';
 import { useRouter } from 'next/router';
+import SlideStyled from "../styles/SlideStyled";
 
 const product = {
     detail: [
