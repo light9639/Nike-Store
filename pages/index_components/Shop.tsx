@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { RouteType } from '../api/TypeBox'
-import Shoes from '../data/Shoes.json';
+import Shoes from '../../data/Shoes.json';
 
 export default function Shop(): JSX.Element {
     const [Shop, setShop] = useState(Shoes.ShopAll);

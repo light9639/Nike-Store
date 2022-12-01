@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import HeadInfo from '../../components/HeadInfo'
-import Details from '../data/Detail.json';
+import Details from '../../data/Detail.json';
 import { useRouter } from 'next/router'
 
 function Detail() {

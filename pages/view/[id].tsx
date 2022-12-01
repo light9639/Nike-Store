@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import HeadInfo from '../../components/HeadInfo'
-import ShoeAll from "../data/Shoes_View.json";
+import ShoeAll from "../../data/Shoes_View.json";
 import { useRouter } from 'next/router'
 
 const product = {

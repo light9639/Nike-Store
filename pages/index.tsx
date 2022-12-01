@@ -2,15 +2,13 @@
 import type { NextPage } from 'next'
 import Banner from '../components/Banner'
 import HeadInfo from '../components/HeadInfo'
-import Slide_men from "../components/Slide_men";
-import Slide_women from "../components/Slide_women";
-import Slide_kids from "../components/Slide_kids";
 import { useRouter } from 'next/router';
 import Photos from './index_components/Photos';
 import Photos2 from './index_components/Photos2';
 import Trending from './index_components/Trending';
 import Minimal from './index_components/Minimal';
 import Shop from './index_components/Shop';
+import Slide from '../components/Slide';
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -21,7 +19,7 @@ const Home: NextPage = () => {
 
       <Banner></Banner>
 
-      <Slide_men></Slide_men>
+      <Slide name="Men"></Slide >
 
       <Photos router={router}></Photos>
 
@@ -29,9 +27,9 @@ const Home: NextPage = () => {
 
       <Trending router={router}></Trending>
 
-      <Slide_women></Slide_women>
+      <Slide name="Women"></Slide>
 
-      <Slide_kids></Slide_kids>
+      <Slide name="Kids"></Slide>
 
       <div className="container mx-auto px-4 -mt-20" style={{ "maxWidth": "98%" }}>
         <img className='mx-auto max-w-full p-2 md:p-0 sm:max-w-md mb-10' src="/Kids.png" alt="Nike" />

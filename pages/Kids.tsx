@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
 import HeadInfo from '../components/HeadInfo'
-import ShoesJson from './data/Shoes.json';
+import ShoesJson from '../data/Shoes.json';
 import Dropdowns from "../components/Dropdowns";
 import PageStyle from '../styles/PageStyle';
 import { useRouter } from 'next/router';
