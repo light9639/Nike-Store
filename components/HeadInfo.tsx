@@ -19,9 +19,4 @@ const HeadInfo: React.FC<HeadInfoProps> = ({ title, contents }) => {
     )
 }
 
-// HeadInfo.defaultProps = {
-//     title: '나이키. Just Do It. Nike.com',
-//     contents: "Nike next js",
-// }
-
 export default HeadInfo

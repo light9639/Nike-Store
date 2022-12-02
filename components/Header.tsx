@@ -24,15 +24,9 @@ function Nav() {
                                     <span className="sr-only">Workflow</span>
                                     <img
                                         className="h-8 w-auto sm:h-10"
-                                        // src="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png"
                                         src='/S_logo.png'
                                         alt="reactLogo"
                                     />
-                                    {/* <img
-                                        className="hidden dark:block h-8 w-auto sm:h-10"
-                                        src="https://cdn.aglty.io/bwql7jyk/Attachments/NewItems/image_20211214122557_0.png"
-                                        alt="reactLogo"
-                                    /> */}
                                 </a>
                             </Link>
                         </div>

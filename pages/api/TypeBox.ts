@@ -7,6 +7,9 @@ export interface Res {
     err: any
 }
 
+export interface GreetingsProps {
+    name: string;
+}
 export interface RouteType {
     router: any
 }

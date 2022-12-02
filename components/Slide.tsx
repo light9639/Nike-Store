@@ -4,20 +4,16 @@ import "swiper/css/scrollbar";
 import { Scrollbar, Navigation } from "swiper";
 import SlideStyled from "../styles/SlideStyled";
 import { useRouter } from 'next/router';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, useEffect, useState } from "react";
-import Slide_data from '../data/Slide.json'
+import { useEffect, useState } from "react";
 import axios from "axios";
-
-type GreetingsProps = {
-    name: string;
-}
+import { SlideType, GreetingsProps } from "../pages/api/TypeBox";
 
 export default function Stuff({ name }: GreetingsProps): JSX.Element {
     const router = useRouter()
-    let [list, setList] = useState([]);
+    const [list, setList] = useState([]);
+    const API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Slide.json';
 
-    const API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/pages/data/Shoes.json';
-
+    // props가 Men, Women, Kids일 때 각각의 데이터를 전달
     function getData() {
         if (name == "Men") {
             axios.get(API_URL).then((res: any) => {
@@ -39,6 +35,7 @@ export default function Stuff({ name }: GreetingsProps): JSX.Element {
         }
     }
 
+    
     useEffect(() => {
         getData();
     }, []);
@@ -71,10 +68,10 @@ export default function Stuff({ name }: GreetingsProps): JSX.Element {
                 className="mySwiper Shoes_swiper pt-10"
             >
                 <h2 className='mb-10 top-4 sm:top-3 absolute text-2xl sm:text-3xl dark:text-white z-50'>Popular Women Shoes</h2>
-                {list.map(function (a: { index: any; src: string | undefined; alt: string | undefined; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; info: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; price: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; star: { first: string | undefined; second: string | undefined; third: string | undefined; four: string | undefined; five: string | undefined; }; Review: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }, i: number) {
+                {list.map(function (a: SlideType, i: number) {
                     return (
                         <>
-                            <SwiperSlide className="pt-20 pb-10" key={i} onClick={() => router.push(`/view/${a.index}`)}>
+                            <SwiperSlide className="pt-20 pb-10 cursor-pointer" key={i} onClick={() => router.push(`/view/${a.index}`)}>
                                 <div className="rounded-xl sm:ml-1 dark:hover:shadow-slate-700 transform duration-500 text-left">
                                     <div className='ImgBox'>
                                         <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />

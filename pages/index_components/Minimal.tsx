@@ -58,34 +58,33 @@ const Minimal_style = css`
 
     @media (max-width: 1024px) {
         .showcase--grid {
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        grid-template-rows: auto;
-        grid-template-areas: none;
-
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            grid-template-rows: auto;
+            grid-template-areas: none;
         }
 
         .showcase--item__big {
-        height: 16rem;
-        grid-column: 1 / -1;
-        grid-row: 1;
+            height: 16rem;
+            grid-column: 1 / -1;
+            grid-row: 1;
         }
 
         .showcase--item__small_top {
-        height: 16rem;
-        grid-column: 1 / -1;
-        grid-row: 2;
+            height: 16rem;
+            grid-column: 1 / -1;
+            grid-row: 2;
         }
 
         .showcase--item__small_bottom {
-        height: 16rem;
-        grid-column: 1 / -1;
-        grid-row: 3;
+            height: 16rem;
+            grid-column: 1 / -1;
+            grid-row: 3;
         }
 
         .section--feature {
-        height: 100%;
+            height: 100%;
         }
     }
 `

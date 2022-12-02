@@ -21,10 +21,13 @@ yarn dev
 - Next.js를 이용하여 사이트를 구축하였고 로그인 기능, 다크모드를 구현하였습니다.
 ## :hammer_and_wrench: 적용 기술
 ### :zap: Next.js
--
--
+- Next.js를 이용하여 React-router-dom 없이도 라우트 페이지를 만들었습니다.
+- 
 ### :zap: TypeScript
-- 타입스크립트를 이용하여 타입을 지정함으로써 오류의 가능성을
+- 타입스크립트를 이용하여 타입을 지정함으로써 오류 발생 가능성을 줄였습니다.
+### :zap: Axios
+- axios를 이용하여 json 데이터를 가져왔습니다.
+
 ### :zap: Tailwind CSS
 - Tailwind CSS를 이용하여 반응형 웹이 가능한 사이트를 디자인하였습니다.
 

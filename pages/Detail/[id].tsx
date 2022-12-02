@@ -1,13 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import HeadInfo from '../../components/HeadInfo'
-import Details from '../../data/Detail.json';
+// import Details from '../../data/Detail.json';
 import { useRouter } from 'next/router'
+import axios from 'axios';
 
 function Detail() {
-    const [Detail, setDetail] = React.useState(Details)
+    const [Detail, setDetail] = React.useState<any>([])
     const router = useRouter()
     const pid = router.query
     const URL: any = pid.id
+    const API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json'
+    
+    function getData() {
+        axios.get(API_URL).then((res) => {
+            console.log(res.data.Post);
+            setDetail(res.data.Post[URL])
+        })
+    }
+
+    useEffect(() => {
+        getData()
+    }, []);
 
     return (
         <div>
@@ -23,7 +36,7 @@ function Detail() {
             </div>
 
             <div className="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded relative -z-50" style={{ "height": "75vh" }}>
-                <img src={Details.Post[URL]?.src} alt={URL} className="" />
+                <img src={Detail?.src} alt={URL} className="" />
             </div>
             <div className="container max-w-5xl mx-auto -mt-32">
                 <div className="mx-0 sm:mx-6">

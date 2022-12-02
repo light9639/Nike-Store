@@ -1,14 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import HeadInfo from '../components/HeadInfo'
-import ShoesJson from '../data/Shoes.json';
+// import ShoesJson from '../data/Shoes.json';
 import Dropdowns from "../components/Dropdowns";
 import PageStyle from '../styles/PageStyle';
 import { useRouter } from 'next/router';
+import axios from 'axios';
+import { SlideType } from './api/TypeBox';
 
 export default function Women() {
-    const [span, setSpan] = React.useState(['전체보기', '런닝화', '농구화', '운동화']);
+    const [list, setList] = useState([]);
+    const [data, setData] = useState([]);
+    // const [span, setSpan] = React.useState(['전체보기', '런닝화', '농구화', '운동화']);
     const router = useRouter()
+    const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
+    const Women_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
+
+    // 종류 버튼 가져오기
+    function getList() {
+        axios.get(BUTTON_API_URL).then((res: any) => {
+            console.log(res);
+            setList(res.data.Women)
+        })
+    }
+
+    // 신발 데이터 가져오기
+    function getData() {
+        axios.get(Women_API_URL).then((res: any) => {
+            console.log(res);
+            setData(res.data.Women)
+        })
+    }
+
+    // 시작 시에만 함수 실행되도록 설정
+    useEffect(() => {
+        getList();
+        getData();
+    }, []);
+
     return (
         <>
             <HeadInfo title="Women Product Page" contents="Women Product Page" />
@@ -25,54 +54,54 @@ export default function Women() {
                     </div>
                     <div className='w-full text-center mt-7 lg:mt-5 mx-auto mb-7 lg:mb-0'>
                         {
-                            span.map(function (a: string, i: number) {
+                            list.map(function (a: {name: string, number: number}, i: number) {
                                 return (
                                     <span className='px-4 py-2 sm:px-5 sm:py-2.5 bg-slate-300 m-1 text-white font-semibold rounded text-xs lg:text-base' key={i}>
-                                        <a href='#void'>{a}</a>
+                                        <a href='#void'>{a?.name}</a>
                                     </span>
                                 )
                             })
                         }
                     </div>
                     {
-                        ShoesJson.Women.map(function (a, i: number) {
+                        data.map(function (a: SlideType, i: number) {
                             return (
                                 <>
-                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 lg:pr-2" key={a.index} onClick={() => router.push(`/view/${a.index}`)}>
+                                    <div className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mt-16 lg:pr-2" key={a?.index} onClick={() => router.push(`/view/${a?.index}`)}>
                                         <div className="rounded-xl m-2 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
                                             <div className='ImgBox'>
-                                                <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />
+                                                <img src={a?.src} alt={a?.alt} className="w-full h-full object-cover" />
                                             </div>
                                             <div className=" pt-5 px-2 flex flex-col gap-2">
 
                                                 <h2 className="tracking-tighter text-base md:text-xl overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 md:mb-0" title="Best Headphone Ever">
-                                                    {a.name}
+                                                    {a?.name}
                                                 </h2>
 
                                                 <div className='tracking-tighter'>
-                                                    <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{a.info}</p>
-                                                    <span className="text-base md:text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0">{a.price}</span>
+                                                    <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{a?.info}</p>
+                                                    <span className="text-base md:text-xl relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16 mt-0">{a?.price}</span>
                                                 </div>
 
                                             </div>
                                             <div className="block md:flex pl-2 pb-2">
                                                 <span className="flex items-center my-3 md:my-0">
-                                                    <svg fill={a.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a?.star?.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill={a.star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a?.star?.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill={a.star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a?.star?.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill={a.star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a?.star?.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <svg fill={a.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                    <svg fill={a?.star?.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <span className="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{a.Review} Reviews</span>
+                                                    <span className="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{a?.Review} Reviews</span>
                                                 </span>
                                                 <span className="hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
                                                     <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">

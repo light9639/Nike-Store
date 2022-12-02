@@ -18,14 +18,6 @@ export default function Example() {
                                 <span className="inline text-sm md:text-base">배송료가 10만원 이상일 경우 배송료는 무료입니다.</span>
                             </p>
                         </div>
-                        {/* <div className="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
-                            <a
-                                href="#"
-                                className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-blue-600 shadow-sm hover:bg-blue-50"
-                            >
-                                확인하기
-                            </a>
-                        </div> */}
                         <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
                             <button
                                 type="button"

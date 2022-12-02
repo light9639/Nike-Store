@@ -1,78 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import HeadInfo from '../../components/HeadInfo'
-import ShoeAll from "../../data/Shoes_View.json";
+// import ShoeAll from "../../data/Shoes_View.json";
 import { useRouter } from 'next/router'
+import axios from 'axios';
+import product from '../../data/View_product';
 
-const product = {
-    name: 'Men',
-    price: '150,000원',
-    href: '#',
-    breadcrumbs: [
-        { id: 1, name: 'Men', href: '#' },
-        { id: 2, name: 'Shoes', href: '#' },
-    ],
-    images: [
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0fd4ce0b-1657-4a31-b670-3d925774c2a3/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain black basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain gray basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0d62111e-2e0d-4490-b247-54404cf3fbb3/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain white basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f11f19a2-1af6-460c-a346-54cc71d2cb1d/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain white basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/8808183b-8ab7-4876-a231-24f429ca18a9/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain white basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/videos/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,so_1.55/adc356bd-8925-41e5-a297-e3b8f1db0973/air-jordan-1-mid-shoes-PCCmCV.jpg',
-            alt: 'Two each of gray, #181515, and black shirts laying flat.',
-        },
-    ],
-    colors: [
-        { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400', inStock: false },
-        { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400', inStock: false },
-        { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900', inStock: false },
-    ],
-    sizes: [
-        { name: '230', inStock: false },
-        { name: '235', inStock: true },
-        { name: '240', inStock: true },
-        { name: '245', inStock: true },
-        { name: '250', inStock: true },
-        { name: '255', inStock: true },
-        { name: '260', inStock: true },
-        { name: '265', inStock: true },
-        { name: '270', inStock: true },
-        { name: '275', inStock: true },
-        { name: '280', inStock: true },
-        { name: '285', inStock: true },
-    ],
-    description:
-        '스포츠는 건강을 지키며, 내면을 밝혀주고, 우리를 하나로 이어줍니다. 나이키는 스포츠를 통해 세상을 바꿀 수있다고 믿습니다. 세계무대를 빛내는 스포츠 선수에서, 평범한 사람들의 일상에 이르기까지, 우리는 최상의 테크놀로지로 최상의 퍼포먼스를 선사합니다. 러닝에서 바스켓볼, 축구, 피트니스까지. 나이키와 함께 새로운 나의 모습을 만나보세요. 가끔은 도시를 벗어나 아웃도어를 즐기고, 요가를 통해 공동체와 하나가 되어보세요. 3-스트라이프의 헤리티지는 문화로까지 이어집니다. 스포츠는 물론, 음악과 일상의 스트릿까지 말이죠. 휘슬이 울리기 직전의 출발선으로부터, 질주의 순간, 마지막 결승선까지. 나이키는 모두를 위한 브랜드입니다. 스포츠와 당신의 삶, 그리고 세상을 바꿉니다.',
-    highlights: [
-        '에어솔: 신발의 에어백은 신발 본체와 일체형으로 제작, 교체나 때움 등의 수리가 불가능하여 외력에 의해 에어가 손상된 경우는 보상 처리되지 않습니다.',
-        '신발에 기름이 접촉하지 않도록 신경 써주시기 바랍니다.',
-        '천연 가죽이나 천은 물기 및 마찰에 의해 색깔이 변할 가능성이 있습니다.',
-        '젖은 노면 혹은 미끄러지기 쉬운 장소에서는 주의 바랍니다.',
-        '염분(바닷물)이 있는 곳에서 착용하시면 제품이 쉽게 부식됩니다.',
-        '고온 다습한 장소에 장시간 방치를 삼가 바랍니다.',
-        '천연 가죽 신발은 신발 고정대나 신문지 등으로 형태를 고정하여 보관할 것을 권합니다.',
-    ],
-    details:
-        `품질보증기간: 섬유 및 일반 소재-구입 후 6개월 / 가죽소재-구입 후 1년
-        유통중 손상되었거나 품질에 이상이 있는 제품에 한하여 소비자피해보상규정 에 의거 보상하여 드립니다.
-        단, 제품에 부착되어 있는 사용방법 및 취급시주의사항에 따라 제품을 관리해 주시고, 소비자 부주의로 인한 품질 이상 및 변형에 대해서는 책임을 지지 않습니다.`,
-}
 const reviews = { href: '#void', average: 4, totalCount: 4 }
 
 function classNames(...classes: any) {
@@ -84,24 +17,35 @@ export default function Example() {
 
     const [selectedColor, setSelectedColor] = useState(product.colors[0])
     const [selectedSize, setSelectedSize] = useState(product.sizes[2])
-    const [Shoe, setShoeAll] = useState(ShoeAll)
+    const [Shoe, setShoeAll] = useState<any>([])
     const [Show, setShow] = useState(false)
     const [number, setNumber] = useState('')
     const router = useRouter()
     const pid = router.query
     const ID: any = pid.id
-    const Shoes = Shoe.Every[ID];
+    const Data_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes_View.json'
 
     const DetailShow = () => { setShow(!Show) }
     const chooseNumber = (a: any) => { setNumber(a) }
 
+    function getData2() {
+        axios.get(Data_URL).then((res) => {
+            console.log(res.data.Every);
+            setShoeAll(res.data.Every[ID])
+        })
+    }
+
+    useEffect(() => {
+        getData2()
+    }, []);
+
     var ImgUI: any = {
-        1: <img src={Shoes?.src.first} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
-        2: <img src={Shoes?.src.second} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
-        3: <img src={Shoes?.src.third} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
-        4: <img src={Shoes?.src.four} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
-        5: <img src={Shoes?.src.five} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
-        6: <img src={Shoes?.src.six} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        1: <img src={Shoe?.src?.first} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        2: <img src={Shoe?.src?.second} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        3: <img src={Shoe?.src?.third} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        4: <img src={Shoe?.src?.four} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        5: <img src={Shoe?.src?.five} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
+        6: <img src={Shoe?.src?.six} id="modal-img" className="max-w-[800px] max-h-[600px] object-cover" />,
     }
 
     return (
@@ -130,8 +74,8 @@ export default function Example() {
 
                         <li>
                             <div className="flex items-center">
-                                <a href="#void" className="mr-2 text-sm font-medium text-gray-900 dark:text-white" onClick={() => router.push(Shoes.href)}>
-                                    {Shoes?.Gender}
+                                <a href="#void" className="mr-2 text-sm font-medium text-gray-900 dark:text-white" onClick={() => router.push(Shoe?.href)}>
+                                    {Shoe?.Gender}
                                 </a>
                                 <svg
                                     width={16}
@@ -149,7 +93,7 @@ export default function Example() {
                         <li>
                             <div className="flex items-center">
                                 <a href="#void" className="mr-2 text-sm font-medium text-gray-900 dark:text-white">
-                                    {Shoes?.info}
+                                    {Shoe?.info}
                                 </a>
                                 <svg
                                     width={16}
@@ -167,7 +111,7 @@ export default function Example() {
 
                         <li className="text-sm">
                             <a href={product.href} aria-current="page" className="font-medium text-gray-500 dark:text-white hover:text-gray-600">
-                                {Shoes?.name}
+                                {Shoe?.name}
                             </a>
                         </li>
                     </ol>
@@ -177,8 +121,8 @@ export default function Example() {
                 <div className="mx-auto mt-6 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
                         <img
-                            src={Shoes?.src.first}
-                            alt={Shoes?.alt}
+                            src={Shoe?.src?.first}
+                            alt={Shoe?.alt}
                             className="h-full w-full object-cover object-center"
                             onClick={() => {
                                 DetailShow()
@@ -188,8 +132,8 @@ export default function Example() {
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
                         <img
-                            src={Shoes?.src.second}
-                            alt={Shoes?.alt}
+                            src={Shoe?.src?.second}
+                            alt={Shoe?.alt}
                             className="h-full w-full object-cover object-center"
                             onClick={() => {
                                 DetailShow()
@@ -199,8 +143,8 @@ export default function Example() {
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
                         <img
-                            src={Shoes?.src.third}
-                            alt={Shoes?.alt}
+                            src={Shoe?.src?.third}
+                            alt={Shoe?.alt}
                             className="h-full w-full object-cover object-center"
                             onClick={() => {
                                 DetailShow()
@@ -210,8 +154,8 @@ export default function Example() {
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
                         <img
-                            src={Shoes?.src.four}
-                            alt={Shoes?.alt}
+                            src={Shoe?.src?.four}
+                            alt={Shoe?.alt}
                             className="h-full w-full object-cover object-center"
                             onClick={() => {
                                 DetailShow()
@@ -221,8 +165,8 @@ export default function Example() {
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
                         <img
-                            src={Shoes?.src.five}
-                            alt={Shoes?.alt}
+                            src={Shoe?.src?.five}
+                            alt={Shoe?.alt}
                             className="h-full w-full object-cover object-center"
                             onClick={() => {
                                 DetailShow()
@@ -232,8 +176,8 @@ export default function Example() {
                     </div>
                     <div className="aspect-w-3 aspect-h-4 w-1/2 md:w-1/3 lg:w-full overflow-hidden rounded-lg inline-block lg:block p-2 lg:p-0 m-0 lg:mb-3">
                         <img
-                            src={Shoes?.src.six}
-                            alt={Shoes?.alt}
+                            src={Shoe?.src?.six}
+                            alt={Shoe?.alt}
                             className="h-full w-full object-cover object-center"
                             onClick={() => {
                                 DetailShow()
@@ -246,13 +190,13 @@ export default function Example() {
                 {/* Product info */}
                 <div className="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24">
                     <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                        <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{Shoes?.name}</h1>
+                        <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{Shoe?.name}</h1>
                     </div>
 
                     {/* Options */}
                     <div className="mt-4 lg:row-span-3 lg:mt-0">
                         <h2 className="sr-only">Product information</h2>
-                        <p className="text-3xl tracking-tight text-gray-900 dark:text-white">{Shoes?.price}</p>
+                        <p className="text-3xl tracking-tight text-gray-900 dark:text-white">{Shoe?.price}</p>
 
                         {/* Reviews */}
                         <div className="mt-6">
@@ -260,26 +204,26 @@ export default function Example() {
                             <div className="flex items-center">
                                 <div className="flex items-center">
                                     <span className="flex items-center my-3 md:my-0">
-                                        <svg fill={Shoes?.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoe?.star?.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoes?.star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoe?.star?.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoes?.star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoe?.star?.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoes?.star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoe?.star?.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
-                                        <svg fill={Shoes?.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
+                                        <svg fill={Shoe?.star?.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="h-5 w-5 flex-shrink-0 text-yellow-500" viewBox="0 0 24 24">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                         </svg>
                                     </span>
                                 </div>
                                 <p className="sr-only">{reviews.average} out of 5 stars</p>
                                 <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                                    {Shoes?.Review} reviews
+                                    {Shoe?.Review} reviews
                                 </a>
                             </div>
                         </div>
