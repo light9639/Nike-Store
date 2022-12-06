@@ -1,14 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-// import required modules
 import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import css from 'styled-jsx/css';
 import { useRouter } from 'next/router';
@@ -72,7 +68,7 @@ const style = css`
     }
 `;
 
-export default function Section() {
+export default function Section(): JSX.Element {
     const router = useRouter();
 
     return (

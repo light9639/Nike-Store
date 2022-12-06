@@ -6,7 +6,7 @@ import SlideStyled from "../styles/SlideStyled";
 import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { SlideType, GreetingsProps } from "../pages/api/TypeBox";
+import { SlideType, GreetingsProps } from "../pages/Type/TypeBox";
 
 export default function Stuff({ name }: GreetingsProps): JSX.Element {
     const router = useRouter()
@@ -35,7 +35,6 @@ export default function Stuff({ name }: GreetingsProps): JSX.Element {
         }
     }
 
-    
     useEffect(() => {
         getData();
     }, []);
@@ -78,18 +77,18 @@ export default function Stuff({ name }: GreetingsProps): JSX.Element {
                                     </div>
                                     <div className="pt-5 px-2 flex flex-col gap-2">
 
-                                        <h2 className="tracking-tighter text-base md:text-xl overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 md:mb-0" title="Best Headphone Ever">
+                                        <h2 className="tracking-tighter text-base xl:text-xl overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 xl:mb-0" title="Best Headphone Ever">
                                             {a.name}
                                         </h2>
 
                                         <div className='tracking-tighter'>
-                                            <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{a.info}</p>
-                                            <span className="text-base md:text-xl absolute right-3 -translate-y-16 mt-3 md:mt-0">{a.price}</span>
+                                            <p className='pb-1 xl:pb-2 text-sm text-gray-600 dark:text-white'>{a.info}</p>
+                                            <span className="text-base xl:text-xl absolute right-3 -translate-y-16 mt-3 xl:mt-0">{a.price}</span>
                                         </div>
 
                                     </div>
-                                    <div className="block md:flex pl-2 pb-2">
-                                        <span className="flex items-center my-3 md:my-0">
+                                    <div className="block lg:flex pl-2 pb-2">
+                                        <span className="flex items-center my-3 lg:my-0">
                                             <svg fill={a.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                             </svg>
@@ -107,7 +106,7 @@ export default function Stuff({ name }: GreetingsProps): JSX.Element {
                                             </svg>
                                             <span className="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{a.Review} Reviews</span>
                                         </span>
-                                        <span className="hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
+                                        <span className="hidden lg:flex lg:ml-3 lg:pl-3 lg:py-2 lg:border-l-2 border-gray-200 space-x-2s gap-1 xl:gap-3">
                                             <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
                                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>

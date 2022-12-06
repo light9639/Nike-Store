@@ -6,7 +6,7 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Example(): JSX.Element {
     return (
         <Menu as="div" className="relative inline-block text-left ml-1">
             <div>

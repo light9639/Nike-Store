@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes'
 
-export default function DarkModeToggleButton() {
+export default function DarkModeToggleButton(): JSX.Element {
     const { theme, setTheme } = useTheme()
 
     return (
@@ -14,6 +14,7 @@ export default function DarkModeToggleButton() {
                 type='button'
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
+                {/* 라이트 모드 */}
                 <span className='dark:hidden'>
                     <span className="w-8 h-8 rounded-full flex items-center justify-center transition duration-500">
                         <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none transition duration-500 transform text-blue-500 opacity-100 scale-100">
@@ -29,6 +30,7 @@ export default function DarkModeToggleButton() {
                     </span>
                 </span>
 
+                {/* 다크 모드 */}
                 <span className='hidden dark:inline'>
                     <span className="w-8 h-8 rounded flex items-center justify-center transition duration-500">
                         <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none transition duration-500 transform text-blue-500 opacity-0 scale-0">

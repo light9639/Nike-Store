@@ -10,9 +10,19 @@ import Minimal from './index_components/Minimal';
 import NikeKids from './index_components/Nike_Kids';
 import Shop from './index_components/Shop';
 import Slide from '../components/Slide';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+
 
 const Home: NextPage = () => {
+  const [loading, setLoading] = useState<boolean>(true);
   const router = useRouter()
+
+  useEffect(() => {
+    axios.get("").then((res) => {
+      setLoading(false);
+  });
+  }, []);
 
   return (
     <>

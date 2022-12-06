@@ -7,8 +7,10 @@ import Layout from "../components/LayOut";
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
+import { SessionProvider } from "next-auth/react"
+import { wrapper } from "../store";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const router = useRouter()
   
   useEffect(() => {
@@ -23,11 +25,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider attribute="class">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <SessionProvider session={pageProps.session}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SessionProvider>
     </ThemeProvider>
   )
 }
 
-export default MyApp
+export default wrapper.withRedux(MyApp)

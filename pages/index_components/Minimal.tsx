@@ -1,4 +1,4 @@
-import { RouteType } from '../api/TypeBox'
+import { RouteType } from '../Type/TypeBox'
 import css from 'styled-jsx/css';
 
 const Minimal_style = css`

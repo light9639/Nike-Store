@@ -1,18 +1,26 @@
 import Link from 'next/link';
-import { useState } from 'react';
-import { RouteType } from '../api/TypeBox'
-import Shoes from '../../data/Shoes.json';
+import { useEffect, useState } from 'react';
+import { RouteType, ShoeType } from '../Type/TypeBox'
+// import Shoes from '../../data/Shoes.json';
+import axios from 'axios';
 
 export default function Shop(): JSX.Element {
-    const [Shop, setShop] = useState(Shoes.ShopAll);
+    const [shop, setShop] = useState([]);
+    const SHOP_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
+    
+    useEffect(() => {
+        axios.get(SHOP_API_URL).then((res: any) => {
+            setShop(res.data.ShopAll)
+        })
+    }, []);
 
     return (
         <>
-            <div className="container mt-12 mb-20 mx-auto px-4 md:px-12">
-                <h2 className='font-semibold text-3xl text-center md:text-left'>ShopAll</h2>
+            <div className="max-w-screen-2xl mt-12 mb-20 mx-auto px-7 md:px-5 xl:px-10">
+                <h2 className='font-semibold text-3xl text-center xl:text-left'>ShopAll</h2>
                 <div className="md:flex flex-wrap -mx-1 lg:-mx-4">
                     {
-                        Shop.map(function (a, i: number) {
+                        shop.map(function (a: ShoeType, i: number) {
                             return (
                                 <div className="md:w-1/3 rounded overflow-hidden mx-auto my-8 p-3 text-center" key={i}>
                                     <Link href={a.href}>

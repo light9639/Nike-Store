@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import HeadInfo from '../components/HeadInfo'
-import { status, Res } from './api/TypeBox'
-function Error({ statusCode }: status) {
+import { status, Res } from './Type/TypeBox'
+export default function Error({ statusCode }: status): JSX.Element {
     <HeadInfo title="Error Page" contents="Error Page"></HeadInfo>
 
     return (
@@ -30,5 +30,3 @@ Error.getInitialProps = ({ res, err }: Res) => {
     const statusCode = res ? res.statusCode : err ? err.statusCode : 404
     return { statusCode }
 }
-
-export default Error

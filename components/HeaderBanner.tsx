@@ -1,7 +1,7 @@
 import { MegaphoneIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
 
-export default function Example() {
+export default function Example(): JSX.Element {
     const [advertise, setAdvertise] = useState<boolean>(true);
 
     return (

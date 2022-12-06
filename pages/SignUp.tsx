@@ -1,7 +1,7 @@
 import React from 'react'
 import HeadInfo from '../components/HeadInfo'
 
-function SignUp() {
+export default function SignUp(): JSX.Element {
     <HeadInfo title="SignUp page" contents="SignUp page" />
 
     return (
@@ -50,5 +50,3 @@ function SignUp() {
         </>
     )
 }
-
-export default SignUp

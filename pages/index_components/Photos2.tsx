@@ -1,4 +1,4 @@
-import { RouteType } from '../api/TypeBox'
+import { RouteType } from '../Type/TypeBox'
 
 export default function Photos2(props: RouteType): JSX.Element {
 

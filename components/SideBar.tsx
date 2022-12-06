@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SideBar() {
+export default function SideBar(): JSX.Element {
     return (
         <>
             <aside className="fixed top-0 left-0 w-64 h-full" aria-label="Sidenav">
@@ -183,5 +183,3 @@ function SideBar() {
         </>
     )
 }
-
-export default SideBar

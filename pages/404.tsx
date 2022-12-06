@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeadInfo from "../components/HeadInfo";
 import React from 'react'
 
-export default function PageNotFound() {
+export default function PageNotFound(): JSX.Element {
     return (
         <>
             <HeadInfo title="404 Page" contents="404 Page" />
