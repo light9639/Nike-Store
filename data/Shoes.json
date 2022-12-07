@@ -9,6 +9,7 @@
             "price": "119,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -27,6 +28,7 @@
             "price": "139,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -45,6 +47,7 @@
             "price": "188,100원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -63,6 +66,7 @@
             "price": "71,200원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -81,6 +85,7 @@
             "price": "159,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -99,6 +104,7 @@
             "price": "219,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -117,6 +123,7 @@
             "price": "159,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -135,6 +142,7 @@
             "price": "139,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -153,6 +161,7 @@
             "price": "129,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -171,6 +180,7 @@
             "price": "79,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -189,6 +199,7 @@
             "price": "139,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -207,6 +218,7 @@
             "price": "149,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -225,6 +237,7 @@
             "price": "169,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -243,6 +256,7 @@
             "price": "169,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -261,6 +275,7 @@
             "price": "119,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -279,6 +294,7 @@
             "price": "129,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -297,6 +313,7 @@
             "price": "179,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -315,6 +332,7 @@
             "price": "159,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -333,6 +351,7 @@
             "price": "129,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -351,6 +370,7 @@
             "price": "179,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -369,6 +389,7 @@
             "price": "189,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -387,6 +408,7 @@
             "price": "129,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -405,6 +427,7 @@
             "price": "129,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -423,6 +446,7 @@
             "price": "159,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "none",
@@ -441,6 +465,7 @@
             "price": "139,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -459,6 +484,7 @@
             "price": "129,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -477,6 +503,7 @@
             "price": "109,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -495,6 +522,7 @@
             "price": "189,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -513,6 +541,7 @@
             "price": "99,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -531,6 +560,7 @@
             "price": "139,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -549,6 +579,7 @@
             "price": "99,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -567,6 +598,7 @@
             "price": "143,100원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -585,6 +617,7 @@
             "price": "209,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -603,6 +636,7 @@
             "price": "135,200원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "none",
                 "second": "none",
@@ -621,6 +655,7 @@
             "price": "239,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -639,6 +674,7 @@
             "price": "189,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -657,6 +693,7 @@
             "price": "139,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -675,6 +712,7 @@
             "price": "62,100원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -693,6 +731,7 @@
             "price": "139,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "none",
                 "second": "none",
@@ -711,6 +750,7 @@
             "price": "209,000원",
             "Gender": "Men",
             "href": "/Men",
+            "color": "blue",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -731,6 +771,7 @@
             "price": "95,200원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -749,6 +790,7 @@
             "price": "97,300원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -767,6 +809,7 @@
             "price": "132,300원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -785,6 +828,7 @@
             "price": "79,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -803,6 +847,7 @@
             "price": "129,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -821,6 +866,7 @@
             "price": "159,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -839,6 +885,7 @@
             "price": "119,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -857,6 +904,7 @@
             "price": "169,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -875,6 +923,7 @@
             "price": "189,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -893,6 +942,7 @@
             "price": "329,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -911,6 +961,7 @@
             "price": "169,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -929,6 +980,7 @@
             "price": "99,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -947,6 +999,7 @@
             "price": "129,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -965,6 +1018,7 @@
             "price": "125,300원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -983,6 +1037,7 @@
             "price": "95,200원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1001,6 +1056,7 @@
             "price": "179,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1019,6 +1075,7 @@
             "price": "159,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1037,6 +1094,7 @@
             "price": "129,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1055,6 +1113,7 @@
             "price": "159,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1073,6 +1132,7 @@
             "price": "109,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1091,6 +1151,7 @@
             "price": "179,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1109,6 +1170,7 @@
             "price": "119,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1127,6 +1189,7 @@
             "price": "169,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "none",
                 "second": "none",
@@ -1145,6 +1208,7 @@
             "price": "151,200원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1163,6 +1227,7 @@
             "price": "103,200원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1181,6 +1246,7 @@
             "price": "129,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1199,6 +1265,7 @@
             "price": "79,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1217,6 +1284,7 @@
             "price": "199,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1235,6 +1303,7 @@
             "price": "189,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1253,6 +1322,7 @@
             "price": "139,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1271,6 +1341,7 @@
             "price": "159,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1289,6 +1360,7 @@
             "price": "139,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "none",
                 "second": "none",
@@ -1307,6 +1379,7 @@
             "price": "69,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1325,6 +1398,7 @@
             "price": "269,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1343,6 +1417,7 @@
             "price": "69,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1361,6 +1436,7 @@
             "price": "89,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1379,6 +1455,7 @@
             "price": "89,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1397,6 +1474,7 @@
             "price": "169,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1415,6 +1493,7 @@
             "price": "139,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1433,6 +1512,7 @@
             "price": "99,000원",
             "Gender": "Women",
             "href": "/Women",
+            "color": "red",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1453,6 +1533,7 @@
             "price": "44,900원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1471,6 +1552,7 @@
             "price": "53,400원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1489,6 +1571,7 @@
             "price": "59,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1507,6 +1590,7 @@
             "price": "67,500원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1525,6 +1609,7 @@
             "price": "79,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1543,6 +1628,7 @@
             "price": "89,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1561,6 +1647,7 @@
             "price": "169,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1579,6 +1666,7 @@
             "price": "109,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1597,6 +1685,7 @@
             "price": "119,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1615,6 +1704,7 @@
             "price": "69,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1633,6 +1723,7 @@
             "price": "119,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1651,6 +1742,7 @@
             "price": "119,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1669,6 +1761,7 @@
             "price": "60,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1687,6 +1780,7 @@
             "price": "119,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1705,6 +1799,7 @@
             "price": "48,800원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1723,6 +1818,7 @@
             "price": "77,400원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1741,6 +1837,7 @@
             "price": "149,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1759,6 +1856,7 @@
             "price": "169,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1777,6 +1875,7 @@
             "price": "109,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "none",
@@ -1795,6 +1894,7 @@
             "price": "119,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1813,6 +1913,7 @@
             "price": "65,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1831,6 +1932,7 @@
             "price": "49,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1849,6 +1951,7 @@
             "price": "99,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1867,6 +1970,7 @@
             "price": "39,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1885,6 +1989,7 @@
             "price": "55,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1903,6 +2008,7 @@
             "price": "59,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1921,6 +2027,7 @@
             "price": "65,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1939,6 +2046,7 @@
             "price": "55,200원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1957,6 +2065,7 @@
             "price": "45,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1975,6 +2084,7 @@
             "price": "119,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -1993,6 +2103,7 @@
             "price": "89,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2011,6 +2122,7 @@
             "price": "109,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2029,6 +2141,7 @@
             "price": "69,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2047,6 +2160,7 @@
             "price": "65,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2065,6 +2179,7 @@
             "price": "95,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2083,6 +2198,7 @@
             "price": "23,400원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2101,6 +2217,7 @@
             "price": "85,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2119,6 +2236,7 @@
             "price": "53,100원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2137,6 +2255,7 @@
             "price": "57,900원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
@@ -2155,6 +2274,7 @@
             "price": "99,000원",
             "Gender": "Kids",
             "href": "/Kids",
+            "color": "purple",
             "star": {
                 "first": "currentColor",
                 "second": "currentColor",
