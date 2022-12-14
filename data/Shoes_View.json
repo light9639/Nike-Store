@@ -1,7 +1,7 @@
 {
     "Every": [
         {
-            "index": "0",
+            "index": 0,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/912d1811-f410-4c4b-9a79-e3336d42af25/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-ap-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-nZslGrMM.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/974f92a0-1890-425a-bb81-640d54d63f5b/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-ap-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-nZslGrMM.png",
@@ -23,10 +23,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "1",
+            "index": 1,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/04421d64-7214-4718-ba73-93e6d1447bac/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-%EB%AF%B8%EB%93%9C-07-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-TwoWSDaa.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0c249def-bb46-484b-a2ef-50417fe13123/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-%EB%AF%B8%EB%93%9C-07-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-TwoWSDaa.png",
@@ -48,10 +48,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "2",
+            "index": 2,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f13f3cc4-ac24-46e0-8dc7-e92a41323e06/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-OFhu9KQr.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ae426a22-26b5-4e30-98d9-8e39fe96acea/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-OFhu9KQr.png",
@@ -73,10 +73,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "3",
+            "index": 3,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/53716222-2341-477c-b508-80909e3b0d67/%EC%99%80%ED%94%8C-%EB%8D%B0%EB%B7%B0-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-v8VoXK5w.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3cfea17f-b63f-42c8-a3c5-d1d84afb9527/%EC%99%80%ED%94%8C-%EB%8D%B0%EB%B7%B0-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-v8VoXK5w.png",
@@ -98,10 +98,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "4",
+            "index": 4,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5b25746-8542-44ef-afcc-39a77628fd9a/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%AF%B8%EB%93%9C-se-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-59ljZg7U.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/67cd1c6d-7d3b-407c-9801-adb8ba8d3d3d/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%AF%B8%EB%93%9C-se-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-59ljZg7U.png",
@@ -123,10 +123,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "5",
+            "index": 5,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cd58521a-08e8-434d-aa14-c821e2b3909c/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%8E%98%EB%8B%88-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-qde0fIOS.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dfd718b2-96cb-41c1-ae51-c47fb63e9ead/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%8E%98%EB%8B%88-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-qde0fIOS.png",
@@ -148,10 +148,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "6",
+            "index": 6,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fa9c8ce1-f1f0-4cc9-be69-d6c4e68236a9/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9-90-se-%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB-%E3%83%87%E3%82%A4-%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-G1sFr0.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/890e3bec-eeee-4e04-b3fb-63da66efa989/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9-90-se-%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB-%E3%83%87%E3%82%A4-%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-G1sFr0.png",
@@ -173,10 +173,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "7",
+            "index": 7,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4839b560-7960-4303-a4d3-8366c543b306/%EC%9E%90%EC%9D%B4%EC%96%B8-2-pf-%EB%82%A8%EC%84%B1-%EB%86%8D%EA%B5%AC%ED%99%94-xOQoP1GV.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1db43832-8ab4-403a-8c6b-a7647e72e7b8/%EC%9E%90%EC%9D%B4%EC%96%B8-2-pf-%EB%82%A8%EC%84%B1-%EB%86%8D%EA%B5%AC%ED%99%94-xOQoP1GV.png",
@@ -198,10 +198,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "8",
+            "index": 8,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c037b96b-9f24-4d0d-9a53-eb714120b324/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-77-%ED%94%84%EB%A1%9C-%ED%81%B4%EB%9F%BD-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-wvJsCRIE.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4171f94d-e23c-49bb-aafe-46d95f936dd9/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-77-%ED%94%84%EB%A1%9C-%ED%81%B4%EB%9F%BD-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-wvJsCRIE.png",
@@ -223,10 +223,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "9",
+            "index": 9,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/06692ab9-e1db-4b7d-aa72-196be0f9de4d/%EC%BD%94%ED%8A%B8-%EC%A4%8C-%EB%9D%BC%EC%9D%B4%ED%8A%B8-3-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-pU4RM1nf.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/95bfae5d-1213-4657-9f22-8fa9ea6883e0/%EC%BD%94%ED%8A%B8-%EC%A4%8C-%EB%9D%BC%EC%9D%B4%ED%8A%B8-3-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-pU4RM1nf.png",
@@ -248,10 +248,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "10",
+            "index": 10,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9fde7126-69ff-4c24-8154-c284382ca15d/%EC%BD%94%ED%8A%B8-%EC%97%90%EC%96%B4-%EC%A4%8C-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%ED%94%84%EB%A1%9C-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-ggQ7BYZT.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/b9ca9cc8-63d6-4fa0-aa6d-98f3e9bc7152/%EC%BD%94%ED%8A%B8-%EC%97%90%EC%96%B4-%EC%A4%8C-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%ED%94%84%EB%A1%9C-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-ggQ7BYZT.png",
@@ -273,10 +273,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "11",
+            "index": 11,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9fcfbcf8-2db3-4cce-a5f8-6328b8b17ce2/%EC%A1%B0%EB%8D%98-%EB%A7%A5%EC%8A%A4-%EC%95%84%EC%9A%B0%EB%9D%BC-4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-o9fvckTu.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/6090367d-480d-4e5e-909a-3008ec733f6b/%EC%A1%B0%EB%8D%98-%EB%A7%A5%EC%8A%A4-%EC%95%84%EC%9A%B0%EB%9D%BC-4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-o9fvckTu.png",
@@ -298,10 +298,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "12",
+            "index": 12,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/398b3bbb-a881-49c3-ae39-26e64d91566d/%EC%97%90%EC%96%B4-%ED%94%84%EB%A0%88%EC%8A%A4%ED%86%A0-x-hello-kitty-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-Jf05X0Z3.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b91fe809-a85e-47f1-af63-b1213d7157a0/%EC%97%90%EC%96%B4-%ED%94%84%EB%A0%88%EC%8A%A4%ED%86%A0-x-hello-kitty-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-Jf05X0Z3.png",
@@ -323,10 +323,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "13",
+            "index": 13,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7a15ef14-44f4-435f-9b7c-81bc517aa285/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-0qoVssMu.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f4426181-717c-4fa1-8472-ae103f30c4e9/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-0qoVssMu.png",
@@ -348,10 +348,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "14",
+            "index": 14,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a31ae86f-0503-42d7-bee8-7ae1137b89c0/%EB%A5%B4%EB%B8%8C%EB%A1%A0-%EC%9C%84%ED%8A%B8%EB%8B%88%EC%8A%A4-7-ep-%EB%86%8D%EA%B5%AC%ED%99%94-eBa98sAg.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/acc8c507-046e-4721-addb-82725ab84846/%EB%A5%B4%EB%B8%8C%EB%A1%A0-%EC%9C%84%ED%8A%B8%EB%8B%88%EC%8A%A4-7-ep-%EB%86%8D%EA%B5%AC%ED%99%94-eBa98sAg.png",
@@ -373,11 +373,11 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
 
-            "index": "15",
+            "index": 15,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7de8cc00-5e27-46ca-8bfc-3a92b0e94d58/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-UcWKzjsk.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/07be1d89-2e46-4d89-bcd1-2730e51ebeb3/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-UcWKzjsk.png",
@@ -399,10 +399,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "16",
+            "index": 16,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f0f08080-83c0-4587-8993-1fa3f7638fd7/%EC%A0%90%ED%94%84%EB%A7%A8-%ED%88%AC-%ED%8A%B8%EB%A0%88%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-lwPQR4YA.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ff5b8859-0c15-4351-b3f2-a2172c1ae135/%EC%A0%90%ED%94%84%EB%A7%A8-%ED%88%AC-%ED%8A%B8%EB%A0%88%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-lwPQR4YA.png",
@@ -424,10 +424,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "17",
+            "index": 17,
             "src": {
                 "first": "https://static.shoeprize.com/open_raffle/main_carousel/67743/CZ0790-104-shoeprize-AIR-JORDAN-1-LOW-OG-UNC-80857-1658053279027.jpeg",
                 "second": "https://static.shoeprize.com/open_raffle/main_carousel/67744/CZ0790-104-shoeprize-AIR-JORDAN-1-LOW-OG-UNC-80857-1658053280613.jpeg",
@@ -449,10 +449,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "18",
+            "index": 18,
             "src": {
                 "first": "https://static.shoeprize.com/open_raffle/main_carousel/24208/553558-612-shoeprize-AIR-JORDAN-1-LOW-BRED-TOE-56772-1628392439307.jpeg",
                 "second": "https://static.shoeprize.com/open_raffle/main_carousel/24209/553558-612-shoeprize-AIR-JORDAN-1-LOW-BRED-TOE-56772-1628392440872.jpeg",
@@ -474,10 +474,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "19",
+            "index": 19,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a3b054fe-88b5-473a-9279-73c11257281b/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-%EB%AF%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-V0ygJnT3.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b798216a-e4ea-4aef-9814-1f96cf061f3e/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-%EB%AF%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-V0ygJnT3.png",
@@ -499,10 +499,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "20",
+            "index": 20,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/873152b1-4ab3-48b4-9d11-227927aa51c5/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-96-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-phEy4TYA.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/35fc82d3-d2f7-4281-aeed-c54df2921981/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-96-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-phEy4TYA.png",
@@ -524,10 +524,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "21",
+            "index": 21,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f4bac890-f200-46be-8dbe-81d627c8cfb8/%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4-3-fg-%EC%B2%9C%EC%97%B0-%EC%9E%94%EB%94%94-%ED%81%B4%EB%A6%AC%ED%8A%B8-%EC%B6%95%EA%B5%AC%ED%99%94-rZC5CjOW.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/1487034d-59fe-4dac-8ee4-5041ddb34443/%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4-3-fg-%EC%B2%9C%EC%97%B0-%EC%9E%94%EB%94%94-%ED%81%B4%EB%A6%AC%ED%8A%B8-%EC%B6%95%EA%B5%AC%ED%99%94-rZC5CjOW.png",
@@ -549,10 +549,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "22",
+            "index": 22,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3eb1a8f4-2bc9-470d-afd2-943fbeabc61c/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-%EB%AF%B8%EB%93%9C-77-%EC%A0%90%EB%B3%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-G1tku13Z.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/645c3500-e618-418b-86e6-74ee2f3ee24d/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-%EB%AF%B8%EB%93%9C-77-%EC%A0%90%EB%B3%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-G1tku13Z.png",
@@ -574,10 +574,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "23",
+            "index": 23,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/547e7758-cf6b-4c79-8551-52ec404eae81/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EB%A0%88%ED%8A%B8%EB%A1%9C-se-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-2zYLFxFj.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/e1506d9d-17aa-4e4b-bd99-7c3d84446a40/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EB%A0%88%ED%8A%B8%EB%A1%9C-se-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-2zYLFxFj.png",
@@ -599,10 +599,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "1"
+            "Review": 1
         },
         {
-            "index": "24",
+            "index": 24,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bad3ac0a-7732-490b-b3dc-8bb94b31f4dd/%EC%99%80%ED%94%8C-%EC%9B%90-%EB%A0%88%EB%8D%94-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-PbQr1kQb.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3792c43a-3ce4-48fa-9790-2da309027ce7/%EC%99%80%ED%94%8C-%EC%9B%90-%EB%A0%88%EB%8D%94-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-PbQr1kQb.png",
@@ -624,10 +624,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "25",
+            "index": 25,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d8456b17-5d3a-4f87-8c41-9b4e25c03674/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-w2DJoBxO.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c7f71bf1-41c8-4ead-ad17-e460f8c58f9c/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-w2DJoBxO.png",
@@ -649,10 +649,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "26",
+            "index": 26,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9432a0a4-3872-4cc6-87ea-da91a2741ae7/%EC%97%90%EC%96%B4-%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-83-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-L9SyLOIA.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/23f015d3-a20a-4581-a3ea-ace135abcd49/%EC%97%90%EC%96%B4-%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-83-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-L9SyLOIA.png",
@@ -674,10 +674,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "27",
+            "index": 27,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/93af6553-1052-4ade-b35d-507f5010a561/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-95-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-y9mfxzDf.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/417848ce-c1d2-4c17-b61c-8cb256535c00/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-95-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-y9mfxzDf.png",
@@ -699,10 +699,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "28",
+            "index": 28,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f0e7e1ff-94a5-4432-837e-0e0839e8aee4/%EC%BD%94%ED%8A%B8-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-ZWmFPlzX.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ff70f30d-b9af-473c-81ed-98355e0c94b4/%EC%BD%94%ED%8A%B8-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-ZWmFPlzX.png",
@@ -724,10 +724,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "29",
+            "index": 29,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0dcf45dc-ffd3-49a5-bd2a-e89046b1d84f/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-se-%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-1nVYHSHC.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/02328401-d147-4587-9f11-21de07338c12/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-se-%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-1nVYHSHC.png",
@@ -749,10 +749,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "30",
+            "index": 30,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0c300464-0632-45ce-a727-ddd4cceeedab/sb-%ED%8F%AC%EA%B3%A0-%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8A%B8%EB%B3%B4%EB%93%9C%ED%99%94-5KRukINO.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5990c732-eede-4841-9ac0-19442f95e982/sb-%ED%8F%AC%EA%B3%A0-%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8A%B8%EB%B3%B4%EB%93%9C%ED%99%94-5KRukINO.png",
@@ -763,7 +763,7 @@
             },
             "alt": "나이키 SB 줌 POGO 플러스",
             "name": "나이키 SB 줌 POGO 플러스",
-            "info": "여성 스케이트보드화",
+            "info": "남성 스케이트보드화",
             "price": "99,000원",
             "Gender": "Men",
             "href": "/Men",
@@ -774,10 +774,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "31",
+            "index": 31,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/02ef58db-e9ea-4783-ba0b-bc7f27323d20/%ED%94%84%EB%A6%AC-%ED%85%8C%EB%9D%BC-%EB%B9%84%EC%8A%A4%ED%83%80-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-mMruJbkD.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6ddaf7f2-be19-477c-9962-4047aab9f47b/%ED%94%84%EB%A6%AC-%ED%85%8C%EB%9D%BC-%EB%B9%84%EC%8A%A4%ED%83%80-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-mMruJbkD.png",
@@ -799,10 +799,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "32",
+            "index": 32,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0308f185-4193-40cd-b5a6-8e69236c6e75/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-96-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-oEIkSdbT.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dc0d100e-8e94-4dac-8531-ad0baed960c5/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-96-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-oEIkSdbT.png",
@@ -824,10 +824,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "33",
+            "index": 33,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/032dc3b6-ea96-402a-b353-0b116ae0dbd7/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZGHdBJ2O.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e3572b0c-80bc-45e1-a8dc-8bdebf214930/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZGHdBJ2O.png",
@@ -849,10 +849,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "34",
+            "index": 34,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6e9b71f2-617b-40f3-b437-69fcbc76d0ae/%EB%A5%B4%EB%B8%8C%EB%A1%A0-xx-ep-%EB%86%8D%EA%B5%AC%ED%99%94-H5eTtmwb.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/df73dcbe-4d93-4e69-a835-a6f571bede7b/%EB%A5%B4%EB%B8%8C%EB%A1%A0-xx-ep-%EB%86%8D%EA%B5%AC%ED%99%94-H5eTtmwb.png",
@@ -874,10 +874,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "35",
+            "index": 35,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/521474a9-b5e0-4f18-9d57-788946763cfc/%EC%97%90%EC%96%B4-%EC%A4%8C-%ED%94%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8-95-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-vm83YLa0.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2af899ea-48f4-4512-bafa-17aee87e4a44/%EC%97%90%EC%96%B4-%EC%A4%8C-%ED%94%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8-95-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-vm83YLa0.png",
@@ -899,10 +899,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "36",
+            "index": 36,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4173e966-5dd2-4ea2-adb2-115129a9d1c0/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-07-lv8-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-sS79sTts.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/50c7db13-8664-4a12-afd7-5bc039e861ef/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-07-lv8-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-sS79sTts.png",
@@ -924,10 +924,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "37",
+            "index": 37,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/970b5ccd-4078-4ba5-95a1-72c789f8f884/%EC%BD%94%ED%8A%B8-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EC%BA%94%EB%B2%84%EC%8A%A4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-kUjuk7Vk.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a77f5033-7300-4313-bcd4-33efa9db99cf/%EC%BD%94%ED%8A%B8-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EC%BA%94%EB%B2%84%EC%8A%A4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-kUjuk7Vk.png",
@@ -949,10 +949,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "38",
+            "index": 38,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/be569a93-632f-433b-8cda-1af0a667e21a/%EC%9E%90%EC%9D%B4%EC%96%B8-2-pf-%EB%82%A8%EC%84%B1-%EB%86%8D%EA%B5%AC%ED%99%94-4CHjvGO6.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/64470e59-23e2-43f3-9b75-3370dcb81f94/%EC%9E%90%EC%9D%B4%EC%96%B8-2-pf-%EB%82%A8%EC%84%B1-%EB%86%8D%EA%B5%AC%ED%99%94-4CHjvGO6.png",
@@ -974,10 +974,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "39",
+            "index": 39,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b093663e-817f-44d0-8cd3-5d53905c1a62/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A0%88%ED%8A%B8%EB%A1%9C-%ED%95%98%EC%9D%B4-og-%EC%8B%A0%EB%B0%9C-uXXnpk3p.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/27cc125a-ce18-4484-b65f-954889e1723f/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A0%88%ED%8A%B8%EB%A1%9C-%ED%95%98%EC%9D%B4-og-%EC%8B%A0%EB%B0%9C-uXXnpk3p.png",
@@ -999,10 +999,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "40",
+            "index": 40,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6c9a48b8-1a23-43bd-be3f-5ef5c6238be5/%EB%94%94%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-hwpyPLjL.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/430dd580-91f9-4440-a84a-cab7a5cbe287/%EB%94%94%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-hwpyPLjL.png",
@@ -1024,10 +1024,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "41",
+            "index": 41,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e3e132f7-e392-4bb6-b9ef-a70cf3de528e/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-YZykagZe.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/42823162-4ac7-485f-b554-22e0d03daace/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-YZykagZe.png",
@@ -1049,10 +1049,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "42",
+            "index": 42,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1fcd2192-0585-4da1-8c88-1b3eabe87acd/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-%ED%8A%B8%EB%A0%88%EC%9D%BC-3-gore-tex-%EC%97%AC%EC%84%B1-%EC%9B%8C%ED%84%B0%ED%94%84%EB%A3%A8%ED%94%84-%ED%8A%B8%EB%A0%88%EC%9D%BC-%EB%9F%AC%EB%8B%9D%ED%99%94-EX5Zmh9T.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/bbd74eb4-33e5-4332-abcc-a60f4449a1a1/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-%ED%8A%B8%EB%A0%88%EC%9D%BC-3-gore-tex-%EC%97%AC%EC%84%B1-%EC%9B%8C%ED%84%B0%ED%94%84%EB%A3%A8%ED%94%84-%ED%8A%B8%EB%A0%88%EC%9D%BC-%EB%9F%AC%EB%8B%9D%ED%99%94-EX5Zmh9T.png",
@@ -1074,10 +1074,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "43",
+            "index": 43,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cacba2e5-9087-4d33-9460-6f0411e8d834/%EB%B2%84%EB%A1%9C%EC%9A%B0-se-%EC%97%AC%EC%84%B1-%EC%8A%AC%EB%A6%AC%ED%8D%BC-Krkzq5vy.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e63af890-4a07-49e8-92e4-28b0af80e82f/%EB%B2%84%EB%A1%9C%EC%9A%B0-se-%EC%97%AC%EC%84%B1-%EC%8A%AC%EB%A6%AC%ED%8D%BC-Krkzq5vy.png",
@@ -1099,10 +1099,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "44",
+            "index": 44,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cba10837-d3a4-404c-8cce-6bfb3d46a0b1/%EC%99%80%ED%94%8C-%EC%9B%90-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-hII2WvnX.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/74218913-a82e-4ca9-bfdd-f0f758c625c4/%EC%99%80%ED%94%8C-%EC%9B%90-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-hII2WvnX.png",
@@ -1124,10 +1124,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "45",
+            "index": 45,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cb3833c9-995e-4059-8c9b-9df48de454e9/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EC%97%85-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-GPTVYT0y.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a93c7ad7-1aa7-4aea-b60c-929c8150183a/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EC%97%85-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-GPTVYT0y.png",
@@ -1149,10 +1149,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "46",
+            "index": 46,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d3a4c6c9-8303-4733-b6a3-d17c00cf8dab/%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-KzwVEwzG.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3174f9d7-64cc-4841-8c79-a6b96af19eb4/%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-KzwVEwzG.png",
@@ -1174,10 +1174,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "47",
+            "index": 47,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d685d1c0-5606-4258-8254-ee75ac855ac8/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-pre-day-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-YNHkXslx.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cc962a14-27f2-4bba-b998-e424111b0390/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-pre-day-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-YNHkXslx.png",
@@ -1199,10 +1199,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "48",
+            "index": 48,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0d8d6035-4170-4c8c-869e-bc7ef8f68fc1/%EC%A4%8C-%ED%94%8C%EB%9D%BC%EC%9D%B4-5-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-WvnognAD.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/23996d79-c9a1-49c1-86d8-b76ab5be73b1/%EC%A4%8C-%ED%94%8C%EB%9D%BC%EC%9D%B4-5-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-WvnognAD.png",
@@ -1224,10 +1224,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "49",
+            "index": 49,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/928f082e-4b98-4fb5-9eb2-13929291857e/%EC%97%90%EC%96%B4-%EC%A4%8C-%EC%95%8C%ED%8C%8C%ED%94%8C%EB%9D%BC%EC%9D%B4-%EB%84%A5%EC%8A%A4%ED%8A%B8-2-%EB%82%A8%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%A0%88%EC%9D%B4%EC%8B%B1%ED%99%94-tL7CEVL8.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/75bdc7ed-f118-4596-8d40-632d508ef2eb/%EC%97%90%EC%96%B4-%EC%A4%8C-%EC%95%8C%ED%8C%8C%ED%94%8C%EB%9D%BC%EC%9D%B4-%EB%84%A5%EC%8A%A4%ED%8A%B8-2-%EB%82%A8%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%A0%88%EC%9D%B4%EC%8B%B1%ED%99%94-tL7CEVL8.png",
@@ -1249,10 +1249,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "50",
+            "index": 50,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/35d313e5-9691-4843-a4f2-65ae40cc5351/%EC%8A%A4%ED%8C%8C%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-aFqxAapA.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/aca59254-6d02-4bac-b656-e836a3daf89d/%EC%8A%A4%ED%8C%8C%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-aFqxAapA.png",
@@ -1274,10 +1274,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "51",
+            "index": 51,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/%EC%A1%B0%EB%8D%98-%EC%86%8C%ED%94%BC%EC%95%84-%EC%97%AC%EC%84%B1-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-y5T8cYUD.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/95c464cd-b01e-42fa-8167-50d021828f7c/%EC%A1%B0%EB%8D%98-%EC%86%8C%ED%94%BC%EC%95%84-%EC%97%AC%EC%84%B1-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-y5T8cYUD.png",
@@ -1299,10 +1299,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "52",
+            "index": 52,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9492ec71-0736-4265-96d6-ea94dbb126a4/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-G0azn2en.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0264a627-5bd0-4512-941c-60f26d628155/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-G0azn2en.png",
@@ -1324,10 +1324,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "53",
+            "index": 53,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dd6a0013-43bc-4e31-9ca5-c787ecba66aa/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-lRceRqE1.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/65bf2577-0707-4d8e-a215-d003d8d9a2a8/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-lRceRqE1.png",
@@ -1349,10 +1349,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "54",
+            "index": 54,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2c212665-4de6-433e-82c0-83b1d5124be7/%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-eG3iTweK.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0bc33fd3-9794-4550-ac88-7f0c92c95cb7/%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-eG3iTweK.png",
@@ -1374,10 +1374,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "55",
+            "index": 55,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fcc9ef0f-ca13-487e-b52a-bc57b24b152d/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%95%A0%ED%81%B4%EB%9F%AC%EB%A9%94%EC%9D%B4%ED%8A%B8-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-9a85NCiw.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/87ef54d6-c43b-49a2-95ca-b7adf5b3e7f7/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%95%A0%ED%81%B4%EB%9F%AC%EB%A9%94%EC%9D%B4%ED%8A%B8-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-9a85NCiw.png",
@@ -1399,10 +1399,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "56",
+            "index": 56,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6cc3b5d4-3a76-4226-86e0-7943716b4a1b/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%97%98%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-fMD68li7.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a456be70-64bc-4c5e-b375-942c90e2288a/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%97%98%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-fMD68li7.png",
@@ -1424,10 +1424,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "57",
+            "index": 57,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/261b9615-4dec-4e1c-9b59-3932d74c5cf7/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%83%BC%E3%82%B9-%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88-%E3%82%B4%E3%83%AB%E3%83%95%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-%E3%83%AF%E3%82%A4%E3%83%89-rZ0pKS.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/44ff2fa1-447b-4388-97cf-0bf2cf39fa3b/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%83%BC%E3%82%B9-%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88-%E3%82%B4%E3%83%AB%E3%83%95%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-%E3%83%AF%E3%82%A4%E3%83%89-rZ0pKS.png",
@@ -1449,10 +1449,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "58",
+            "index": 58,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c26c9ade-e9e7-4c70-a9e0-33d7a628599f/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC-%EB%8D%B0%EC%9D%B4-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ESEj6gGk.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bb61d4c6-3a6e-4cb1-ab32-fb509787f6eb/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC-%EB%8D%B0%EC%9D%B4-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ESEj6gGk.png",
@@ -1474,10 +1474,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "59",
+            "index": 59,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e0f96ae2-51c2-4052-a28b-4a69b3c18718/%EC%9C%88%ED%94%8C%EB%A1%9C-8-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-vx8lNQxI.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f6905c29-cfec-4b73-8ba1-ed13b8bd2380/%EC%9C%88%ED%94%8C%EB%A1%9C-8-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-vx8lNQxI.png",
@@ -1499,10 +1499,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "60",
+            "index": 60,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7584e3a3-32a8-4f3d-a74f-241c215ef39d/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%95%A0%ED%81%B4%EB%9F%AC%EB%A9%94%EC%9D%B4%ED%8A%B8-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-9a85NCiw.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/20e22f9c-66a8-46f0-8ae2-86ece6c672e9/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%95%A0%ED%81%B4%EB%9F%AC%EB%A9%94%EC%9D%B4%ED%8A%B8-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-9a85NCiw.png",
@@ -1524,10 +1524,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "61",
+            "index": 61,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b9236205-47f6-4463-bd04-aa867d56f510/%ED%8F%B0%ED%83%84%EC%B9%B4-%EC%99%80%ED%94%8C-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-HAwnuJaa.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/bf3f86bd-6522-4a22-a052-c139f2df3aaf/%ED%8F%B0%ED%83%84%EC%B9%B4-%EC%99%80%ED%94%8C-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-HAwnuJaa.png",
@@ -1549,10 +1549,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "62",
+            "index": 62,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/38d2ffca-b7ed-45d2-b3de-e3f9595048f5/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-g-%EA%B3%A8%ED%94%84%ED%99%94-a68FMm7V.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/5b7fa589-76fe-42f4-967c-2a5deacf8eb0/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-g-%EA%B3%A8%ED%94%84%ED%99%94-a68FMm7V.png",
@@ -1574,10 +1574,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "63",
+            "index": 63,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d7yyh7rta3tkye7kdyka/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-tUpiD534.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ydp5wlke6errc6bucgkt/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-tUpiD534.png",
@@ -1599,10 +1599,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "64",
+            "index": 64,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b084a3e9-9468-43d4-915d-33989e8c9440/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-aJXARHqW.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2e1d5232-08d9-4766-a853-3968c60aa2bb/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-aJXARHqW.png",
@@ -1624,10 +1624,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "65",
+            "index": 65,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/89f80715-9b70-4b97-81d3-bc3859bcc894/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZuZyA5Sj.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/26d71a26-0aa6-4c92-a1e0-537c574d3c2a/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZuZyA5Sj.png",
@@ -1649,10 +1649,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "66",
+            "index": 66,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c9116d04-8b5c-4757-bc3c-8f64a3efd75f/%EC%BD%94%ED%8A%B8-%EC%A4%8C-%EB%9D%BC%EC%9D%B4%ED%8A%B8-3-%EC%97%AC%EC%84%B1-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-QVZqUbZq.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6ff8bc25-0f2a-4c32-a05c-b23ffc6d2379/%EC%BD%94%ED%8A%B8-%EC%A4%8C-%EB%9D%BC%EC%9D%B4%ED%8A%B8-3-%EC%97%AC%EC%84%B1-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-QVZqUbZq.png",
@@ -1674,10 +1674,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "67",
+            "index": 67,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2a6447a0-804d-4676-ac28-6b6e9f22ead0/%EC%A4%8Cx-%EC%9D%B8%EB%B9%88%EC%84%9C%EB%B8%94-%EB%9F%B0-%ED%94%8C%EB%9D%BC%EC%9D%B4%EB%8B%88%ED%8A%B8-2-%EB%82%A8%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-FCkfJ3L8.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/76947d0b-6995-483f-aa29-9665f7d3f7df/%EC%A4%8Cx-%EC%9D%B8%EB%B9%88%EC%84%9C%EB%B8%94-%EB%9F%B0-%ED%94%8C%EB%9D%BC%EC%9D%B4%EB%8B%88%ED%8A%B8-2-%EB%82%A8%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-FCkfJ3L8.png",
@@ -1699,10 +1699,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "68",
+            "index": 68,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a97d57c7-0e52-4286-bb6f-c71ab0240a8f/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-RyP3te0j.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8111fd04-c27a-4471-b8a2-6792ff648311/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-RyP3te0j.png",
@@ -1724,10 +1724,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "69",
+            "index": 69,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8193aa25-f90f-43db-946f-af1618bd671a/%EC%A4%8C-%EC%97%90%EC%96%B4-%ED%8C%8C%EC%9D%B4%EC%96%B4-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-Cxr4nmAN.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/979fa3a2-b81b-495f-babe-8a3cb1aa38f1/%EC%A4%8C-%EC%97%90%EC%96%B4-%ED%8C%8C%EC%9D%B4%EC%96%B4-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-Cxr4nmAN.png",
@@ -1749,10 +1749,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "70",
+            "index": 70,
             "src": {
                 "first": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/c69d4372-a119-412e-a079-b5b8c1af6e3f/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-1985-arctic-orange-dv1143-800-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg",
                 "second": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/09a729db-02b5-4d5e-9d00-3ac6d66e49bb/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-1985-arctic-orange-dv1143-800-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg",
@@ -1774,10 +1774,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "71",
+            "index": 71,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2b4e0060-e7e6-42cd-aa60-1d6d7e7737f6/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-CFoibTQ1.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/06255a5b-f3ad-419e-85ed-2374c87f22b6/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-CFoibTQ1.png",
@@ -1799,10 +1799,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "72",
+            "index": 72,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/jvcf7clhvzyavyopsi9n/%EB%A0%88%EB%B3%BC%EB%A3%A8%EC%85%98-5-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-MLbmKjwS.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/sfosx7mbldo2hio8j0pu/%EB%A0%88%EB%B3%BC%EB%A3%A8%EC%85%98-5-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-MLbmKjwS.png",
@@ -1824,10 +1824,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "73",
+            "index": 73,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e76351ca-b409-4f93-9d67-6a16e993557e/%EB%B2%A0%EC%9D%B4%ED%8D%BC%ED%94%8C%EB%9D%BC%EC%9D%B4-%EB%84%A5%EC%8A%A4%ED%8A%B8-2-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%A0%88%EC%9D%B4%EC%8B%B1%ED%99%94-EEuP8Nfm.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3ce61696-96d2-4a57-a3d5-04d2d4850138/%EB%B2%A0%EC%9D%B4%ED%8D%BC%ED%94%8C%EB%9D%BC%EC%9D%B4-%EB%84%A5%EC%8A%A4%ED%8A%B8-2-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%A0%88%EC%9D%B4%EC%8B%B1%ED%99%94-EEuP8Nfm.png",
@@ -1849,10 +1849,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "74",
+            "index": 74,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cf895ce2-802a-46f5-b02c-e0805577268a/%EB%A0%88%EB%B3%BC%EB%A3%A8%EC%85%98-5-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-MLbmKjwS.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6dfde775-20c8-4d74-82fa-84b05ab0de24/%EB%A0%88%EB%B3%BC%EB%A3%A8%EC%85%98-5-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-MLbmKjwS.png",
@@ -1874,10 +1874,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "75",
+            "index": 75,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0d5b100a-1c53-462a-8d8e-20b023aed588/%EC%99%80%ED%94%8C-%EB%8D%B0%EB%B7%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-VIKgKEHE.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/e9c34257-6ef8-4554-af93-06b43a405a0d/%EC%99%80%ED%94%8C-%EB%8D%B0%EB%B7%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-VIKgKEHE.png",
@@ -1899,10 +1899,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "76",
+            "index": 76,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9fb89dfa-c161-4695-b52a-2c94d32e1ee5/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-Aq2ktX7K.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7a798d1c-bce4-416c-886d-cbddb6fc69a8/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-Aq2ktX7K.png",
@@ -1924,10 +1924,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "77",
+            "index": 77,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f8519360-a288-40e2-8373-9c0c0615d7b8/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-%ED%93%A8%EC%B6%94%EB%9D%BC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-IzQZNYX6.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e451b9fe-196b-41aa-a233-25ec0735fa2a/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-%ED%93%A8%EC%B6%94%EB%9D%BC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-IzQZNYX6.png",
@@ -1949,10 +1949,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "78",
+            "index": 78,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b2fa4a86-621f-49f3-a6c5-4627d5d9f792/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%82%A2-%E3%82%BA%E3%83%BC%E3%83%A0-%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%AC%E3%83%83%E3%83%97-3-hiit%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-HJFmzR.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/44ff2fa1-447b-4388-97cf-0bf2cf39fa3b/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%83%BC%E3%82%B9-%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88-%E3%82%B4%E3%83%AB%E3%83%95%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-%E3%83%AF%E3%82%A4%E3%83%89-rZ0pKS.png",
@@ -1974,10 +1974,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "79",
+            "index": 79,
             "src": {
                 "first": "https://static.shoeprize.com/open_raffle/main_carousel/None/DR9114-500-shoeprize-NIKE-NIKE-SB-ZOOM-POGO-PLUS-CAVE-PURPLE-99724-1664731181961.jpg",
                 "second": "https://static.shoeprize.com/open_raffle/main_carousel/None/DR9114-500-shoeprize-NIKE-NIKE-SB-ZOOM-POGO-PLUS-CAVE-PURPLE-99724-1664731182023.jpg",
@@ -1999,10 +1999,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "80",
+            "index": 80,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f385aae2-652c-481d-a947-996b7167f4c2/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%83%96%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC-low-77-%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-cJXqm2.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9251790d-e9f7-4478-95bf-bb0c7009657c/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%83%96%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC-low-77-%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-cJXqm2.png",
@@ -2024,10 +2024,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "81",
+            "index": 81,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5df4241e-3f60-4a65-8ff7-4a71548f48b8/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-%EB%AF%B8%EB%93%9C-77-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-yrtWLJwo.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b9f806eb-7be3-4c27-af9f-49c417a8f0e8/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-%EB%AF%B8%EB%93%9C-77-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-yrtWLJwo.png",
@@ -2049,10 +2049,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "82",
+            "index": 82,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/32ca1069-a0d9-4c61-bdde-a233163f9594/%EC%8A%A4%EC%B9%B4%EC%9D%B4-%EC%A1%B0%EB%8D%98-1-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-NUBsZxHF.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3b85ee4c-352e-4fa6-ba4e-60dece308e84/%EC%8A%A4%EC%B9%B4%EC%9D%B4-%EC%A1%B0%EB%8D%98-1-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-NUBsZxHF.png",
@@ -2074,10 +2074,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "83",
+            "index": 83,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/990b2e4a-5453-4961-8d5f-ee5bff3a73e8/%ED%8F%AC%EC%8A%A4-1-le-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-cXdlRmlR.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f323f21a-4007-4bff-8b97-cb41408321cd/%ED%8F%AC%EC%8A%A4-1-le-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-cXdlRmlR.png",
@@ -2099,10 +2099,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "84",
+            "index": 84,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d5a6e8a8-c058-4924-8c9f-ac7955502171/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-PYyP7QQ2.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9a1b0358-5b66-4ec2-a6c9-df6c851e8d2b/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-PYyP7QQ2.png",
@@ -2124,10 +2124,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "85",
+            "index": 85,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/75f8ef04-504b-4b5b-adbf-62da33042786/%EC%A1%B0%EB%8D%98-%EC%8B%9C%EB%A6%AC%EC%A6%88-es-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-oYexDfdk.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3b603080-8a4e-4081-aab7-343ae6e3c05a/%EC%A1%B0%EB%8D%98-%EC%8B%9C%EB%A6%AC%EC%A6%88-es-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-oYexDfdk.png",
@@ -2149,10 +2149,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "86",
+            "index": 86,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6502ce7d-dfd6-45aa-b2b5-fc6b05f8452d/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-tw-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-8ItZtT3T.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a7c620e1-d440-4dd9-b26b-ba70c2592422/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-tw-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-8ItZtT3T.png",
@@ -2174,10 +2174,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "87",
+            "index": 87,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/848bcf22-b9f6-4e08-9df4-368edb07cd93/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-%EB%AF%B8%EB%93%9C-77-d-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-wrYLI0CN.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9a2ffdda-4a16-46c8-83e7-bc69d1f4b64b/%EB%B8%94%EB%A0%88%EC%9D%B4%EC%A0%80-%EB%AF%B8%EB%93%9C-77-d-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-wrYLI0CN.png",
@@ -2199,10 +2199,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "88",
+            "index": 88,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1bdcbf7d-77a4-45de-a60d-92d35b4dac7b/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%AA%A8%ED%8B%B0%EB%B8%8C-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-pvXytq97.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/1f779bd4-50b1-4728-abb8-6e9703693102/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%AA%A8%ED%8B%B0%EB%B8%8C-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-pvXytq97.png",
@@ -2224,10 +2224,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "89",
+            "index": 89,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ae21de2f-f2b8-48cb-9de9-4905b4d106ca/%EC%A3%BC%EB%8B%88%EC%96%B4-%ED%8C%AC%ED%85%80-gt2-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-tf-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%9D%B8%EC%A1%B0-%EC%9E%94%EB%94%94-%EC%B6%95%EA%B5%AC%ED%99%94-zq4HQpPF.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8ada0b6b-94ad-466d-96d9-d85d24859905/%EC%A3%BC%EB%8B%88%EC%96%B4-%ED%8C%AC%ED%85%80-gt2-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-tf-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%9D%B8%EC%A1%B0-%EC%9E%94%EB%94%94-%EC%B6%95%EA%B5%AC%ED%99%94-zq4HQpPF.png",
@@ -2249,10 +2249,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "90",
+            "index": 90,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c03b25b2-8000-4c23-954c-ce6976173c23/%EC%A1%B0%EB%8D%98-%EB%8D%B8%ED%83%80-3-%EB%A1%9C%EC%9A%B0-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-t9pUmoh3.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1e5b774e-0a22-4d78-be4b-03ac0ebe0848/%EC%A1%B0%EB%8D%98-%EB%8D%B8%ED%83%80-3-%EB%A1%9C%EC%9A%B0-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-t9pUmoh3.png",
@@ -2274,10 +2274,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "91",
+            "index": 91,
             "src": {
                 "first": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/e4406f85-deaf-41fe-b030-c32fc9ac6b08/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-2-j-balvin-dq7691-419-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg",
                 "second": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/ee348248-ddba-41e0-ad06-6437fad956da/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-2-j-balvin-dq7691-419-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg",
@@ -2299,10 +2299,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "92",
+            "index": 92,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fb487792-cb5d-425a-b5a8-0f6ae7320487/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EC%9D%B8%ED%84%B0%EB%9D%BD-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-48Fl6f21.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/eb8bbf33-5d77-4237-8b82-36a85982f64d/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EC%9D%B8%ED%84%B0%EB%9D%BD-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-48Fl6f21.png",
@@ -2324,10 +2324,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "93",
+            "index": 93,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e19fcbed-a33f-4b4a-819f-6a6e6fe27085/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-gi7TJTxC.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/81fb744a-ca9f-4dd8-a796-d03b7a1e9f54/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-gi7TJTxC.png",
@@ -2349,10 +2349,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "94",
+            "index": 94,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c16dbcaa-434c-4eba-885c-5e534da30aff/%ED%94%8C%EB%A0%89%EC%8A%A4-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-ZQVsi8Hz.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d8482281-ca46-458b-a85b-c31650927ba8/%ED%94%8C%EB%A0%89%EC%8A%A4-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-ZQVsi8Hz.png",
@@ -2374,10 +2374,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "95",
+            "index": 95,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e1debb53-eeb8-4418-905d-804e130d3fe8/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-ltr-se-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-uUBd3NXT.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d6f3b61b-6389-4c16-8022-b2230668bd13/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-ltr-se-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-uUBd3NXT.png",
@@ -2399,10 +2399,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "96",
+            "index": 96,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/36d75096-a70c-4f59-8419-5ae2885c02d0/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A0%88%ED%8A%B8%EB%A1%9C-%ED%95%98%EC%9D%B4-og-%EC%8B%A0%EB%B0%9C-uXXnpk3p.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0a20fa8f-3166-488d-9381-6b8c2741534d/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A0%88%ED%8A%B8%EB%A1%9C-%ED%95%98%EC%9D%B4-og-%EC%8B%A0%EB%B0%9C-uXXnpk3p.png",
@@ -2424,10 +2424,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "97",
+            "index": 97,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/82a85b21-3248-4d79-8166-4d21f5d8eb2b/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-izlp4xWn.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2ea372e8-f27c-4c19-bbd3-fbc88c9253f7/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-izlp4xWn.png",
@@ -2449,10 +2449,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "98",
+            "index": 98,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/886e108a-392a-468f-b7a6-7b418ea7955b/%ED%97%88%EB%9D%BC%EC%B9%98-%EB%9F%B0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-8IyMTKqg.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1114cfb5-a7e7-480f-8e99-be84f4f58157/%ED%97%88%EB%9D%BC%EC%B9%98-%EB%9F%B0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-8IyMTKqg.png",
@@ -2474,10 +2474,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "1"
+            "Review": 1
         },
         {
-            "index": "99",
+            "index": 99,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/04421d64-7214-4718-ba73-93e6d1447bac/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-%EB%AF%B8%EB%93%9C-07-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-TwoWSDaa.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0c249def-bb46-484b-a2ef-50417fe13123/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-%EB%AF%B8%EB%93%9C-07-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-TwoWSDaa.png",
@@ -2499,10 +2499,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "100",
+            "index": 100,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7cac6f04-9bad-4bc3-ae39-99228b665ca4/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-hx6TgAUz.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a0b39a45-0b82-4d2f-aa9f-3427786e55af/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-hx6TgAUz.png",
@@ -2524,10 +2524,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "101",
+            "index": 101,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7ec99a39-4f0e-4051-84d0-62f4d89afc9c/%ED%94%BC%EC%BD%94-5-%EB%A6%B4-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-o2yfzONr.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4f53592b-09f1-4283-87f1-4824b0f6c636/%ED%94%BC%EC%BD%94-5-%EB%A6%B4-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-o2yfzONr.png",
@@ -2549,10 +2549,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "102",
+            "index": 102,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/994bf199-c71d-4eb2-a732-555347d205e6/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-pjHiMDtn.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ae25f19e-c8d6-45b4-af3d-6f71e1f1ded8/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-pjHiMDtn.png",
@@ -2574,10 +2574,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "103",
+            "index": 103,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/af730b14-2480-45c6-95cb-8a55956da96b/%EC%BD%94%ED%8A%B8-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-VG2aAe8O.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cf6a471a-3ca3-4d6a-80f2-4a5470cdf7d6/%EC%BD%94%ED%8A%B8-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-VG2aAe8O.png",
@@ -2599,10 +2599,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "104",
+            "index": 104,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d5f619ac-0cc1-4ffa-bb83-6eae529126c0/%ED%94%8C%EB%A0%89%EC%8A%A4-%ED%94%8C%EB%9F%AC%EC%8A%A4-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-qVPVDDtG.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ff96eebc-a3a2-4b6b-b515-f70165508f1c/%ED%94%8C%EB%A0%89%EC%8A%A4-%ED%94%8C%EB%9F%AC%EC%8A%A4-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-qVPVDDtG.png",
@@ -2624,10 +2624,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "105",
+            "index": 105,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5b2969bb-48df-463e-8073-bc96a387dc48/%ED%8F%AC%EC%8A%A4-1-le-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-d5vFPkCi.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0419159d-678a-4f3a-a846-c1589697e7f2/%ED%8F%AC%EC%8A%A4-1-le-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-d5vFPkCi.png",
@@ -2649,10 +2649,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "106",
+            "index": 106,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/156236f2-6970-489d-b936-fa593da3e9af/%ED%83%84%EC%A4%80-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-uMjIoHlB.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/235b2753-cfa7-4284-a304-187d123e19f8/%ED%83%84%EC%A4%80-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-uMjIoHlB.png",
@@ -2674,10 +2674,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "107",
+            "index": 107,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/71f200d1-b7fa-4abf-806f-f7690a748085/%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-%EC%95%8C%ED%8A%B8-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-4yvNp5Ce.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/965e1015-dea3-4734-8346-129cc4f44958/%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-%EC%95%8C%ED%8A%B8-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-4yvNp5Ce.png",
@@ -2699,10 +2699,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "108",
+            "index": 108,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3d632c7b-943e-4f3c-8458-2144813530e1/%EC%BD%94%ED%8A%B8-%EB%B2%84%EB%A1%9C%EC%9A%B0-%EB%A1%9C%EC%9A%B0-2-se-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-kDrjgF30.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/92c264d9-9ad2-43fb-af72-ee2e2643fe6d/%EC%BD%94%ED%8A%B8-%EB%B2%84%EB%A1%9C%EC%9A%B0-%EB%A1%9C%EC%9A%B0-2-se-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-kDrjgF30.png",
@@ -2724,10 +2724,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "109",
+            "index": 109,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/88aa5a35-5b7d-4596-83a5-7b7a7d9dc370/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-cU6Qxeoy.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/29ce2a80-1ee9-4abe-aaae-41a7bace3c05/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-cU6Qxeoy.png",
@@ -2749,10 +2749,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "110",
+            "index": 110,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/886e108a-392a-468f-b7a6-7b418ea7955b/%ED%97%88%EB%9D%BC%EC%B9%98-%EB%9F%B0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-8IyMTKqg.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1114cfb5-a7e7-480f-8e99-be84f4f58157/%ED%97%88%EB%9D%BC%EC%B9%98-%EB%9F%B0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-8IyMTKqg.png",
@@ -2774,10 +2774,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "111",
+            "index": 111,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/52f6df3c-5a20-48b7-98f5-73a08fc55fe4/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-tw-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-IHOPA8Cc.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/99ebbfbe-a181-4297-8d73-99878d22c934/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-tw-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-IHOPA8Cc.png",
@@ -2799,10 +2799,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "112",
+            "index": 112,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/74ae0fc4-44bf-4800-9acd-4c6fef3f5755/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-Nh69kkoW.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/449bbaab-2be4-45c7-8637-d97e8f0f6415/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-Nh69kkoW.png",
@@ -2824,10 +2824,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "113",
+            "index": 113,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/02437307-99f4-4d7b-903d-e6a25f427a8d/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AA%A8-%EA%B3%A0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%9D%B4%EC%A7%80-%EC%98%A8-%EC%98%A4%ED%94%84-%EC%8B%A0%EB%B0%9C-0PQ905FF.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b6a303eb-902f-4d12-a762-995aa0c0315a/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AA%A8-%EA%B3%A0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%9D%B4%EC%A7%80-%EC%98%A8-%EC%98%A4%ED%94%84-%EC%8B%A0%EB%B0%9C-0PQ905FF.png",
@@ -2849,10 +2849,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "114",
+            "index": 114,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d90c4298-065c-48be-b391-09fd34e96e27/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-ltr-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-jPe6ap8c.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e9c40fda-99a8-431e-baee-29dd80145883/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-ltr-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-jPe6ap8c.png",
@@ -2874,10 +2874,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "115",
+            "index": 115,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/97159080-1037-467b-b1a6-beeff0d1ee16/%EC%BD%94%ED%8A%B8-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-VG2aAe8O.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b5e6a743-3994-4b5b-9da4-987ac102b53e/%EC%BD%94%ED%8A%B8-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-VG2aAe8O.png",
@@ -2899,10 +2899,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "116",
+            "index": 116,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/939c3017-0191-4f62-a4d9-4bc6b6c72f2e/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-se-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-ix5zPD0H.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ae7d9652-7945-4751-8d13-81e2ced42220/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-se-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-ix5zPD0H.png",
@@ -2924,10 +2924,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "117",
+            "index": 117,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e8f62728-0979-45e7-aecc-f5238c37f8f9/%ED%94%8C%EB%A0%89%EC%8A%A4-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-at7Q2TKy.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e27db77f-f72f-48cc-bc35-3fa59172da6b/%ED%94%8C%EB%A0%89%EC%8A%A4-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-at7Q2TKy.png",
@@ -2949,10 +2949,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "118",
+            "index": 118,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cb5a76ae-89b4-4df6-b6df-20bdf4193ffb/%EC%A1%B0%EB%8D%98-%EC%8B%9C%EB%A6%AC%EC%A6%88-es-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-oYexDfdk.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3ea4f0d9-ec06-4d5a-acf1-e1fa70ce6f67/%EC%A1%B0%EB%8D%98-%EC%8B%9C%EB%A6%AC%EC%A6%88-es-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-oYexDfdk.png",
@@ -2974,10 +2974,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "119",
+            "index": 119,
             "src": {
                 "first": "https://static.shoeprize.com/open_raffle/main_carousel/None/DJ2778-081-shoeprize-AIR-JORDAN-7-RETRO-PS-CITRUS-93804-1655862779967.jpeg",
                 "second": "https://static.shoeprize.com/open_raffle/main_carousel/None/DJ2778-081-shoeprize-AIR-JORDAN-7-RETRO-PS-CITRUS-93804-1655862780066.jpeg",
@@ -2999,10 +2999,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "120",
+            "index": 120,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/88aa5a35-5b7d-4596-83a5-7b7a7d9dc370/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-cU6Qxeoy.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/29ce2a80-1ee9-4abe-aaae-41a7bace3c05/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-cU6Qxeoy.png",
@@ -3024,10 +3024,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "121",
+            "index": 121,
             "src": {
                 "first": "https://static.shoeprize.com/open_raffle/main_carousel/21580/DM7866-140-shoeprize-TRAVIS-SCOTT-X-FRAGMENT-X-AIR-JORDAN-1-LOW-975-1628048323059.jpeg",
                 "second": "https://static.shoeprize.com/open_raffle/main_carousel/21579/DM7866-140-shoeprize-TRAVIS-SCOTT-X-FRAGMENT-X-AIR-JORDAN-1-LOW-975-1628048323176.jpeg",
@@ -3049,10 +3049,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "122",
+            "index": 122,
             "src": {
                 "first": "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.3/w_523,c_limit/b2d8aa4a-92db-46cf-bd09-61f17dedb1db/air-max-95-mens-shoes-4Nzc1w.png",
                 "second": "",
@@ -3074,10 +3074,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "123",
+            "index": 123,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f990c301-37f3-40e2-8028-99cb279a6797/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZuZyA5Sj.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/810c0526-f447-4263-b143-4b2e72c7bf05/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZuZyA5Sj.png",
@@ -3099,10 +3099,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "124",
+            "index": 124,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/%E3%82%A8%E3%82%A2-%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3-1-mid-%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-WnST84.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f11f19a2-1af6-460c-a346-54cc71d2cb1d/%E3%82%A8%E3%82%A2-%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3-1-mid-%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-WnST84.png",
@@ -3124,10 +3124,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "125",
+            "index": 125,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4f57f040-ec35-477a-a051-796d8cb05701/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EB%A0%88%ED%8A%B8%EB%A1%9C-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-nXWOcll2.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5f542765-cad2-4fb1-833a-bfe0f071c0b0/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EB%A0%88%ED%8A%B8%EB%A1%9C-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-nXWOcll2.png",
@@ -3149,10 +3149,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "126",
+            "index": 126,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a97d57c7-0e52-4286-bb6f-c71ab0240a8f/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-RyP3te0j.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8111fd04-c27a-4471-b8a2-6792ff648311/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-RyP3te0j.png",
@@ -3174,10 +3174,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "127",
+            "index": 127,
             "src": {
                 "first": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/c69d4372-a119-412e-a079-b5b8c1af6e3f/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-1985-arctic-orange-dv1143-800-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg",
                 "second": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/09a729db-02b5-4d5e-9d00-3ac6d66e49bb/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-1985-arctic-orange-dv1143-800-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg",
@@ -3199,10 +3199,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "128",
+            "index": 128,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c5ca7424-8409-4735-80ef-e3485b8a16f9/%EC%BD%94%ED%8A%B8-%EC%A4%8C-%EB%9D%BC%EC%9D%B4%ED%8A%B8-3-%EC%97%AC%EC%84%B1-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-QVZqUbZq.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/edf7f18d-90c1-4dfe-84bf-0c1363d7283d/%EC%BD%94%ED%8A%B8-%EC%A4%8C-%EB%9D%BC%EC%9D%B4%ED%8A%B8-3-%EC%97%AC%EC%84%B1-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-QVZqUbZq.png",
@@ -3224,10 +3224,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "129",
+            "index": 129,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/361431d9-d3bb-4837-8402-16798b19bd21/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%97%E3%83%AA%E3%83%87%E3%82%A4-%E3%82%A6%E3%82%A3%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-nXX51g.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5b2f60cf-1963-4b97-9d6f-40745f5ae87c/%E3%83%8A%E3%82%A4%E3%82%AD-%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%97%E3%83%AA%E3%83%87%E3%82%A4-%E3%82%A6%E3%82%A3%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-nXX51g.png",
@@ -3249,10 +3249,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "130",
+            "index": 130,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b364399a-2048-4185-ad6a-a648a895d9f7/%EC%BD%94%ED%8A%B8-%EC%97%90%EC%96%B4-%EC%A4%8C-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%ED%94%84%EB%A1%9C-%EC%97%AC%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-JU1FMRe2.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/112c3129-4a8a-4503-9182-5b21f17ea2ef/%EC%BD%94%ED%8A%B8-%EC%97%90%EC%96%B4-%EC%A4%8C-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%ED%94%84%EB%A1%9C-%EC%97%AC%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-JU1FMRe2.png",
@@ -3274,10 +3274,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "131",
+            "index": 131,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b2ed11df-e3d0-4a38-9a8a-9d24dc0cd35d/%EC%BD%94%ED%8A%B8-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EC%97%AC%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-gyg5jEij.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/df494afc-038e-46ae-9630-7ed4a297be21/%EC%BD%94%ED%8A%B8-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EC%97%AC%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-gyg5jEij.png",
@@ -3299,10 +3299,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "132",
+            "index": 132,
             "src": {
                 "first": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/AR6352-079/4004d669-0cdf-4e97-a7b4-893a480e3218_primary.jpg?gallery",
                 "second": "",
@@ -3324,10 +3324,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "133",
+            "index": 133,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e19fcbed-a33f-4b4a-819f-6a6e6fe27085/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-gi7TJTxC.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/81fb744a-ca9f-4dd8-a796-d03b7a1e9f54/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-gi7TJTxC.png",
@@ -3349,10 +3349,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "134",
+            "index": 134,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/02437307-99f4-4d7b-903d-e6a25f427a8d/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AA%A8-%EA%B3%A0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%9D%B4%EC%A7%80-%EC%98%A8-%EC%98%A4%ED%94%84-%EC%8B%A0%EB%B0%9C-0PQ905FF.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b6a303eb-902f-4d12-a762-995aa0c0315a/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AA%A8-%EA%B3%A0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%9D%B4%EC%A7%80-%EC%98%A8-%EC%98%A4%ED%94%84-%EC%8B%A0%EB%B0%9C-0PQ905FF.png",
@@ -3374,10 +3374,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "135",
+            "index": 135,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d90c4298-065c-48be-b391-09fd34e96e27/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-ltr-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-jPe6ap8c.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e9c40fda-99a8-431e-baee-29dd80145883/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-ltr-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-jPe6ap8c.png",
@@ -3399,10 +3399,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "136",
+            "index": 136,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/683536b9-0a7c-41d8-b7a5-b48cd12fc063/%E3%82%A8%E3%82%A2-%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3-36-%E3%83%AB%E3%82%AB-%E3%82%B8%E3%83%A5%E3%83%8B%E3%82%A2%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-cMNdqn.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a9905120-eeb6-4cb8-bf35-ac88ec5afbe8/%E3%82%A8%E3%82%A2-%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3-36-%E3%83%AB%E3%82%AB-%E3%82%B8%E3%83%A5%E3%83%8B%E3%82%A2%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-cMNdqn.png",
@@ -3424,10 +3424,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "137",
+            "index": 137,
             "src": {
                 "first": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/49030489-a936-4b5d-a76f-ee0308fc840b/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-IqdU4i5d.png",
                 "second": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1377539e-2c8b-4ca7-b897-af544b2593fa/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-IqdU4i5d.png",
@@ -3449,7 +3449,7 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         }
     ]
 }

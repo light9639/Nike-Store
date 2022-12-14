@@ -5,17 +5,25 @@ import DetailSide from '../../components/DetailSide'
 import Loading from '../loading';
 import { DetailType } from "../Type/TypeBox";
 import Link from 'next/link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Fade from 'react-reveal/Fade';
+// import Paging from '../../components/Paging';
+import Pagination from "../../components/Pagination";
 
 export default function DetailMain(): JSX.Element {
     <HeadInfo title="Detail Page" contents="Detail Page" />
-    
-    const [list, setList] = useState<any>([]);
+
+    const [list, setList] = useState<DetailType[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
+    const [page, setPage] = useState<number>(1);
+    const [limit, setLimit] = useState<number>(3);
+    const offset: number = (page - 1) * limit;
     const API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json';
 
     function getData() {
-        axios.get(API_URL).then((res: any) => {
-            setList(res.data.Post.slice(0, 3))
+        axios.get(API_URL).then((res) => {
+            setList(res.data.Post)
         })
     }
 
@@ -24,97 +32,75 @@ export default function DetailMain(): JSX.Element {
         axios.get("").then((res) => {
             setLoading(false);
         });
+        if ( localStorage.getItem("Detail_pageNum") != null ) {
+            setPage(parseInt(`${localStorage.getItem("Detail_pageNum")}`));
+        }
     }, []);
 
     return (
-        <>
+        <React.Fragment>
             {loading ? <Loading></Loading>
-                : <>
+                : <React.Fragment>
                     <div className="container mx-auto flex flex-wrap py-6">
 
-                        <section className="w-full md:w-2/3 flex flex-col items-center px-3">
+                        <section className="w-full lg:w-2/3 flex flex-col items-center px-3">
 
                             {
-                                list.map(function (item: DetailType, idx: number) {
+                                list.slice(offset, offset + limit).map(function (item: DetailType, idx: number) {
                                     return (
-                                        <article className="flex flex-col shadow my-4">
+                                        <article className="flex flex-col shadow my-4" key={idx}>
                                             <Link href={`/Detail/${idx}`}>
                                                 <a className="hover:opacity-75">
-                                                    <img src={item?.src} />
+                                                    <Fade><img src={item?.src} /></Fade>
                                                 </a>
                                             </Link>
 
-                                                <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
+                                            <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
+                                                <Fade bottom>
                                                     <a className="text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
                                                     <a className="text-3xl font-bold pb-4">{item?.h2}</a>
                                                     <p className="text-sm pb-3">
                                                         이 글은 <a className="font-semibold">Lee dong ho</a>에 의해 {item?.date} 작성되었습니다.
                                                     </p>
-                                                    <a className="pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..</a>
+                                                    <a className="pb-6">{item.p2}..</a>
                                                     <Link href={`/Detail/${item?.index}`}>
                                                         <a className="uppercase text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-600 transition">
-                                                            Continue Reading <i className="fas fa-arrow-right"></i>
+                                                            Continue Reading <FontAwesomeIcon icon={faArrowRight} />
                                                         </a>
                                                     </Link>
-                                                </div>
+                                                </Fade>
+                                            </div>
                                         </article>
                                     )
                                 })
                             }
 
-                            {/* <article className="flex flex-col shadow my-4">
-                            <a href="#" className="hover:opacity-75">
-                                <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=2" />
-                            </a>
-                            <div className="bg-white  dark:bg-slate-900 flex flex-col justify-start p-6">
-                                <a href="#" className="text-blue-700 text-sm font-bold uppercase pb-4">Automotive, Finance</a>
-                                <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
-                                <p className="text-sm pb-3">
-                                    By <a href="#" className="font-semibold hover:text-gray-800">David Grzyb</a>, Published on January 12th, 2020
-                                </p>
-                                <a href="#" className="pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..</a>
-                                <a href="#" className="uppercase text-gray-800 hover:text-black">Continue Reading <i className="fas fa-arrow-right"></i></a>
-                            </div>
-                        </article>
-
-                        <article className="flex flex-col shadow my-4">
-                            <a href="#" className="hover:opacity-75">
-                                <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=3" />
-                            </a>
-                            <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
-                                <a href="#" className="text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
-                                <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
-                                <p className="text-sm pb-3">
-                                    By <a href="#" className="font-semibold hover:text-gray-800">David Grzyb</a>, Published on October 22nd, 2019
-                                </p>
-                                <a href="#" className="pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..</a>
-                                <a href="#" className="uppercase text-gray-800 hover:text-black">Continue Reading <i className="fas fa-arrow-right"></i></a>
-                            </div>
-                        </article> */}
-
-                            <div className="flex items-center py-8">
-                                <button 
-                                    type='button' 
+                            <Pagination
+                                total={list.length}
+                                limit={limit}
+                                page={page}
+                                setPage={setPage}
+                                Name={"Detail"}
+                            />
+                            {/* <div className="flex items-center py-8">
+                                <button
+                                    type='button'
                                     className="h-10 w-10 bg-blue-800 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center cursor-pointer"
-                                    // onClick={getData1} 
                                 >1</button>
-                                <button 
-                                    type='button' 
+                                <button
+                                    type='button'
                                     className="h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center cursor-pointer"
-                                    // onClick={getData2} 
                                 >2</button>
-                                <button 
-                                    type='button' 
+                                <button
+                                    type='button'
                                     className="h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center cursor-pointer"
-                                    // onClick={getData3} 
                                 >3</button>
-                                <button 
-                                    type='button' 
+                                <button
+                                    type='button'
                                     className="h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center cursor-pointer"
-                                    // onClick={getData4} 
                                 >4</button>
-                                {/* <span className="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3">Next <i className="fas fa-arrow-right ml-2"></i></span> */}
-                            </div>
+                                <span className="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3">Next <i className="fas fa-arrow-right ml-2"></i></span>
+                            </div> */}
 
                         </section>
 
@@ -151,7 +137,8 @@ export default function DetailMain(): JSX.Element {
                     </aside> */}
 
                     </div>
-                </>}
-        </>
+                </React.Fragment>
+            }
+        </React.Fragment>
     )
 }

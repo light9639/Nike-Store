@@ -25,8 +25,17 @@ yarn dev
 - 
 ### :zap: TypeScript
 - 타입스크립트를 이용하여 타입을 지정함으로써 오류 발생 가능성을 줄였습니다.
+### :zap: Next-Auth
+- Next-Auth를 이용하여 구글, 페이스북, 깃허브, 네이버, 카카오 로그인을 구현하였고 Cart 페이지로 접속하려면 로그인을 하도록 사이트를 만들었습니다.
+
 ### :zap: Axios
 - axios를 이용하여 json 데이터를 가져왔습니다.
+
+### :zap: Redux, Redux-Wrapper
+- Redux와 Redux-Wrapper를 이용하여 주문 버튼 클릭시 자료가 전송되도록 작성하였습니다.
+
+### :zap: FontAwesome
+- FontAwesome를 이용하여 아이콘 부분을 활용하였습니다.
 
 ### :zap: Tailwind CSS
 - Tailwind CSS를 이용하여 반응형 웹이 가능한 사이트를 디자인하였습니다.

@@ -11,8 +11,7 @@ import NikeKids from './index_components/Nike_Kids';
 import Shop from './index_components/Shop';
 import Slide from '../components/Slide';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from 'react';
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -25,7 +24,8 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
+
       <HeadInfo title="Shoe-Store. Just Do It." contents="Shoe-Store Next.js"></HeadInfo>
 
       <Banner></Banner>
@@ -47,7 +47,8 @@ const Home: NextPage = () => {
       <Minimal router={router}></Minimal>
 
       <Shop></Shop>
-    </>
+
+    </React.Fragment>
   )
 }
 

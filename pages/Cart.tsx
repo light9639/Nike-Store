@@ -8,7 +8,7 @@ export default function Cart(): JSX.Element {
     const router = useRouter()
 
     return (
-        <>
+        <React.Fragment>
             <HeadInfo title="Cart Page" contents="Cart Page"></HeadInfo>
 
             <div className="container mx-auto my-24 shadow-md">
@@ -36,7 +36,7 @@ export default function Cart(): JSX.Element {
                             </thead>
                             <tbody>
                                 {
-                                    [1, 2, 3].map(function (a, i) {
+                                    [1, 2, 3].map(function (item, idx: number) {
                                         return (
                                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                                 <td className="p-4 w-32">
@@ -151,7 +151,7 @@ export default function Cart(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </>
+        </React.Fragment>
     )
 }
 
@@ -161,7 +161,7 @@ export async function getServerSideProps(context: any) {
     if (!session) {
         return {
             redirect: {
-                destination: '/Login',
+                destination: '/NotLogin',
                 permanent: false,
             },
         }

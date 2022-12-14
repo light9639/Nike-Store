@@ -1,10 +1,12 @@
+import React from 'react';
 import { useTheme } from 'next-themes'
 
 export default function DarkModeToggleButton(): JSX.Element {
     const { theme, setTheme } = useTheme()
 
+    console.log(theme)
     return (
-        <>
+        <React.Fragment>
             <button
                 className="
                 inline-flex items-center py-1.5 px-2 mr-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200
@@ -47,6 +49,6 @@ export default function DarkModeToggleButton(): JSX.Element {
                 </span>
 
             </button>
-        </>
+        </React.Fragment>
     );
 }

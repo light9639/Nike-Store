@@ -1,7 +1,7 @@
 {
     "Men": [
         {
-            "index": "0",
+            "index": 0,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/31bac1a8-b608-4754-aa83-ffcb265ec66e/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-ap-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-nZslGrMM.png",
             "alt": "나이키 에어맥스 AP",
             "name": "나이키 에어맥스 AP",
@@ -17,10 +17,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "1",
+            "index": 1,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0447d3b3-28d3-4ba3-a6d6-deb0b21558af/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-%EB%AF%B8%EB%93%9C-07-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-TwoWSDaa.png",
             "alt": "나이키 에어 포스 1 미드 ‘07",
             "name": "나이키 에어 포스 1 미드 ‘07",
@@ -36,10 +36,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "2",
+            "index": 2,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f4ea7019-b9a5-434d-9753-976cae67049b/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-97-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-OFhu9KQr.png",
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
@@ -55,10 +55,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "3",
+            "index": 3,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/26dd42ea-4c98-455e-ab53-e74db2fb1de2/%EC%99%80%ED%94%8C-%EB%8D%B0%EB%B7%B0-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-v8VoXK5w.png",
             "alt": "나이키 와플 데뷰",
             "name": "나이키 와플 데뷰",
@@ -74,10 +74,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "4",
+            "index": 4,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dc9efa13-9572-490e-afa9-4c5b8e25187a/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%AF%B8%EB%93%9C-se-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-59ljZg7U.png",
             "alt": "에어 조던 1 미드 SE",
             "name": "에어 조던 1 미드 SE",
@@ -93,10 +93,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "5",
+            "index": 5,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/999d8aad-a379-4ad2-ae03-b5f829822665/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%8E%98%EB%8B%88-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-qde0fIOS.png",
             "alt": "나이키 에어맥스 페니",
             "name": "나이키 에어맥스 페니",
@@ -112,10 +112,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "6",
+            "index": 6,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DZ5167-077/ce651e8a-7216-4b5c-9d36-71a71deb84d0_primary.jpg?browse",
             "alt": "나이키 에어맥스 90 SE 한글날",
             "name": "나이키 에어맥스 90 SE 한글날",
@@ -131,10 +131,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "7",
+            "index": 7,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6d3cccec-e483-433d-a45d-45a49945100a/%EC%9E%90%EC%9D%B4%EC%96%B8-2-pf-%EB%82%A8%EC%84%B1-%EB%86%8D%EA%B5%AC%ED%99%94-xOQoP1GV.png",
             "alt": "자이언 2 PF",
             "name": "자이언 2 PF",
@@ -150,10 +150,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "8",
+            "index": 8,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ7673-001/c1312bec-e895-49eb-9173-4165456a185a_primary.jpg?browse",
             "alt": "나이키 블레이저 미드 프로 클럽",
             "name": "나이키 블레이저 미드 프로 클럽",
@@ -169,10 +169,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "9",
+            "index": 9,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a7812f46-f0e1-4df0-b0f3-ceb5dc0a41cc/%EC%BD%94%ED%8A%B8-%EC%A4%8C-%EB%9D%BC%EC%9D%B4%ED%8A%B8-3-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-pU4RM1nf.png",
             "alt": "나이키코트 줌 라이트 3",
             "name": "나이키코트 줌 라이트 3",
@@ -188,10 +188,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "10",
+            "index": 10,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f9e5795e-2fcf-406a-af8d-62e6c6b48b69/%EC%BD%94%ED%8A%B8-%EC%97%90%EC%96%B4-%EC%A4%8C-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%ED%94%84%EB%A1%9C-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-ggQ7BYZT.png",
             "alt": "나이키코트 에어 줌 베이퍼 프로",
             "name": "나이키코트 에어 줌 베이퍼 프로",
@@ -207,10 +207,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "11",
+            "index": 11,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/de408f27-294e-4ea8-94f1-bf4ddceacb21/%EC%A1%B0%EB%8D%98-%EB%A7%A5%EC%8A%A4-%EC%95%84%EC%9A%B0%EB%9D%BC-4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-o9fvckTu.png",
             "alt": "조던 맥스 아우라 4",
             "name": "조던 맥스 아우라 4",
@@ -226,10 +226,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "12",
+            "index": 12,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/169c6c9c-4c9e-49d2-b5ac-2214f5568369/%EC%97%90%EC%96%B4-%ED%94%84%EB%A0%88%EC%8A%A4%ED%86%A0-x-hello-kitty-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-Jf05X0Z3.png",
             "alt": "나이키 에어 프레스토 x Hello Kitty®",
             "name": "나이키 에어 프레스토 x Hello Kitty®",
@@ -245,10 +245,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "13",
+            "index": 13,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ4068-100/d4377ed8-05fa-4de5-8fbd-e0c82a4a6b3d_primary.jpg?browse",
             "alt": "나이키 에어맥스 PRE-DAY",
             "name": "나이키 에어맥스 PRE-DAY",
@@ -264,10 +264,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "14",
+            "index": 14,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DM1122-100/5f6a59b0-1a53-4b0f-9368-68ef4023c046_primary.jpg?browse",
             "alt": "르브론 위트니스 7 EP",
             "name": "르브론 위트니스 7 EP",
@@ -283,10 +283,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "15",
+            "index": 15,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b312cb23-4862-4aa8-bd30-66f94ec26c71/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-UcWKzjsk.png",
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
@@ -302,10 +302,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "16",
+            "index": 16,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/50a78a96-ece6-49d1-8a60-f9516be7b5d7/%EC%A0%90%ED%94%84%EB%A7%A8-%ED%88%AC-%ED%8A%B8%EB%A0%88%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-lwPQR4YA.png",
             "alt": "점프맨 투 트레이",
             "name": "점프맨 투 트레이",
@@ -321,10 +321,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "17",
+            "index": 17,
             "src": "https://static.shoeprize.com/open_raffle/main_carousel/67743/CZ0790-104-shoeprize-AIR-JORDAN-1-LOW-OG-UNC-80857-1658053279027.jpeg",
             "alt": "에어 조던 1 로우 OG 블랙 앤 다크 파우더 블루",
             "name": "에어 조던 1 로우 OG 블랙 앤 다크 파우더 블루",
@@ -340,10 +340,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "18",
+            "index": 18,
             "src": "https://static.shoeprize.com/open_raffle/main_carousel/24208/553558-612-shoeprize-AIR-JORDAN-1-LOW-BRED-TOE-56772-1628392439307.jpeg",
             "alt": "에어 조던 1 로우 브레드 토",
             "name": "에어 조던 1 로우 브레드 토",
@@ -359,10 +359,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "19",
+            "index": 19,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ1872-100/df1e2fb9-a059-4ba1-bc80-374c2b845a17_primary.jpg?browse",
             "alt": "나이키 에어 포스 1 미드 리액트",
             "name": "나이키 에어 포스 1 미드 리액트",
@@ -378,10 +378,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "20",
+            "index": 20,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9834be65-c5c0-4d97-9b72-e1d63a8ebd90/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-96-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-phEy4TYA.png",
             "alt": "나이키 에어 모어 업템포 '96",
             "name": "나이키 에어 모어 업템포 '96",
@@ -397,10 +397,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "21",
+            "index": 21,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dfa94d24-2521-4c8d-91be-6d9f90050ff7/%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4-3-fg-%EC%B2%9C%EC%97%B0-%EC%9E%94%EB%94%94-%ED%81%B4%EB%A6%AC%ED%8A%B8-%EC%B6%95%EA%B5%AC%ED%99%94-rZC5CjOW.png",
             "alt": "나이키 프리미어 3 FG",
             "name": "나이키 프리미어 3 FG",
@@ -416,10 +416,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "22",
+            "index": 22,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DD3111-100/a2dcd3e2-2d18-44a1-bab5-580d7c311850_primary.jpg?browse",
             "alt": "나이키 블레이저 미드 77 점보",
             "name": "나이키 블레이저 미드 77 점보",
@@ -435,10 +435,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "23",
+            "index": 23,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7a56f8fc-82cf-4564-817f-96def4f3cab1/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EB%A0%88%ED%8A%B8%EB%A1%9C-se-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-2zYLFxFj.png",
             "alt": "나이키 덩크 하이 레트로 SE",
             "name": "나이키 덩크 하이 레트로 SE",
@@ -454,10 +454,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "1"
+            "Review": 1
         },
         {
-            "index": "24",
+            "index": 24,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DX9428-001/9eeda3a8-34f7-47d2-9e37-22e7f3871974_primary.jpg?browse",
             "alt": "나이키 와플원 레더",
             "name": "나이키 와플원 레더",
@@ -473,10 +473,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "25",
+            "index": 25,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DJ3624-002/546704be-ff14-42c9-88b3-7c47bd0da267_primary.jpg?browse",
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
@@ -492,10 +492,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "26",
+            "index": 26,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/67f8e626-7e6c-4e43-bf55-59a783c0ade3/%EC%97%90%EC%96%B4-%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-83-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-L9SyLOIA.png",
             "alt": "나이키 에어 페가수스 83",
             "name": "나이키 에어 페가수스 83",
@@ -511,10 +511,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "27",
+            "index": 27,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ3982-100/c1fa3de8-df33-4ad5-8a3e-991097f8f7f5_primary.jpg?browse",
             "alt": "나이키 에어맥스 95 에센셜",
             "name": "나이키 에어맥스 95 에센셜",
@@ -530,10 +530,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "28",
+            "index": 28,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4af38279-8d20-4a8e-9ec9-5d3e7dd9c3c7/%EC%BD%94%ED%8A%B8-%EB%B2%A0%EC%9D%B4%ED%8D%BC-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EB%82%A8%EC%84%B1-%ED%95%98%EB%93%9C-%EC%BD%94%ED%8A%B8-%ED%85%8C%EB%8B%88%EC%8A%A4%ED%99%94-ZWmFPlzX.png",
             "alt": "나이키코트 베이퍼 라이트+",
             "name": "나이키코트 베이퍼 라이트+",
@@ -549,10 +549,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "29",
+            "index": 29,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9f19a760-ef17-43c8-81e0-eade67a099f1/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-se-%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-1nVYHSHC.png",
             "alt": "에어 조던 1 로우 SE 크래프트",
             "name": "에어 조던 1 로우 SE 크래프트",
@@ -568,14 +568,14 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "30",
+            "index": 30,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DR9114-500/ec48ea26-fed2-4b09-b2de-e278021cb095_primary.jpg?browse",
             "alt": "나이키 SB 줌 POGO 플러스",
             "name": "나이키 SB 줌 POGO 플러스",
-            "info": "여성 스케이트보드화",
+            "info": "남성 스케이트보드화",
             "price": "99,000원",
             "Gender": "Men",
             "href": "/Men",
@@ -587,10 +587,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "31",
+            "index": 31,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/816ffd74-8569-4bbb-8df1-683c2ac0fdef/%ED%94%84%EB%A6%AC-%ED%85%8C%EB%9D%BC-%EB%B9%84%EC%8A%A4%ED%83%80-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-mMruJbkD.png",
             "alt": "나이키 프리 테라 비스타 넥스트 네이처",
             "name": "나이키 프리 테라 비스타 넥스트 네이처",
@@ -606,10 +606,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "32",
+            "index": 32,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/459df98a-86dd-4210-9aaa-cb753d6cd5de/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-96-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-oEIkSdbT.png",
             "alt": "나이키 에어 모어 업템포 '96",
             "name": "나이키 에어 모어 업템포 '96",
@@ -625,10 +625,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "33",
+            "index": 33,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5f14a5df-3088-48a2-bb78-a3f5e03431db/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZGHdBJ2O.png",
             "alt": "나이키 에어맥스 프리데이",
             "name": "나이키 에어맥스 프리데이",
@@ -644,10 +644,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "34",
+            "index": 34,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1acc05e6-b796-42b9-a3b3-39c9bd438d30/%EB%A5%B4%EB%B8%8C%EB%A1%A0-xx-ep-%EB%86%8D%EA%B5%AC%ED%99%94-H5eTtmwb.png",
             "alt": "르브론 XX EP",
             "name": "르브론 XX EP",
@@ -663,10 +663,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "35",
+            "index": 35,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c9d3d4c6-7bec-4556-ba39-9da4a259f9aa/%EC%97%90%EC%96%B4-%EC%A4%8C-%ED%94%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8-95-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-vm83YLa0.png",
             "alt": "나이키 에어 줌 플라이트 95",
             "name": "나이키 에어 줌 플라이트 95",
@@ -682,10 +682,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "36",
+            "index": 36,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DZ5070-010/b7d309fd-67aa-45ec-b547-e78539a37668_primary.jpg?browse",
             "alt": "나이키 에어 포스 1 07 LV8 한글날",
             "name": "나이키 에어 포스 1 07 LV8 한글날",
@@ -701,10 +701,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "37",
+            "index": 37,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/29410be8-bc63-4161-9717-3fa0e6e95155/%EC%BD%94%ED%8A%B8-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EC%BA%94%EB%B2%84%EC%8A%A4-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-kUjuk7Vk.png",
             "alt": "나이키 코트 레거시 캔버스",
             "name": "나이키 코트 레거시 캔버스",
@@ -720,10 +720,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "38",
+            "index": 38,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dcd44fea-b9dd-4e04-9661-b30ff12ab365/%EC%9E%90%EC%9D%B4%EC%96%B8-2-pf-%EB%82%A8%EC%84%B1-%EB%86%8D%EA%B5%AC%ED%99%94-4CHjvGO6.png",
             "alt": "자이언 2 PF",
             "name": "자이언 2 PF",
@@ -739,10 +739,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "39",
+            "index": 39,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3e9e43c6-ee56-482d-a847-4648e468d4f0/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A0%88%ED%8A%B8%EB%A1%9C-%ED%95%98%EC%9D%B4-og-%EC%8B%A0%EB%B0%9C-uXXnpk3p.png",
             "alt": "에어 조던 1 레트로 하이 OG",
             "name": "에어 조던 1 레트로 하이 OG",
@@ -758,12 +758,12 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         }
     ],
     "Women": [
         {
-            "index": "40",
+            "index": 40,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a7661c25-7a70-4a61-907a-c2f5da7154cb/%EB%94%94%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-hwpyPLjL.png",
             "alt": "나이키 디브레이크",
             "name": "나이키 디브레이크",
@@ -779,10 +779,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "41",
+            "index": 41,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/68b4c9d3-e04a-4009-b075-d3eed11f79f1/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-YZykagZe.png",
             "alt": "나이키 에어맥스 던 SE",
             "name": "나이키 에어맥스 던 SE",
@@ -798,10 +798,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "42",
+            "index": 42,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9766b9b5-1f9b-405a-aabe-7a7981c5b03d/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-%ED%8A%B8%EB%A0%88%EC%9D%BC-3-gore-tex-%EC%97%AC%EC%84%B1-%EC%9B%8C%ED%84%B0%ED%94%84%EB%A3%A8%ED%94%84-%ED%8A%B8%EB%A0%88%EC%9D%BC-%EB%9F%AC%EB%8B%9D%ED%99%94-EX5Zmh9T.png",
             "alt": "나이키 페가수스 트레일 3 GORE-TEX",
             "name": "나이키 페가수스 트레일 3 GORE-TEX",
@@ -817,10 +817,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "43",
+            "index": 43,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/50b29e40-d0dc-437e-bbb6-f387e6316a89/%EB%B2%84%EB%A1%9C%EC%9A%B0-se-%EC%97%AC%EC%84%B1-%EC%8A%AC%EB%A6%AC%ED%8D%BC-Krkzq5vy.png",
             "alt": "나이키 버로우 SE",
             "name": "나이키 버로우 SE",
@@ -836,10 +836,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "44",
+            "index": 44,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/103721b0-f49f-44de-bc04-eef60fa3f27c/%EC%99%80%ED%94%8C-%EC%9B%90-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-hII2WvnX.png",
             "alt": "나이키 와플 원 SE",
             "name": "나이키 와플 원 SE",
@@ -855,10 +855,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "45",
+            "index": 45,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f0ebe406-654c-4642-8a97-40a58b1f9fe9/%EB%8D%A9%ED%81%AC-%ED%95%98%EC%9D%B4-%EC%97%85-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-GPTVYT0y.png",
             "alt": "나이키 덩크 하이 업",
             "name": "나이키 덩크 하이 업",
@@ -874,10 +874,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "46",
+            "index": 46,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5fc8ff81-8364-4a07-97cd-8363db5a6db9/%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-KzwVEwzG.png",
             "alt": "나이키 데이브레이크",
             "name": "나이키 데이브레이크",
@@ -893,10 +893,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "47",
+            "index": 47,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/658b621b-ba70-4d86-a8ef-4b225aa8ab1b/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-pre-day-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-YNHkXslx.png",
             "alt": "나이키 에어맥스 PRE-DAY",
             "name": "나이키 에어맥스 PRE-DAY",
@@ -912,10 +912,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "48",
+            "index": 48,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DM8974-800/246b19c6-f388-4f35-a9b3-87121e75fedd_primary.jpg?browse",
             "alt": "나이키 줌 플라이 5",
             "name": "나이키 줌 플라이 5",
@@ -931,10 +931,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "49",
+            "index": 49,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DN3559-800/8dc2bb4f-54dd-4c45-92b3-73cc45c8360d_primary.jpg?browse",
             "alt": "나이키 에어 줌 알파플라이 넥스트 2",
             "name": "나이키 에어 줌 알파플라이 넥스트 2",
@@ -950,10 +950,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "50",
+            "index": 50,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3a08d19a-bcb1-4a3f-a0ad-4cba80f1b3bf/%EC%8A%A4%ED%8C%8C%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-aFqxAapA.png",
             "alt": "나이키 스파크",
             "name": "나이키 스파크",
@@ -969,10 +969,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "51",
+            "index": 51,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/52c58c52-7345-40d8-bd84-0f9c864f7906/%EC%A1%B0%EB%8D%98-%EC%86%8C%ED%94%BC%EC%95%84-%EC%97%AC%EC%84%B1-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-y5T8cYUD.png",
             "alt": "조던 소피아",
             "name": "조던 소피아",
@@ -988,10 +988,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "52",
+            "index": 52,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/04df47d3-3e09-4967-a8cc-3a9f5c3834c0/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%8D%98-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-G0azn2en.png",
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
@@ -1007,10 +1007,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "53",
+            "index": 53,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4535ae90-6a28-446c-a754-4064a9da1795/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC%EB%8D%B0%EC%9D%B4-se-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-lRceRqE1.png",
             "alt": "나이키 에어맥스 프리데이 SE",
             "name": "나이키 에어맥스 프리데이 SE",
@@ -1026,10 +1026,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "54",
+            "index": 54,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8af8c0fc-9f5a-4996-ad23-8c6c15056ec9/%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-eG3iTweK.png",
             "alt": "나이키 데이브레이크",
             "name": "나이키 데이브레이크",
@@ -1045,10 +1045,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "55",
+            "index": 55,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC7723-701/5dc19441-48cc-4a4a-ac96-7cd3ad49e1f6_primary.jpg?browse",
             "alt": "에어 조던 1 ACCLIMATE",
             "name": "에어 조던 1 ACCLIMATE",
@@ -1064,10 +1064,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "56",
+            "index": 56,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/abe969ab-990f-4683-9f68-23beb719acf3/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%97%98%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-fMD68li7.png",
             "alt": "에어 조던 1 엘레베이트 로우",
             "name": "에어 조던 1 엘레베이트 로우",
@@ -1083,10 +1083,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "57",
+            "index": 57,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC0101-666/5d49b597-576f-4587-bf1c-daf3062e582d_primary.jpg?browse",
             "alt": "나이키 에이스 서머라이트",
             "name": "나이키 에이스 서머라이트",
@@ -1102,10 +1102,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "58",
+            "index": 58,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/811f90a0-a5c2-4b63-95f9-bdb905688c9a/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%ED%94%84%EB%A6%AC-%EB%8D%B0%EC%9D%B4-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ESEj6gGk.png",
             "alt": "나이키 에어맥스 프리데이",
             "name": "나이키 에어맥스 프리데이",
@@ -1121,10 +1121,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "59",
+            "index": 59,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CW3421-005/6340467f-95bb-4825-9d79-9ab5e76acd07_primary.jpg?browse",
             "alt": "나이키 줌 윈플로 8",
             "name": "나이키 줌 윈플로 8",
@@ -1140,10 +1140,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "60",
+            "index": 60,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8db6e11d-45e2-458b-bde8-f8784295db09/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%95%A0%ED%81%B4%EB%9F%AC%EB%A9%94%EC%9D%B4%ED%8A%B8-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-9a85NCiw.png",
             "alt": "에어 조던 1 애클러메이트",
             "name": "에어 조던 1 애클러메이트",
@@ -1159,10 +1159,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "61",
+            "index": 61,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0d264f9b-ef32-4817-b3eb-e29f7ecaa252/%ED%8F%B0%ED%83%84%EC%B9%B4-%EC%99%80%ED%94%8C-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-HAwnuJaa.png",
             "alt": "나이키 폰탄카 와플",
             "name": "나이키 폰탄카 와플",
@@ -1178,10 +1178,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "62",
+            "index": 62,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/183653ea-35d1-4022-b895-03642a022779/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-g-%EA%B3%A8%ED%94%84%ED%99%94-a68FMm7V.png",
             "alt": "나이키 에어맥스 90 G",
             "name": "나이키 에어맥스 90 G",
@@ -1197,10 +1197,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "63",
+            "index": 63,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/921522-011/3fc3ab2c-c923-4a8d-8335-e2ba528e33ef_primary.jpg?browse",
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
@@ -1216,10 +1216,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "64",
+            "index": 64,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DJ9955-100/7bc54c68-1900-421f-bb36-36740c2ff5f4_primary.jpg?browse",
             "alt": "나이키 덩크 로우 에센셜",
             "name": "나이키 덩크 로우 에센셜",
@@ -1235,10 +1235,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "65",
+            "index": 65,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DD1503-801/c1670ab9-9083-43df-a6ee-8c81f1a3c3b4_primary.jpg?browse",
             "alt": "나이키 덩크 로우",
             "name": "나이키 덩크 로우",
@@ -1254,10 +1254,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "66",
+            "index": 66,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DH1042-104/ff311d37-b2c2-44b7-a8b0-c28d61f249ad_primary.jpg?browse",
             "alt": "나이키코트 줌 라이트 3",
             "name": "나이키코트 줌 라이트 3",
@@ -1273,10 +1273,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "67",
+            "index": 67,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC9993-103/fda3b9d2-9e32-404b-9b32-ba6cb7656cd2_primary.jpg?browse",
             "alt": "나이키 줌X 인빈서블 런 플라이니트 2",
             "name": "나이키 줌X 인빈서블 런 플라이니트 2",
@@ -1292,10 +1292,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "68",
+            "index": 68,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CT1904-100/b51f434e-8ae2-4e80-8109-61110016e846_primary.jpg?browse",
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
@@ -1311,10 +1311,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "69",
+            "index": 69,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CW3876-002/57db2d52-3801-4651-b215-58c422264073_primary.jpg?browse",
             "alt": "나이키 줌 에어 파이어",
             "name": "나이키 줌 에어 파이어",
@@ -1330,10 +1330,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "70",
+            "index": 70,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DV1143-800/84e52cf7-51f6-4007-8f0b-3609991e8fa0_primary.jpg?browse",
             "alt": "나이키 덩크 하이 1985",
             "name": "나이키 덩크 하이 1985",
@@ -1349,10 +1349,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "71",
+            "index": 71,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fba909b5-4406-4eef-bde0-ba558bb77956/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-CFoibTQ1.png",
             "alt": "나이키 에어맥스 90",
             "name": "나이키 에어맥스 90",
@@ -1368,10 +1368,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "0"
+            "Review": 0
         },
         {
-            "index": "72",
+            "index": 72,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/BQ3207-002/20a3da9a-5da0-4cfa-9ea1-438e1f87eb7b_primary.jpg?browse",
             "alt": "나이키 레볼루션 5",
             "name": "나이키 레볼루션 5",
@@ -1387,10 +1387,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "73",
+            "index": 73,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DZ5222-400/70fc6e94-9fc8-4742-88b2-5cffba36a421_primary.jpg?browse",
             "alt": "나이키 줌X 베이퍼플라이 넥스트 2",
             "name": "나이키 줌X 베이퍼플라이 넥스트 2",
@@ -1406,10 +1406,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "74",
+            "index": 74,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/BQ3207-502/8c7648ba-cf48-4101-a048-c34656aa3f87_primary.jpg?browse",
             "alt": "나이키 레볼루션 5",
             "name": "나이키 레볼루션 5",
@@ -1425,10 +1425,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "75",
+            "index": 75,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9650ca05-90ca-42be-8805-01319fa38938/%EC%99%80%ED%94%8C-%EB%8D%B0%EB%B7%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-VIKgKEHE.png",
             "alt": "나이키 와플 데뷰",
             "name": "나이키 와플 데뷰",
@@ -1444,10 +1444,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "76",
+            "index": 76,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CW4554-100/1107b31b-6f6b-441e-bc73-4468ba76256d_primary.jpg?browse",
             "alt": "나이키 에어맥스 SC",
             "name": "나이키 에어맥스 SC",
@@ -1463,10 +1463,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "77",
+            "index": 77,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/FB1877-110/d6d3daf3-af3a-4cc1-aef9-b9f214e4e4ce_primary.jpg?browse",
             "alt": "나이키 에어맥스 90 퓨추라",
             "name": "나이키 에어맥스 90 퓨추라",
@@ -1482,10 +1482,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "78",
+            "index": 78,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DA9492-600/16db2819-5cdb-44da-8331-ca4c2da4c06a_primary.jpg?browse",
             "alt": "나이키 에어 줌 슈퍼렙 3",
             "name": "나이키 에어 줌 슈퍼렙 3",
@@ -1501,10 +1501,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "79",
+            "index": 79,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DR9114-500/ec48ea26-fed2-4b09-b2de-e278021cb095_primary.jpg?browse",
             "alt": "나이키 SB 줌 POGO 플러스",
             "name": "나이키 SB 줌 POGO 플러스",
@@ -1520,12 +1520,12 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         }
     ],
     "Kids": [
         {
-            "index": "80",
+            "index": 80,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DA4075-101/bda79d29-0b7d-48b5-a248-06ecec6a82b1_primary.jpg?browse",
             "alt": "나이키 블레이저 로우 77",
             "name": "나이키 블레이저 로우 77",
@@ -1541,10 +1541,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "81",
+            "index": 81,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DA4087-100/62d3486b-699e-455a-ab7e-57155db6f11f_primary.jpg?browse",
             "alt": "나이키 블레이저 미드 '77",
             "name": "나이키 블레이저 미드 '77",
@@ -1560,10 +1560,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "82",
+            "index": 82,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/75da42ea-ac76-4dce-9139-aa7a5b11bea3/%EC%8A%A4%EC%B9%B4%EC%9D%B4-%EC%A1%B0%EB%8D%98-1-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-NUBsZxHF.png",
             "alt": "스카이 조던 1",
             "name": "스카이 조던 1",
@@ -1579,10 +1579,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "83",
+            "index": 83,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DH2925-111/0ce74cfc-014b-4bee-a39a-67dd06d45434_primary.jpg?browse",
             "alt": "나이키 포스 1 LE",
             "name": "나이키 포스 1 LE",
@@ -1598,10 +1598,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "84",
+            "index": 84,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CZ5358-113/b56d9075-e248-43d6-8381-082d816e2834_primary.jpg?browse",
             "alt": "나이키 에어맥스 SC",
             "name": "나이키 에어맥스 SC",
@@ -1617,10 +1617,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "85",
+            "index": 85,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DN3205-621/3e769597-79e4-44ec-b991-bbd96b14a199_primary.jpg?browse",
             "alt": "조던 시리즈 ES",
             "name": "조던 시리즈 ES",
@@ -1636,10 +1636,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "86",
+            "index": 86,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ0296-100/3e328f1b-1148-4394-acf8-60a333c0f369_primary.jpg?browse",
             "alt": "나이키 에어맥스 TW",
             "name": "나이키 에어맥스 TW",
@@ -1655,10 +1655,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "87",
+            "index": 87,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ6084-500/144ed4b2-e01f-47d1-9af6-b2270f5d6371_primary.jpg?browse",
             "alt": "나이키 블레이저 미드 '77 D",
             "name": "나이키 블레이저 미드 '77 D",
@@ -1674,10 +1674,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "88",
+            "index": 88,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/333ef671-5dca-4815-a210-1cff6af54cc1/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EB%AA%A8%ED%8B%B0%EB%B8%8C-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-pvXytq97.png",
             "alt": "나이키 에어맥스 모티브",
             "name": "나이키 에어맥스 모티브",
@@ -1693,10 +1693,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "89",
+            "index": 89,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC0817-407/7b6dc214-3fa7-4d90-93d1-e6967fb03701_primary.jpg?browse",
             "alt": "나이키 주니어 팬텀 GT2 아카데미 TF",
             "name": "나이키 주니어 팬텀 GT2 아카데미 TF",
@@ -1712,10 +1712,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "90",
+            "index": 90,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ4982-160/8dcbe7e4-6084-46b5-8664-2cc9c1c80545_primary.jpg?browse",
             "alt": "조던 델타 3 로우",
             "name": "조던 델타 3 로우",
@@ -1731,10 +1731,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "91",
+            "index": 91,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ7693-419/b9708859-77f2-4304-8188-3e23476828a8_primary.jpg?browse",
             "alt": "조던 2 레트로 J Balvin",
             "name": "조던 2 레트로 J Balvin",
@@ -1750,10 +1750,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "92",
+            "index": 92,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/21bfded4-a5f1-4f08-97bb-ae01a35a3a81/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-%EC%9D%B8%ED%84%B0%EB%9D%BD-%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-48Fl6f21.png",
             "alt": "나이키 에어맥스 인터락 라이트",
             "name": "나이키 에어맥스 인터락 라이트",
@@ -1769,10 +1769,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "93",
+            "index": 93,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DH3157-107/a6c6d8e4-b0c7-44e4-898e-5e5396394fb0_primary.jpg?browse",
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
@@ -1788,10 +1788,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "94",
+            "index": 94,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CZ0186-002/5affa0b6-972c-42af-94df-62ad71802bbf_primary.jpg?browse",
             "alt": "나이키 플렉스 어드밴스",
             "name": "나이키 플렉스 어드밴스",
@@ -1807,10 +1807,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "95",
+            "index": 95,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/91fc7a43-c646-44f2-b6ba-87f92bd83d66/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-90-ltr-se-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-uUBd3NXT.png",
             "alt": "나이키 에어맥스 90 LTR SE",
             "name": "나이키 에어맥스 90 LTR SE",
@@ -1826,10 +1826,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "96",
+            "index": 96,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/575441-706/52d77730-fc86-4ad1-b839-0c88b2ae5326_primary.jpg?browse",
             "alt": "에어 조던 1 레트로 하이 OG",
             "name": "에어 조던 1 레트로 하이 OG",
@@ -1845,10 +1845,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "97",
+            "index": 97,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/375eabe2-a240-4be2-b505-63149fc0a478/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-izlp4xWn.png",
             "alt": "나이키 에어 모어 업템포",
             "name": "나이키 에어 모어 업템포",
@@ -1864,10 +1864,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "98",
+            "index": 98,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/654275-045/75e5f4e5-282c-4961-9cc6-e920ae0db8ec_primary.jpg?browse",
             "alt": "나이키 허라치 런",
             "name": "나이키 허라치 런",
@@ -1883,10 +1883,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "1"
+            "Review": 1
         },
         {
-            "index": "99",
+            "index": 99,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DH2933-111/d5f81a99-d8e2-4993-9ea0-6fda4288aeb8_primary.jpg?browse",
             "alt": "나이키 에어 포스 1 미드 LE",
             "name": "나이키 에어 포스 1 미드 LE",
@@ -1902,10 +1902,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "100",
+            "index": 100,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DH9761-003/c2ca4584-fb10-492a-a434-9de7e01b0b05_primary.jpg?browse",
             "alt": "나이키 덩크 로우",
             "name": "나이키 덩크 로우",
@@ -1921,10 +1921,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "101",
+            "index": 101,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1adb1e5f-9242-4290-81d2-f273d903363e/%ED%94%BC%EC%BD%94-5-%EB%A6%B4-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-o2yfzONr.png",
             "alt": "나이키 피코 5 릴",
             "name": "나이키 피코 5 릴",
@@ -1940,10 +1940,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "102",
+            "index": 102,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC9318-102/41d3dab5-82f3-42f9-bbca-054d4bee956d_primary.jpg?browse",
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
@@ -1959,10 +1959,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "103",
+            "index": 103,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DA5382-002/a90cbc70-1cbb-4856-8ef6-8336191ecd91_primary.jpg?browse",
             "alt": "나이키코트 레거시",
             "name": "나이키코트 레거시",
@@ -1978,10 +1978,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "104",
+            "index": 104,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CW7429-003/aa0a8765-17cb-4c46-9283-2dee3089ac8b_primary.jpg?browse",
             "alt": "나이키 플렉스 플러스",
             "name": "나이키 플렉스 플러스",
@@ -1997,10 +1997,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "105",
+            "index": 105,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DH2926-111/ac1da239-4d16-46e2-b71a-ffa4d4b7447e_primary.jpg?browse",
             "alt": "나이키 포스 1 LE",
             "name": "나이키 포스 1 LE",
@@ -2016,10 +2016,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "106",
+            "index": 106,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/59f7ed70-eef3-4b02-85c3-4493a328c77d/%ED%83%84%EC%A4%80-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-uMjIoHlB.png",
             "alt": "나이키 탄준",
             "name": "나이키 탄준",
@@ -2035,10 +2035,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "107",
+            "index": 107,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DM8971-114/e32fd531-7496-41c9-bc81-aa4c9f2761a5_primary.jpg?browse",
             "alt": "조던 1 로우 ALT",
             "name": "조던 1 로우 ALT",
@@ -2054,10 +2054,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "108",
+            "index": 108,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7dbbf78a-ec4a-4c72-b7b1-0fb3518d6e78/%EC%BD%94%ED%8A%B8-%EB%B2%84%EB%A1%9C%EC%9A%B0-%EB%A1%9C%EC%9A%B0-2-se-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-kDrjgF30.png",
             "alt": "나이키 코트 버로우 로우 2 SE",
             "name": "나이키 코트 버로우 로우 2 SE",
@@ -2073,10 +2073,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "109",
+            "index": 109,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f6d98579-b1f5-4d5d-bf20-e259673e103b/%EC%97%90%EC%96%B4-%EB%AA%A8%EC%96%B4-%EC%97%85%ED%85%9C%ED%8F%AC-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-cU6Qxeoy.png",
             "alt": "나이키 에어 모어 업템포",
             "name": "나이키 에어 모어 업템포",
@@ -2092,10 +2092,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "110",
+            "index": 110,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/704949-045/33ee4abe-a7cd-42b2-8aa6-7130501974bb_primary.jpg?browse",
             "alt": "나이키 허라치 런",
             "name": "나이키 허라치 런",
@@ -2111,10 +2111,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "3"
+            "Review": 3
         },
         {
-            "index": "111",
+            "index": 111,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DQ0298-100/6c8514c5-81be-4102-9484-3b7ea039e74b_primary.jpg?browse",
             "alt": "나이키 에어맥스 TW",
             "name": "나이키 에어맥스 TW",
@@ -2130,10 +2130,10 @@
                 "four": "none",
                 "five": "none"
             },
-            "Review": "2"
+            "Review": 2
         },
         {
-            "index": "112",
+            "index": 112,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CZ5356-113/27548042-8dea-416f-a496-edc3eadc5884_primary.jpg?browse",
             "alt": "나이키 에어맥스 SC",
             "name": "나이키 에어맥스 SC",
@@ -2149,10 +2149,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "113",
+            "index": 113,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5dc44712-2453-40e4-a03c-2342b0024485/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AA%A8-%EA%B3%A0-%EB%A6%AC%ED%8B%80%ED%82%A4%EC%A6%88-%EC%9D%B4%EC%A7%80-%EC%98%A8-%EC%98%A4%ED%94%84-%EC%8B%A0%EB%B0%9C-0PQ905FF.png",
             "alt": "나이키 다이나모 고",
             "name": "나이키 다이나모 고",
@@ -2168,10 +2168,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "114",
+            "index": 114,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CD6867-022/2ea6d4db-ef04-4e5e-ab14-776115c59f87_primary.jpg?browse",
             "alt": "나이키 에어맥스 90 LTR",
             "name": "나이키 에어맥스 90 LTR",
@@ -2187,10 +2187,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "115",
+            "index": 115,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DA5382-102/0174453d-5193-40ca-bf65-5865cdb30b2e_primary.jpg?browse",
             "alt": "나이키코트 레거시",
             "name": "나이키코트 레거시",
@@ -2206,10 +2206,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "116",
+            "index": 116,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0ec2714d-0bf8-41d5-bc09-7d3593a31c1b/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-se-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-ix5zPD0H.png",
             "alt": "나이키 덩크 로우 SE",
             "name": "나이키 덩크 로우 SE",
@@ -2225,10 +2225,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "117",
+            "index": 117,
             "src": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2ffabc86-7d6b-4bd5-a3bd-f9635f1e9346/%ED%94%8C%EB%A0%89%EC%8A%A4-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-at7Q2TKy.png",
             "alt": "나이키 플렉스 어드밴스",
             "name": "나이키 플렉스 어드밴스",
@@ -2244,10 +2244,10 @@
                 "four": "currentColor",
                 "five": "currentColor"
             },
-            "Review": "5"
+            "Review": 5
         },
         {
-            "index": "118",
+            "index": 118,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DN3205-060/45a3f66e-3f97-4490-b5e9-70ba6e0f06ff_primary.jpg?browse",
             "alt": "조던 시리즈 ES",
             "name": "조던 시리즈 ES",
@@ -2263,10 +2263,10 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         },
         {
-            "index": "119",
+            "index": 119,
             "src": "https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DJ2778-081/0269a237-d2fe-4d09-8f74-1ecf1f0c9e7f_primary.jpg?browse",
             "alt": "조던 7 레트로",
             "name": "조던 7 레트로",
@@ -2282,7 +2282,7 @@
                 "four": "currentColor",
                 "five": "none"
             },
-            "Review": "4"
+            "Review": 4
         }
     ],
     "ShopAll": [

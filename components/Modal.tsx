@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import { useRouter } from 'next/router'
 
-export default function Modal(): JSX.Element {
+export default function Modal(props: { Name: string }): JSX.Element {
     const [showModal, setShowModal] = useState<boolean>(false);
     const router = useRouter()
 
     return (
-        <>
-            <span
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 py-3 px-8 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
-                onClick={() => setShowModal(!showModal)}
-            >
-                카트에 추가
-            </span>
+        <React.Fragment>
+            {
+                props.Name != null ?
+                <span
+                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 py-3 px-8 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
+                    onClick={() => setShowModal(!showModal)}
+                >
+                    {props.Name}
+                </span>
+                : null
+            }
             {showModal ? (
                 <>
                     <div
@@ -22,7 +26,7 @@ export default function Modal(): JSX.Element {
                             <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                 <button
                                     type="button"
-                                    className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" 
+                                    className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
                                     data-modal-toggle="popup-modal"
                                     onClick={() => setShowModal(!showModal)}
                                 >
@@ -36,7 +40,7 @@ export default function Modal(): JSX.Element {
                                         data-modal-toggle="popup-modal"
                                         type="button"
                                         className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
-                                        onClick={() => {router.push('/Login')}}
+                                        onClick={() => { router.push('/login') }}
                                     >
                                         알겠습니다.
                                     </button>
@@ -55,6 +59,6 @@ export default function Modal(): JSX.Element {
                     <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
                 </>
             ) : null}
-        </>
+        </React.Fragment>
     );
 }

@@ -5,13 +5,13 @@ import React from 'react'
 
 export default function PageNotFound(): JSX.Element {
     return (
-        <>
+        <React.Fragment>
             <HeadInfo title="404 Page" contents="404 Page" />
 
             <section className="flex items-center h-full pt-16 pb-28 dark:bg-black dark:text-gray-100">
                 <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
                     <div className="max-w-md text-center">
-                        <h2 className="mb-8 font-extrabold text-9xl dark:text-white">
+                        <h2 className="pb-8 font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
                             <span className="sr-only">Error</span>404
                         </h2>
                         <p className="text-2xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
@@ -20,6 +20,6 @@ export default function PageNotFound(): JSX.Element {
                     </div>
                 </div>
             </section>
-        </>
+        </React.Fragment>
     );
 }

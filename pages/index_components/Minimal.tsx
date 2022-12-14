@@ -1,5 +1,7 @@
-import { RouteType } from '../Type/TypeBox'
+import React from 'react';
 import css from 'styled-jsx/css';
+import { RouteType } from '../Type/TypeBox'
+import Fade from 'react-reveal/Fade';
 
 const Minimal_style = css`
     .showcase--grid {
@@ -91,38 +93,44 @@ const Minimal_style = css`
 
 export default function Minimal(props: RouteType): JSX.Element {
     return (
-        <>
+        <React.Fragment>
             <section className="section--showcase min-h-full py-20">
                 <div className="container mx-auto px-4">
                     <div className="showcase--grid my-20">
-                        <div
-                            className="showcase--item__big relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95"
-                            onClick={() => props.router.push(`/Detail/${8}`)}
-                        >
-                            <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
-                                <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Soccer Shoes</h1>
+                        <Fade left>
+                            <div
+                                className="showcase--item__big relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95"
+                                onClick={() => props.router.push(`/Detail/${8}`)}
+                            >
+                                <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
+                                    <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Soccer Shoes</h1>
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            className="showcase--item__small_top relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95"
-                            onClick={() => props.router.push(`/Detail/${9}`)}
-                        >
-                            <div className="showcase--item__overlay absolute  flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
-                                <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Running Shoes</h1>
+                        </Fade>
+                        <Fade right>
+                            <div
+                                className="showcase--item__small_top relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95"
+                                onClick={() => props.router.push(`/Detail/${9}`)}
+                            >
+                                <div className="showcase--item__overlay absolute  flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
+                                    <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Running Shoes</h1>
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            className="showcase--item__small_bottom relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-90"
-                            onClick={() => props.router.push(`/Detail/${10}`)}
-                        >
-                            <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
-                                <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Minimal Shoes</h1>
+                        </Fade>
+                        <Fade right>
+                            <div
+                                className="showcase--item__small_bottom relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-90"
+                                onClick={() => props.router.push(`/Detail/${10}`)}
+                            >
+                                <div className="showcase--item__overlay absolute flex h-full w-full items-end p-8 rounded-lg cursor-pointer">
+                                    <h1 className="text-white font-serif font-regular text-4xl text-center">Nike Minimal Shoes</h1>
+                                </div>
                             </div>
-                        </div>
+                        </Fade>
                     </div>
                 </div>
             </section>
             <style jsx>{Minimal_style}</style>
-        </>
+        </React.Fragment>
     )
 }
