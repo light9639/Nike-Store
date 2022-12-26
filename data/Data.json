@@ -1,0 +1,56 @@
+{
+    "Men": [
+        {
+            "name": "전체보기",
+            "number": 1
+        },
+        {
+            "name": "스니커즈",
+            "number": 2
+        },
+        {
+            "name": "런닝화",
+            "number": 3
+        },
+        {
+            "name": "농구화",
+            "number": 4
+        }
+    ],
+    "Women": [
+        {
+            "name": "전체보기",
+            "number": 1
+        },
+        {
+            "name": "런닝화",
+            "number": 2
+        },
+        {
+            "name": "농구화",
+            "number": 3
+        },
+        {
+            "name": "운동화",
+            "number": 4
+        }
+    ],
+    "Kids": [
+        {
+            "name": "전체보기",
+            "number": 1
+        },
+        {
+            "name": "리틀키즈 신발",
+            "number": 2
+        },
+        {
+            "name": "베이비 신발",
+            "number": 3
+        },
+        {
+            "name": "주니어 신발",
+            "number": 4
+        }
+    ]
+}
