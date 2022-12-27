@@ -3,6 +3,7 @@
         {
             "index": 1,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner01.png",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-01.jpg",
             "alt": "mainBanner01",
             "h2": "한계 없는 플레이, 끝 없는 즐거움",
             "p1": "득점이 쏟아지는 NIKELAND 농구를 친구들과 함께 즐겨보세요.",
@@ -12,6 +13,7 @@
         {
             "index": 2,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner02.png",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-02.jpg",
             "alt": "mainBanner02",
             "h2": "나이키 패스트 팩",
             "p1": "탁월한 에너지 반환력으로 최상의 스피드를 위해 탄생한 레이싱화.",
@@ -21,6 +23,7 @@
         {
             "index": 3,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner03.png",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-03.jpg",
             "alt": "mainBanner03",
             "h2": "나이키 줌 X 제가마",
             "p1": "험준한 지형의 오르막길과 내리막길에서도 탁월한 접지력으로",
@@ -30,6 +33,7 @@
         {
             "index": 4,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner04.png",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-04.jpg",
             "alt": "mainBanner04",
             "h2": "에어 조던 37",
             "p1": "최첨단의 혁신과 소재를 더한 에어 조던 37과 함께",
@@ -39,6 +43,7 @@
         {
             "index": 5,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Paris.jpg",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-05.jpg",
             "alt": "Dunk",
             "h2": "조던 X 파리 생제르맹 컬렉션",
             "p1": "스포츠와 스트리트 룩의 만남.",
@@ -48,6 +53,7 @@
         {
             "index": 6,
             "src": "https://www.weloveadidas.com/wp-content/uploads/2021/05/adidas-4DFWD-8.jpg",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-06.jpg",
             "alt": "Adidas",
             "h2": "아디다스 4DFWD",
             "p1": "스피드 러닝을 위해 태어난 아디다스 4DFWD 모든 걸음에 탄력을 더하는 탁월한 반응성으로",
@@ -57,6 +63,7 @@
         {
             "index": 7,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Exercise.jpg",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-07.jpg",
             "alt": "Exercise",
             "h2": "Nike Exercise",
             "p1": "Nike Exercise",
@@ -66,6 +73,7 @@
         {
             "index": 8,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Kids_Detail.jpg",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-08.jpg",
             "alt": "Kids",
             "h2": "즐거운 놀이의 세계로",
             "p1": "아이들을 준비시키는 건 어려운 일이죠.",
@@ -75,6 +83,7 @@
         {
             "index": 9,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_Soccer.jpg",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-09.jpg",
             "alt": "Nike Soccer",
             "h2": "Nike Soccer",
             "p1": "Nike Soccer",
@@ -84,6 +93,7 @@
         {
             "index": 10,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_Running.jpg",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-10.jpg",
             "alt": "Nike Running",
             "h2": "Nike Running",
             "p1": "Nike Running",
@@ -93,6 +103,7 @@
         {
             "index": 11,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_White_Shoes.jpg",
+            "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-11.jpg",
             "alt": "Nike Running Shoes",
             "h2": "Nike Running Shoes",
             "p1": "Nike Running Shoes",

@@ -6,7 +6,8 @@ import SlideStyled from "./SlideStyled";
 import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { SlideType, GreetingsProps } from "../../lib/TypeBox";
+import { GreetingsProps } from "../../lib/TypeBox";
+import { SlideType } from "../../lib/ShoeType";
 import Fade from 'react-reveal/Fade';
 
 export default function Stuff({ name }: GreetingsProps): JSX.Element {

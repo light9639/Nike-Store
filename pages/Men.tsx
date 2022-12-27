@@ -5,7 +5,7 @@ import Dropdowns from "../components/Dropdowns/Dropdowns";
 import PageStyle from '../styles/PageStyle';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { SlideType } from '../lib/TypeBox';
+import { SlideType } from '../lib/ShoeType';
 import Loading from './loading';
 import SideBar from '../components/SideBar/SideBar';
 import Fade from 'react-reveal/Fade';

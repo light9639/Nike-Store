@@ -32,7 +32,7 @@ export default function DetailSide(): JSX.Element {
                             list && list.map(function (item: DetailType, idx: number) {
                                 return (
                                     <Link href={"/Detail/" + idx}>
-                                        <img className="hover:opacity-75 cursor-pointer" src={item?.src} />
+                                        <img className="hover:opacity-75 cursor-pointer" src={item?.src2} />
                                     </Link>
                                 )
                             })

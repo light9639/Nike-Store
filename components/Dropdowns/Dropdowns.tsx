@@ -1,7 +1,7 @@
 import React, { Fragment, SetStateAction, useEffect, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { SlideType } from '../../lib/TypeBox';
+import { SlideType } from '../../lib/ShoeType';
 
 export default function Example(props: { data: any, setData: any, Name: string, copy: any }): JSX.Element {
 
@@ -65,12 +65,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
         props.setData(New);
     }
 
-    // 원상복귀
-    function OriginFilter() {
-        // const data = localStorage.setItem(`${props.Name}_StateInLocal`, props.NewData);
-        props.setData(props.copy);
-    }
-
     // 클릭시 찾기
     function findName(children: string) {
         props.setData(
@@ -114,19 +108,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
             >
                 <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a
-                                    className={classNames(
-                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                        'block px-4 py-2 text-sm cursor-pointer'
-                                    )}
-                                    onClick={() => { OriginFilter(); }}
-                                >
-                                    원본 되돌리기
-                                </a>
-                            )}
-                        </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
                                 <a

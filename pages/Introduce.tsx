@@ -22,7 +22,7 @@ export default function Introduce(): JSX.Element {
                 </div>
 
                 <div className="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded relative -z-50 h-3/4" >
-                    <Fade><img src="/mainBanner01.png" alt="Img" /></Fade>
+                    <Fade><img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner01.png" alt="Img" /></Fade>
                 </div>
                 <div className="container max-w-5xl mx-auto mt-10 lg:-mt-32">
                     <div className="mx-0 sm:mx-6">

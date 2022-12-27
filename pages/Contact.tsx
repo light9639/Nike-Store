@@ -80,7 +80,7 @@ export default function Contact(): JSX.Element {
                         </div>
 
                         <div className="mt-12 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:ml-14 lg:-mr-8">
-                            <img className="hidden object-cover mx-auto rounded-full lg:block shrink-0 w-96 h-96" src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/g1ljiszo4qhthfpluzbt/nike-joyride.jpg" alt="" />
+                            <img className="hidden object-cover mx-auto rounded-full lg:block shrink-0 w-96 h-96" src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Contact.jpg" alt="" />
 
                                 <div className="mt-6 space-y-8 md:mt-8">
                                     <p className="flex items-start -mx-2">

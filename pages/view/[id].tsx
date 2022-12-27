@@ -7,7 +7,8 @@ import product from '../../data/View_data';
 import { signIn, useSession, signOut } from "next-auth/react";
 import Modal from '../../components/Modal/Modal';
 import Loading from '../loading';
-import { ShoeViewType, productColors, productSize } from '../../lib/TypeBox'
+import { productColors, productSize } from '../../lib/ProductType'
+import { ShoeViewType } from '../../lib/ShoeType'
 
 export default function Example(): JSX.Element {
     <HeadInfo title="제품 상세페이지" contents="제품 상세페이지" />

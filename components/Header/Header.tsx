@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import DarkModeToggleButton from '../DarkModeToggleButton/DarkModeToggleButton';
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import { useSession } from "next-auth/react";
-import { HeaderType, HeaderMobileType } from "../../lib/TypeBox";
+import { HeaderType, HeaderMobileType } from "../../lib/HeaderType";
 import { First, Second, Recent, Mobile, MobileText } from './Header_data'
 
 export default function Nav(): JSX.Element {
