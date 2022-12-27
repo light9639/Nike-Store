@@ -2,7 +2,7 @@
     "Post": [
         {
             "index": 1,
-            "src": "/mainBanner01.png",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner01.png",
             "alt": "mainBanner01",
             "h2": "한계 없는 플레이, 끝 없는 즐거움",
             "p1": "득점이 쏟아지는 NIKELAND 농구를 친구들과 함께 즐겨보세요.",
@@ -11,7 +11,7 @@
         },
         {
             "index": 2,
-            "src": "/mainBanner02.png",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner02.png",
             "alt": "mainBanner02",
             "h2": "나이키 패스트 팩",
             "p1": "탁월한 에너지 반환력으로 최상의 스피드를 위해 탄생한 레이싱화.",
@@ -20,7 +20,7 @@
         },
         {
             "index": 3,
-            "src": "/mainBanner03.png",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner03.png",
             "alt": "mainBanner03",
             "h2": "나이키 줌 X 제가마",
             "p1": "험준한 지형의 오르막길과 내리막길에서도 탁월한 접지력으로",
@@ -29,7 +29,7 @@
         },
         {
             "index": 4,
-            "src": "/mainBanner04.png",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner04.png",
             "alt": "mainBanner04",
             "h2": "에어 조던 37",
             "p1": "최첨단의 혁신과 소재를 더한 에어 조던 37과 함께",
@@ -38,7 +38,7 @@
         },
         {
             "index": 5,
-            "src": "https://static-breeze.nike.co.kr/kr/ko_kr//cmsstatic/structured-content/65250/220905_mlp_p6_bg.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Paris.jpg",
             "alt": "Dunk",
             "h2": "조던 X 파리 생제르맹 컬렉션",
             "p1": "스포츠와 스트리트 룩의 만남.",
@@ -56,7 +56,7 @@
         },
         {
             "index": 7,
-            "src": "/Exercise.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Exercise.jpg",
             "alt": "Exercise",
             "h2": "Nike Exercise",
             "p1": "Nike Exercise",
@@ -65,7 +65,7 @@
         },
         {
             "index": 8,
-            "src": "https://static.nike.com/a/images/f_auto/dpr_2.3,cs_srgb/w_1592,c_limit/c3841cac-af3a-45e0-8896-31265038122e/%EB%82%98%EC%9D%B4%ED%82%A4-%ED%82%A4%EC%A6%88-%EC%8B%A0%EB%B0%9C-%EC%9D%98%EB%A5%98-%EB%B0%8F-%EC%95%A1%EC%84%B8%EC%84%9C%EB%A6%AC-nike-com.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Kids_Detail.jpg",
             "alt": "Kids",
             "h2": "즐거운 놀이의 세계로",
             "p1": "아이들을 준비시키는 건 어려운 일이죠.",
@@ -74,7 +74,7 @@
         },
         {
             "index": 9,
-            "src": "https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_1824,c_limit/1ac1ef70-731b-41fe-9537-decd9f1584d7/nike-just-do-it.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_Soccer.jpg",
             "alt": "Nike Soccer",
             "h2": "Nike Soccer",
             "p1": "Nike Soccer",
@@ -83,7 +83,7 @@
         },
         {
             "index": 10,
-            "src": "https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_906,c_limit/b61e8381-4ea0-4ae4-a6eb-4df5889a0be9/nike-just-do-it.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_Running.jpg",
             "alt": "Nike Running",
             "h2": "Nike Running",
             "p1": "Nike Running",
@@ -92,7 +92,7 @@
         },
         {
             "index": 11,
-            "src": "https://static.nike.com/a/images/f_auto/dpr_1.7,cs_srgb/w_906,c_limit/d07a1c1f-2d1c-44a1-9874-c65af6ef593a/nike-just-do-it.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_White_Shoes.jpg",
             "alt": "Nike Running Shoes",
             "h2": "Nike Running Shoes",
             "p1": "Nike Running Shoes",

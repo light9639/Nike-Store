@@ -2,36 +2,6 @@ const product = {
     name: 'Men',
     price: '150,000원',
     href: '#',
-    breadcrumbs: [
-        { id: 1, name: 'Men', href: '#' },
-        { id: 2, name: 'Shoes', href: '#' },
-    ],
-    images: [
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0fd4ce0b-1657-4a31-b670-3d925774c2a3/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain black basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain gray basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0d62111e-2e0d-4490-b247-54404cf3fbb3/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain white basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f11f19a2-1af6-460c-a346-54cc71d2cb1d/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain white basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/8808183b-8ab7-4876-a231-24f429ca18a9/air-jordan-1-mid-shoes-PCCmCV.png',
-            alt: 'Model wearing plain white basic tee.',
-        },
-        {
-            src: 'https://static.nike.com/a/videos/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,so_1.55/adc356bd-8925-41e5-a297-e3b8f1db0973/air-jordan-1-mid-shoes-PCCmCV.jpg',
-            alt: 'Two each of gray, #181515, and black shirts laying flat.',
-        },
-    ],
     colors: [
         { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400', inStock: false },
         { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400', inStock: false },

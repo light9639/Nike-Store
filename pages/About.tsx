@@ -14,7 +14,7 @@ export default function About(): JSX.Element {
                     </Fade>
                 </div>
                 <div className="w-full lg:w-8/12 ">
-                    <Fade right><img className="w-full h-full" src="https://media.about.nike.com/images/71fbb222-326e-4bc3-8e4a-f0fbad0fc1fb/nike-inc-swoosh-jordan-converse-logos.jpg?fm=jpg&q=80&fit=max&crop=%2C%2C%2C&w=4000&w=3840" alt="A group of People" /></Fade>
+                    <Fade right><img className="w-full h-full" src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/About/About.jpg" alt="A group of People" /></Fade>
                 </div>
             </div>
 
