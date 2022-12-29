@@ -2,7 +2,7 @@
     "Men": [
         {
             "index": 2,
-            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Men/Men_3.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Men/Men_03.jpg",
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
             "info": "남성 신발",
@@ -21,7 +21,7 @@
         },
         {
             "index": 5,
-            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Men/Men_6.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Men/Men_06.jpg",
             "alt": "나이키 에어맥스 페니",
             "name": "나이키 에어맥스 페니",
             "info": "남성 신발",
@@ -234,7 +234,7 @@
     "Kids": [
         {
             "index": 82,
-            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_3.jpg",
+            "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_03.jpg",
             "alt": "스카이 조던 1",
             "name": "스카이 조던 1",
             "info": "베이비 신발",
