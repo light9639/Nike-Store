@@ -31,3 +31,11 @@ export type ShoeViewType = CommonType & {
         six: string;
     }
 }
+
+export type StarType = {
+    first: string;
+    second: string;
+    third: string;
+    four: string;
+    five: string;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeadInfo from "../components/HeadInfo/HeadInfo";
+import HeadInfo from "@components/HeadInfo/HeadInfo";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 

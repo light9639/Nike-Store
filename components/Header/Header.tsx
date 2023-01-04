@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import DarkModeToggleButton from '../DarkModeToggleButton/DarkModeToggleButton';
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import { useSession } from "next-auth/react";
-import { HeaderType, HeaderMobileType } from "../../lib/HeaderType";
+import { HeaderType, HeaderMobileType } from "@lib/HeaderType";
 import { First, Second, Recent, Mobile, MobileText } from './Header_data'
 
 export default function Nav(): JSX.Element {
@@ -26,8 +26,13 @@ export default function Nav(): JSX.Element {
                             <Link href="/">
                                 <span className="sr-only">Workflow</span>
                                 <img
-                                    className="h-8 w-auto sm:h-10"
-                                    src="/S_logo.png"
+                                    className="w-14 sm:w-20 block dark:hidden"
+                                    src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Logo.png"
+                                    alt="reactLogo"
+                                />
+                                <img
+                                    className="w-14 sm:w-20 hidden dark:block"
+                                    src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Logo_Dark.png"
                                     alt="reactLogo"
                                 />
                             </Link>
@@ -53,7 +58,7 @@ export default function Nav(): JSX.Element {
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                        strokeWidth={2}
+                                        strokeWidth={1.5}
                                         d="M4 6h16M4 12h16M4 18h16"
                                     />
                                 </svg>
@@ -63,7 +68,7 @@ export default function Nav(): JSX.Element {
                             <div className="relative">
                                 <button
                                     type="button"
-                                    className="group bg-white dark:bg-slate-900 rounded-md text-gray-500 dark:text-white inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 pb-8'"
+                                    className="group bg-white dark:bg-slate-900 rounded-md text-gray-500 dark:text-white inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-blue-500 pb-8'"
                                     onClick={() => (setFlyer(!flyer), setFlyerTwo(false))}
                                 >
                                     <span>New Releases</span>
@@ -100,7 +105,7 @@ export default function Nav(): JSX.Element {
                                                     return (
                                                         <Link href={item.href} key={idx} className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700">
                                                             <svg
-                                                                className="flex-shrink-0 h-6 w-6 text-blue-600"
+                                                                className="flex-shrink-0 h-6 w-6 text-gray-900 dark:text-gray-200"
                                                                 xmlns="http://www.w3.org/2000/svg"
                                                                 fill="none"
                                                                 viewBox="0 0 24 24"
@@ -110,7 +115,7 @@ export default function Nav(): JSX.Element {
                                                                 <path
                                                                     strokeLinecap="round"
                                                                     strokeLinejoin="round"
-                                                                    strokeWidth={2}
+                                                                    strokeWidth={1.5}
                                                                     d={item.svg}
                                                                 />
                                                             </svg>
@@ -144,13 +149,13 @@ export default function Nav(): JSX.Element {
                                                         <path
                                                             strokeLinecap="round"
                                                             strokeLinejoin="round"
-                                                            strokeWidth={2}
+                                                            strokeWidth={1.5}
                                                             d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
                                                         />
                                                         <path
                                                             strokeLinecap="round"
                                                             strokeLinejoin="round"
-                                                            strokeWidth={2}
+                                                            strokeWidth={1.5}
                                                             d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                                         />
                                                     </svg>
@@ -173,7 +178,7 @@ export default function Nav(): JSX.Element {
                                                         <path
                                                             strokeLinecap="round"
                                                             strokeLinejoin="round"
-                                                            strokeWidth={2}
+                                                            strokeWidth={1.5}
                                                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                                         />
                                                     </svg>
@@ -207,7 +212,7 @@ export default function Nav(): JSX.Element {
                             <div className="relative">
                                 <button
                                     type="button"
-                                    className="group bg-white dark:bg-slate-900 rounded-md text-gray-500 dark:text-white inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                    className="group bg-white dark:bg-slate-900 rounded-md text-gray-500 dark:text-white inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-blue-500"
                                     onClick={() => (setFlyerTwo(!flyerTwo), setFlyer(false))}
                                 >
                                     <span>Sale</span>
@@ -245,7 +250,7 @@ export default function Nav(): JSX.Element {
                                                     return (
                                                         <Link href={item.href} key={idx} className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700">
                                                             <svg
-                                                                className="flex-shrink-0 h-6 w-6 text-blue-600"
+                                                                className="flex-shrink-0 h-6 w-6 text-gray-900 dark:text-gray-200"
                                                                 xmlns="http://www.w3.org/2000/svg"
                                                                 fill="none"
                                                                 viewBox="0 0 24 24"
@@ -255,7 +260,7 @@ export default function Nav(): JSX.Element {
                                                                 <path
                                                                     strokeLinecap="round"
                                                                     strokeLinejoin="round"
-                                                                    strokeWidth={2}
+                                                                    strokeWidth={1.5}
                                                                     d={item.svg}
                                                                 />
                                                             </svg>
@@ -302,14 +307,26 @@ export default function Nav(): JSX.Element {
                             </div>
                         </nav>
                         <div className="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
-
+                            <form className="flex items-center mr-2">
+                                <label htmlFor="voice-search" className="sr-only">Search</label>
+                                <div className="relative w-full">
+                                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <input type="text" id="voice-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 xl:hidden block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                                    <input type="text" id="voice-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 hidden xl:block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required />
+                                    <button type="button" className="absolute inset-y-0 right-0 hidden xl:flex items-center pr-3">
+                                        <svg aria-hidden="true" className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </div>
+                            </form>
                             <DarkModeToggleButton></DarkModeToggleButton>
 
                             <Link href="/Login" className="Sign_Box">
                                 {data?.user ? (
-                                    <>My Page</>
+                                    <span className="line-clamp-1">My Page</span>
                                 ) : (
-                                    <>LOGIN</>
+                                    <span className="line-clamp-1">LOGIN</span>
                                 )}
                             </Link>
                         </div>
@@ -326,18 +343,46 @@ export default function Nav(): JSX.Element {
                     <div
                         className={
                             open
-                                ? "fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r duration-700 lg:duration-1000 z-[65]"
-                                : "fixed flex flex-col top-0 -left-full w-64 bg-white h-full border-r duration-[1.5s] lg:duration-[3s] z-[65]"
+                                ? "fixed flex flex-col top-0 left-0 w-64 bg-white dark:bg-gray-900 h-full border-r dark:border-none duration-700 lg:duration-1000 z-[65]"
+                                : "fixed flex flex-col top-0 -left-full w-64 bg-white dark:bg-gray-900 h-full border-r dark:border-none duration-[1.5s] lg:duration-[3s] z-[65]"
                         }
                     >
-                        <div className="flex items-center justify-center h-14 border-b">
+                        {/* <div className="flex items-center justify-center h-14 border-b">
                             <div>Nike SideBar</div>
+                        </div> */}
+                        <div className="flex flex-col items-center mt-6 -mx-2">
+                            {data?.user ? (
+                                <React.Fragment>
+                                    <Link href="/Login"><img className='object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src={`${data?.user?.image}`} alt="profile" /></Link>
+                                    <p className='mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200'>{data?.user?.name}</p>
+                                    <p className='mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'>{data?.user?.email}</p>
+                                </React.Fragment>
+                            ) : (
+                                <React.Fragment>
+                                    <Link href="/Login"><img className='bg-gray-100 object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src="https://static.nid.naver.com/images/web/user/default.png?type=s160" alt="" /></Link>
+                                    <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">Nike Store</h4>
+                                    <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">Nike@example.com</p>
+                                </React.Fragment>
+                            )}
                         </div>
+                        <form className="flex items-center my-4 mx-2">
+                            <label htmlFor="voice-search" className="sr-only">Search</label>
+                            <div className="relative w-full">
+                                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <input type="text" id="voice-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 xl:hidden block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                                <input type="text" id="voice-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 hidden xl:block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required />
+                                <button type="button" className="absolute inset-y-0 right-0 hidden xl:flex items-center pr-3">
+                                    <svg aria-hidden="true" className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </div>
+                        </form>
                         <div className="overflow-y-auto overflow-x-hidden flex-grow">
                             <ul className="flex flex-col py-4 space-y-1">
                                 <li className="px-5">
                                     <div className="flex flex-row items-center h-8">
-                                        <div className="text-sm font-light tracking-wide text-gray-500">Menu</div>
+                                        <div className="text-sm font-light tracking-wide text-gray-500 dark:text-gray-200">Menu</div>
                                     </div>
                                 </li>
                                 {
@@ -346,10 +391,10 @@ export default function Nav(): JSX.Element {
                                             <React.Fragment>
                                                 <Link href={item.href} key={idx}>
                                                     <li>
-                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer">
+                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
                                                             <span className="inline-flex justify-center items-center ml-4">
                                                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.svg}></path>
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d={item.svg}></path>
                                                                 </svg>
                                                             </span>
                                                             <span className="ml-2 text-sm tracking-wide truncate">{item.p1}</span>

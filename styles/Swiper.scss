@@ -38,7 +38,7 @@
 
 .swiper-pagination-bullet {
     background-color: rgba(255, 255, 255, 0.25) !important;
-    width: 75px !important;
+    width: 65px !important;
     height: 3px !important;
     margin: 0 5px !important;
     border-radius: 10% !important;
@@ -50,8 +50,19 @@
     margin: 0 5px !important;
 }
 
-@media screen and (max-width: 1024px) {
+// @media screen and (max-width: 1024px) {
+//     .swiper-pagination-bullet {
+//         width: 50px !important;
+//     }
+// }
+
+@media screen and (max-width: 767px) {
+    .swiper-pagination {
+        max-width: 95% !important;
+        width: 100% !important;
+    }
     .swiper-pagination-bullet {
-        width: 50px !important;
+        width: 22.5% !important;
+        margin: 0px !important;
     }
 }

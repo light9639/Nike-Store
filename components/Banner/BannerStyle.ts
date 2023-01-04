@@ -3,7 +3,7 @@ import css from 'styled-jsx/css';
 export default css`
     .swiper-button-prev,
     .swiper-button-next {
-        background-color: #fff;
+        background-color: #222;
         padding: 22.5px;
         border-radius: 50%;
         transition: 0.5s;
@@ -12,17 +12,18 @@ export default css`
 
     .swiper-button-prev:hover,
     .swiper-button-next:hover {
-        background-color: rgb(59 130 246);
+        background-color: #fff;
+        /* background-color: rgb(59 130 246); */
     }
 
     .swiper-button-prev:hover::after,
     .swiper-button-next:hover::after {
-        color: white;
+        color: #222;
     }
 
     .swiper-button-prev::after,
     .swiper-button-next::after {
-        color: #333;
+        color: #fff;
         font-size: 16px;
         font-weight: 600;
     }
@@ -47,6 +48,13 @@ export default css`
         transform: translate(-50%, 25%);
     }
 
+    @media screen and (max-width: 767px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+    }
+
     @media screen and (max-width: 640px) {
         .swiper-button-prev::after,
         .swiper-button-next::after {
@@ -56,4 +64,5 @@ export default css`
         .Banner_text {
             transform: translate(-50%, 35%);
         }
-    }`
+    }
+`

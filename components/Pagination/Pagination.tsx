@@ -51,7 +51,7 @@ export default function Paging(props: { total: number, limit: number, page: numb
             <button
                 onClick={() => {pageMinusParams(); props.setPage(props.page - 1); ScrollTop(); }}
                 disabled={props.page === 1}
-                className="h-12 w-14 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white dark:bg-gray-200 dark:hover:bg-blue-600 text-sm flex items-center justify-center cursor-pointer rounded-lg border border-gray-200 dark:hover:border-blue-600 mr-3 transition"
+                className="h-12 w-14 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white dark:bg-gray-200 dark:hover:bg-blue-600 text-sm flex items-center justify-center cursor-pointer rounded-lg border border-gray-200 dark:hover:border-blue-600 mr-3 transition"
             >
                 Prev
             </button>
@@ -61,8 +61,8 @@ export default function Paging(props: { total: number, limit: number, page: numb
                         key={idx + 1}
                         onClick={(e: React.MouseEvent<HTMLButtonElement>) => { pageParams(e.currentTarget.textContent); props.setPage(idx + 1); ScrollTop(); }}
                         aria-current={props.page === idx + 1 && "page"}
-                        className={`h-12 w-12 font-semibold hover:bg-blue-500 hover:text-white text-sm flex items-center justify-center cursor-pointer border border-gray-200 dark:hover:border-blue-600 rounded-lg mr-3 transition
-                            ${props.page === idx + 1 && "page" ? 'bg-blue-600 dark:bg-blue-600 dark:border-blue-600 text-white' : 'dark:bg-gray-200 text-gray-800 dark:hover:bg-blue-600 dark:hover:border-blue-600 hover:text-white'}`}
+                        className={`h-12 w-12 font-semibold hover:bg-gray-800 hover:text-white text-sm flex items-center justify-center cursor-pointer border border-gray-200 dark:hover:border-gray-600 rounded-lg mr-3 transition
+                            ${props.page === idx + 1 && "page" ? 'bg-gray-900 dark:bg-blue-600 dark:border-blue-600 text-white' : 'dark:bg-gray-200 text-gray-800 dark:hover:bg-blue-600 dark:hover:border-blue-600 hover:text-white'}`}
                     >
                         {idx + 1}
                     </button>
@@ -71,7 +71,7 @@ export default function Paging(props: { total: number, limit: number, page: numb
             <button
                 onClick={() => {pagePlusParams(); props.setPage(props.page + 1); ScrollTop(); }}
                 disabled={props.page === numPages}
-                className="h-12 w-14 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center cursor-pointer rounded-lg border border-gray-200 dark:bg-gray-200 dark:hover:border-blue-600 dark:hover:bg-blue-600 transition"
+                className="h-12 w-14 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white text-sm flex items-center justify-center cursor-pointer rounded-lg border border-gray-200 dark:bg-gray-200 dark:hover:border-blue-600 dark:hover:bg-blue-600 transition"
             >
                 Next
             </button>

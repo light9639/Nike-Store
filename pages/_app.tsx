@@ -3,7 +3,7 @@ import '../styles/Swiper.scss'
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'next-themes'
-import Layout from "../components/LayOut/LayOut";
+import Layout from "@components/LayOut/LayOut";
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { SessionProvider } from "next-auth/react"

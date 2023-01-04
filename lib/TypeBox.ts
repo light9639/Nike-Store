@@ -66,6 +66,19 @@ export type ServiceType = {
 
 export type MainSideType = {
     name: string;
+    href: string;
     svg: string;
-    svg2: string;
+}
+
+export type ContactType = {
+    cx: string;
+    cy: string;
+    r: string;
+    transform: string;
+}
+
+declare global {
+    interface Window {
+        kakao: any;
+    }
 }

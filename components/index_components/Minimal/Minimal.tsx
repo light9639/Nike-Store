@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteType } from '../../../lib/TypeBox'
+import { RouteType } from '@lib/TypeBox'
 import Fade from 'react-reveal/Fade';
 import { Minimal_style } from "./MinimalStyle";
 

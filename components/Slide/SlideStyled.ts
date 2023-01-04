@@ -3,7 +3,7 @@ import css from 'styled-jsx/css';
 export default css`
     .swiper-button-prev,
     .swiper-button-next {
-        background-color: #333;
+        background-color: #222;
         padding: 22.5px;
         border-radius: 50%;
         top: 5%;

@@ -6,11 +6,11 @@ import SlideStyled from "./SlideStyled";
 import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { GreetingsProps } from "../../lib/TypeBox";
-import { SlideType } from "../../lib/ShoeType";
+import { GreetingsProps } from "@lib/TypeBox";
+import { SlideType } from "@lib/ShoeType";
 import Fade from 'react-reveal/Fade';
 
-export default function Stuff({ name }: GreetingsProps): JSX.Element {
+export default function Slide({ name }: GreetingsProps): JSX.Element {
     const [list, setList] = useState<SlideType[]>([]);
     const router = useRouter()
     const API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Slide.json';
@@ -70,17 +70,20 @@ export default function Stuff({ name }: GreetingsProps): JSX.Element {
                 {list.map(function (a: SlideType, i: number) {
                     return (
                         <>
-                            <SwiperSlide className="pt-20 pb-10 cursor-pointer" key={i} onClick={() => router.push(`/view/${a.index}`)}>
+                            <SwiperSlide className="pt-20 pb-10" key={i}>
                                 <div className="rounded-xl sm:ml-1 dark:hover:shadow-slate-700 transform duration-500 text-left">
-                                    <div className='ImgBox'>
+                                    <div
+                                        className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition cursor-pointer rounded-3xl'
+                                        onClick={() => router.push(`/view/${a.index}`)}
+                                    >
                                         <Fade>
-                                            <img src={a.src} alt={a.alt} className="w-full h-full object-cover" />
+                                            <img src={a.src} alt={a.alt} className="w-full h-full object-cover rounded-3xl" />
                                         </Fade>
                                     </div>
                                     <Fade bottom cascade>
                                         <div className="pt-5 px-2 flex flex-col gap-2">
     
-                                            <h2 className="tracking-tighter text-base xl:text-xl overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 xl:mb-0" title="Best Headphone Ever">
+                                            <h2 className="tracking-tighter text-base xl:text-xl overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 xl:mb-0 cursor-pointer hover:text-blue-600 transition" title="Best Headphone Ever">
                                                 {a.name}
                                             </h2>
     

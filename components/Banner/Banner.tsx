@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import { useRouter } from 'next/router';
-import { BannerType } from '../../lib/TypeBox';
+import { BannerType } from '@lib/TypeBox';
 import Fade from 'react-reveal/Fade';
 import style from './BannerStyle';
 import { product } from './Banner_data'

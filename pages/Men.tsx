@@ -1,21 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect, useCallback } from 'react'
-import HeadInfo from '../components/HeadInfo/HeadInfo'
-import Dropdowns from "../components/Dropdowns/Dropdowns";
-import PageStyle from '../styles/PageStyle';
+import HeadInfo from '@components/HeadInfo/HeadInfo'
+import Dropdowns from "@components/Dropdowns/Dropdowns";
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { SlideType } from '../lib/ShoeType';
+import { SlideType } from '@lib/ShoeType';
 import Loading from './loading';
-import SideBar from '../components/SideBar/SideBar';
+import SideBar from '@components/SideBar/SideBar';
 import Fade from 'react-reveal/Fade';
-import Pagination from "../components/Pagination/Pagination";
-import Mobile from '../components/Mobile/Mobile';
+import Pagination from "@components/Pagination/Pagination";
+import Mobile from '@components/Mobile/Mobile';
 import Link from 'next/link';
 
 export default function Men(): JSX.Element {
-    <HeadInfo title="Men Product Page" contents="Men Product Page" />
-
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -23,8 +20,9 @@ export default function Men(): JSX.Element {
     const [loading, setLoading] = useState<boolean>(true);
     const [page, setPage] = useState<number>(1);
     const [limit, setLimit] = useState<number>(15);
-    const [search, setSearch] = useState<string>('')
     const [mobile, setMobile] = useState<boolean>(true);
+    const [ScrollY, setScrollY] = useState<number>(0); // window 의 pageYOffset값을 저장
+    const [ScrollActive, setScrollActive] = useState<boolean>(false);
     const offset: number = (page - 1) * limit;
 
     // 라우터 모음
@@ -40,11 +38,11 @@ export default function Men(): JSX.Element {
     async function getData() {
         try {
             const response = await axios.get(Men_API_URL);
-            if ( JSON.parse(LocalState) == '' ) {
+            if (JSON.parse(LocalState) == '') {
                 setData(response.data.Men);
                 setCopy(response.data.Men);
             }
-            else if ( LocalState ) {
+            else if (LocalState) {
                 setData(JSON.parse(LocalState));
             }
             else {
@@ -67,19 +65,10 @@ export default function Men(): JSX.Element {
         }
     }, []);
 
-    const inputChange = (e: { target: { value: any; }; }) => {
-        const { value } = e.target
-        setSearch(value)
-    }
-
-    useEffect(() => {
-        setData(
-            data.filter(item => item.price.toUpperCase().indexOf(search) !== -1)
-        )
-    }, [search])
-
     return (
         <React.Fragment>
+            <HeadInfo title="Men Product Page" contents="Men Product Page" />
+
             {loading ? <Loading></Loading>
                 : <React.Fragment>
                     <div className="flex items-center lg:w-screen min-h-screen my-16">
@@ -99,13 +88,6 @@ export default function Men(): JSX.Element {
                                 </div>
 
                                 <div className='inline-flex lg:flex items-center mx-auto mt-6 lg:mt-0 lg:float-right'>
-                                    {/* <input type="text" placeholder="검색어를 입력하세요" value={search} onChange={inputChange}/> */}
-                                    <div className="relative mr-5 hidden lg:block">
-                                        <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                            <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-                                        </div>
-                                        <input type="text" id="table-search" className="block p-2 pl-10 w-80 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for items" value={search} onChange={inputChange} />
-                                    </div>
                                     <a
                                         className='flex justify-between items-center text-sm mr-5 cursor-pointer hover:opacity-50'
                                         onClick={() => { setSide(!side); setMobile(!mobile); }}
@@ -121,9 +103,16 @@ export default function Men(): JSX.Element {
 
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar side={side} Name={"Men"}></SideBar>
+                                <SideBar
+                                    side={side}
+                                    Name={"Men"}
+                                    ScrollY={ScrollY}
+                                    ScrollActive={ScrollActive}
+                                    setScrollY={setScrollY}
+                                    setScrollActive={setScrollActive}
+                                ></SideBar>
 
-                                <div>
+                                <div className={side && ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
                                     <div className='w-full flex flex-wrap '>
                                         {
                                             data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
@@ -135,10 +124,10 @@ export default function Men(): JSX.Element {
                                                             onClick={() => router.push(`/view/${item?.index}`)}
                                                         >
                                                             <div className="rounded-xl m-2 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
-                                                                <div className='ImgBox'>
+                                                                <div className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition rounded-3xl'>
                                                                     <Link href={`/view/${item?.index}`}>
                                                                         <Fade>
-                                                                            <img src={item?.src} alt={item?.alt} className="w-full h-full object-cover" />
+                                                                            <img src={item?.src} alt={item?.alt} className="w-full h-full object-cover rounded-3xl" />
                                                                         </Fade>
                                                                     </Link>
                                                                 </div>
@@ -159,7 +148,7 @@ export default function Men(): JSX.Element {
                                                                         </div>
 
                                                                     </div>
-                                                                    <div className="block md:flex pl-2 pb-2">
+                                                                    <div className={`block md:flex pl-2 pb-2 ${side ? "md:flex-wrap": ""}`}>
                                                                         <span className="flex items-center my-3 md:my-0">
                                                                             <svg fill={item?.star?.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
@@ -178,7 +167,9 @@ export default function Men(): JSX.Element {
                                                                             </svg>
                                                                             <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item?.Review} Reviews</span>
                                                                         </span>
-                                                                        <span className="hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
+                                                                        <span className={`hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3
+                                                                            ${side ? 'md:hidden': ''}
+                                                                        `}>
                                                                             <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
                                                                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                                                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -220,7 +211,6 @@ export default function Men(): JSX.Element {
 
                     <Mobile mobile={mobile} setMobile={setMobile}></Mobile>
 
-                    <style jsx>{PageStyle}</style>
                 </React.Fragment>
             }
         </React.Fragment>

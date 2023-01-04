@@ -1,7 +1,7 @@
 import React, { Fragment, SetStateAction, useEffect, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { SlideType } from '../../lib/ShoeType';
+import { SlideType } from '@lib/ShoeType';
 
 export default function Example(props: { data: any, setData: any, Name: string, copy: any }): JSX.Element {
 
@@ -91,7 +91,7 @@ export default function Example(props: { data: any, setData: any, Name: string, 
     return (
         <Menu as="div" className="relative inline-block text-left ml-1">
             <div>
-                <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100">
                     선택 옵션
                     <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                 </Menu.Button>

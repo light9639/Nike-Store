@@ -6,8 +6,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -24,15 +25,11 @@ a {
 }
 
 .Black_box {
-  @apply inline-block px-5 py-3 rounded-lg shadow-lg dark:bg-white bg-black text-sm text-white dark:text-black uppercase tracking-wider font-semibold sm:text-base
-}
-
-.Login_border {
-  @apply transition duration-300 ease-in-out mr-2 last:mr-0 py-2 px-4 bg-transparent rounded text-blue-700 font-medium focus:outline-none hover:bg-blue-700 hover:border-blue-700 hover:text-white dark:text-white
+  @apply inline-block px-5 py-3 rounded-lg shadow-lg dark:bg-white bg-black text-sm text-white dark:text-black uppercase tracking-wider font-semibold sm:text-base transition hover:opacity-75
 }
 
 .Sign_Box {
-  @apply transition duration-300 ease-in-out py-2 px-4 bg-blue-700 rounded text-white font-normal focus:outline-none hover:bg-blue-900
+  @apply inline-block text-white bg-black dark:bg-blue-600 font-semibold rounded-md py-2.5 px-5 hover:opacity-75 transition focus:ring-gray-300 dark:focus:ring-gray-600
 }
 
 @media (prefers-color-scheme: dark) {

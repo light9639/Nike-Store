@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouteType } from '../../../lib/TypeBox'
+import { RouteType } from '@lib/TypeBox'
 import Fade from 'react-reveal/Fade';
 
 export default function Photos(props: RouteType): JSX.Element {
@@ -7,7 +7,7 @@ export default function Photos(props: RouteType): JSX.Element {
         <React.Fragment>
             <div className="py-16">
                 <div className="block lg:w-full max-w-screen-2xl m-auto lg:relative">
-                    <Fade><img className="inset-0 h-full w-full object-cover object-center" src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Paris.jpg" alt="Woman workcationing on the beach" /></Fade>
+                    <Fade><img className="inset-0 h-full w-full object-cover object-center rounded" src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Paris.jpg" alt="Photo" /></Fade>
                 </div>
                 <div className="px-8 py-6 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:px-12">
                     <div className="max-w-lg m-auto text-center">

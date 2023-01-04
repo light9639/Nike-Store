@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
-import Banner from '../components/Banner/Banner'
-import HeadInfo from '../components/HeadInfo/HeadInfo'
+import Banner from '@components/Banner/Banner'
+import HeadInfo from '@components/HeadInfo/HeadInfo'
 import { useRouter } from 'next/router';
-import Photos from '../components/index_components/Photos/Photos';
-import Photos2 from '../components/index_components/Photos2/Photos2';
-import Trending from '../components/index_components/Trending/Trending';
-import Minimal from '../components/index_components/Minimal/Minimal';
-import NikeKids from '../components/index_components/Nike_Kids/Nike_Kids';
-import Shop from '../components/index_components/Shop/Shop';
-import Slide from '../components/Slide/Slide';
+import Photos from '@components/index_components/Photos/Photos';
+import Photos2 from '@components/index_components/Photos2/Photos2';
+import Trending from '@components/index_components/Trending/Trending';
+import Minimal from '@components/index_components/Minimal/Minimal';
+import NikeKids from '@components/index_components/Nike_Kids/Nike_Kids';
+import Shop from '@components/index_components/Shop/Shop';
+import Slide from '@components/Slide/Slide';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Inter } from '@next/font/google'
@@ -29,7 +29,7 @@ export default function Home(): JSX.Element {
   return (
     <React.Fragment>
 
-      <HeadInfo title="Shoe-Store. Just Do It." contents="Shoe-Store Next.js"></HeadInfo>
+      <HeadInfo title="Nike-Store. Just Do It." contents="Nike-Store Next.js"></HeadInfo>
 
       <Banner></Banner>
 

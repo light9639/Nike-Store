@@ -1,21 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react'
-import HeadInfo from '../components/HeadInfo/HeadInfo'
-import Dropdowns from "../components/Dropdowns/Dropdowns";
-import PageStyle from '../styles/PageStyle';
+import HeadInfo from '@components/HeadInfo/HeadInfo'
+import Dropdowns from "@components/Dropdowns/Dropdowns";
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import { SlideType } from '../lib/ShoeType';
+import { SlideType } from '@lib/ShoeType';
 import Loading from './loading';
-import SideBar from '../components/SideBar/SideBar';
+import SideBar from '@components/SideBar/SideBar';
 import Fade from 'react-reveal/Fade';
-import Pagination from "../components/Pagination/Pagination";
-import Mobile from '../components/Mobile/Mobile';
+import Pagination from "@components/Pagination/Pagination";
+import Mobile from '@components/Mobile/Mobile';
 import Link from 'next/link';
 
 export default function Women(): JSX.Element {
-    <HeadInfo title="Women Product Page" contents="Women Product Page" />
-
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -24,6 +21,8 @@ export default function Women(): JSX.Element {
     const [page, setPage] = useState<number>(1);
     const [limit, setLimit] = useState<number>(15);
     const [mobile, setMobile] = useState<boolean>(true);
+    const [ScrollY, setScrollY] = useState<number>(0); // window 의 pageYOffset값을 저장
+    const [ScrollActive, setScrollActive] = useState<boolean>(false);
     const offset: number = (page - 1) * limit;
 
     // 라우터 모음
@@ -33,16 +32,22 @@ export default function Women(): JSX.Element {
     const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
     const Women_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
     const LocalPage = localStorage.getItem("Women_pageNum")
-    const LocalState = localStorage.getItem("Women_StateInLocal");
+    const LocalState: any = localStorage.getItem("Women_StateInLocal");
 
     // 신발 데이터 가져오기
     async function getData() {
         try {
             const response = await axios.get(Women_API_URL);
-            if ( LocalState ) {
+            if (JSON.parse(LocalState) == '') {
+                setData(response.data.Women);
+                setCopy(response.data.Women);
+            }
+            else if (LocalState) {
                 setData(JSON.parse(LocalState));
-            } else {
-                setData(response.data.Women)
+            }
+            else {
+                setData(response.data.Women);
+                setCopy(response.data.Women);
             }
         } catch (error) {
             console.error(error);
@@ -55,13 +60,15 @@ export default function Women(): JSX.Element {
         axios.get("").then((res) => {
             setLoading(false);
         });
-        if ( LocalPage ) {
+        if (LocalPage) {
             setPage(JSON.parse(LocalPage));
         }
     }, []);
 
     return (
         <React.Fragment>
+            <HeadInfo title="Women Product Page" contents="Women Product Page" />
+
             {loading ? <Loading></Loading>
                 : <React.Fragment>
                     <div className="flex items-center lg:w-screen min-h-screen my-16">
@@ -87,9 +94,16 @@ export default function Women(): JSX.Element {
                             </div>
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar side={side} Name={"Women"}></SideBar>
+                                <SideBar
+                                    side={side}
+                                    Name={"Women"}
+                                    ScrollY={ScrollY}
+                                    ScrollActive={ScrollActive}
+                                    setScrollY={setScrollY}
+                                    setScrollActive={setScrollActive}
+                                ></SideBar>
 
-                                <div>
+                                <div className={side && ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
                                     <div className='w-full flex flex-wrap'>
                                         {
                                             data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
@@ -99,10 +113,10 @@ export default function Women(): JSX.Element {
                                                             className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mb-16 lg:pr-2"
                                                         >
                                                             <div className="rounded-xl m-2 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
-                                                                <div className='ImgBox'>
+                                                                <div className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition rounded-3xl'>
                                                                     <Link href={`/view/${item?.index}`}>
                                                                         <Fade>
-                                                                            <img src={item?.src} alt={item?.alt} className="w-full h-full object-cover cursor-pointer" />
+                                                                            <img src={item?.src} alt={item?.alt} className="w-full h-full object-cover cursor-pointer rounded-3xl" />
                                                                         </Fade>
                                                                     </Link>
                                                                 </div>
@@ -142,7 +156,9 @@ export default function Women(): JSX.Element {
                                                                             </svg>
                                                                             <span className="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{item?.Review} Reviews</span>
                                                                         </span>
-                                                                        <span className="hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
+                                                                        <span className={`hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3
+                                                                            ${side ? 'md:hidden': ''}
+                                                                        `}>
                                                                             <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
                                                                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                                                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -184,7 +200,6 @@ export default function Women(): JSX.Element {
 
                     <Mobile mobile={mobile} setMobile={setMobile}></Mobile>
 
-                    <style jsx>{PageStyle}</style>
                 </React.Fragment>
             }
         </React.Fragment>

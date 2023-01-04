@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { ShoeType } from '../../../lib/TypeBox'
+import { ShoeType } from '@lib/TypeBox'
 import axios from 'axios';
 import Fade from 'react-reveal/Fade';
 
@@ -25,7 +25,7 @@ export default function Shop(): JSX.Element {
                                 <div className="md:w-1/3 rounded overflow-hidden mx-auto my-8 p-3 text-center" key={idx}>
                                     <Fade big>
                                         <Link href={item.href}>
-                                            <img className="w-full cursor-pointer hover:opacity-75 transition" src={item.img} alt="Sunset in the mountains" />
+                                            <img className="w-full cursor-pointer hover:opacity-75 transition rounded" src={item.img} alt="Sunset in the mountains" />
                                         </Link>
                                     </Fade>
                                     <div className="pr-6 py-2">

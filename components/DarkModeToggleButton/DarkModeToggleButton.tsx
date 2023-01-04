@@ -18,7 +18,7 @@ export default function DarkModeToggleButton(): JSX.Element {
                 {/* 라이트 모드 */}
                 <span className='dark:hidden'>
                     <span className="w-8 h-8 rounded-full flex items-center justify-center transition duration-500">
-                        <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none transition duration-500 transform text-blue-500 opacity-100 scale-100">
+                        <svg width="24" height="24" fill="none" aria-hidden="true" className="flex-none transition duration-500 transform text-black opacity-100 scale-100">
                             <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             </path>
                             <path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
