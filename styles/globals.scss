@@ -29,7 +29,7 @@ a {
 }
 
 .Sign_Box {
-  @apply inline-block text-white bg-black dark:bg-blue-600 font-semibold rounded-md py-2.5 px-5 hover:opacity-75 transition focus:ring-gray-300 dark:focus:ring-gray-600
+  @apply inline-block text-white bg-black dark:bg-blue-600 font-medium rounded-md py-2.5 px-5 hover:opacity-75 transition focus:ring-gray-300 dark:focus:ring-gray-600
 }
 
 @media (prefers-color-scheme: dark) {

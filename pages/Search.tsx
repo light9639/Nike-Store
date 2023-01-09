@@ -3,6 +3,7 @@ import HeadInfo from '@components/HeadInfo/HeadInfo'
 import axios from 'axios';
 import { DetailType } from '@lib/TypeBox'
 import { ShoeViewType } from '@lib/ShoeType'
+import { motion } from "framer-motion";
 
 export default function Search(): JSX.Element {
     const [search, setSearch] = useState<string>('')
@@ -11,14 +12,65 @@ export default function Search(): JSX.Element {
     const Every_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes_View.json'
     const Detail_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json'
 
-    const inputChange = (e: { target: { value: any; }; }) => {
-        const { value } = e.target
-        setSearch(value)
-    }
+
+    // const [search, setSearch] = useState("");
+    const [lists, setLists] = useState([]);
+    // const router = useRouter();
+    /*pagination*/
+    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPosts, setCurrentPosts] = useState([]);
+    const postsPerPage = 10;
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
     // useEffect(() => {
-    //     setData(
-    //         data.filter(item => item.price.toUpperCase().indexOf(search) !== -1)
+    //     const userData = async () => {
+    //         await axios
+    //             .get(common.baseURL + "user")
+    //             .then((res) => {
+    //                 setLists(res.data.patientList)
+    //                 setCurrentPosts(res.data.patientList.slice(indexOfFirstPost, indexOfLastPost))
+    //                 setCurrentPage(1)
+    //             });
+    //     };
+    //     userData();
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, []);
+
+    // useEffect(() => {
+    //     setCurrentPosts(lists.slice(indexOfFirstPost, indexOfLastPost))
+    // }, [indexOfFirstPost, indexOfLastPost, lists])
+
+    // const onSearch = (e) => {
+    //     e.preventDefault();
+    //     if (search === null || search === '') {
+    //         axios.get(common.baseURL + "user")
+    //             .then((res) => {
+    //                 setLists(res.data.userList)
+    //                 setCurrentPosts(res.data.userist.slice(indexOfFirstPost, indexOfLastPost))
+    //             });
+    //     } else {
+    //         const filterData = lists.filter((row) => row.userId.includes(search))
+    //         setLists(filterData)
+    //         setCurrentPosts(filterData.slice(indexOfFirstPost, indexOfLastPost))
+    //         setCurrentPage(1)
+    //     }
+    //     setSearch('')
+    // }
+
+    // const onChangeSearch = (e: { preventDefault: () => void; target: { value: React.SetStateAction<string>; }; }) => {
+    //     e.preventDefault();
+    //     setSearch(e.target.value);
+    // };
+
+    // const inputChange = (e: { target: { value: any; }; }) => {
+    //     const { value } = e.target
+    //     setSearch(value)
+    // }
+
+    // useEffect(() => {
+    //     setEvery(
+    //         every.filter(item => item.name.toUpperCase().indexOf(search) !== -1)
     //     )
     // }, [search])
 
@@ -47,13 +99,27 @@ export default function Search(): JSX.Element {
 
                 <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold text-center mt-20">Nike Search Page</h1>
 
+                {/* <form onSubmit={e => onSearch(e)} className='max-w-3xl mx-auto my-10'> */}
                 <form className='max-w-3xl mx-auto my-10'>
                     <label htmlFor="" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </div>
-                        <input type="search" id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required />
+                        {/* <input
+                            placeholder="Search Mockups, Logos..."
+                            onChange={inputChange}
+                            value={inputText}
+                        /> */}
+                        <input
+                            type="search"
+                            id="default-search"
+                            className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            value={search}
+                            placeholder="아이디를 검색하세요."
+                            // onChange={onChangeSearch}
+                            required
+                        />
                         <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                     </div>
                 </form>
@@ -66,7 +132,7 @@ export default function Search(): JSX.Element {
                                 return (
                                     <li>
                                         <a href={`/view/${item.index}`} className="block items-center p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <img className="mr-3 mb-3 w-36 h-36 rounded-md sm:mb-0" src={item.src.first} alt={item.alt} />
+                                            <img className="mr-3 mb-3 w-36 rounded-md sm:mb-0" src={item.src.first} alt={item.alt} />
                                             <div className="text-gray-600 dark:text-gray-400">
                                                 <p className="text-base font-normal">{item.name}</p>
                                                 <p className="text-sm font-normal">{item.info}</p>

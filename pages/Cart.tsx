@@ -95,7 +95,7 @@ export default function Cart(): JSX.Element {
                                                             $599
                                                         </td>
                                                         <td className="py-4 px-6">
-                                                            <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
+                                                            <a href="#void" className="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                                                         </td>
                                                     </tr>
                                                 )
@@ -134,7 +134,7 @@ export default function Cart(): JSX.Element {
                                                             $599
                                                         </p>
                                                         <p className="py-4 px-6">
-                                                            <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
+                                                            <a href="#void" className="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -291,7 +291,7 @@ export default function Cart(): JSX.Element {
                                         </div>
                                         <div><label htmlFor="card-name" className="sr-only">Card name</label><input type="text" id="card-name" name="card-name" placeholder="Name on the card" className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-teal-500" /></div>
                                     </form>
-                                    <p className="mt-10 text-center text-sm font-semibold text-gray-500">By placing this order you agree to the <a href="#" className="whitespace-nowrap text-teal-400 underline hover:text-teal-600">Terms and Conditions</a></p>
+                                    <p className="mt-10 text-center text-sm font-semibold text-gray-500">By placing this order you agree to the <a href="#void" className="whitespace-nowrap text-teal-400 underline hover:text-teal-600">Terms and Conditions</a></p>
                                     <button type="submit" className="mt-4 inline-flex w-full items-center justify-center rounded bg-teal-600 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg">Place Order</button>
                                 </div>
                             </div>
@@ -439,7 +439,7 @@ export default function Cart(): JSX.Element {
 export async function getServerSideProps(context: any) {
     const session = await unstable_getServerSession(context.req, context.res, authOptions)
 
-    if (session) {
+    if ( !session ) {
         return {
             redirect: {
                 destination: '/NotLogin',

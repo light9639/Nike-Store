@@ -11,6 +11,7 @@ import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination/Pagination";
 import Mobile from '@components/Mobile/Mobile';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Kids(): JSX.Element {
     // useState 모음
@@ -116,7 +117,7 @@ export default function Kids(): JSX.Element {
                                                                 <div className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition rounded-3xl'>
                                                                     <Link href={`/view/${item?.index}`}>
                                                                         <Fade>
-                                                                            <img src={item?.src} alt={item?.alt} className="w-full h-full object-cover rounded-3xl" />
+                                                                            <Image src={item?.src} alt={item?.alt} className="w-full h-full object-cover rounded-3xl" width={592} height={592} />
                                                                         </Fade>
                                                                     </Link>
                                                                 </div>

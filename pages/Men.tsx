@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, use } from 'react'
 import HeadInfo from '@components/HeadInfo/HeadInfo'
 import Dropdowns from "@components/Dropdowns/Dropdowns";
 import axios from 'axios';
@@ -11,6 +11,7 @@ import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination/Pagination";
 import Mobile from '@components/Mobile/Mobile';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Men(): JSX.Element {
     // useState 모음
@@ -127,7 +128,7 @@ export default function Men(): JSX.Element {
                                                                 <div className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition rounded-3xl'>
                                                                     <Link href={`/view/${item?.index}`}>
                                                                         <Fade>
-                                                                            <img src={item?.src} alt={item?.alt} className="w-full h-full object-cover rounded-3xl" />
+                                                                            <Image src={item?.src} alt={item?.alt} className="w-full h-full object-cover rounded-3xl" width={592} height={592} />
                                                                         </Fade>
                                                                     </Link>
                                                                 </div>
@@ -204,6 +205,7 @@ export default function Men(): JSX.Element {
                                         Name={"Men"}
                                     />
 
+                                    <Page></Page>
                                 </div>
                             </div>
                         </div>
@@ -215,4 +217,15 @@ export default function Men(): JSX.Element {
             }
         </React.Fragment>
     )
+}
+
+export async function getData1() {
+    const res = await fetch('https://dummyjson.com/todos/1', {cache: "no-store",})
+    const data = await res.json();
+    return data;
+}
+
+function Page() {
+    const a = use(getData1())
+    return <div>메인 페이지 {a.todo}</div>
 }

@@ -12,10 +12,10 @@ export default function Photos(props: RouteType): JSX.Element {
                 <div className="px-8 py-6 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:px-12">
                     <div className="max-w-lg m-auto text-center">
                         <Fade bottom>
-                            <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl dark:text-white tracking-tighter">
+                            <h1 className="mt-6 text-2xl font-bold leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl dark:text-white tracking-tighter">
                                 조던 X 파리 생제르맹 컬렉션
                             </h1>
-                            <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl dark:text-white tracking-tighter">
+                            <p className="mt-2 sm:mt-4 sm:text-xl dark:text-white tracking-tighter">
                                 스포츠와 스트리트 룩의 만남. <br />
                                 새로운 조던 X 파리 생제르맹 컬렉션을 만나보세요.
                             </p>

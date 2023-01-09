@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { DetailType } from "@lib/TypeBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 export default function DetailSide(): JSX.Element {
     const [list, setList] = useState<DetailType[]>([]);
@@ -29,10 +30,10 @@ export default function DetailSide(): JSX.Element {
                     <p className="text-xl font-semibold pb-5">Instagram</p>
                     <div className="grid grid-cols-3 gap-3">
                         {
-                            list && list.map(function (item: DetailType, idx: number) {
+                            list && list.slice(0,9).map(function (item: DetailType, idx: number) {
                                 return (
                                     <Link href={"/Detail/" + idx}>
-                                        <img className="hover:opacity-75 cursor-pointer" src={item?.src2} />
+                                        <Image className="hover:opacity-75 cursor-pointer" src={item?.src2} alt={item?.alt} width={300} height={300} />
                                     </Link>
                                 )
                             })

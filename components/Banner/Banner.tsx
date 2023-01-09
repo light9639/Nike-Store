@@ -43,11 +43,11 @@ export default function Section(): JSX.Element {
                                 <SwiperSlide key={idx}>
                                     <div className="Banner w-screen">
                                         <img src={item.src} alt={item.alt} />
-                                        <div className="Banner_text absolute left-1/2 xl:left-1/3 bottom-1/2 z-20">
+                                        <div className="Banner_text absolute left-[20%] lg:left-[15%] bottom-[47%] md:bottom-[45%] lg:bottom-1/2 xl:bottom-[45.5%] z-20 w-1/2 lg:w-full">
                                             <Fade bottom>
-                                                <h2 className="text-white text-center xl:text-left text-3xl md:text-4xl xl:text-5xl font-semibold mb-10 tracking-tighter line-clamp-1">{item.h2}</h2>
-                                                <p className="text-white text-center xl:text-left text-sm xl:text-lg tracking-tighter">{item.p1}<br />{item.p2}</p>
-                                                <div className="text-center xl:text-left -mb-16 mt-10 lg:-ml-5 xl:ml-0">
+                                                <h2 className="text-white text-left text-3xl md:text-4xl xl:text-5xl font-semibold mb-10 tracking-tighter line-clamp-1">{item.h2}</h2>
+                                                <p className="text-white text-left text-sm xl:text-lg tracking-tighter line-clamp-2 lg:line-clamp-none">{item.p1}<br className="hidden lg:block" />{item.p2}</p>
+                                                <div className="text-left -mb-16 mt-10 xl:ml-0">
                                                     <a
                                                         className="hover:bg-white hover:text-black transition px-5 py-3 rounded-lg border border-white text-white tracking-wider font-semibold text-sm sm:text-base cursor-pointer"
                                                         onClick={() => router.push(`/Detail/${idx}`)}

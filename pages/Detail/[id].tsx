@@ -83,8 +83,8 @@ export default function Detail(): JSX.Element {
                                 <Fade><img src={list[ID]?.src} alt={list[ID]?.alt} /></Fade>
                                 <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
                                     <Fade bottom>
-                                        <a href="#" className="text-gray-900 dark:text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
-                                        <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">{list[ID]?.h2}</a>
+                                        <a href="#void" className="text-gray-900 dark:text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
+                                        <a href="#void" className="text-3xl font-bold hover:text-gray-700 pb-4">{list[ID]?.h2}</a>
                                         <p className="text-sm pb-8">
                                             이 글은 <span className="font-semibold hover:text-gray-800">Lee dong ho</span>에 의해 {list[ID]?.date} 작성되었습니다.
                                         </p>
@@ -116,16 +116,16 @@ export default function Detail(): JSX.Element {
                                     </Fade>
                                     <div className="flex items-center justify-center lg:justify-start text-2xl no-underline pt-4">
                                         <Fade bottom>
-                                            <a className="pr-4 hover:text-blue-600 transition" href="#">
+                                            <a className="pr-4 hover:text-blue-600 transition" href="#void">
                                                 <FontAwesomeIcon icon={faTwitter} className="w-5 h-5" />
                                             </a>
-                                            <a className="pr-4 hover:text-blue-600 transition" href="#">
+                                            <a className="pr-4 hover:text-blue-600 transition" href="#void">
                                                 <FontAwesomeIcon icon={faFacebook} className="w-5 h-5" />
                                             </a>
-                                            <a className="pr-4 hover:text-blue-600 transition" href="#">
+                                            <a className="pr-4 hover:text-blue-600 transition" href="#void">
                                                 <FontAwesomeIcon icon={faGoogle} className="w-5 h-5" />
                                             </a>
-                                            <a className="pr-4 hover:text-blue-600 transition" href="#">
+                                            <a className="pr-4 hover:text-blue-600 transition" href="#void">
                                                 <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
                                             </a>
                                         </Fade>

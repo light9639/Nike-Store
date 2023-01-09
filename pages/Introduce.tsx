@@ -35,7 +35,7 @@ export default function Introduce(): JSX.Element {
                                     <li className="py-3">운동하는 여성들을 위해 브라와 타이츠를 만들며, 세상의 모든 스포츠와 모든 체형을 포용합니다. 새로움을 디자인하고, 혁신하고, 창조합니다. 그라운드에서 육상 트랙과 코트, 수영장에 이르기까지, 스포츠의 새로운 미래를 위한 실험을 반복합니다. NMD에서 파이어버드 트랙수트까지, 어제의 영감을 바탕으로 내일의 스트릿 트렌드를 생각해냅니다. 영원한 스트릿의 아이콘으로 자리 잡은 스탠 스미스와 슈퍼스타에서 볼 수 있듯이, 나이키는 어제의 클래식에 오늘의 트렌드라는 새 생명을 불어넣는 브랜드입니다.</li>
                                     <li className="py-3">나이키가 내놓는 컬렉션은 하이 패션과 퍼포먼스의 경계를 자유롭게 넘나듭니다. 나이키 by 스텔라 맥카트니의 애슬레틱 컬렉션이 증명하듯 스튜디오와 스트릿 룩의 구분은 의미가 없습니다. 오리지널스의 라이프스타일 어패럴도 필요할 때면 언제든 운동복이 될 수 있습니다. 우리의 삶은 끊임없이 변화하고 있습니다. 일상의 모습도 하루가 다르게 바뀝니다. 나이키의 디자인 철학은 이 세상의 끝없는 진화를 담고 있습니다.</li>
                                 </ol>
-                                <blockquote className="border-l-4 border-blue-500 my-8 pl-8 md:pl-12">지금 <Link href="/Login">로그인</Link> 페이지로 이동 후,<br /> 가입하여 혜택으르 누려보세요 </blockquote>
+                                <blockquote className="border-l-4 border-blue-500 my-8 pl-8 md:pl-12">지금 <Link href="/Login" className='font-semibold hover:opacity-75'>로그인 페이지</Link>로 이동 후,<br /> 가입하여 혜택을 누려보세요 </blockquote>
                             </Fade>
                         </div>
                     </div>

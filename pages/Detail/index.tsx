@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination/Pagination";
+import Image from 'next/image';
 
 export default function DetailMain(): JSX.Element {
     const [list, setList] = useState<DetailType[]>([]);
@@ -49,7 +50,7 @@ export default function DetailMain(): JSX.Element {
                                     return (
                                         <article className="flex flex-col shadow my-4 w-full" key={idx}>
                                             <Link href={`/Detail/${item?.index - 1}`} className="hover:opacity-75 w-full max-h-[520px] h-full overflow-hidden">
-                                                <Fade><img src={item?.src} className="w-full" /></Fade>
+                                                <Fade><Image src={item?.src} alt={item?.alt} width={1443} height={750} className="w-full" /></Fade>
                                             </Link>
 
                                             <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">

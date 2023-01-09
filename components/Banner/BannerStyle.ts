@@ -44,10 +44,6 @@ export default css`
         background-color: rgb(0, 0, 0, 0.25);
     }
 
-    .Banner_text {
-        transform: translate(-50%, 25%);
-    }
-
     @media screen and (max-width: 767px) {
         .swiper-button-prev,
         .swiper-button-next {
@@ -59,10 +55,6 @@ export default css`
         .swiper-button-prev::after,
         .swiper-button-next::after {
             font-size: 14px;
-        }
-
-        .Banner_text {
-            transform: translate(-50%, 35%);
         }
     }
 `

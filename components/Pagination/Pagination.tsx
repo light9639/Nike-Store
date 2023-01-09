@@ -1,6 +1,7 @@
 import React from 'react';
+import { PaginationType } from "@lib/TypeBox";
 
-export default function Paging(props: { total: number, limit: number, page: number, setPage: Function, Name: string }): JSX.Element {
+export default function Pagination(props: PaginationType): JSX.Element {
 
     // 상위 컴포넌트에서 페이지 수 계산.
     const numPages: number = Math.ceil(props.total / props.limit);

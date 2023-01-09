@@ -77,6 +77,23 @@ export type ContactType = {
     transform: string;
 }
 
+export type PaginationType = {
+    total: number;
+    limit: number;
+    page: number;
+    setPage: Function;
+    Name: string;
+}
+export type ReviewType = {
+    img: string;
+    Name: string;
+    Join: string;
+    Reviews1: string;
+    Reviews2: string;
+    Others: string;
+    WriteDate: string;
+}
+
 declare global {
     interface Window {
         kakao: any;

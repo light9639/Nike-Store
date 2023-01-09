@@ -126,7 +126,7 @@ export default function Footer(): JSX.Element {
                     <div className="grid gap-8 grid-cols-2 md:grid-cols-4 lg:col-span-2">
                         <div className="text-center md:text-left">
                             <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">이용안내</p>
-                            <nav className="mt-8">
+                            <nav className="mt-7">
                                 <ul className="space-y-4 text-sm">
                                     <li>
                                         <Link href="/Service" className="text-gray-700 dark:text-gray-300 transition hover:text-gray-700/75 dark:hover:text-gray-300/75">
@@ -153,7 +153,7 @@ export default function Footer(): JSX.Element {
                         </div>
                         <div className="text-center md:text-left">
                             <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">고객지원</p>
-                            <nav className="mt-8">
+                            <nav className="mt-7">
                                 <ul className="space-y-4 text-sm">
                                     <li>
                                         <Link href="/Service" className="text-gray-700 dark:text-gray-300 transition hover:text-gray-700/75 dark:hover:text-gray-300/75">
@@ -180,7 +180,7 @@ export default function Footer(): JSX.Element {
                         </div>
                         <div className="text-center md:text-left">
                             <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">판매물품</p>
-                            <nav className="mt-8">
+                            <nav className="mt-7">
                                 <ul className="space-y-4 text-sm">
                                     <li>
                                         <Link href="/Service" className="text-gray-700 dark:text-gray-300 transition hover:text-gray-700/75 dark:hover:text-gray-300/75">
@@ -208,7 +208,7 @@ export default function Footer(): JSX.Element {
                         </div>
                         <div className="text-center md:text-left">
                             <Link href="/Contact" className="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-gray-900/75 transition">Contact Us</Link>
-                            <ul className="mt-8 space-y-4 text-sm">
+                            <ul className="mt-7 space-y-4 text-sm">
                                 <li className="flex items-center justify-center gap-1.5 md:justify-start">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
