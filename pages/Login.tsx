@@ -13,6 +13,13 @@ export default function Login(): JSX.Element {
     const [list, setList] = useState<DetailType[]>([]);
     const { data, status } = useSession();
     const DETAIL_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json'
+    const sleep = (delay: number | undefined) => new Promise(resolve => setTimeout(resolve, delay));
+
+    async function Alert() {
+        alert('로그아웃 하시겠습니까?')
+        await sleep(250);
+        signOut();
+    }
 
     useEffect(() => {
         axios.get(DETAIL_URL).then((res) => {
@@ -42,7 +49,7 @@ export default function Login(): JSX.Element {
                                 </div>
                                 <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center hidden lg:block">
                                     <button
-                                        onClick={() => signOut()}
+                                        onClick={() => Alert()}
                                         type="button"
                                         className="inline-block text-white bg-black hover:bg-black/75 dark:bg-blue-600 hover:dark:bg-blue-600/75 font-medium rounded-md text-sm px-5 py-2.5 text-center mx-auto my-5 transition"
                                     >
@@ -97,7 +104,7 @@ export default function Login(): JSX.Element {
                             </div>
                             <div className="w-full text-center block lg:hidden pt-3">
                                 <button
-                                    onClick={() => signOut()}
+                                    onClick={() => Alert()}
                                     type="button"
                                     className="text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-auto my-5"
                                 >

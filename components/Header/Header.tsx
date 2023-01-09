@@ -6,6 +6,7 @@ import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import { useSession, signOut } from "next-auth/react";
 import { HeaderType, HeaderMobileType } from "@lib/HeaderType";
 import { First, Second, Recent, Mobile1, Mobile2, Mobile3, Mobile4, MobileText } from './Header_data'
+import { useRouter } from 'next/router';
 
 export default function Nav(): JSX.Element {
     const [open, setOpen] = useState<boolean>(false);
@@ -13,6 +14,25 @@ export default function Nav(): JSX.Element {
     const [flyerTwo, setFlyerTwo] = useState<boolean>(false);
     const [advertise, setAdvertise] = useState<boolean>(true);
     const { data, status } = useSession();
+
+    const router = useRouter();
+    const sleep = (delay: number | undefined) => new Promise(resolve => setTimeout(resolve, delay));
+
+    async function LoginAlert() {
+        if (router.pathname != '/Login') {
+            alert('현재 로그인된 상태가 아닙니다. 로그인 하시겠습니까?')
+            await sleep(250);
+            router.push('/Login')
+        } else {
+            return true
+        }
+    }
+
+    async function LogOutAlert() {
+        alert('로그아웃 하시겠습니까?')
+        await sleep(250);
+        signOut();
+    }
 
     return (
         <div className='w-screen border-b-2 border-gray-100 dark:border-slate-900 text-left'>
@@ -347,18 +367,18 @@ export default function Nav(): JSX.Element {
                         }
                     >
                         <div className="flex justify-center text-gray-900 dark:text-gray-100 md:justify-start text-xl font-bold pt-3">
-                            <a className="hover:opacity-75 transition" href="/">Nike Store</a>
+                            <Link className="hover:opacity-75 transition" href="/" onClick={() => setOpen(!open)}>Nike Store</Link>
                         </div>
                         <div className="flex flex-col items-center mt-6 -mx-2">
                             {data?.user ? (
                                 <React.Fragment>
-                                    <Link href="/Login" onClick={() => setOpen(!open)}><img className='object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src={`${data?.user?.image}`} alt="profile" /></Link>
+                                    <Link href="/Login" onClick={() => { LoginAlert(); setOpen(!open); }}><img className='object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src={`${data?.user?.image}`} alt="profile" /></Link>
                                     <p className='mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200'>{data?.user?.name}</p>
                                     <p className='mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'>{data?.user?.email}</p>
                                 </React.Fragment>
                             ) : (
                                 <React.Fragment>
-                                    <Link href="/Login" onClick={() => setOpen(!open)}><img className='bg-gray-100 object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src="https://static.nid.naver.com/images/web/user/default.png?type=s160" alt="" /></Link>
+                                    <Link href="/Login" onClick={() => { LoginAlert(); setOpen(!open); }}><img className='bg-gray-100 object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src="https://static.nid.naver.com/images/web/user/default.png?type=s160" alt="" /></Link>
                                     <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">Nike Store</h4>
                                     <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">Nike@example.com</p>
                                 </React.Fragment>
@@ -401,7 +421,7 @@ export default function Nav(): JSX.Element {
                                                                 </svg>
                                                             </span>
                                                             <span className="ml-2 text-sm tracking-wide truncate">{item.p1}</span>
-                                                            <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">15</span>
+                                                            <span className={`px-2 py-0.5 ml-auto text-xs font-medium tracking-wide rounded-full ${item.class}`}>{item.text}</span>
                                                         </a>
                                                     </li>
                                                 </Link>
@@ -431,7 +451,7 @@ export default function Nav(): JSX.Element {
                                                                 </svg>
                                                             </span>
                                                             <span className="ml-2 text-sm tracking-wide truncate">{item.p1}</span>
-                                                            <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">15</span>
+                                                            <span className={`px-2 py-0.5 ml-auto text-xs font-medium tracking-wide rounded-full ${item.class}`}>{item.text}</span>
                                                         </a>
                                                     </li>
                                                 </Link>
@@ -461,7 +481,7 @@ export default function Nav(): JSX.Element {
                                                                 </svg>
                                                             </span>
                                                             <span className="ml-2 text-sm tracking-wide truncate">{item.p1}</span>
-                                                            <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">15</span>
+                                                            <span className={`px-2 py-0.5 ml-auto text-xs font-medium tracking-wide rounded-full ${item.class}`}>{item.text}</span>
                                                         </a>
                                                     </li>
                                                 </Link>
@@ -491,7 +511,7 @@ export default function Nav(): JSX.Element {
                                                                 </svg>
                                                             </span>
                                                             <span className="ml-2 text-sm tracking-wide truncate">{item.p1}</span>
-                                                            <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">15</span>
+                                                            <span className={`px-2 py-0.5 ml-auto text-xs font-medium tracking-wide rounded-full ${item.class}`}>{item.text}</span>
                                                         </a>
                                                     </li>
                                                 </Link>
@@ -502,7 +522,7 @@ export default function Nav(): JSX.Element {
                                 {data?.user ? (
                                     <Link
                                         href="#void"
-                                        onClick={() => { signOut(); setOpen(!open) }}
+                                        onClick={() => { LogOutAlert(); setOpen(!open) }}
                                     >
                                         <li>
                                             <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
@@ -518,7 +538,7 @@ export default function Nav(): JSX.Element {
                                 ) : (
                                     <Link
                                         href="/Login"
-                                        onClick={() => setOpen(!open)}
+                                        onClick={() => { LoginAlert(); setOpen(!open); }}
                                     >
                                         <li>
                                             <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
