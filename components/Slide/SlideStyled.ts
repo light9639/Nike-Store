@@ -25,7 +25,7 @@ export default css`
             padding: 20px;
             width: 33.75px;
             height: 33.75px;
-            top: 5.5%;
+            top: 6%;
         }
         .swiper-button-prev::after,
         .swiper-button-next::after {
