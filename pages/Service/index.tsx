@@ -13,8 +13,8 @@ function Service() {
             <HeadInfo title="Nike Service Page" contents="Nike Service Page" />
 
             <div className="mx-auto max-w-screen-xl">
-                <section className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]">
-                    <div className="container">
+                <div className="p-3 xl:p-0">
+                    <div className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]">
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full px-4">
                                 <div className="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
@@ -39,7 +39,7 @@ function Service() {
                                     ServiceData && ServiceData.map(function (item: ServiceType, idx: number) {
                                         return (
                                             <div className="w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" key={idx} onClick={() => router.push(`/Service/${idx}`)}>
-                                                <div className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white dark:bg-slate-900 shadow-md hover:shadow-lg mb-8 text-center">
+                                                <div className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white hover:bg-gray-50 dark:bg-slate-900 hover:dark:bg-gray-800 shadow-md hover:shadow-lg mb-8 text-center transition">
                                                     <div className={`w-[70px] h-[70px] flex items-center justify-center rounded-full mb-8 mx-auto bg-gray-900 dark:bg-blue-600`} >
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="fill-white w-8 h-8">
                                                             <path d={item.svg1} />
@@ -61,7 +61,7 @@ function Service() {
                             </Fade>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </React.Fragment>
     )

@@ -8,7 +8,7 @@ export default function Trending(props: RouteType): JSX.Element {
         <React.Fragment>
             <section className="section--showcase min-h-full py-20">
                 <div className="container mx-auto px-4">
-                    <div className="showcase--grid my-20">
+                    <div className="showcase--grid mt-20">
                         <Fade big>
                             <div
                                 className="showcase--item__big relative bg-cover bg-center bg-no-repeat rounded-lg transition hover:shadow-2xl hover:opacity-95"
@@ -29,8 +29,8 @@ export default function Trending(props: RouteType): JSX.Element {
                         </Fade>
                     </div>
                     <Fade bottom>
-                        <h2 className="text-center font-serif text-4xl text-black mb-4 dark:text-white">NEW ARRIVAL PLATFORMS</h2>
-                        <p className="text-lg text-center">가을에 어울리는 차분한 컬러로 새롭게 출시된 <br /> 플랫폼 제품을 만나보세요.</p>
+                        <h2 className="text-center font-serif text-2xl sm:text-4xl text-black mb-4 dark:text-white mt-10 sm:mt-20">NEW ARRIVAL PLATFORMS</h2>
+                        <p className="sm:text-lg text-center">가을에 어울리는 차분한 컬러로 새롭게 출시된 <br /> 플랫폼 제품을 만나보세요.</p>
                         <div className="mt-4 sm:mt-6 text-center ">
                             <a className="cursor-pointer Black_border" onClick={() => props.router.push(`/Detail/${6}`)}>더 알아보기</a>
                             <a className="cursor-pointer Black_box" onClick={() => props.router.push(`/Detail/${6}`)}>구매하기</a>

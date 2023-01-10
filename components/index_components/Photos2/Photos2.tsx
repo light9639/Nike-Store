@@ -16,13 +16,12 @@ export default function Photos2(props: RouteType): JSX.Element {
                 <div className="px-8 py-6 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:px-12">
                     <div className="max-w-lg m-auto text-center">
                         <Fade bottom>
-                            <h1 className="mt-6 text-2xl font-bold leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl dark:text-white tracking-tighter">
+                            <h1 className="mt-6 text-2xl font-bold leading-tight sm:mt-8 sm:text-4xl dark:text-white tracking-tighter">
                                 Nike 4DFWD
                             </h1>
                             <p className="mt-2 sm:mt-4 sm:text-xl dark:text-white tracking-tighter" >
                                 스피드 러닝을 위해 태어난 나이키 4DFWD<br />
                                 모든 걸음에 탄력을 더하는 탁월한 반응성으로<br />
-                                {/* 템포 러닝, 인터벌 러닝, 베이스 러닝, 프로그레션 러닝 등의<br />  */}
                                 다양한 러닝을 함께 즐겨보세요.
                             </p>
                             <div className="mt-4 sm:mt-6">

@@ -13,7 +13,6 @@ export default css`
     .swiper-button-prev:hover,
     .swiper-button-next:hover {
         background-color: #fff;
-        /* background-color: rgb(59 130 246); */
     }
 
     .swiper-button-prev:hover::after,

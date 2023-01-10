@@ -20,9 +20,16 @@ export default css`
         transform: translateX(-125%);
     }
     @media screen and (max-width: 640px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+            padding: 20px;
+            width: 33.75px;
+            height: 33.75px;
+            top: 5.5%;
+        }
         .swiper-button-prev::after,
         .swiper-button-next::after {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
     img:hover {
