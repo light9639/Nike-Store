@@ -4,7 +4,7 @@ import { MainData } from "./MainSide_data";
 import {useRouter} from 'next/router'
 
 export default function MainSide(): JSX.Element {
-    const [number, setNumber] = useState(0);
+    const [number, setNumber] = useState<number>(0);
     const [hide, setHide] = useState<boolean>(false);
     const [hover, setHover] = useState<boolean>(false);
     const router = useRouter();

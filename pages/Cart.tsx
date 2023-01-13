@@ -447,6 +447,14 @@ export async function getServerSideProps(context: any) {
             },
         }
     }
+    else {
+        return {
+            redirect: {
+                destination: '/Cart',
+                permanent: true,
+            },
+        }
+    }
 
     return {
         props: {

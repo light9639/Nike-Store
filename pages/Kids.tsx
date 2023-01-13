@@ -22,8 +22,6 @@ export default function Kids(): JSX.Element {
     const [page, setPage] = useState<number>(1);
     const [limit, setLimit] = useState<number>(15);
     const [mobile, setMobile] = useState<boolean>(true);
-    const [ScrollY, setScrollY] = useState<number>(0); // window 의 pageYOffset값을 저장
-    const [ScrollActive, setScrollActive] = useState<boolean>(false);
     const offset: number = (page - 1) * limit;
 
     // 라우터 모음
@@ -35,13 +33,16 @@ export default function Kids(): JSX.Element {
 
     // 로컬 스토리지 변수
     const LocalPage = localStorage.getItem("Kids_pageNum");
-    const LocalState: any = localStorage.getItem("Kids_StateInLocal");
+    const LocalState = localStorage.getItem("Kids_StateInLocal");
 
     // 신발 데이터 가져오기
     async function getData() {
         try {
             const response = await axios.get(Kids_API_URL);
-            if (JSON.parse(LocalState) == '') {
+            if (JSON.parse(LocalState || '{}').length != 40) {
+                setData(response.data.Kids);
+            }
+            else if (JSON.parse(LocalState || '{}') == '') {
                 setData(response.data.Kids);
                 setCopy(response.data.Kids);
             }
@@ -95,16 +96,9 @@ export default function Kids(): JSX.Element {
                             </div>
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar
-                                    side={side}
-                                    Name={"Kids"}
-                                    ScrollY={ScrollY}
-                                    ScrollActive={ScrollActive}
-                                    setScrollY={setScrollY}
-                                    setScrollActive={setScrollActive}
-                                ></SideBar>
+                                <SideBar side={side} Name={"Kids"}></SideBar>
 
-                                <div className={side && ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
+                                <div className={side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
                                     <div className='w-full flex flex-wrap '>
                                         {
                                             data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {

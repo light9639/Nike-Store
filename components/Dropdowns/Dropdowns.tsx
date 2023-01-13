@@ -72,11 +72,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
         );
     }
 
-    // 로컬 저장
-    // function saveLocal() {
-    //     localStorage.setItem(`${props.Name}_StateInLocal`, JSON.stringify(props.data));
-    // };
-
     useEffect(() => {
         localStorage.setItem(`${props.Name}_StateInLocal`, JSON.stringify(props.data));
     }, [props.data]);

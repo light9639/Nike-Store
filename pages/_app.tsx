@@ -7,6 +7,7 @@ import Layout from "@components/LayOut/LayOut";
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { SessionProvider } from "next-auth/react"
+import { store } from '../app/store';
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -21,9 +22,11 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
     return (
       <ThemeProvider attribute="class">
         <SessionProvider session={pageProps.session}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <Provider store={store}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </Provider>
         </SessionProvider>
       </ThemeProvider>
     )

@@ -938,6 +938,11 @@ decompress-response@^6.0.0:
   dependencies:
     mimic-response "^3.1.0"
 
+deep-diff@^0.3.5:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.8.tgz#c01de63efb0eec9798801d40c7e0dae25b582c84"
+  integrity sha512-yVn6RZmHiGnxRKR9sJb3iVV2XTF1Ghh2DiWRZ3dMnGc43yUdWWF/kX6lQyk3+P84iprfWKU/8zFTrlkvtFm1ug==
+
 deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
@@ -2157,10 +2162,25 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-auth@*, next-auth@^4.18.6:
+next-auth@*:
   version "4.18.6"
   resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-4.18.6.tgz#c23d02894a09e12d210cfb7041afa43fb1e897a4"
   integrity sha512-0TQwbq5X9Jyd1wUVYUoyvHJh4JWXeW9UOcMEl245Er/Y5vsSbyGJHt8M7xjRMzk9mORVMYehoMdERgyiq/jCgA==
+  dependencies:
+    "@babel/runtime" "^7.16.3"
+    "@panva/hkdf" "^1.0.1"
+    cookie "^0.5.0"
+    jose "^4.9.3"
+    oauth "^0.9.15"
+    openid-client "^5.1.0"
+    preact "^10.6.3"
+    preact-render-to-string "^5.1.19"
+    uuid "^8.3.2"
+
+next-auth@^4.18.8:
+  version "4.18.8"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-4.18.8.tgz#34012ac107702b27779647e8787715cea948812a"
+  integrity sha512-USP8ihmvB7iCGtkS0+toe2QPrzdbZfkydQZX56JOI9Ft5n/BardOXh3D4wQ2An+vpq/jDKojGlgfv21wVElW7A==
   dependencies:
     "@babel/runtime" "^7.16.3"
     "@panva/hkdf" "^1.0.1"
@@ -2714,6 +2734,13 @@ redux-devtools-extension@^2.13.9:
   version "2.13.9"
   resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.9.tgz#6b764e8028b507adcb75a1cae790f71e6be08ae7"
   integrity sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A==
+
+redux-logger@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
+  integrity sha512-JoCIok7bg/XpqA1JqCqXFypuqBbQzGQySrhFzewB7ThcnysTO30l4VCst86AuB9T9tuT03MAA56Jw2PNhRSNCg==
+  dependencies:
+    deep-diff "^0.3.5"
 
 redux-thunk@^2.4.2:
   version "2.4.2"

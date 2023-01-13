@@ -22,8 +22,6 @@ export default function Men(): JSX.Element {
     const [page, setPage] = useState<number>(1);
     const [limit, setLimit] = useState<number>(15);
     const [mobile, setMobile] = useState<boolean>(true);
-    const [ScrollY, setScrollY] = useState<number>(0); // window 의 pageYOffset값을 저장
-    const [ScrollActive, setScrollActive] = useState<boolean>(false);
     const offset: number = (page - 1) * limit;
 
     // 라우터 모음
@@ -33,13 +31,16 @@ export default function Men(): JSX.Element {
     const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
     const Men_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
     const LocalPage = localStorage.getItem("Men_pageNum");
-    const LocalState: any = localStorage.getItem("Men_StateInLocal");
+    const LocalState = localStorage.getItem("Men_StateInLocal");
 
     // 신발 데이터 가져오기
     async function getData() {
         try {
             const response = await axios.get(Men_API_URL);
-            if (JSON.parse(LocalState) == '') {
+            if (JSON.parse(LocalState || '{}').length != 40) {
+                setData(response.data.Men);
+            }
+            else if (JSON.parse(LocalState || '{}') == '') {
                 setData(response.data.Men);
                 setCopy(response.data.Men);
             }
@@ -95,16 +96,10 @@ export default function Men(): JSX.Element {
 
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar
-                                    side={side}
-                                    Name={"Men"}
-                                    ScrollY={ScrollY}
-                                    ScrollActive={ScrollActive}
-                                    setScrollY={setScrollY}
-                                    setScrollActive={setScrollActive}
-                                ></SideBar>
+                                <SideBar side={side} Name={"Men"}></SideBar>
 
-                                <div className={side && ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
+                                {/* <div className={`${side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"} ${ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "" }`}> */}
+                                <div className={side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
                                     <div className='w-full flex flex-wrap '>
                                         {
                                             data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {

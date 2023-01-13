@@ -8,8 +8,8 @@ export default function Pagination(props: PaginationType): JSX.Element {
     const Pages: any = Array(numPages)
 
     // 로컬 스토리지 변환
-    const getItem: any = localStorage.getItem(`${props.Name}_pageNum`);
-    const NewItem = JSON.parse(getItem);
+    const getItem = localStorage.getItem(`${props.Name}_pageNum`);
+    const NewItem = JSON.parse(getItem || '{}');
     const BestItem = parseInt(NewItem);
 
     // 클릭시 페이지 상단으로
@@ -32,7 +32,7 @@ export default function Pagination(props: PaginationType): JSX.Element {
         if ( getItem == null)  {
             pageParams(1);
         }
-        else if ( getItem >= 1 ) {
+        else if ( parseInt(getItem) >= 1 ) {
             pageParams( BestItem - 1 );
         }
     }
@@ -42,7 +42,7 @@ export default function Pagination(props: PaginationType): JSX.Element {
         if ( getItem == null)  {
             pageParams( props.page + 1 );
         }
-        else if ( getItem <= props.page ) {
+        else if ( parseInt(getItem) <= props.page ) {
             pageParams( BestItem + 1 )
         }
     }

@@ -5,7 +5,7 @@ import DarkModeToggleButton from '../DarkModeToggleButton/DarkModeToggleButton';
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import { useSession, signOut } from "next-auth/react";
 import { HeaderType, HeaderMobileType } from "@lib/HeaderType";
-import { First, Second, Recent, Mobile1, Mobile2, Mobile3, Mobile4, MobileText } from './Header_data'
+import { First, Second, Recent, Mobile1, Mobile2, Mobile3, Mobile4 } from './Header_data'
 import { useRouter } from 'next/router';
 
 export default function Nav(): JSX.Element {
@@ -20,18 +20,25 @@ export default function Nav(): JSX.Element {
 
     async function LoginAlert() {
         if (router.pathname != '/Login') {
-            alert('현재 로그인된 상태가 아닙니다. 로그인 하시겠습니까?')
-            await sleep(250);
-            router.push('/Login')
+            if (confirm("현재 로그인된 상태가 아닙니다. 로그인 하시겠습니까?")) {
+                alert("로그인 페이지로 이동합니다.");
+                await sleep(250);
+                router.push('/Login')
+            } else {
+                alert("취소를 누르셨습니다.");
+            }
         } else {
             return true
         }
     }
 
     async function LogOutAlert() {
-        alert('로그아웃 하시겠습니까?')
-        await sleep(250);
-        signOut();
+        if (confirm("정말 로그아웃 하시겠습니까?")) {
+            await sleep(250);
+            signOut();
+        } else {
+            alert("취소를 누르셨습니다.");
+        }
     }
 
     return (
@@ -372,13 +379,13 @@ export default function Nav(): JSX.Element {
                         <div className="flex flex-col items-center mt-6 -mx-2">
                             {data?.user ? (
                                 <React.Fragment>
-                                    <Link href="/Login" onClick={() => { LoginAlert(); setOpen(!open); }}><img className='object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src={`${data?.user?.image}`} alt="profile" /></Link>
+                                    <Link href="/Login" onClick={() => { setOpen(!open); }}><img className='object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src={`${data?.user?.image}`} alt="profile" /></Link>
                                     <p className='mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200'>{data?.user?.name}</p>
                                     <p className='mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'>{data?.user?.email}</p>
                                 </React.Fragment>
                             ) : (
                                 <React.Fragment>
-                                    <Link href="/Login" onClick={() => { LoginAlert(); setOpen(!open); }}><img className='bg-gray-100 object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src="https://static.nid.naver.com/images/web/user/default.png?type=s160" alt="" /></Link>
+                                    <Link href="#void" onClick={() => { LoginAlert(); setOpen(!open); }}><img className='bg-gray-100 object-cover w-24 h-24 mx-2 rounded-full cursor-pointer hover:opacity-75 transition' src="https://static.nid.naver.com/images/web/user/default.png?type=s160" alt="" /></Link>
                                     <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">Nike Store</h4>
                                     <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">Nike@example.com</p>
                                 </React.Fragment>
@@ -537,7 +544,7 @@ export default function Nav(): JSX.Element {
                                     </Link>
                                 ) : (
                                     <Link
-                                        href="/Login"
+                                        href="#void"
                                         onClick={() => { LoginAlert(); setOpen(!open); }}
                                     >
                                         <li>

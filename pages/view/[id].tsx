@@ -35,7 +35,7 @@ export default function Example(): JSX.Element {
 
     // 모달 함수들
     const DetailShow = () => { setShow(!Show) }
-    const chooseNumber = (a: any) => { setNumber(a) }
+    const chooseNumber = (a: number) => { setNumber(a) }
 
     // 데이터 가져오는 함수
     function getData() {

@@ -122,9 +122,12 @@ export default function Contact(): JSX.Element {
                                     <div className="mb-6">
                                         <Fade bottom>
                                             <input
+                                                id="email-address"
+                                                name="email"
                                                 type="email"
                                                 placeholder="이메일을 작성해주세요."
                                                 className="dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-900 w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                                                required
                                             />
                                         </Fade>
                                     </div>
