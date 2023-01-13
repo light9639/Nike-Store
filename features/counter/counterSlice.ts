@@ -1,34 +1,78 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { PURGE } from "redux-persist";
 
 interface CounterState {
-    value: number;
+    data: object;
 }
 
 const initialState: CounterState = {
-    value: 0,
+    data: {},
 };
 
-const counterSlice = createSlice({
-    name: 'counter',
+//상품 상세페이지에 데이터 전달
+const detailData = createSlice({
+    name: 'detailData',
     initialState,
     reducers: {
-        increment: (state) => {
-            state.value += 1;
-        },
-        decrement: (state) => {
-            state.value -= 1;
-        },
-        Anyincrement: (state, actions) => {
-            state.value += actions.payload;
-        },
-        Anydecrement: (state, actions) => {
-            state.value -= actions.payload;
-        },
+        addDetailData(state, action) {
+            state.data = action.payload
+            // localStorage.setItem("itemData", JSON.stringify(action.payload));
+        }
     },
-});
+    extraReducers: builder => {
+        builder.addCase(PURGE, () => initialState);
+    },
+})
 
-const { actions, reducer: counterReducer } = counterSlice;
+export const {addDetailData} = detailData.actions;
 
-export const { increment, decrement, Anyincrement, Anydecrement } = actions;
+//latest 데이터 값 받기
+const latestData = createSlice({
+    name: 'latestData',
+    initialState,
+    reducers: {
+        addLatestData(state, action) {
+            state.data = action.payload
+        }
+    },
+    extraReducers: builder => {
+        builder.addCase(PURGE, () => initialState);
+    },
+})
 
-export default counterReducer;
+export let {addLatestData} = latestData.actions;
+
+// const counterSlice = createSlice({
+//     name: 'counter',
+//     initialState,
+//     reducers: {
+//         increment: (state) => {
+//             state.value += 1;
+//         },
+//         decrement: (state) => {
+//             state.value -= 1;
+//         },
+//         Anyincrement: (state, actions) => {
+//             state.value += actions.payload;
+//         },
+//         Anydecrement: (state, actions) => {
+//             state.value -= actions.payload;
+//         },
+//     },
+//     extraReducers: builder => {
+//         builder.addCase(PURGE, () => initialState);
+//     },
+// });
+
+export default configureStore({
+    reducer: {
+        detailData: detailData.reducer,
+        latestData: latestData.reducer
+    }
+})
+
+// const { actions, reducer: counterReducer } = counterSlice;
+
+// export const { increment, decrement, Anyincrement, Anydecrement } = actions;
+
+// export default counterReducer;
