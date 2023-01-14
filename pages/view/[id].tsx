@@ -11,6 +11,8 @@ import { ReviewType } from '@lib/TypeBox'
 import { productColors, productSize } from '@lib/ProductType'
 import { ShoeViewType, StarType } from '@lib/ShoeType'
 import Image from 'next/image';
+import { useAppDispatch } from 'app/hooks';
+import { addDetailData } from 'features/data/dataSlice';
 
 export default function Example(): JSX.Element {
     // useState 모음
@@ -20,6 +22,8 @@ export default function Example(): JSX.Element {
     const [Show, setShow] = useState<boolean>(false)
     const [number, setNumber] = useState<number>(0)
     const [loading, setLoading] = useState<boolean>(true);
+
+    const dispatch = useAppDispatch();
 
     // 라우터 모음
     const router = useRouter()
@@ -33,6 +37,7 @@ export default function Example(): JSX.Element {
     const reviews = { href: '#void', average: 4, totalCount: 4 }
     const Star: StarType = Shoe[ID]?.star;
 
+    console.log(Shoe[ID])
     // 모달 함수들
     const DetailShow = () => { setShow(!Show) }
     const chooseNumber = (a: number) => { setNumber(a) }
@@ -411,7 +416,7 @@ export default function Example(): JSX.Element {
                                     {data?.user ? (
                                         <span
                                             className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 dark:bg-blue-600 py-3 px-8 text-base font-medium text-white hover:bg-gray-900 dark:hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
-                                            onClick={() => router.push('/Cart')}
+                                            onClick={() => {router.push('/Cart'); dispatch(addDetailData(Shoe[ID]));}}
                                         >
                                             카트에 추가
                                         </span>

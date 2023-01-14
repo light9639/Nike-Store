@@ -11,6 +11,7 @@ import { store } from '../app/index';
 
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
+
 export let persistor = persistStore(store);
 
 function App({ Component, pageProps }: AppProps): JSX.Element {

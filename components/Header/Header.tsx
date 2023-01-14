@@ -7,6 +7,7 @@ import { useSession, signOut } from "next-auth/react";
 import { HeaderType, HeaderMobileType } from "@lib/HeaderType";
 import { First, Second, Recent, Mobile1, Mobile2, Mobile3, Mobile4 } from './Header_data'
 import { useRouter } from 'next/router';
+import { persistor } from 'pages/_app';
 
 export default function Nav(): JSX.Element {
     const [open, setOpen] = useState<boolean>(false);
@@ -17,6 +18,10 @@ export default function Nav(): JSX.Element {
 
     const router = useRouter();
     const sleep = (delay: number | undefined) => new Promise(resolve => setTimeout(resolve, delay));
+    const purge = async () => {
+        location.reload();
+        await persistor.purge(); // persistStore의 데이터 전부 날림
+    };
 
     async function LoginAlert() {
         if (router.pathname != '/Login') {
@@ -36,6 +41,7 @@ export default function Nav(): JSX.Element {
         if (confirm("정말 로그아웃 하시겠습니까?")) {
             await sleep(250);
             signOut();
+            purge();
         } else {
             alert("취소를 누르셨습니다.");
         }

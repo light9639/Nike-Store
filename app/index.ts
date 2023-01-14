@@ -4,20 +4,10 @@ import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
-import { detailData, latestData } from "features/counter/counterSlice";
-// import reducer from 'features/counter/counterSlice';
-
-
-// export default configureStore({
-//     reducer: {
-//         detailData: detailData.reducer,
-//         latestData: latestData.reducer
-//     }
-// })
+import DataReducer from 'features/data/dataSlice';
 
 const reducers = combineReducers({
-    detailData: detailData.reducer,
-    latestData: latestData.reducer
+    data: DataReducer,
 });
 
 const persistConfig = {

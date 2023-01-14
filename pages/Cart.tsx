@@ -8,15 +8,61 @@ import Link from 'next/link';
 import axios from 'axios';
 import { SlideType } from '@lib/ShoeType'
 import Loading from './loading';
+import { useCallback } from 'react';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { persistor } from "./_app";
+import { RemoveDetailData, Increase, Decrease } from 'features/data/dataSlice';
 
 export default function Cart(): JSX.Element {
-    const [shoe, setShoeAll] = useState<SlideType[]>([])
-    const [loading, setLoading] = useState<boolean>(true);
+    // useState 모음
+    const [reduxData, setReduxData] = useState<SlideType[]>([]) // 신발 데이터 정보
+    const [shoe, setShoeAll] = useState<SlideType[]>([]) // 신발 데이터 정보
+    const [loading, setLoading] = useState<boolean>(true); // 로딩중 정보
+    const [totalPrice, setTotalPrice] = useState<string>(''); // 총 금액 3자리마다 ',' 들어간 데이터
+    const [priceNum, setPriceNum] = useState<number>(0); // 총 금액 숫자 함수
+
+    // Nike Best Sellers 생성 숫자들
     const Number: number = Math.random()
     const calc: number = Math.ceil(Number * 10)
+
+    // Next.js 라우터 모음
     const router = useRouter()
     const Data_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json'
 
+    // redux 함수들
+    const state = useAppSelector((state) => state);
+    const dispatch = useAppDispatch();
+    const StateArray: any = state.data;
+
+    // redux-persist 초기화
+    const purge = async () => {
+        location.reload();
+        await persistor.purge(); // persistStore의 데이터 전부 날림
+    };
+
+    // price 값 계산
+    function PriceTotal() {
+        let Price = 0;
+        for (let i = 0; i < StateArray.length; i++) {
+            let result = StateArray[i].price.replace(/[^0-9]/g, "");
+            let PriceNumber = result.replace(/[^0-9]/g, "");
+            let multiplyPrice = PriceNumber * StateArray[i].count
+            Price = Price + multiplyPrice;
+        }
+        setPriceNum(Price)
+        let FinalPrice = priceNum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        setTotalPrice(FinalPrice)
+    }
+
+    // 배송료 포함 총 결제비용
+    const UpPrice = (priceNum + 2500).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+
+    // price 값 계산, 결제비용 실행
+    useEffect(() => {
+        PriceTotal()
+    }, [totalPrice, priceNum, state]);
+
+    // 자료 가져오는 함수
     function getData() {
         axios.get(Data_URL).then((res) => {
             if (calc % 3 == 0) {
@@ -29,12 +75,15 @@ export default function Cart(): JSX.Element {
         })
     }
 
+    // 실행 순간 가져오는 함수들
     useEffect(() => {
         getData();
         axios.get("").then((res) => {
             setLoading(false);
         });
     }, []);
+
+    console.log(StateArray)
 
     return (
         <React.Fragment>
@@ -45,99 +94,58 @@ export default function Cart(): JSX.Element {
                     <div className="container mx-auto my-24 shadow-md">
                         <div className="block lg:flex my-10 p-4 md:p-0">
                             <div className="w-full overflow-x-auto relative sm:rounded-lg">
-                                {/* <table className="w-full text-sm text-center text-gray-500 dark:text-gray-400">
-                                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                        <tr>
-                                            <th scope="col" className="py-3 px-6">
-                                                <span className="sr-only">Image</span>
-                                            </th>
-                                            <th scope="col" className="py-3 px-6">
-                                                Product
-                                            </th>
-                                            <th scope="col" className="py-3 px-6">
-                                                Qty
-                                            </th>
-                                            <th scope="col" className="py-3 px-6">
-                                                Price
-                                            </th>
-                                            <th scope="col" className="py-3 px-6">
-                                                Action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            [1, 2, 3].map(function (item, idx: number) {
-                                                return (
-                                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-center">
-                                                        <td className="lg:p-2 w-40">
-                                                            <img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_09.jpg" alt="Apple Watch" className='w-full' />
-                                                        </td>
-                                                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
-                                                            Apple Watch
-                                                        </td>
-                                                        <td className="py-4 px-6">
-                                                            <div className="flex items-center space-x-3">
-                                                                <button className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                                    <span className="sr-only">Quantity button</span>
-                                                                    <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                                                                </button>
-                                                                <div>
-                                                                    <input type="number" id="first_product" className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="1" required />
-                                                                </div>
-                                                                <button className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                                    <span className="sr-only">Quantity button</span>
-                                                                    <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
-                                                            $599
-                                                        </td>
-                                                        <td className="py-4 px-6">
-                                                            <a href="#void" className="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
-                                                        </td>
-                                                    </tr>
-                                                )
-                                            })
-                                        }
-                                    </tbody>
-                                </table> */}
                                 <div className="col-span-2 p-5">
                                     <h1 className="text-xl font-medium ">Shopping Cart</h1>
                                     {
-                                        [1, 2, 3].map(function (item, idx: number) {
+                                        StateArray && StateArray.map(function (item: any, idx: number) {
                                             return (
-                                                <div className="flex justify-between items-center mt-6 pt-6">
-                                                    <div className="flex  items-center">
-                                                        <img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_09.jpg" className="rounded-3xl max-w-[200px]" />
-                                                    </div>
-                                                    <div className="flex flex-col ml-3">
-                                                        <span className="md:text-md font-medium">Chicken momo</span>
-                                                        <span className="text-xs font-light text-gray-400">#41551</span>
-                                                    </div>
-                                                    <div className="flex items-center space-x-3">
-                                                        <button className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                            <span className="sr-only">Quantity button</span>
-                                                            <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                                                        </button>
-                                                        <div>
-                                                            <input type="number" id="first_product" className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="1" required />
+                                                <React.Fragment key={idx}>
+                                                    <div className={`flex justify-between items-center mt-6 pt-6`} >
+                                                        <div className="flex items-center" onClick={() => { console.log(item) }}>
+                                                            <img src={item.src?.first} className="rounded-3xl max-w-[200px]" alt={item.alt} />
                                                         </div>
-                                                        <button className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                            <span className="sr-only">Quantity button</span>
-                                                            <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                                        </button>
+                                                        <div className="flex flex-col ml-3">
+                                                            <span className="md:text-md font-medium">{item.name}</span>
+                                                            <span className="text-xs font-light text-gray-400">{item.info}</span>
+                                                            <span className="text-xs font-light text-gray-400">{item.Review}</span>
+                                                        </div>
+                                                        <div className="flex items-center space-x-3">
+                                                            <button
+                                                                onClick={() => { dispatch(Decrease(item.index)) }}
+                                                                className={`inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 ${item.count < 1 ? 'cursor-not-allowed' : ''}`}
+                                                                type="button"
+                                                            >
+                                                                <span className="sr-only">Quantity button</span>
+                                                                <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                                                            </button>
+                                                            <div>
+                                                                <input
+                                                                    className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center"
+                                                                    placeholder={item.count}
+                                                                    required 
+                                                                />
+                                                            </div>
+                                                            <button
+                                                                onClick={() => { dispatch(Increase(item.index)) }}
+                                                                className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                                                                <span className="sr-only">Quantity button</span>
+                                                                <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div className="flex justify-center items-center">
+                                                            <p className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                                                                {item.price}
+                                                            </p>
+                                                            <p className="py-4 px-6">
+                                                                <a
+                                                                    onClick={() => { dispatch(RemoveDetailData(idx)) }}
+                                                                    href="#void"
+                                                                    className="font-medium text-red-600 dark:text-red-500 hover:underline"
+                                                                >Remove</a>
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div className="flex justify-center items-center">
-                                                        <p className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
-                                                            $599
-                                                        </p>
-                                                        <p className="py-4 px-6">
-                                                            <a href="#void" className="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                                </React.Fragment>
                                             )
                                         })
 
@@ -191,157 +199,20 @@ export default function Cart(): JSX.Element {
                                     <div className="flex p-4 mt-4">
                                         <h2 className="text-xl font-bold">ITEMS 2</h2>
                                     </div>
-                                    <div
-                                        className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                        Subtotal<span className="ml-2">$40.00</span></div>
-                                    <div
-                                        className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                        Shipping Tax<span className="ml-2">$10</span></div>
-                                    <div
-                                        className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                        Total<span className="ml-2">$50.00</span></div>
+                                    <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                        총 금액 : <span className="ml-2">{totalPrice}원</span>
+                                    </div>
+                                    <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                        배송료 : <span className="ml-2">{priceNum > 100000 ? "무료 배송" : (priceNum == 0 ? '0원' : "2,500원")}</span>
+                                    </div>
+                                    <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                        결제 비용 : <span className="ml-2">{priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice)}원</span>
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    {/* <div className="flex flex-col w-full ml-0 lg:ml-12 lg:w-2/5 shadow-2xl p-10">
-                        <div className="pt-12 md:pt-0 2xl:ps-4">
-                            <h2 className="text-xl font-bold">Order Summary
-                            </h2>
-                            <div className="mt-8">
-                                <div className="flex flex-col space-y-4 ">
-                                    <div className="flex space-x-4">
-                                        <div className='w-full'>
-                                            <img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_09.jpg" alt="image"
-                                                className="w-60" />
-                                        </div>
-                                        <div className='w-full'>
-                                            <h2 className="text-xl font-bold">Title</h2>
-                                            <p className="text-sm">Lorem ipsum dolor sit amet, tet</p>
-                                            <span className="text-red-600">Price</span> $20
-                                        </div>
-                                        <div>
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-4">
-                                        <div className='w-full'>
-                                            <img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_09.jpg" alt="image"
-                                                className="w-60" />
-                                        </div>
-                                        <div className='w-full'>
-                                            <h2 className="text-xl font-bold">Title</h2>
-                                            <p className="text-sm">Lorem ipsum dolor sit amet, tet</p>
-                                            <span className="text-red-600">Price</span> $20
-                                        </div>
-                                        <div>
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex p-4 mt-4">
-                                <h2 className="text-xl font-bold">ITEMS 2</h2>
-                            </div>
-                            <div
-                                className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                Subtotal<span className="ml-2">$40.00</span></div>
-                            <div
-                                className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                Shipping Tax<span className="ml-2">$10</span></div>
-                            <div
-                                className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                Total<span className="ml-2">$50.00</span></div>
-                        </div>
-                    </div> */}
-                    {/* <div className="container relative mx-auto w-full bg-white">
-                        <div className="flex min-h-screen justify-between">
-                            <div className="col-span-full py-6 px-4 sm:py-12 lg:w-1/2 lg:py-24">
-                                <div className="mx-auto w-full max-w-lg">
-                                    <h1 className="relative text-2xl font-medium text-gray-700 sm:text-3xl">Secure Checkout<span className="mt-2 block h-1 w-10 bg-teal-600 sm:w-20"></span></h1>
-                                    <form action="" className="mt-10 flex flex-col space-y-4">
-                                        <div><label htmlFor="email" className="text-xs font-semibold text-gray-500">Email</label><input type="email" id="email" name="email" placeholder="john.capler@fang.com" className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-teal-500" /></div>
-                                        <div className="relative"><label htmlFor="card-number" className="text-xs font-semibold text-gray-500">Card number</label><input type="text" id="card-number" name="card-number" placeholder="1234-5678-XXXX-XXXX" className="block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 pr-10 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-teal-500" /><img src="/images/uQUFIfCYVYcLK0qVJF5Yw.png" alt="" className="absolute bottom-3 right-3 max-h-4" /></div>
-                                        <div>
-                                            <p className="text-xs font-semibold text-gray-500">Expiration date</p>
-                                            <div className="mr-6 flex flex-wrap">
-                                                <div className="my-1">
-                                                    <label htmlFor="month" className="sr-only">Select expiration month</label>
-                                                    <select name="month" id="month" className="cursor-pointer rounded border-gray-300 bg-gray-50 py-3 px-2 text-sm shadow-sm outline-none transition focus:ring-2 focus:ring-teal-500">
-                                                        <option value="">Month</option>
-                                                    </select>
-                                                </div>
-                                                <div className="my-1 ml-3 mr-6">
-                                                    <label htmlFor="year" className="sr-only">Select expiration year</label>
-                                                    <select name="year" id="year" className="cursor-pointer rounded border-gray-300 bg-gray-50 py-3 px-2 text-sm shadow-sm outline-none transition focus:ring-2 focus:ring-teal-500">
-                                                        <option value="">Year</option>
-                                                    </select>
-                                                </div>
-                                                <div className="relative my-1"><label htmlFor="security-code" className="sr-only">Security code</label><input type="text" id="security-code" name="security-code" placeholder="Security code" className="block w-36 rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-teal-500" /></div>
-                                            </div>
-                                        </div>
-                                        <div><label htmlFor="card-name" className="sr-only">Card name</label><input type="text" id="card-name" name="card-name" placeholder="Name on the card" className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-teal-500" /></div>
-                                    </form>
-                                    <p className="mt-10 text-center text-sm font-semibold text-gray-500">By placing this order you agree to the <a href="#void" className="whitespace-nowrap text-teal-400 underline hover:text-teal-600">Terms and Conditions</a></p>
-                                    <button type="submit" className="mt-4 inline-flex w-full items-center justify-center rounded bg-teal-600 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg">Place Order</button>
-                                </div>
-                            </div>
-                            <div className="relative col-span-full flex flex-col py-6 pl-8 pr-4 sm:py-12 lg:w-1/2 lg:py-24">
-                                <h2 className="sr-only">Order summary</h2>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1581318694548-0fb6e47fe59b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" className="absolute inset-0 h-full w-full object-cover" />
-                                    <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-teal-800 to-teal-400 opacity-95"></div>
-                                </div>
-                                <div className="relative">
-                                    <ul className="space-y-5">
-                                <li className="flex justify-between">
-                                    <div className="inline-flex">
-                                        <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhhaXIlMjBkcnllcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" className="max-h-16" />
-                                        <div className="ml-3">
-                                            <p className="text-base font-semibold text-white">Nano Titanium Hair Dryer</p>
-                                            <p className="text-sm font-medium text-white text-opacity-80">Pdf, doc Kindle</p>
-                                        </div>
-                                    </div>
-                                    <p className="text-sm font-semibold text-white">$260.00</p>
-                                </li>
-                                <li className="flex justify-between">
-                                    <div className="inline-flex">
-                                        <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGhhaXIlMjBkcnllcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" className="max-h-16" />
-                                        <div className="ml-3">
-                                            <p className="text-base font-semibold text-white">Luisia H35</p>
-                                            <p className="text-sm font-medium text-white text-opacity-80">Hair Dryer</p>
-                                        </div>
-                                    </div>
-                                    <p className="text-sm font-semibold text-white">$350.00</p>
-                                </li>
-                            </ul>
-                                    <div className="my-5 h-0.5 w-full bg-white bg-opacity-30"></div>
-                                    <div className="space-y-2">
-                                        <p className="flex justify-between text-lg font-bold text-white"><span>Total price:</span><span>$510.00</span></p>
-                                        <p className="flex justify-between text-sm font-medium text-white"><span>Vat: 10%</span><span>$55.00</span></p>
-                                    </div>
-                                </div>
-                                <div className="relative mt-10 text-white">
-                                    <h3 className="mb-5 text-lg font-bold">Support</h3>
-                                    <p className="text-sm font-semibold">+01 653 235 211 <span className="font-light">(International)</span></p>
-                                    <p className="mt-1 text-sm font-semibold">support@nanohair.com <span className="font-light">(Email)</span></p>
-                                    <p className="mt-2 text-xs font-medium">Call us now for payment related issues</p>
-                                </div>
-                                <div className="relative mt-10 flex">
-                                    <p className="flex flex-col"><span className="text-sm font-bold text-white">Money Back Guarantee</span><span className="text-xs font-medium text-white">within 30 days of purchase</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                     <div className="flex items-center mb-16">
                         <div className="container m-auto flex flex-wrap items-start">
                             <div className="w-full m-auto">
@@ -436,29 +307,21 @@ export default function Cart(): JSX.Element {
     )
 }
 
-export async function getServerSideProps(context: any) {
-    const session = await unstable_getServerSession(context.req, context.res, authOptions)
+// export async function getServerSideProps(context: any) {
+//     const session = await unstable_getServerSession(context.req, context.res, authOptions)
 
-    if ( !session ) {
-        return {
-            redirect: {
-                destination: '/NotLogin',
-                permanent: false,
-            },
-        }
-    }
-    else {
-        return {
-            redirect: {
-                destination: '/Cart',
-                permanent: true,
-            },
-        }
-    }
+//     if ( !session ) {
+//         return {
+//             redirect: {
+//                 destination: '/NotLogin',
+//                 permanent: false,
+//             },
+//         }
+//     }
 
-    return {
-        props: {
-            session,
-        },
-    }
-}
+//     return {
+//         props: {
+//             session,
+//         },
+//     }
+// }
