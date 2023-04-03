@@ -11,7 +11,8 @@ import Loading from './loading';
 import { useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { persistor } from "./_app";
-import { RemoveDetailData, Increase, Decrease } from 'features/data/dataSlice';
+import { RemoveDetailData, Increase, Decrease, ChangeZero } from 'features/data/dataSlice';
+import { EnvelopeIcon, PhoneIcon, UserCircleIcon, HomeIcon, TruckIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export default function Cart(): JSX.Element {
     // useState 모음
@@ -83,8 +84,6 @@ export default function Cart(): JSX.Element {
         });
     }, []);
 
-    console.log(StateArray)
-
     return (
         <React.Fragment>
             <HeadInfo title="Cart Page" contents="Cart Page"></HeadInfo>
@@ -92,7 +91,7 @@ export default function Cart(): JSX.Element {
             {loading ? <Loading></Loading>
                 : <React.Fragment>
                     <div className="container mx-auto my-24 shadow-md">
-                        <div className="block lg:flex my-10 p-4 md:p-0">
+                        <div className="block lg:flex my-10 p-4 md:p-0 dark:bg-gray-900">
                             <div className="w-full overflow-x-auto relative sm:rounded-lg">
                                 <div className="col-span-2 p-5">
                                     <h1 className="text-xl font-medium ">Shopping Cart</h1>
@@ -102,7 +101,7 @@ export default function Cart(): JSX.Element {
                                                 <React.Fragment key={idx}>
                                                     <div className={`flex justify-between items-center mt-6 pt-6`} >
                                                         <div className="flex items-center" onClick={() => { console.log(item) }}>
-                                                            <img src={item.src?.first} className="rounded-3xl max-w-[200px]" alt={item.alt} />
+                                                            <img src={item.src?.first} className="rounded-3xl w-full max-h-full lg:max-h-[350px] xl:max-h-[150px] object-cover" alt={item.alt} />
                                                         </div>
                                                         <div className="flex flex-col ml-3">
                                                             <span className="md:text-md font-medium">{item.name}</span>
@@ -112,24 +111,28 @@ export default function Cart(): JSX.Element {
                                                         <div className="flex items-center space-x-3">
                                                             <button
                                                                 onClick={() => { dispatch(Decrease(item.index)) }}
-                                                                className={`inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 ${item.count < 1 ? 'cursor-not-allowed' : ''}`}
+                                                                className={`inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 ${item.count == 1 ? 'cursor-not-allowed' : ''}`}
                                                                 type="button"
                                                             >
-                                                                <span className="sr-only">Quantity button</span>
                                                                 <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                                                             </button>
                                                             <div>
                                                                 <input
                                                                     className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center"
                                                                     placeholder={item.count}
-                                                                    required 
+                                                                    required
+                                                                    readOnly
                                                                 />
                                                             </div>
                                                             <button
                                                                 onClick={() => { dispatch(Increase(item.index)) }}
                                                                 className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                                <span className="sr-only">Quantity button</span>
                                                                 <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                                            </button>
+                                                            <button
+                                                                onClick={() => { dispatch(ChangeZero(item.index)) }}
+                                                                className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                                                                reset
                                                             </button>
                                                         </div>
                                                         <div className="flex justify-center items-center">
@@ -152,65 +155,106 @@ export default function Cart(): JSX.Element {
                                     }
                                 </div>
                             </div>
-                            <div className="flex flex-col w-full ml-0 lg:ml-12 lg:w-2/5 p-10">
+                            <div className="flex flex-col w-full ml-0 lg:ml-12 lg:w-3/5 p-10">
                                 <div className="pt-12 md:pt-0 2xl:ps-4">
-                                    <h2 className="text-xl font-bold">Order Summary
-                                    </h2>
-                                    <div className="mt-8">
-                                        <div className="flex flex-col space-y-4 ">
-                                            <div className="flex space-x-4">
-                                                <div className='w-full'>
-                                                    <img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_09.jpg" alt="image"
-                                                        className="w-60" />
-                                                </div>
-                                                <div className='w-full'>
-                                                    <h2 className="text-xl font-bold">Title</h2>
-                                                    <p className="text-sm">Lorem ipsum dolor sit amet, tet</p>
-                                                    <span className="text-red-600">Price</span> $20
-                                                </div>
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none"
-                                                        viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                            d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
+                                    <div className="max-w-4xl mr-5 lg:mr-10">
+                                        <form name="checkoutForm">
+                                            <h3 className="text-lg font-bold mb-3">Order Summary</h3>
+                                            <div className="relative mb-4">
+                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">
+                                                    Email
+                                                </label>
+                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline font-semibold" id="email" type="email" placeholder="Enter your email..." required />
+                                                <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
+                                                    <EnvelopeIcon className="w-5 h-5 text-gray-500" />
                                                 </div>
                                             </div>
-                                            <div className="flex space-x-4">
-                                                <div className='w-full'>
-                                                    <img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Page/Kids/Kids_09.jpg" alt="image"
-                                                        className="w-60" />
-                                                </div>
-                                                <div className='w-full'>
-                                                    <h2 className="text-xl font-bold">Title</h2>
-                                                    <p className="text-sm">Lorem ipsum dolor sit amet, tet</p>
-                                                    <span className="text-red-600">Price</span> $20
-                                                </div>
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none"
-                                                        viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                            d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
+                                            <div className="relative mb-10">
+                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">
+                                                    Phone
+                                                </label>
+                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline font-semibold" id="phone" type="number" placeholder="Enter your phone..." required />
+                                                <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
+                                                    <PhoneIcon className="w-5 h-5 text-gray-500" />
                                                 </div>
                                             </div>
-                                        </div>
+
+                                            <h3 className="text-lg font-bold mt-2 mb-3">Shipping address</h3>
+                                            <div className="relative mb-4">
+                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="name">
+                                                    Full name
+                                                </label>
+                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="name" type="text" placeholder="John Doe" required />
+                                                <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
+                                                    <UserCircleIcon className="w-5 h-5 text-gray-500" />
+                                                </div>
+                                            </div>
+                                            <div className="relative mb-4">
+                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="address">
+                                                    Address
+                                                </label>
+                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="address" type="text" placeholder="Your address..." required />
+                                                <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
+                                                    <HomeIcon className="w-5 h-5 text-gray-500" />
+                                                </div>
+                                            </div>
+                                            <div className="relative mb-4">
+                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="city">
+                                                    City
+                                                </label>
+                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="city" type="text" placeholder="Your city..." required />
+                                                <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
+                                                    <TruckIcon className="w-5 h-5 text-gray-500" />
+                                                </div>
+                                            </div>
+                                            <div className="flex mb-4">
+                                                <div className="relative flex-1">
+                                                    <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="country">Country</label>
+                                                    <select className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="country" required>
+                                                        <option>서울</option>
+                                                        <option>부산</option>
+                                                        <option>대구</option>
+                                                        <option>경기도</option>
+                                                        <option>강원도</option>
+                                                    </select>
+                                                    <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-5">
+                                                        <TruckIcon className="w-5 h-5 text-gray-500" />
+                                                    </div>
+                                                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 py-1 mt-7">
+                                                        <ChevronDownIcon className="w-5 h-5 text-gray-500" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mb-4">
+                                                <label className="block text-gray-700 font-semibold">
+                                                    <input className="mr-2 leading-tight" type="checkbox" required />
+                                                    <span className="">
+                                                        이 정보를 다음에도 저장하겠습니다.
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div className="flex p-4 mt-4">
+                                                <h2 className="text-xl font-bold">ITEMS 2</h2>
+                                            </div>
+                                            <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                                총 금액 : <span className="ml-2">{totalPrice}원</span>
+                                            </div>
+                                            <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                                배송료 : <span className="ml-2">{priceNum > 100000 ? "무료 배송" : (priceNum == 0 ? '0원' : "2,500원")}</span>
+                                            </div>
+                                            <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                                결제 비용 : <span className="ml-2">{priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice)}원</span>
+                                            </div>
+                                            <div className="flex justify-end mt-10">
+                                                <button className="px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg" type="submit" id="submitted">
+                                                    Continue
+                                                </button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div className="flex p-4 mt-4">
-                                        <h2 className="text-xl font-bold">ITEMS 2</h2>
-                                    </div>
-                                    <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                        총 금액 : <span className="ml-2">{totalPrice}원</span>
-                                    </div>
-                                    <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                        배송료 : <span className="ml-2">{priceNum > 100000 ? "무료 배송" : (priceNum == 0 ? '0원' : "2,500원")}</span>
-                                    </div>
-                                    <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
-                                        결제 비용 : <span className="ml-2">{priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice)}원</span>
-                                    </div>
+
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div className="flex items-center mb-16">

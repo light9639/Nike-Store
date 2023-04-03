@@ -41,7 +41,7 @@ export default function SideBar(props: DropType): JSX.Element {
                 }
             >
                 <div
-                    className={`h-full bg-white shadow-lg dark:bg-slate-900 dark:border-gray-700 rounded-xl mr-3
+                    className={`h-full bg-white shadow-lg dark:bg-slate-900 dark:border-gray-700 rounded-xl mr-3 relative
                         ${props.side == true ? 'w-64 duration-[1.25s]' : 'w-0 duration-[1.25s]'}
                     `}>
                     <div className="py-5 px-3">

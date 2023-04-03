@@ -12,7 +12,6 @@ export default function Search(): JSX.Element {
     const Every_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes_View.json'
     const Detail_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json'
 
-
     // const [search, setSearch] = useState("");
     const [lists, setLists] = useState([]);
     // const router = useRouter();
@@ -120,7 +119,7 @@ export default function Search(): JSX.Element {
                             // onChange={onChangeSearch}
                             required
                         />
-                        <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                        <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                     </div>
                 </form>
 

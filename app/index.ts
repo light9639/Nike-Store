@@ -5,9 +5,11 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
 import DataReducer from 'features/data/dataSlice';
+import LoginReducer from "features/logindata/loginSlice";
 
 const reducers = combineReducers({
     data: DataReducer,
+    Login: LoginReducer
 });
 
 const persistConfig = {

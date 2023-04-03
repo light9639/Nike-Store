@@ -1,7 +1,8 @@
+import { ShoeViewType } from '@lib/ShoeType';
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 import { PURGE } from "redux-persist";
 
-const initialState: any[] = []
+const initialState: ShoeViewType[] = []
 
 //상품 상세페이지에 데이터 전달
 const detailData = createSlice({
@@ -20,8 +21,14 @@ const detailData = createSlice({
         },
         Decrease(state, action) {
             let Number = state.findIndex((a)=>{ return a.index === action.payload })
-            state[Number].count--
+            if (state[Number].count > 1) {
+                state[Number].count--
+            }
         },
+        ChangeZero(state, action) {
+            let Number = state.findIndex((a)=>{ return a.index === action.payload })
+            state[Number].count = 1
+        }
     },
     extraReducers: builder => {
         builder.addCase(PURGE, () => initialState);
@@ -30,6 +37,6 @@ const detailData = createSlice({
 
 const { actions, reducer: DataReducer } = detailData;
 
-export const { addDetailData, RemoveDetailData, Increase, Decrease } = actions;
+export const { addDetailData, RemoveDetailData, Increase, Decrease, ChangeZero } = actions;
 
 export default DataReducer;

@@ -99,7 +99,7 @@ export default function Men(): JSX.Element {
                                 <SideBar side={side} Name={"Men"}></SideBar>
 
                                 {/* <div className={`${side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"} ${ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "" }`}> */}
-                                <div className={side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
+                                <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                     <div className='w-full flex flex-wrap '>
                                         {
                                             data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {

@@ -17,17 +17,17 @@ function Service() {
                     <div className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]">
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full px-4">
-                                <div className="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
+                                <div className="text-center mx-auto mb-12 lg:mb-20">
                                     <Fade bottom>
                                         <span className="font-semibold text-lg text-primary mb-2 block">
                                             Our Services
                                         </span>
                                         <h2 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4" >
-                                            What We Offer
+                                            Nike FAQ Page
                                         </h2>
-                                        <p className="text-base text-body-color">
-                                            There are many variations of passages of Lorem Ipsum available
-                                            but the majority have suffered alteration in some form.
+                                        <p className="text-base text-body-color leading-7">
+                                            원하는 것을 누구보다 빠르게, 새로운 영감으로 매일을 새롭게, 상상만 했던 경험을 현실로.<br />
+                                            여러분의 매일을 나이키 스토어에서 체험해 보세요.
                                         </p>
                                     </Fade>
                                 </div>
@@ -50,7 +50,7 @@ function Service() {
                                                     <h4 className="font-semibold text-xl text-dark mb-3">
                                                         {item.title}
                                                     </h4>
-                                                    <p className="text-body-color">
+                                                    <p className="text-body-color line-clamp-3">
                                                         {item.content}
                                                     </p>
                                                 </div>
