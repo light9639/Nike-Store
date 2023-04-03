@@ -98,7 +98,7 @@ export default function Women(): JSX.Element {
 
                                 <SideBar side={side} Name={"Women"}></SideBar>
 
-                                <div className={side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"}>
+                                <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                     <div className='w-full flex flex-wrap'>
                                         {
                                             data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
@@ -152,7 +152,7 @@ export default function Women(): JSX.Element {
                                                                             <span className="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{item?.Review} Reviews</span>
                                                                         </span>
                                                                         <span className={`hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3
-                                                                            ${side ? 'md:hidden': ''}
+                                                                            ${side ? 'md:hidden' : ''}
                                                                         `}>
                                                                             <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
                                                                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">

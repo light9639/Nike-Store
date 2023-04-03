@@ -8,17 +8,23 @@ import Slide from '@components/Slide/Slide';
 import axios from 'axios';
 import { DetailType } from "@lib/TypeBox";
 import Link from 'next/link';
+import { persistor } from './_app';
 
 export default function Login(): JSX.Element {
     const [list, setList] = useState<DetailType[]>([]);
     const { data, status } = useSession();
     const DETAIL_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json'
     const sleep = (delay: number | undefined) => new Promise(resolve => setTimeout(resolve, delay));
+    const purge = async () => {
+        location.reload();
+        await persistor.purge(); // persistStore의 데이터 전부 날림
+    };
 
     async function LogOutAlert() {
         if (confirm("정말 로그아웃 하시겠습니까?")) {
             await sleep(250);
             signOut();
+            purge();
         } else {
             alert("취소를 누르셨습니다.");
         }

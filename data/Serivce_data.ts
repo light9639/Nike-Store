@@ -5,7 +5,7 @@ const ServiceData = [
         svg3: "",
         color: "bg-blue-500",
         title: "이용안내",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "좋은 퍼포먼스를 내기 위해서는 착용하는 옷과 장비의 알맞은 사이즈가 중요합니다. 최상의 퍼포먼스를 내실 수 있도록 나이키에서 도와드리겠습니다.",
     },
     {
         svg1: "",
@@ -13,7 +13,7 @@ const ServiceData = [
         svg3: "",
         color: "bg-blue-500",
         title: "고객지원",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "Nike의 검수기준으로 고지된 사항 이외에 제조사에서 불량으로 인정하지 않는 기준, 또는 당사 검수기준에 따라 그 여부를 명확히 분별할 수 없는 상품의 경우 하자로 판단하지 않으며,이로 인한 구매 취소는 불가하므로 신중한 거래 부탁드립니다.",
     },
     {
         svg1: "",
@@ -21,7 +21,7 @@ const ServiceData = [
         svg3: "",
         color: "bg-blue-500",
         title: "판매물품",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "원하는 것을 누구보다 빠르게, 새로운 영감으로 매일을 새롭게, 상상만 했던 경험을 현실로. 여러분의 매일을 나이키 스토어에서 바꿔 보세요.",
     },
     {
         svg1: "M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z",
@@ -29,7 +29,7 @@ const ServiceData = [
         svg3: "",
         color: "bg-blue-500",
         title: "가격안내",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "구매자는 Nike 사이트의 가격으로 제품을 구매할 수 있으며, 구매를 원하시면 거래가 체결됩니다. 구매가 완료되었다면 제품을 발송합니다.",
     },
     {
         svg1: "M10.076 8.64l-2.201-2.2V4.874a.75.75 0 00-.364-.643l-3.75-2.25a.75.75 0 00-.916.113l-.75.75a.75.75 0 00-.113.916l2.25 3.75a.75.75 0 00.643.364h1.564l2.062 2.062 1.575-1.297z",
@@ -37,7 +37,7 @@ const ServiceData = [
         svg3: "M12.556 17.329l4.183 4.182a3.375 3.375 0 004.773-4.773l-3.306-3.305a6.803 6.803 0 01-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 00-.167.063l-3.086 3.748zm3.414-1.36a.75.75 0 011.06 0l1.875 1.876a.75.75 0 11-1.06 1.06L15.97 17.03a.75.75 0 010-1.06z",
         color: "bg-blue-500",
         title: "검수기준",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "Nike의 검수기준은 거래 당사자간 원활한 거래와 보다 균형있는 검수기준 확립을 위해 지속적으로 업데이트 되고 있습니다. 거래에 앞서 최신 검수기준을 참고하시기 바랍니다. 회원님께서 판매 또는 구매하신 모든 상품은 Nike의 전문 검수팀이 제품의 컨디션을 꼼꼼하게 확인한 후, 검수 합격 시에만 출고하고 있습니다.",
     },
     {
         svg1: "",
@@ -45,7 +45,7 @@ const ServiceData = [
         svg3: "",
         color: "bg-blue-500",
         title: "이용정책",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "유한회사 나이키 코리아는 Nike.com/kr 및 나이키 한국용 앱을 통한 한국 내 제품 구매, 마케팅, 특정 행사, 콘테스트, 프로모션 참여와 관련된 개인 데이터 처리에 대한 책임이 있습니다.",
     },
     {
         svg1: "",
@@ -53,7 +53,7 @@ const ServiceData = [
         svg3: "",
         color: "bg-blue-500",
         title: "커뮤니티 가이드라인",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "자신에게 꼭 맞는 러닝화를 찾기까지 많은 노력이 필요합니다. 나이키 멤버가 되어 러닝 전문가의 조언, 14일 무료 반품 서비스, 나이키 런 클럽(NRC)과 함께하는 러닝 트레이닝등의 다양한 혜택들과 함께 나만의 러닝화를 찾아보세요.",
     },
     {
         svg1: "",
@@ -61,7 +61,7 @@ const ServiceData = [
         svg3: "",
         color: "bg-blue-500",
         title: "공지사항",
-        content: "We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics.",
+        content: "나이키 커뮤니티에 오신 것을 환영합니다! 본 약관은 귀하와 나이키 및 그 계열사 간에 귀하의 플랫폼 사용에 관한 법적으로 구속력이 있는 계약을 형성합니다.",
     },
 ]
 

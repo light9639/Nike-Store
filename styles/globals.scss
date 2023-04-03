@@ -32,6 +32,19 @@ a {
   @apply inline-block text-white bg-black dark:bg-blue-600 font-medium rounded-md py-2.5 px-5 hover:opacity-75 transition focus:ring-gray-300 dark:focus:ring-gray-600
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #111827;
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
