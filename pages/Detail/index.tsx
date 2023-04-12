@@ -1,14 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
-import DetailSide from '@components/DetailSide/DetailSide'
+import HeadInfo from '@components/HeadInfo'
+import DetailSide from '@components/DetailSide'
 import Loading from '../loading';
 import { DetailType } from "@lib/TypeBox";
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Fade from 'react-reveal/Fade';
-import Pagination from "@components/Pagination/Pagination";
+import Pagination from "@components/Pagination";
 import Image from 'next/image';
 
 export default function DetailMain(): JSX.Element {
@@ -56,7 +56,7 @@ export default function DetailMain(): JSX.Element {
                                             <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
                                                 <Fade bottom>
                                                     <a className="text-gray-900 dark:text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
-                                                    <a className="text-3xl font-bold pb-4">{item?.h2}</a>
+                                                    <a className="text-[1.75rem] md:text-3xl font-bold pb-4">{item?.h2}</a>
                                                     <p className="text-sm pb-3">
                                                         이 글은 <a className="font-semibold">Lee dong ho</a>에 의해 {item?.date} 작성되었습니다.
                                                     </p>

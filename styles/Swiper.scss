@@ -1,13 +1,23 @@
+$pc1024: 1024px;
+$mobile767: 767px;
+
+@mixin respond($size) {
+    @media screen and (max-width:$size) {
+        @content;
+    }
+}
+
 // Swiper 기본 css 부분 _app.tsx에 import 되어있음.
 .swiper {
     width: 100%;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    // background: #fff;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -21,19 +31,20 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    // height: 100%;
-    object-fit: cover;
-    margin: 0 auto;
-}
-
-.swiper {
-    margin-left: auto;
-    margin-right: auto;
+.swiper-pagination {
+    @include respond($mobile767) {
+        max-width: 95% !important;
+        width: 100% !important;
+    }
 }
 
 .swiper-pagination-bullet {
@@ -43,6 +54,11 @@
     margin: 0 5px !important;
     border-radius: 10% !important;
     opacity: 1 !important;
+
+    @include respond($mobile767) {
+        width: 22.5% !important;
+        margin: 0px !important;
+    }
 }
 
 .swiper-pagination-bullet-active {
@@ -50,13 +66,14 @@
     margin: 0 5px !important;
 }
 
-@media screen and (max-width: 767px) {
-    .swiper-pagination {
-        max-width: 95% !important;
-        width: 100% !important;
-    }
-    .swiper-pagination-bullet {
-        width: 22.5% !important;
-        margin: 0px !important;
+.dark {
+
+    .swiper-button-prev.jsx-d0bdde867167693f,
+    .swiper-button-next.jsx-d0bdde867167693f {
+        background-color: white;
+
+        &::after {
+            color: #222;
+        }
     }
 }

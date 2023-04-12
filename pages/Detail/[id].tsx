@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import HeadInfo from '@components/HeadInfo/HeadInfo';
+import HeadInfo from '@components/HeadInfo';
 import { useRouter } from 'next/router';
 import Loading from '../loading';
-import DetailSide from '@components/DetailSide/DetailSide';
+import DetailSide from '@components/DetailSide';
 import Link from 'next/link';
 import { DetailType } from "@lib/TypeBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

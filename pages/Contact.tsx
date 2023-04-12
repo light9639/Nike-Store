@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeadInfo from "@components/HeadInfo/HeadInfo";
+import HeadInfo from "@components/HeadInfo";
 import Fade from 'react-reveal/Fade';
 import { RightData, LeftData } from "@data/Contact_data";
 import { ContactType } from "@lib/TypeBox";
@@ -16,14 +16,14 @@ export default function Contact(): JSX.Element {
                         <div className="w-full px-4 sm:w-3/4 md:w-2/3 mx-auto lg:w-1/2 xl:w-6/12">
                             <div className="mb-12 max-w-[570px] lg:mb-0 text-center lg:text-left">
                                 <span className="text-primary mb-4 block text-base font-semibold text-gray-900 dark:text-gray-200">
-                                    <Fade bottom cascade>Contact Us</Fade>
+                                    <Fade bottom>Contact Us</Fade>
                                 </span>
                                 <h2
                                     className="text-dark mb-6 text-[32px] font-bold uppercase md:text-[40px] lg:text-[36px] xl:text-[40px]"
                                 >
-                                    <Fade bottom cascade>GET IN TOUCH WITH US</Fade>
+                                    <Fade bottom>GET IN TOUCH WITH US</Fade>
                                 </h2>
-                                <Fade bottom cascade>
+                                <Fade bottom>
                                     <p className="text-body-color text-base leading-relaxed">Nike 사이트에 오신 것을 환영합니다.</p>
                                     <p className="text-body-color mb-9 text-base leading-relaxed">연락을 원하시거나 궁금한 점이 있다면 언제든지 문의 부탁드립니다.</p>
                                 </Fade>
@@ -45,7 +45,7 @@ export default function Contact(): JSX.Element {
                                         </div>
                                     </Fade>
                                     <div className="w-full mt-3 lg:mt-0">
-                                        <Fade bottom cascade>
+                                        <Fade bottom>
                                             <h4 className="text-dark mb-1 text-xl font-bold">Our Location</h4>
                                             <p className="text-body-color text-sm lg:text-base tracking-tighter">서울특별시 강남구 역삼1동 테헤란로 152</p>
                                         </Fade>
@@ -75,7 +75,7 @@ export default function Contact(): JSX.Element {
                                         </div>
                                     </Fade>
                                     <div className="w-full mt-3 lg:mt-0">
-                                        <Fade bottom cascade>
+                                        <Fade bottom>
                                             <h4 className="text-dark mb-1 text-xl font-bold">Phone Number</h4>
                                             <p className="text-body-color text-sm lg:text-base tracking-tighter">080-022-0182</p>
                                         </Fade>
@@ -99,7 +99,7 @@ export default function Contact(): JSX.Element {
                                         </div>
                                     </Fade>
                                     <div className="w-full mt-3 lg:mt-0">
-                                        <Fade bottom cascade>
+                                        <Fade bottom>
                                             <h4 className="text-dark mb-1 text-xl font-bold">Email Address</h4>
                                             <p className="text-body-color text-sm lg:text-base tracking-tighter">dong963939@gmail.com</p>
                                         </Fade>

@@ -1,6 +1,6 @@
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import MainSide from '../MainSdie/MainSdie';
+import Header from './Header/Header';
+import Footer from './Footer';
+import MainSide from './MainSdie/MainSdie';
 interface LayoutProps {
     children: JSX.Element;
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import HeadInfo from "@components/HeadInfo/HeadInfo";
+import HeadInfo from "@components/HeadInfo";
 
 export default function loading(): JSX.Element {
     return (

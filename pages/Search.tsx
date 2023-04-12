@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
+import HeadInfo from '@components/HeadInfo'
 import axios from 'axios';
 import { DetailType } from '@lib/TypeBox'
 import { ShoeViewType } from '@lib/ShoeType'
@@ -123,20 +123,20 @@ export default function Search(): JSX.Element {
                     </div>
                 </form>
 
-                <div className="max-w-screen-xl mx-auto p-5 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-                    <time className="text-lg font-semibold text-gray-900 dark:text-white">Search All Shoes</time>
-                    <ol className="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+                <div className="max-w-screen-xl mx-auto p-5 mb-4 bg-gray-50 rounded-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
+                    {/* <p className="text-xl font-semibold text-gray-900 dark:text-white text-center">Search All Shoes</p> */}
+                    <ol className="mt-5 divide-y divider-gray-200 dark:divide-gray-700 grid grid-cols-3">
                         {
-                            every.slice(0, 3).map(function (item: ShoeViewType, idx: number) {
+                            every.slice(0, 12).map(function (item: ShoeViewType, idx: number) {
                                 return (
                                     <li>
                                         <a href={`/view/${item.index}`} className="block items-center p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <img className="mr-3 mb-3 w-36 rounded-md sm:mb-0" src={item.src.first} alt={item.alt} />
+                                            <img className="mr-3 mb-3 w-40 h-40 object-cover rounded-md sm:mb-0" src={item.src.first} alt={item.alt} />
                                             <div className="text-gray-600 dark:text-gray-400">
-                                                <p className="text-base font-normal">{item.name}</p>
-                                                <p className="text-sm font-normal">{item.info}</p>
-                                                <p className="text-sm font-normal">{item.price}</p>
-                                                <span className="flex items-center mt-1">
+                                                <p className="text-lg font-semibold">{item.name}</p>
+                                                <p className="text-sm font-normal mt-1">{item.info}</p>
+                                                <p className="text-sm font-normal mt-1">{item.price}</p>
+                                                <span className="flex items-center mt-2">
                                                     <svg fill={item.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
@@ -152,12 +152,12 @@ export default function Search(): JSX.Element {
                                                     <svg fill={item.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                     </svg>
-                                                    <span className="bg-blue-100 text-blue-800 text-xs font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item.Review} Reviews</span>
                                                 </span>
-                                                <span className="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                                                    <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"></path><path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"></path></svg>
+                                                <span className="inline-flex bg-blue-100 text-blue-800 text-xs font-semibold mt-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item.Review} Reviews</span>
+                                                {/* <span className="inline-flex items-center text-sm font-normal text-gray-500 dark:text-gray-400 mt-2">
+                                                    <svg aria-hidden="true" className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"></path><path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"></path></svg>
                                                     Private
-                                                </span>
+                                                </span> */}
                                             </div>
                                         </a>
                                     </li>
@@ -166,7 +166,7 @@ export default function Search(): JSX.Element {
                         }
                     </ol>
                 </div>
-                <div className="max-w-screen-xl mx-auto p-5 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
+                {/* <div className="max-w-screen-xl mx-auto p-5 bg-gray-50 rounded-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-700 ">
                     <time className="text-lg font-semibold text-gray-900 dark:text-white">January 12th, 2022</time>
                     <ol className="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
                         {
@@ -191,7 +191,7 @@ export default function Search(): JSX.Element {
                             })
                         }
                     </ol>
-                </div>
+                </div> */}
             </div>
         </React.Fragment>
     )

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
+import HeadInfo from '@components/HeadInfo'
 import { status, Res } from '@lib/TypeBox'
 
 export default function Error({ statusCode }: status): JSX.Element {

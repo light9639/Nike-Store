@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Banner from '@components/Banner/Banner'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
+import HeadInfo from '@components/HeadInfo'
 import { useRouter } from 'next/router';
 import Photos from '@components/index_components/Photos/Photos';
 import Photos2 from '@components/index_components/Photos2/Photos2';

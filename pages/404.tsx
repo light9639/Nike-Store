@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import HeadInfo from "@components/HeadInfo/HeadInfo";
+import HeadInfo from "@components/HeadInfo";
 import React from 'react'
 
 export default function PageNotFound(): JSX.Element {

@@ -1,5 +1,5 @@
 import React from 'react'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
+import HeadInfo from '@components/HeadInfo'
 import Fade from 'react-reveal/Fade';
 
 export default function information(): JSX.Element {

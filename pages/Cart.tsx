@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
+import HeadInfo from '@components/HeadInfo'
 import { useRouter } from 'next/router';
 import { authOptions } from './api/auth/[...nextauth]'
 import { unstable_getServerSession } from "next-auth/next"
@@ -90,61 +90,62 @@ export default function Cart(): JSX.Element {
 
             {loading ? <Loading></Loading>
                 : <React.Fragment>
-                    <div className="container mx-auto my-24 shadow-md">
-                        <div className="block lg:flex my-10 p-4 md:p-0 dark:bg-gray-900">
-                            <div className="w-full overflow-x-auto relative sm:rounded-lg">
-                                <div className="col-span-2 p-5">
-                                    <h1 className="text-xl font-medium ">Shopping Cart</h1>
+                    <div className="container mx-auto my-24 shadow-md rounded-xl">
+                        <div className="block lg:flex my-10 p-4 md:p-0 dark:bg-gray-900 rounded-xl">
+                            <div className="w-screen overflow-x-auto relative sm:rounded-lg">
+                                <div className="col-span-2 pt-10 pl-10 pb-10">
+                                    <h1 className="text-2xl font-semibold ">쇼핑 카트</h1>
                                     {
                                         StateArray && StateArray.map(function (item: any, idx: number) {
                                             return (
                                                 <React.Fragment key={idx}>
-                                                    <div className={`flex justify-between items-center mt-6 pt-6`} >
-                                                        <div className="flex items-center" onClick={() => { console.log(item) }}>
-                                                            <img src={item.src?.first} className="rounded-3xl w-full max-h-full lg:max-h-[350px] xl:max-h-[150px] object-cover" alt={item.alt} />
+                                                    <div className="flex justify-start items-center text-center md:text-left flex-col xl:flex-row mt-12 overflow-hidden">
+                                                        <div className="flex items-center w-full xl:w-1/4" onClick={() => { console.log(item) }}>
+                                                            <img src={item.src?.first} className="rounded-xl mx-auto xl:w-[200px] xl:h-[200px] object-cover" alt={item.alt} />
                                                         </div>
-                                                        <div className="flex flex-col ml-3">
-                                                            <span className="md:text-md font-medium">{item.name}</span>
-                                                            <span className="text-xs font-light text-gray-400">{item.info}</span>
-                                                            <span className="text-xs font-light text-gray-400">{item.Review}</span>
-                                                        </div>
-                                                        <div className="flex items-center space-x-3">
-                                                            <button
-                                                                onClick={() => { dispatch(Decrease(item.index)) }}
-                                                                className={`inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 ${item.count == 1 ? 'cursor-not-allowed' : ''}`}
-                                                                type="button"
-                                                            >
-                                                                <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                                                            </button>
-                                                            <div>
-                                                                <input
-                                                                    className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center"
-                                                                    placeholder={item.count}
-                                                                    required
-                                                                    readOnly
-                                                                />
-                                                            </div>
-                                                            <button
-                                                                onClick={() => { dispatch(Increase(item.index)) }}
-                                                                className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                                <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                                            </button>
-                                                            <button
-                                                                onClick={() => { dispatch(ChangeZero(item.index)) }}
-                                                                className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                                reset
-                                                            </button>
-                                                        </div>
-                                                        <div className="flex justify-center items-center">
-                                                            <p className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
-                                                                {item.price}
-                                                            </p>
-                                                            <p className="py-4 px-6">
+                                                        <div className="flex flex-col ml-3 w-full xl:w-1/4">
+                                                            <span className="md:text-md font-medium text-base">{item.name}</span>
+                                                            <span className="text-xs leading-7 font-light text-gray-400">{item.info}</span>
+                                                            <p className="leading-7">
                                                                 <a
                                                                     onClick={() => { dispatch(RemoveDetailData(idx)) }}
                                                                     href="#void"
-                                                                    className="font-medium text-red-600 dark:text-red-500 hover:underline"
+                                                                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm"
                                                                 >Remove</a>
+                                                            </p>
+                                                        </div>
+                                                        <div className="w-full xl:w-1/4">
+                                                            <div className='flex justify-center gap-2'>
+                                                                <button
+                                                                    onClick={() => { dispatch(Decrease(item.index)) }}
+                                                                    className={`inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 ${item.count == 1 ? 'cursor-not-allowed' : ''}`}
+                                                                    type="button"
+                                                                >
+                                                                    <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                                                                </button>
+                                                                <div>
+                                                                    <input
+                                                                        className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center"
+                                                                        placeholder={item.count}
+                                                                        required
+                                                                        readOnly
+                                                                    />
+                                                                </div>
+                                                                <button
+                                                                    onClick={() => { dispatch(Increase(item.index)) }}
+                                                                    className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                                                                    <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                                                </button>
+                                                            </div>
+                                                            <button
+                                                                onClick={() => { dispatch(ChangeZero(item.index)) }}
+                                                                className="flex mx-auto mt-3 py-1 px-3 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                                                                reset
+                                                            </button>
+                                                        </div>
+                                                        <div className="flex justify-center items-center w-full xl:w-1/4">
+                                                            <p className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                                                                Price : {item.price}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -155,62 +156,62 @@ export default function Cart(): JSX.Element {
                                     }
                                 </div>
                             </div>
-                            <div className="flex flex-col w-full ml-0 lg:ml-12 lg:w-3/5 p-10">
-                                <div className="pt-12 md:pt-0 2xl:ps-4">
-                                    <div className="max-w-4xl mr-5 lg:mr-10">
+                            <div className="flex flex-col w-full lg:w-7/12 p-10">
+                                <div className="pt-12 md:pt-0 2xl:ps-4 ml-2 lg:ml-10">
+                                    <div className="max-w-4xl">
                                         <form name="checkoutForm">
-                                            <h3 className="text-lg font-bold mb-3">Order Summary</h3>
+                                            <h3 className="text-lg font-bold mb-3">배송자 정보</h3>
                                             <div className="relative mb-4">
-                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">
-                                                    Email
+                                                <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="email">
+                                                    이메일
                                                 </label>
-                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline font-semibold" id="email" type="email" placeholder="Enter your email..." required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline font-semibold placeholder-gray-500 dark:placeholder-gray-400" id="email" type="email" placeholder="이메일을 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
-                                                    <EnvelopeIcon className="w-5 h-5 text-gray-500" />
+                                                    <EnvelopeIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
                                             </div>
                                             <div className="relative mb-10">
-                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">
-                                                    Phone
+                                                <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="email">
+                                                    전화번호
                                                 </label>
-                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline font-semibold" id="phone" type="number" placeholder="Enter your phone..." required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline font-semibold placeholder-gray-500 dark:placeholder-gray-400" id="phone" type="number" placeholder="전화번호를 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
-                                                    <PhoneIcon className="w-5 h-5 text-gray-500" />
+                                                    <PhoneIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
                                             </div>
 
-                                            <h3 className="text-lg font-bold mt-2 mb-3">Shipping address</h3>
+                                            <h3 className="text-lg font-bold mt-2 mb-3">배송지</h3>
                                             <div className="relative mb-4">
-                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="name">
-                                                    Full name
+                                                <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="name">
+                                                    이름
                                                 </label>
-                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="name" type="text" placeholder="John Doe" required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="name" type="text" placeholder="이름을 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
-                                                    <UserCircleIcon className="w-5 h-5 text-gray-500" />
+                                                    <UserCircleIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
                                             </div>
                                             <div className="relative mb-4">
-                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="address">
-                                                    Address
+                                                <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="address">
+                                                    주소
                                                 </label>
-                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="address" type="text" placeholder="Your address..." required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="address" type="text" placeholder="주소를 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
-                                                    <HomeIcon className="w-5 h-5 text-gray-500" />
+                                                    <HomeIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
                                             </div>
                                             <div className="relative mb-4">
-                                                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="city">
-                                                    City
+                                                <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="city">
+                                                    배송주소
                                                 </label>
-                                                <input className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="city" type="text" placeholder="Your city..." required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="city" type="text" placeholder="배송지를 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
-                                                    <TruckIcon className="w-5 h-5 text-gray-500" />
+                                                    <TruckIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
                                             </div>
                                             <div className="flex mb-4">
                                                 <div className="relative flex-1">
-                                                    <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="country">Country</label>
-                                                    <select className="shadow appearance-none border rounded-lg w-full py-3 px-8 text-gray-700 leading-tight border-gray-800 focus:outline-none focus:shadow-outline placeholder-gray-500 font-semibold" id="country" required>
+                                                    <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="country">배송도시</label>
+                                                    <select className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-gray-400 leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="country" required>
                                                         <option>서울</option>
                                                         <option>부산</option>
                                                         <option>대구</option>
@@ -218,36 +219,36 @@ export default function Cart(): JSX.Element {
                                                         <option>강원도</option>
                                                     </select>
                                                     <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-5">
-                                                        <TruckIcon className="w-5 h-5 text-gray-500" />
+                                                        <TruckIcon className="w-5 h-5 text-gray-500 dark:text-gray-400   mt-2" />
                                                     </div>
                                                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 py-1 mt-7">
-                                                        <ChevronDownIcon className="w-5 h-5 text-gray-500" />
+                                                        <ChevronDownIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="mb-4">
-                                                <label className="block text-gray-700 font-semibold">
-                                                    <input className="mr-2 leading-tight" type="checkbox" required />
+                                            <div className="mb-4 ml-1 mt-5">
+                                                <label className="text-gray-700 dark:text-white font-semibold flex items-center">
+                                                    <input className="mr-2 leading-tight w-4 h-4 -mt-[0.09rem]" type="checkbox" required />
                                                     <span className="">
                                                         이 정보를 다음에도 저장하겠습니다.
                                                     </span>
                                                 </label>
                                             </div>
-                                            <div className="flex p-4 mt-4">
+                                            <div className="flex py-4 pl-1 mt-4">
                                                 <h2 className="text-xl font-bold">ITEMS 2</h2>
                                             </div>
-                                            <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                            <div className="flex items-center w-full py-4 text-base font-semibold border-b border-gray-300 lg:py-5 lg:pl-1 text-heading last:border-b-0 last:text-base last:pb-0">
                                                 총 금액 : <span className="ml-2">{totalPrice}원</span>
                                             </div>
-                                            <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                            <div className="flex items-center w-full py-4 text-base font-semibold border-b border-gray-300 lg:py-5 lg:pl-1 text-heading last:border-b-0 last:text-base last:pb-0">
                                                 배송료 : <span className="ml-2">{priceNum > 100000 ? "무료 배송" : (priceNum == 0 ? '0원' : "2,500원")}</span>
                                             </div>
-                                            <div className="flex items-center w-full py-4 text-sm font-semibold border-b border-gray-300 lg:py-5 lg:px-3 text-heading last:border-b-0 last:text-base last:pb-0">
+                                            <div className="flex items-center w-full py-4 text-base font-semibold border-b border-gray-300 lg:py-5 lg:pl-1 text-heading last:border-b-0 last:text-base last:pb-0">
                                                 결제 비용 : <span className="ml-2">{priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice)}원</span>
                                             </div>
-                                            <div className="flex justify-end mt-10">
-                                                <button className="px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg" type="submit" id="submitted">
-                                                    Continue
+                                            <div className="mt-8">
+                                                <button className="block w-full px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-75 duration-500" type="submit" id="submitted">
+                                                    결제하기
                                                 </button>
                                             </div>
                                         </form>

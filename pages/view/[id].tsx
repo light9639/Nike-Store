@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
+import HeadInfo from '@components/HeadInfo'
 import { useRouter } from 'next/router'
 import axios from 'axios';
 import { product, ReviewData1, ReviewData2 } from '@data/View_data';
 import { signIn, useSession, signOut } from "next-auth/react";
-import Modal from '@components/Modal/Modal';
+import Modal from '@components/Modal';
 import Loading from '../loading';
 import { ReviewType } from '@lib/TypeBox'
 import { productColors, productSize } from '@lib/ProductType'
@@ -415,8 +415,8 @@ export default function Example(): JSX.Element {
                                     </div>
                                     {data?.user ? (
                                         <span
-                                            className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 dark:bg-blue-600 py-3 px-8 text-base font-medium text-white hover:bg-gray-900 dark:hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
-                                            onClick={() => {router.push('/Cart'); dispatch(addDetailData(Shoe[ID]));}}
+                                            className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 dark:bg-blue-600 py-3 px-8 text-base font-medium text-white hover:bg-gray-900 dark:hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-blue-500 focus:ring-offset-2 cursor-pointer hover:opacity-75 duration-500"
+                                            onClick={() => { router.push('/Cart'); dispatch(addDetailData(Shoe[ID])); }}
                                         >
                                             카트에 추가
                                         </span>

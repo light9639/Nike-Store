@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React, { useState } from 'react'
-import DarkModeToggleButton from '../DarkModeToggleButton/DarkModeToggleButton';
-import HeaderBanner from "../HeaderBanner/HeaderBanner";
+import DarkModeToggleButton from '../DarkModeToggleButton';
+import HeaderBanner from "../HeaderBanner";
 import { useSession, signOut } from "next-auth/react";
 import { HeaderType, HeaderMobileType } from "@lib/HeaderType";
 import { First, Second, Recent, Mobile1, Mobile2, Mobile3, Mobile4 } from './Header_data'
@@ -427,7 +427,7 @@ export default function Nav(): JSX.Element {
                                                     onClick={() => setOpen(!open)}
                                                 >
                                                     <li>
-                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
+                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-gray-500 dark:hover:border-blue-500 pr-6 cursor-pointer transition">
                                                             <span className="inline-flex justify-center items-center ml-4">
                                                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.svg}></path>
@@ -457,7 +457,7 @@ export default function Nav(): JSX.Element {
                                                     onClick={() => setOpen(!open)}
                                                 >
                                                     <li>
-                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
+                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-gray-500 dark:hover:border-blue-500 pr-6 cursor-pointer transition">
                                                             <span className="inline-flex justify-center items-center ml-4">
                                                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.svg}></path>
@@ -487,7 +487,7 @@ export default function Nav(): JSX.Element {
                                                     onClick={() => setOpen(!open)}
                                                 >
                                                     <li>
-                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
+                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-gray-500 dark:hover:border-blue-500 pr-6 cursor-pointer transition">
                                                             <span className="inline-flex justify-center items-center ml-4">
                                                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.svg}></path>
@@ -517,7 +517,7 @@ export default function Nav(): JSX.Element {
                                                     onClick={() => setOpen(!open)}
                                                 >
                                                     <li>
-                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
+                                                        <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-gray-500 dark:hover:border-blue-500 pr-6 cursor-pointer transition">
                                                             <span className="inline-flex justify-center items-center ml-4">
                                                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.svg}></path>
@@ -538,7 +538,7 @@ export default function Nav(): JSX.Element {
                                         onClick={() => { LogOutAlert(); setOpen(!open) }}
                                     >
                                         <li>
-                                            <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 cursor-pointer transition">
+                                            <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-gray-500 dark:hover:border-blue-500 pr-6 cursor-pointer transition">
                                                 <span className="inline-flex justify-center items-center ml-4">
                                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>

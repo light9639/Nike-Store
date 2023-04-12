@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeadInfo from '@components/HeadInfo/HeadInfo';
+import HeadInfo from '@components/HeadInfo';
 import { signIn, useSession, signOut } from "next-auth/react";
 import Loading from './loading';
 import { LoginType } from '@lib/TypeBox';
@@ -140,8 +140,8 @@ export default function Login(): JSX.Element {
                                                             <img className="object-cover object-center w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/95972251?v=4" alt="" />
 
                                                             <div className="mx-4">
-                                                                <h1 className="text-sm text-gray-700 dark:text-gray-200">Lee Dong ho</h1>
-                                                                <p className="text-sm text-gray-500 dark:text-gray-400">Creative Director</p>
+                                                                <h1 className="text-sm font-semibold text-gray-700 dark:text-gray-200">Lee Dong ho</h1>
+                                                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Creative Director</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -156,7 +156,7 @@ export default function Login(): JSX.Element {
                                                         {item.p1} {item.p2}
                                                     </p>
 
-                                                    <Link href={`/Detail/${item.index - 1}`} className="inline-block text-white bg-black dark:bg-blue-600 font-medium  rounded-lg text-sm px-5 py-3 mt-5">자세히 보기</Link>
+                                                    <Link href={`/Detail/${item.index - 1}`} className="inline-block text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-sm px-5 py-3 mt-5 hover:opacity-75 duration-500">자세히 보기</Link>
                                                 </div>
 
                                             </React.Fragment>

@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react'
-import HeadInfo from '@components/HeadInfo/HeadInfo'
-import Dropdowns from "@components/Dropdowns/Dropdowns";
+import HeadInfo from '@components/HeadInfo'
+import Dropdowns from "@components/Dropdowns";
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import { SlideType } from '@lib/ShoeType';
 import Loading from './loading';
 import SideBar from '@components/SideBar/SideBar';
 import Fade from 'react-reveal/Fade';
-import Pagination from "@components/Pagination/Pagination";
-import Mobile from '@components/Mobile/Mobile';
+import Pagination from "@components/Pagination";
+import Mobile from '@components/Mobile';
 import Link from 'next/link';
 import Image from 'next/image';
 
