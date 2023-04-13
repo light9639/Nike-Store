@@ -20,64 +20,7 @@ export default function ServiceDetail(): JSX.Element {
 
             <div className='max-w-screen-lg mx-auto h-full py-24'>
 
-                <div className='mx-auto text-center mb-32'>
-                    <Fade>
-                        <h2 className="text-4xl font-extrabold dark:text-white">문의하기</h2>
-                        <div className="flex justify-center mx-auto mt-3 mb-12">
-                            <span className="inline-block w-24 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
-                            <span className="inline-block w-3 h-1 mx-1 bg-gray-900 dark:bg-white rounded-full"></span>
-                            <span className="inline-block w-1 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
-                        </div>
-                    </Fade>
-                    <div className='flex justify-between flex-wrap text-center mx-auto'>
-                        <Fade bottom duration={1000}>
-                            <a href='#void' className='w-1/2 md:w-1/4 mb-16 md:mb-0'>
-                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
-                                    <img alt="제품 및 주문" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/phone.png" className="p-3" />
-                                </div>
-                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>제품 및 주문</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>080-022-0182</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>9:00~20:00</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~일요일</span>
-                            </a>
-                        </Fade>
-                        <Fade bottom duration={1200}>
-                            <a href='/Cart' className='w-1/2 md:w-1/4 mb-16 md:mb-0'>
-                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
-                                    <img alt="제품 및 주문" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/chat.png" className="p-3" />
-                                </div>
-                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>제품 및 주문</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>나이키와 채팅하기</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>9:00~20:00</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~일요일</span>
-                            </a>
-                        </Fade>
-                        <Fade bottom duration={1400}>
-                            <a href='#void' className='w-1/2 md:w-1/4'>
-                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
-                                    <img alt="제품 및 주문" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/phone.png" className="p-3" />
-                                </div>
-                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>A/S 서비스</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>080-022-0182</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>9:00~12:00, 13:00~18:00</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~금요일(공휴일 제외)</span>
-                            </a>
-                        </Fade>
-                        <Fade bottom duration={1600}>
-                            <a href='/Maps' className='w-1/2 md:w-1/4'>
-                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
-                                    <img alt="매장 찾기" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/store.png" className="p-3" />
-                                </div>
-                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>매장 찾기</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>가까운 나이키 리테일 매장 찾기</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>00:00~24:00</span>
-                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~일요일</span>
-                            </a>
-                        </Fade>
-                    </div>
-                </div>
-
-                <div>
+                <div className='mx-2 lg:mx-0'>
                     <Fade>
                         <h2 className="text-4xl font-extrabold dark:text-white text-center">빠른 지원</h2>
                         <div className="flex justify-center mx-auto mt-3 mb-14">
@@ -419,6 +362,63 @@ export default function ServiceDetail(): JSX.Element {
                             </Transition>
                         </div>
                     </Fade>
+                </div>
+
+                <div className='mx-auto text-center mt-32 mb-16'>
+                    <Fade>
+                        <h2 className="text-4xl font-extrabold dark:text-white">문의하기</h2>
+                        <div className="flex justify-center mx-auto mt-3 mb-12">
+                            <span className="inline-block w-24 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
+                            <span className="inline-block w-3 h-1 mx-1 bg-gray-900 dark:bg-white rounded-full"></span>
+                            <span className="inline-block w-1 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
+                        </div>
+                    </Fade>
+                    <div className='flex justify-between flex-wrap text-center mx-auto'>
+                        <Fade bottom duration={1000}>
+                            <a href='#void' className='w-1/2 md:w-1/4 mb-16 md:mb-0'>
+                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
+                                    <img alt="제품 및 주문" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/phone.png" className="p-3" />
+                                </div>
+                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>제품 및 주문</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>080-022-0182</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>9:00~20:00</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~일요일</span>
+                            </a>
+                        </Fade>
+                        <Fade bottom duration={1200}>
+                            <a href='/Cart' className='w-1/2 md:w-1/4 mb-16 md:mb-0'>
+                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
+                                    <img alt="제품 및 주문" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/chat.png" className="p-3" />
+                                </div>
+                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>제품 및 주문</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>나이키와 채팅하기</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>9:00~20:00</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~일요일</span>
+                            </a>
+                        </Fade>
+                        <Fade bottom duration={1400}>
+                            <a href='#void' className='w-1/2 md:w-1/4'>
+                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
+                                    <img alt="제품 및 주문" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/phone.png" className="p-3" />
+                                </div>
+                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>A/S 서비스</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>080-022-0182</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>9:00~12:00, 13:00~18:00</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~금요일(공휴일 제외)</span>
+                            </a>
+                        </Fade>
+                        <Fade bottom duration={1600}>
+                            <a href='/Maps' className='w-1/2 md:w-1/4'>
+                                <div className='rounded-full bg-white inline-block mx-auto mb-2'>
+                                    <img alt="매장 찾기" src="https://www.nike.com/assets/experience/dotcom-member/gethelpfe-webshell/_next/static/images/store.png" className="p-3" />
+                                </div>
+                                <span className='block text-lg font-semibold leading-8 mb-1 md:mb-0'>매장 찾기</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>가까운 나이키 리테일 매장 찾기</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>00:00~24:00</span>
+                                <span className='block text-sm md:text-base leading-6 md:leading-7'>월요일~일요일</span>
+                            </a>
+                        </Fade>
+                    </div>
                 </div>
 
             </div>

@@ -2,92 +2,33 @@ import React, { useEffect, useState } from 'react'
 import HeadInfo from '@components/HeadInfo'
 import axios from 'axios';
 import { DetailType } from '@lib/TypeBox'
-import { ShoeViewType } from '@lib/ShoeType'
+import { ShoeViewType, SlideType } from '@lib/ShoeType'
 import { motion } from "framer-motion";
+import Link from 'next/link';
+import Fade from 'react-reveal/Fade';
+import type { NextPage } from "next";
 
-export default function Search(): JSX.Element {
-    const [search, setSearch] = useState<string>('')
-    const [every, setEvery] = useState<ShoeViewType[]>([]);
-    const [detail, setDetail] = useState<DetailType[]>([]);
-    const Every_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes_View.json'
-    const Detail_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json'
+interface PropsType {
+    Men: SlideType[];
+    Women: SlideType[];
+    Kids: SlideType[];
+}
 
-    // const [search, setSearch] = useState("");
-    const [lists, setLists] = useState([]);
-    // const router = useRouter();
-    /*pagination*/
-    const [currentPage, setCurrentPage] = useState(1);
-    const [currentPosts, setCurrentPosts] = useState([]);
-    const postsPerPage = 10;
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
-    // useEffect(() => {
-    //     const userData = async () => {
-    //         await axios
-    //             .get(common.baseURL + "user")
-    //             .then((res) => {
-    //                 setLists(res.data.patientList)
-    //                 setCurrentPosts(res.data.patientList.slice(indexOfFirstPost, indexOfLastPost))
-    //                 setCurrentPage(1)
-    //             });
-    //     };
-    //     userData();
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
+const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
+    const [shoeList, setShoeList] = useState<SlideType[]>([]);
+    const [searchWord, setSearchWord] = useState<string>("");
 
-    // useEffect(() => {
-    //     setCurrentPosts(lists.slice(indexOfFirstPost, indexOfLastPost))
-    // }, [indexOfFirstPost, indexOfLastPost, lists])
-
-    // const onSearch = (e) => {
-    //     e.preventDefault();
-    //     if (search === null || search === '') {
-    //         axios.get(common.baseURL + "user")
-    //             .then((res) => {
-    //                 setLists(res.data.userList)
-    //                 setCurrentPosts(res.data.userist.slice(indexOfFirstPost, indexOfLastPost))
-    //             });
-    //     } else {
-    //         const filterData = lists.filter((row) => row.userId.includes(search))
-    //         setLists(filterData)
-    //         setCurrentPosts(filterData.slice(indexOfFirstPost, indexOfLastPost))
-    //         setCurrentPage(1)
-    //     }
-    //     setSearch('')
-    // }
-
-    // const onChangeSearch = (e: { preventDefault: () => void; target: { value: React.SetStateAction<string>; }; }) => {
-    //     e.preventDefault();
-    //     setSearch(e.target.value);
-    // };
-
-    // const inputChange = (e: { target: { value: any; }; }) => {
-    //     const { value } = e.target
-    //     setSearch(value)
-    // }
-
-    // useEffect(() => {
-    //     setEvery(
-    //         every.filter(item => item.name.toUpperCase().indexOf(search) !== -1)
-    //     )
-    // }, [search])
-
-    function getEvery() {
-        axios.get(Every_URL).then((res) => {
-            setEvery(res.data.Every)
-        })
+    function getData() {
+        setShoeList([...Men, ...Women, ...Kids]);
     }
 
-    function getDetail() {
-        axios.get(Detail_URL).then((res) => {
-            setDetail(res.data.Post)
-        })
-    }
+    const filtered = shoeList.filter((Search) => {
+        return Search.name.toLowerCase().includes(searchWord.toLowerCase());
+    });
 
     useEffect(() => {
-        getEvery()
-        getDetail()
+        getData()
     }, []);
 
     return (
@@ -95,104 +36,111 @@ export default function Search(): JSX.Element {
             <HeadInfo title="Map Page" contents="Map Page"></HeadInfo>
 
             <div className='max-w-screen-2xl mx-auto my-20'>
-
-                <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold text-center mt-20">Nike Search Page</h1>
-
-                {/* <form onSubmit={e => onSearch(e)} className='max-w-3xl mx-auto my-10'> */}
-                <form className='max-w-3xl mx-auto my-10'>
-                    <label htmlFor="" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    <div className="relative">
-                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <Fade>
+                    <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold text-center mt-20">Nike Search Page</h1>
+                </Fade>
+                <Fade>
+                    <form className='max-w-3xl my-10 mx-6 lg:mx-auto '>
+                        <label htmlFor="" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                        <div className="relative">
+                            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <input
+                                type="search"
+                                id="default-search"
+                                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="원하시는 제품명을 입력해주세요."
+                                required
+                                onChange={(event) => {
+                                    setSearchWord(event.target.value);
+                                }}
+                            />
+                            <input type="text" style={{ display: "none" }} />
+                            <button type="button" className="text-white absolute right-2.5 bottom-2.5 bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                         </div>
-                        {/* <input
-                            placeholder="Search Mockups, Logos..."
-                            onChange={inputChange}
-                            value={inputText}
-                        /> */}
-                        <input
-                            type="search"
-                            id="default-search"
-                            className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            value={search}
-                            placeholder="아이디를 검색하세요."
-                            // onChange={onChangeSearch}
-                            required
-                        />
-                        <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                    </form>
+                </Fade>
+                <div className="max-w-screen-xl mx-auto p-5 mb-4">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+                        {
+                            filtered && filtered.slice(0, 12).map(function (item: SlideType, idx: number) {
+                                return (
+                                    <Fade duration={500} key={item.index}>
+                                        <div className="bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 my-5 mx-auto md:mx-3 max-w-sm">
+                                            <div className='p-8 pb-5'>
+                                                <img className="rounded-lg" src={item.src} alt={item.alt} />
+                                            </div>
+                                            <div className="px-8 pb-5">
+                                                <h3 className="text-gray-900 font-semibold text-lg tracking-tight dark:text-white">{item.name}</h3>
+                                                <span className='text-gray-500 text-xs leading-6'>{item.info}</span>
+                                                <div className="flex items-center mt-1 mb-4">
+                                                    <svg className="w-4 h-4 text-yellow-300" fill={item.star.first} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg className="w-4 h-4 text-yellow-300" fill={item.star.second} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg className="w-4 h-4 text-yellow-300" fill={item.star.third} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg className="w-4 h-4 text-yellow-300" fill={item.star.four} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg className="w-4 h-4 text-yellow-300" fill={item.star.five} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2.5">{item.Review}.0</span>
+                                                </div>
+                                                <div className="flex items-center justify-between">
+                                                    <span className="text-lg font-bold text-gray-900 dark:text-white">{item.price}</span>
+                                                    <Link href={`/view/${item.index}`}
+                                                        className="text-white bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                    >
+                                                        구매하기
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Fade>
+                                )
+                            })
+                        }
                     </div>
-                </form>
-
-                <div className="max-w-screen-xl mx-auto p-5 mb-4 bg-gray-50 rounded-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-                    {/* <p className="text-xl font-semibold text-gray-900 dark:text-white text-center">Search All Shoes</p> */}
-                    <ol className="mt-5 divide-y divider-gray-200 dark:divide-gray-700 grid grid-cols-3">
-                        {
-                            every.slice(0, 12).map(function (item: ShoeViewType, idx: number) {
-                                return (
-                                    <li>
-                                        <a href={`/view/${item.index}`} className="block items-center p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <img className="mr-3 mb-3 w-40 h-40 object-cover rounded-md sm:mb-0" src={item.src.first} alt={item.alt} />
-                                            <div className="text-gray-600 dark:text-gray-400">
-                                                <p className="text-lg font-semibold">{item.name}</p>
-                                                <p className="text-sm font-normal mt-1">{item.info}</p>
-                                                <p className="text-sm font-normal mt-1">{item.price}</p>
-                                                <span className="flex items-center mt-2">
-                                                    <svg fill={item.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
-                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                    </svg>
-                                                    <svg fill={item.star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
-                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                    </svg>
-                                                    <svg fill={item.star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
-                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                    </svg>
-                                                    <svg fill={item.star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
-                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                    </svg>
-                                                    <svg fill={item.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
-                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                    </svg>
-                                                </span>
-                                                <span className="inline-flex bg-blue-100 text-blue-800 text-xs font-semibold mt-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item.Review} Reviews</span>
-                                                {/* <span className="inline-flex items-center text-sm font-normal text-gray-500 dark:text-gray-400 mt-2">
-                                                    <svg aria-hidden="true" className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"></path><path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"></path></svg>
-                                                    Private
-                                                </span> */}
-                                            </div>
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ol>
                 </div>
-                {/* <div className="max-w-screen-xl mx-auto p-5 bg-gray-50 rounded-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-700 ">
-                    <time className="text-lg font-semibold text-gray-900 dark:text-white">January 12th, 2022</time>
-                    <ol className="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
-                        {
-                            detail.slice(0, 3).map(function (item: DetailType, idx: number) {
-                                return (
-                                    <li>
-                                        <a href={`/Detail/${item.index - 1}`} className="block items-center p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <img className="mr-3 mb-3 w-24 rounded-md sm:mb-0" src={item.src2} alt={item.alt} />
-                                            <div className="text-gray-600 dark:text-gray-400">
-                                                <p className="text-base font-normal">{item.h2}</p>
-                                                <p className="text-sm font-normal">{item.p1}</p>
-                                                <p className="text-sm font-normal">{item.p2}</p>
-                                                <p className="text-sm font-normal">{item.date}</p>
-                                                <span className="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                                                    <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"></path><path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"></path></svg>
-                                                    Private
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ol>
-                </div> */}
             </div>
         </React.Fragment>
     )
 }
+
+export async function getStaticProps() {
+    const ShoeList_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json'
+    const res = await fetch(ShoeList_URL);
+    const data = await res.json();
+
+    return {
+        props: {
+            Men: data.Men,
+            Women: data.Women,
+            Kids: data.Kids,
+        },
+        revalidate: 20,
+    };
+}
+
+export default Search;
