@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 import Link from 'next/link';
 import axios from 'axios';
 import { SlideType, ShoeViewType } from '@lib/ShoeType'
-import Loading from './Loading';
+import LoadingPage from './Loading';
 import { useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { persistor } from "./_app";
@@ -89,7 +89,7 @@ const Cart: NextPage = () => {
         <React.Fragment>
             <HeadInfo title="Cart Page" contents="Cart Page"></HeadInfo>
 
-            {loading ? <Loading></Loading>
+            {loading ? <LoadingPage></LoadingPage>
                 : <React.Fragment>
                     <div className="container mx-auto my-24 ">
                         <div className="block lg:flex my-10 p-4 md:p-0 mx-8">
