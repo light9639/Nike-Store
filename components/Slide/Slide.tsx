@@ -4,7 +4,7 @@ import "swiper/css/scrollbar";
 import { Scrollbar, Navigation } from "swiper";
 import SlideStyled from "./SlideStyled";
 import { useRouter } from 'next/router';
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { GreetingsProps } from "@lib/TypeBox";
 import { SlideType } from "@lib/ShoeType";
@@ -70,8 +70,8 @@ export default function Slide({ name }: GreetingsProps): JSX.Element {
                 <h2 className='mb-10 top-4 sm:top-3 absolute text-2xl sm:text-3xl dark:text-white z-50'>Popular Women Shoes</h2>
                 {list.map(function (item: SlideType, idx: number) {
                     return (
-                        <>
-                            <SwiperSlide className="pt-20 pb-10" key={idx}>
+                        <React.Fragment key={item.index}>
+                            <SwiperSlide className="pt-20 pb-10">
                                 <div className="rounded-xl sm:ml-1 dark:hover:shadow-slate-700 transform duration-500 text-left">
                                     <div
                                         className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition cursor-pointer rounded-3xl'
@@ -131,7 +131,7 @@ export default function Slide({ name }: GreetingsProps): JSX.Element {
                                     </Fade>
                                 </div>
                             </SwiperSlide>
-                        </>
+                        </React.Fragment>
                     )
                 })}
                 <div className="swiper-button-next"></div>

@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import HeadInfo from "@components/HeadInfo";
 import Link from "next/link";
 import { useRouter } from 'next/router'
+import type { NextPage } from "next";
 
-export default function NotLogin(): JSX.Element {
+const NotLogin: NextPage = () => {
     const router = useRouter()
 
     useEffect(() => {
@@ -19,7 +20,7 @@ export default function NotLogin(): JSX.Element {
             <section className="flex items-center h-full pt-16 pb-28 dark:bg-black dark:text-gray-100">
                 <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
                     <div className="max-w-md text-center">
-                    <h2 className="pb-8 font-extrabold text-8xl dark:text-white text-gray-900">
+                        <h2 className="pb-8 font-extrabold text-8xl dark:text-white text-gray-900">
                             Sorry
                         </h2>
                         <p className="text-2xl font-semibold md:text-3xl">You have been logged out.</p>
@@ -31,3 +32,5 @@ export default function NotLogin(): JSX.Element {
         </React.Fragment>
     )
 }
+
+export default NotLogin;

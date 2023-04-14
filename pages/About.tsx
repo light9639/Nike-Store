@@ -3,8 +3,9 @@ import { AboutType } from '@lib/TypeBox';
 import AboutData from "@data/About_data";
 import Fade from 'react-reveal/Fade';
 import HeadInfo from "@components/HeadInfo";
+import type { NextPage } from "next";
 
-export default function About(): JSX.Element {
+const About: NextPage = () => {
     return (
         <React.Fragment>
             <HeadInfo title="About Page" contents="About Page"></HeadInfo>
@@ -100,7 +101,7 @@ export default function About(): JSX.Element {
                         {
                             AboutData && AboutData.map(function (item: AboutType, idx: number) {
                                 return (
-                                    <div key={idx}>
+                                    <div key={item.index}>
                                         <Fade bottom cascade duration={(((idx % 3 == 0 ? 0 : idx % 3 == 1 ? 1 : 2) + 1) * 500) + 1000}>
                                             <div className="w-full lg:max-w-full text-left p-5 lg:p-8 rounded-lg mt-2 ">
                                                 <img className="object-cover object-center w-full mx-auto rounded-3xl" src={item.src} alt={item.p1} />
@@ -147,3 +148,5 @@ export default function About(): JSX.Element {
         </React.Fragment>
     );
 };
+
+export default About

@@ -2,8 +2,9 @@
 import Link from "next/link";
 import HeadInfo from "@components/HeadInfo";
 import React from 'react'
+import type { NextPage } from "next";
 
-export default function PageNotFound(): JSX.Element {
+const PageNotFound: NextPage = () => {
     return (
         <React.Fragment>
             <HeadInfo title="404 Page" contents="404 Page" />
@@ -23,3 +24,5 @@ export default function PageNotFound(): JSX.Element {
         </React.Fragment>
     );
 }
+
+export default PageNotFound

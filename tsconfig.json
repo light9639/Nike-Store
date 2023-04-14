@@ -21,7 +21,8 @@
     "paths": {
       "@lib/*": ["lib/*"],
       "@data/*": ["data/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@app/*": ["app/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/MainSdie", "components/Banner/Banner.module.scss"],

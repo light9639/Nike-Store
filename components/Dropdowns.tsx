@@ -125,7 +125,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block px-4 py-2 text-sm cursor-pointer'
                                     )}
-                                    // onClick={NameUpFilter}
                                     onClick={() => { NameUpFilter(); }}
                                 >
                                     이름 오름차순
@@ -139,7 +138,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block px-4 py-2 text-sm cursor-pointer'
                                     )}
-                                    // onClick={NameDownFilter}
                                     onClick={() => { NameDownFilter(); }}
                                 >
                                     이름 내림차순
@@ -155,7 +153,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block px-4 py-2 text-sm cursor-pointer'
                                     )}
-                                    // onClick={HighPriceFilter}
                                     onClick={() => { HighPriceFilter(); }}
                                 >
                                     가격 높은 순
@@ -169,7 +166,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block px-4 py-2 text-sm cursor-pointer'
                                     )}
-                                    // onClick={LowPriceFilter}
                                     onClick={() => { LowPriceFilter(); }}
                                 >
                                     가격 낮은 순
@@ -185,7 +181,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block px-4 py-2 text-sm cursor-pointer'
                                     )}
-                                    // onClick={StarHighFilter}
                                     onClick={() => { StarHighFilter(); }}
                                 >
                                     리뷰 많은 순
@@ -199,7 +194,6 @@ export default function Example(props: { data: any, setData: any, Name: string, 
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block px-4 py-2 text-sm cursor-pointer'
                                     )}
-                                    // onClick={StarLowFilter}
                                     onClick={() => { StarLowFilter(); }}
                                 >
                                     리뷰 적은 순

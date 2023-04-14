@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import HeadInfo from '@components/HeadInfo';
 import { useRouter } from 'next/router';
-import Loading from '../loading';
+import Loading from '../Loading';
 import DetailSide from '@components/DetailSide';
 import Link from 'next/link';
 import { DetailType } from "@lib/TypeBox";
@@ -10,9 +10,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Fade from 'react-reveal/Fade';
+import type { NextPage } from "next";
 
-export default function Detail(): JSX.Element {
-
+const Detail: NextPage = () => {
     const [list, setList] = useState<DetailType[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const DETAIL_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json';
@@ -73,8 +73,9 @@ export default function Detail(): JSX.Element {
         <React.Fragment>
             <HeadInfo title={list[ID]?.h2} contents={list[ID]?.h2} />
 
-            {loading ? <Loading></Loading>
-                : <>
+            {loading
+                ? <Loading></Loading>
+                : <React.Fragment>
                     <div className="container mx-auto flex flex-wrap py-6">
 
                         <section className="w-full lg:w-2/3 flex flex-col items-center px-3">
@@ -82,7 +83,7 @@ export default function Detail(): JSX.Element {
                             <article className="flex flex-col shadow my-4">
                                 <Fade><img src={list[ID]?.src} alt={list[ID]?.alt} /></Fade>
                                 <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
-                                    <Fade bottom>
+                                    <Fade duration={1500}>
                                         <a href="#void" className="text-gray-900 dark:text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
                                         <a href="#void" className="text-3xl font-bold hover:text-gray-700 pb-4">{list[ID]?.h2}</a>
                                         <p className="text-sm pb-8">
@@ -110,12 +111,12 @@ export default function Detail(): JSX.Element {
                                     <Fade><img src="https://avatars.githubusercontent.com/u/95972251?v=4" className="rounded-full shadow h-32 w-32" /></Fade>
                                 </div>
                                 <div className="flex-1 flex flex-col justify-center lg:justify-start">
-                                    <Fade bottom>
+                                    <Fade duration={1500}>
                                         <p className="font-semibold text-2xl">Lee dong ho</p>
                                         <p className="pt-2">이 페이지를 읽어주셔서 감사합니다. <span className="font-semibold">{list[parseInt(ID)]?.h2}</span>은 <span className="font-semibold">Lee dong ho</span>에 의해 {list[ID]?.date} 작성되었습니다.</p>
                                     </Fade>
                                     <div className="flex items-center justify-center lg:justify-start text-2xl no-underline pt-4">
-                                        <Fade bottom>
+                                        <Fade duration={1500}>
                                             <a className="pr-4 hover:text-blue-600 transition" href="#void">
                                                 <FontAwesomeIcon icon={faTwitter} className="w-5 h-5" />
                                             </a>
@@ -137,8 +138,10 @@ export default function Detail(): JSX.Element {
                         <DetailSide></DetailSide>
 
                     </div>
-                </>
+                </React.Fragment>
             }
         </React.Fragment>
     )
 }
+
+export default Detail;

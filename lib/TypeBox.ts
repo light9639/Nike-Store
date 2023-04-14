@@ -16,6 +16,7 @@ export interface RouteType {
 }
 
 export interface ShoeType {
+    index: number;
     name: string;
     img: string;
     href: string;
@@ -41,6 +42,7 @@ export type DetailType = {
 }
 
 export type AboutType = {
+    index: number;
     src: string;
     p1: string;
     p2: string;
@@ -56,6 +58,7 @@ export type LoginType = {
 }
 
 export type ServiceType = {
+    index: number;
     svg1: string;
     svg2: string;
     svg3: string;
@@ -65,6 +68,7 @@ export type ServiceType = {
 }
 
 export type MainSideType = {
+    index: number;
     name: string;
     href: string;
     svg: string;

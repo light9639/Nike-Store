@@ -1,7 +1,8 @@
 import React from "react"
 import HeadInfo from "@components/HeadInfo";
+import type { NextPage } from "next";
 
-export default function loading(): JSX.Element {
+const Loading: NextPage = () => {
     return (
         <React.Fragment>
             <HeadInfo title="Loading" contents="Loading"></HeadInfo>
@@ -18,3 +19,5 @@ export default function loading(): JSX.Element {
         </React.Fragment>
     )
 }
+
+export default Loading

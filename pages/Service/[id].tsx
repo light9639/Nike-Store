@@ -3,8 +3,9 @@ import { useRouter } from 'next/router'
 import HeadInfo from "@components/HeadInfo";
 import Fade from 'react-reveal/Fade';
 import { Transition } from '@headlessui/react'
+import type { NextPage } from "next";
 
-export default function ServiceDetail(): JSX.Element {
+const ServiceDetail: NextPage = () => {
     const router = useRouter();
     const ID: any = router.query.id;
     let [flyer, setFlyer] = useState<boolean[]>([false, false, false, false, false, false]);
@@ -14,9 +15,10 @@ export default function ServiceDetail(): JSX.Element {
         copy[e] = !copy[e];
         setFlyer(copy);
     }
+
     return (
         <React.Fragment>
-            <HeadInfo title={`Nike Service Page ${ID}`} contents={`Nike Service Page ${ID}`} />
+            <HeadInfo title="Nike Service Page" contents="Nike Service Page" />
 
             <div className='max-w-screen-lg mx-auto h-full py-24'>
 
@@ -425,3 +427,5 @@ export default function ServiceDetail(): JSX.Element {
         </React.Fragment>
     )
 }
+
+export default ServiceDetail

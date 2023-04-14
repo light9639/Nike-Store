@@ -40,7 +40,7 @@ export default function Section(): JSX.Element {
                     {
                         product && product.map(function (item: BannerType, idx: number) {
                             return (
-                                <SwiperSlide key={idx}>
+                                <SwiperSlide key={item.index}>
                                     <div className="Banner w-screen">
                                         <img src={item.src} alt={item.alt} />
                                         <div className="Banner_text absolute left-[20%] lg:left-[15%] bottom-[47%] md:bottom-[45%] lg:bottom-1/2 xl:bottom-[45.5%] z-20 w-1/2 lg:w-full">

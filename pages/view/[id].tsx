@@ -6,15 +6,16 @@ import axios from 'axios';
 import { product, ReviewData1, ReviewData2 } from '@data/View_data';
 import { signIn, useSession, signOut } from "next-auth/react";
 import Modal from '@components/Modal';
-import Loading from '../loading';
+import Loading from '../Loading';
 import { ReviewType } from '@lib/TypeBox'
 import { productColors, productSize } from '@lib/ProductType'
 import { ShoeViewType, StarType } from '@lib/ShoeType'
 import Image from 'next/image';
 import { useAppDispatch } from 'app/hooks';
-import { addDetailData } from 'features/data/dataSlice';
+import { addDetailData } from 'features/DataSlice';
+import type { NextPage } from "next";
 
-export default function Example(): JSX.Element {
+const View: NextPage<any> = ({ item }) => {
     // useState 모음
     const [selectedColor, setSelectedColor] = useState<productColors>(product.colors[0])
     const [selectedSize, setSelectedSize] = useState<productSize>(product.sizes[2])
@@ -37,7 +38,6 @@ export default function Example(): JSX.Element {
     const reviews = { href: '#void', average: 4, totalCount: 4 }
     const Star: StarType = Shoe[ID]?.star;
 
-    console.log(Shoe[ID])
     // 모달 함수들
     const DetailShow = () => { setShow(!Show) }
     const chooseNumber = (a: number) => { setNumber(a) }
@@ -61,6 +61,7 @@ export default function Example(): JSX.Element {
         axios.get("").then((res) => {
             setLoading(false);
         });
+        console.log(item);
     }, []);
 
     return (
@@ -269,6 +270,7 @@ export default function Example(): JSX.Element {
                                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{Shoe[ID]?.name}</h1>
                             </div>
                             <div className="mt-4 lg:row-span-3 lg:mt-0">
+                                <h2>dfdf{item}</h2>
                                 <p className="text-3xl tracking-tight text-gray-900 dark:text-white">{Shoe[ID]?.price}</p>
                                 <div className="mt-6">
                                     <h3 className="sr-only">Reviews</h3>
@@ -456,7 +458,7 @@ export default function Example(): JSX.Element {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex flex-wrap lg:justify-between max-w-screen-xl mx-auto mb-20 p-4 pt-0 lg:p-8 border-t'>
+                        <div className='flex flex-wrap lg:justify-between max-w-screen-xl mx-auto mb-20 px-4 pt-8 md:p-8 border-t'>
                             <div className='w-full lg:w-1/3 mb-10 lg:mb-0'>
                                 <div className="flex items-center mb-3">
                                     <svg aria-hidden="true" className={`w-5 h-5 ${Star?.first == "currentColor" ? "text-yellow-400" : "stroke-yellow-400 dark:stroke-none text-white"}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -587,3 +589,32 @@ function TabContent(props: { number: any, Shoe: ShoeViewType[], ID: any }) {
 function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
 }
+
+// export async function getStaticPaths() {
+//     const Data_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes_View.json'
+//     const res = await axios.get(Data_URL)
+//     const data = res.data;
+
+//     return {
+//         paths: data.map((item: any) => ({
+//             params: { id: item.id.toString() },
+//         })),
+//         fallback: false
+//     }
+// }
+
+export async function getStaticProps(context: any) {
+    const id = context.params.id
+    const Data_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes_View.json'
+    const res = await axios.get(Data_URL)
+    const data = res.data;
+
+    return {
+        props: {
+            item: data,
+        }
+    }
+}
+
+
+export default View

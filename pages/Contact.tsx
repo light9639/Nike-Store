@@ -3,9 +3,9 @@ import HeadInfo from "@components/HeadInfo";
 import Fade from 'react-reveal/Fade';
 import { RightData, LeftData } from "@data/Contact_data";
 import { ContactType } from "@lib/TypeBox";
+import type { NextPage } from "next";
 
-export default function Contact(): JSX.Element {
-
+const Contact: NextPage = () => {
     return (
         <React.Fragment>
             <HeadInfo title="Contact Page" contents="Contact Page"></HeadInfo>
@@ -189,7 +189,7 @@ export default function Contact(): JSX.Element {
                                             {
                                                 RightData.map(function (item: ContactType, idx: number) {
                                                     return (
-                                                        <React.Fragment key={idx}>
+                                                        <React.Fragment key={item.cx}>
                                                             <circle
                                                                 cx={item.cx}
                                                                 cy={item.cy}
@@ -214,7 +214,7 @@ export default function Contact(): JSX.Element {
                                             {
                                                 LeftData.map(function (item: ContactType, idx: number) {
                                                     return (
-                                                        <React.Fragment key={idx}>
+                                                        <React.Fragment key={item.cx}>
                                                             <circle
                                                                 cx={item.cx}
                                                                 cy={item.cy}
@@ -239,3 +239,5 @@ export default function Contact(): JSX.Element {
         </React.Fragment>
     );
 }
+
+export default Contact

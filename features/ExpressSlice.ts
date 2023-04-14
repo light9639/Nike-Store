@@ -21,7 +21,7 @@ const initialState: initialType = {
 }
 
 //상품 상세페이지에 데이터 전달
-const LoginData = createSlice({
+const ExpressData = createSlice({
     name: 'detailData',
     initialState,
     reducers: {
@@ -34,8 +34,8 @@ const LoginData = createSlice({
     },
 })
 
-const { actions, reducer: LoginReducer } = LoginData;
+const { actions, reducer: ExpressReducer } = ExpressData;
 
 // export const { addDetailData } = actions;
 
-export default LoginReducer;
+export default ExpressReducer;

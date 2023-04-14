@@ -1,8 +1,9 @@
 import React from 'react'
 import HeadInfo from '@components/HeadInfo'
 import Fade from 'react-reveal/Fade';
+import type { NextPage } from "next";
 
-export default function information(): JSX.Element {
+const information: NextPage = () => {
     return (
         <React.Fragment>
             <HeadInfo title="Information Page" contents="Information Page"></HeadInfo>
@@ -635,3 +636,5 @@ export default function information(): JSX.Element {
         </React.Fragment>
     )
 }
+
+export default information

@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import Link from 'next/link';
 import Fade from 'react-reveal/Fade';
 import type { NextPage } from "next";
+import { useAppDispatch, useAppSelector } from '@app/hooks';
+import { changeValue } from 'features/SearchSlice';
 
 interface PropsType {
     Men: SlideType[];
@@ -14,10 +16,12 @@ interface PropsType {
     Kids: SlideType[];
 }
 
-
 const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
     const [shoeList, setShoeList] = useState<SlideType[]>([]);
     const [searchWord, setSearchWord] = useState<string>("");
+
+    const state = useAppSelector((state) => state.search.value);
+    const dispatch = useAppDispatch();
 
     function getData() {
         setShoeList([...Men, ...Women, ...Kids]);
@@ -33,14 +37,14 @@ const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
 
     return (
         <React.Fragment>
-            <HeadInfo title="Map Page" contents="Map Page"></HeadInfo>
+            <HeadInfo title="Search Page" contents="Search Page"></HeadInfo>
 
             <div className='max-w-screen-2xl mx-auto my-20'>
                 <Fade>
                     <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold text-center mt-20">Nike Search Page</h1>
                 </Fade>
                 <Fade>
-                    <form className='max-w-3xl my-10 mx-6 lg:mx-auto '>
+                    <form className='max-w-3xl my-10 mx-6 md:mx-auto w-auto md:w-[98%] lg:w-full'>
                         <label htmlFor="" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                         <div className="relative">
                             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -52,8 +56,14 @@ const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
                                 className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="원하시는 제품명을 입력해주세요."
                                 required
+                                value={state}
+                                onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) => {
+                                    setSearchWord((event.target as HTMLInputElement).value)
+                                    dispatch(changeValue((event.target as HTMLInputElement).value))
+                                }}
                                 onChange={(event) => {
-                                    setSearchWord(event.target.value);
+                                    setSearchWord(event.target.value)
+                                    dispatch(changeValue(event.target.value))
                                 }}
                             />
                             <input type="text" style={{ display: "none" }} />
@@ -64,13 +74,14 @@ const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
                 <div className="max-w-screen-xl mx-auto p-5 mb-4">
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
                         {
-                            filtered && filtered.slice(0, 12).map(function (item: SlideType, idx: number) {
+                            filtered.slice(0, 12).map(function (item: SlideType, idx: number) {
                                 return (
                                     <Fade duration={500} key={item.index}>
-                                        <div className="bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 my-5 mx-auto md:mx-3 max-w-sm">
-                                            <div className='p-8 pb-5'>
+                                        <div className="bg-white shadow-lg rounded-lg dark:bg-gray-800 dark:border-gray-700 my-5 mx-auto md:mx-3 max-w-sm relative overflow-hidden">
+                                            <div className='pb-5'>
                                                 <img className="rounded-lg" src={item.src} alt={item.alt} />
                                             </div>
+                                            <span className="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-black text-center text-sm text-white">Sale</span>
                                             <div className="px-8 pb-5">
                                                 <h3 className="text-gray-900 font-semibold text-lg tracking-tight dark:text-white">{item.name}</h3>
                                                 <span className='text-gray-500 text-xs leading-6'>{item.info}</span>

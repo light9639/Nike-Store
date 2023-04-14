@@ -4,13 +4,14 @@ import { ServiceType } from "@lib/TypeBox";
 import Fade from 'react-reveal/Fade';
 import { useRouter } from 'next/router'
 import HeadInfo from '@components/HeadInfo'
+import type { NextPage } from "next";
 
-function Service() {
+const Service: NextPage = () => {
     const router = useRouter()
 
     return (
         <React.Fragment>
-            <HeadInfo title="Nike Service Page" contents="Nike Service Page" />
+            <HeadInfo title="Nike FAQ Page" contents="Nike FAQ Page" />
 
             <div className="mx-auto max-w-screen-xl">
                 <div className="p-3 xl:p-0">
@@ -39,25 +40,30 @@ function Service() {
                             {
                                 ServiceData && ServiceData.map(function (item: ServiceType, idx: number) {
                                     return (
-                                        <Fade bottom duration={(((idx % 3 == 0 ? 0 : idx % 3 == 1 ? 1 : 2) + 1) * 500) + 1000}>
-                                            <div className="w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" key={idx} onClick={() => router.push(`/Service/${idx}`)}>
-                                                <div className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white hover:bg-gray-50 dark:bg-slate-900 hover:dark:bg-gray-800 shadow-md hover:shadow-lg mb-8 text-center transition">
-                                                    <div className={`w-[70px] h-[70px] flex items-center justify-center rounded-full mb-8 mx-auto bg-gray-900 dark:bg-blue-600`} >
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="fill-white w-8 h-8">
-                                                            <path d={item.svg1} />
-                                                            <path fillRule="evenodd" d={item.svg2} clipRule="evenodd" />
-                                                            <path d={item.svg3} />
-                                                        </svg>
+                                        <React.Fragment key={item.index}>
+                                            <Fade
+                                                bottom
+                                                duration={(((idx % 3 == 0 ? 0 : idx % 3 == 1 ? 1 : 2) + 1) * 500) + 1000}
+                                            >
+                                                <div className="w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" key={idx} onClick={() => router.push(`/Service/${idx}`)}>
+                                                    <div className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white hover:bg-gray-50 dark:bg-slate-900 hover:dark:bg-gray-800 shadow-md hover:shadow-lg mb-8 text-center transition">
+                                                        <div className={`w-[70px] h-[70px] flex items-center justify-center rounded-full mb-8 mx-auto bg-gray-900 dark:bg-blue-600`} >
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="fill-white w-8 h-8">
+                                                                <path d={item.svg1} />
+                                                                <path fillRule="evenodd" d={item.svg2} clipRule="evenodd" />
+                                                                <path d={item.svg3} />
+                                                            </svg>
+                                                        </div>
+                                                        <h4 className="font-semibold text-xl text-dark mb-3">
+                                                            {item.title}
+                                                        </h4>
+                                                        <p className="text-body-color line-clamp-3">
+                                                            {item.content}
+                                                        </p>
                                                     </div>
-                                                    <h4 className="font-semibold text-xl text-dark mb-3">
-                                                        {item.title}
-                                                    </h4>
-                                                    <p className="text-body-color line-clamp-3">
-                                                        {item.content}
-                                                    </p>
                                                 </div>
-                                            </div>
-                                        </Fade>
+                                            </Fade>
+                                        </React.Fragment>
                                     )
                                 })
                             }

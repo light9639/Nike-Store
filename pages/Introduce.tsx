@@ -2,9 +2,9 @@ import React from 'react'
 import HeadInfo from '@components/HeadInfo'
 import Fade from 'react-reveal/Fade';
 import Link from 'next/link';
+import type { NextPage } from "next";
 
-export default function Introduce(): JSX.Element {
-
+const Introduce: NextPage = () => {
     return (
         <React.Fragment>
             <HeadInfo title="Introduce Page" contents="Introduce Page"></HeadInfo>
@@ -55,3 +55,5 @@ export default function Introduce(): JSX.Element {
         </React.Fragment>
     )
 }
+
+export default Introduce

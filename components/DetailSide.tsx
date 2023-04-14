@@ -30,11 +30,13 @@ export default function DetailSide(): JSX.Element {
                     <p className="text-xl font-semibold pb-5">Instagram</p>
                     <div className="grid grid-cols-3 gap-3">
                         {
-                            list && list.slice(0,9).map(function (item: DetailType, idx: number) {
+                            list && list.slice(0, 9).map(function (item: DetailType, idx: number) {
                                 return (
-                                    <Link href={"/Detail/" + idx}>
-                                        <Image className="hover:opacity-75 cursor-pointer" src={item?.src2} alt={item?.alt} width={300} height={300} />
-                                    </Link>
+                                    <React.Fragment key={item.index}>
+                                        <Link href={"/Detail/" + idx}>
+                                            <Image className="hover:opacity-75 cursor-pointer" src={item?.src2} alt={item?.alt} width={300} height={300} />
+                                        </Link>
+                                    </React.Fragment>
                                 )
                             })
                         }

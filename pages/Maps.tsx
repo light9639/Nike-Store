@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import HeadInfo from "@components/HeadInfo";
 import { Map, MapMarker, MapTypeControl, ZoomControl } from 'react-kakao-maps-sdk';
+import type { NextPage } from "next";
 
-export default function Maps() {
+const Maps: NextPage = () => {
     const [info, setInfo] = useState<any>()
     const [markers, setMarkers] = useState<any[]>([])
     const [map, setMap] = useState<any>()
@@ -154,3 +155,5 @@ export default function Maps() {
         </React.Fragment>
     );
 }
+
+export default Maps;

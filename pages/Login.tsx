@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeadInfo from '@components/HeadInfo';
 import { signIn, useSession, signOut } from "next-auth/react";
-import Loading from './loading';
+import Loading from './Loading';
 import { LoginType } from '@lib/TypeBox';
 import Fade from 'react-reveal/Fade';
 import Slide from '@components/Slide/Slide';
@@ -9,8 +9,9 @@ import axios from 'axios';
 import { DetailType } from "@lib/TypeBox";
 import Link from 'next/link';
 import { persistor } from './_app';
+import type { NextPage } from "next";
 
-export default function Login(): JSX.Element {
+const Login: NextPage = () => {
     const [list, setList] = useState<DetailType[]>([]);
     const { data, status } = useSession();
     const DETAIL_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json'
@@ -131,13 +132,13 @@ export default function Login(): JSX.Element {
                                 {
                                     list && list.slice(0, 3).map(function (item: DetailType, idx: number) {
                                         return (
-                                            <React.Fragment key={idx}>
+                                            <React.Fragment key={item.index}>
                                                 <div className="shadow-lg dark:bg-gray-900 p-3 rounded-xl text-center lg:text-left">
                                                     <div className="relative">
-                                                        <img className="object-cover object-center w-full h-64 rounded-lg lg:h-80" src={item.src} alt="" />
+                                                        <img className="object-cover object-center w-full h-64 rounded-lg lg:h-80" src={item.src} alt={item.alt} />
 
                                                         <div className="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900 ">
-                                                            <img className="object-cover object-center w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/95972251?v=4" alt="" />
+                                                            <img className="object-cover object-center w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/95972251?v=4" alt="MyProfile" />
 
                                                             <div className="mx-4">
                                                                 <h1 className="text-sm font-semibold text-gray-700 dark:text-gray-200">Lee Dong ho</h1>
@@ -253,3 +254,5 @@ const LoginData = [
         svg: "M279.1 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.4 0 225.4 0c-73.22 0-121.1 44.38-121.1 124.7v70.62H22.89V288h81.39v224h100.2V288z"
     }
 ]
+
+export default Login

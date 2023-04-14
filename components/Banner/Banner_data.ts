@@ -1,5 +1,6 @@
 export const product = [
     {
+        "index": 1,
         "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner01.png",
         "alt": "mainBanner01",
         "h2": "한계 없는 플레이, 끝 없는 즐거움",
@@ -7,6 +8,7 @@ export const product = [
         "p2": "새로운 팀과 장비를 통해 정면 승부를 펼치거나 덩크슛 콘테스트에 도전해 보세요.",
     },
     {
+        "index": 2,
         "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner02.png",
         "alt": "mainBanner02",
         "h2": "나이키 패스트 팩",
@@ -14,6 +16,7 @@ export const product = [
         "p2": "나만의 최고 기록을 향한 여정을 나이키 패스트 팩과 함께 시작해 보세요.",
     },
     {
+        "index": 3,
         "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner03.png",
         "alt": "mainBanner03",
         "h2": "나이키 줌 X 제가마",
@@ -21,6 +24,7 @@ export const product = [
         "p2": "안정감을 제공하는 나이키 줌X 제가마를 경험해 보세요.",
     },
     {
+        "index": 4,
         "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner04.jpg",
         "alt": "mainBanner04",
         "h2": "조던 루카 1",

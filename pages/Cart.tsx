@@ -6,15 +6,16 @@ import { unstable_getServerSession } from "next-auth/next"
 import Fade from 'react-reveal/Fade';
 import Link from 'next/link';
 import axios from 'axios';
-import { SlideType } from '@lib/ShoeType'
-import Loading from './loading';
+import { SlideType, ShoeViewType } from '@lib/ShoeType'
+import Loading from './Loading';
 import { useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { persistor } from "./_app";
-import { RemoveDetailData, Increase, Decrease, ChangeZero } from 'features/data/dataSlice';
+import { RemoveDetailData, Increase, Decrease, ChangeZero } from 'features/DataSlice';
 import { EnvelopeIcon, PhoneIcon, UserCircleIcon, HomeIcon, TruckIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import type { NextPage } from "next";
 
-export default function Cart(): JSX.Element {
+const Cart: NextPage = () => {
     // useState 모음
     const [reduxData, setReduxData] = useState<SlideType[]>([]) // 신발 데이터 정보
     const [shoe, setShoeAll] = useState<SlideType[]>([]) // 신발 데이터 정보
@@ -90,18 +91,109 @@ export default function Cart(): JSX.Element {
 
             {loading ? <Loading></Loading>
                 : <React.Fragment>
-                    <div className="container mx-auto my-24 shadow-md rounded-xl">
-                        <div className="block lg:flex my-10 p-4 md:p-0 dark:bg-gray-900 rounded-xl">
-                            <div className="w-screen overflow-x-auto relative sm:rounded-lg">
-                                <div className="col-span-2 pt-10 pl-10 pb-10">
-                                    <h1 className="text-2xl font-semibold ">쇼핑 카트</h1>
+                    <div className="container mx-auto my-24 ">
+                        <div className="block lg:flex my-10 p-4 md:p-0 mx-8">
+                            <div className="w-full shadow-md overflow-x-auto relative rounded-xl p-10 mr-10 dark:bg-gray-900">
+                                <div className="col-span-2">
+                                    <h1 className="text-lg font-semibold ">쇼핑 카트</h1>
                                     {
+                                        StateArray && StateArray.map(function (item: ShoeViewType, idx: number) {
+                                            return (
+                                                <React.Fragment key={item.index}>
+                                                    <div className="flow-root">
+                                                        <ul className="">
+                                                            <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
+                                                                <div className="shrink-0">
+                                                                    <img className="h-28 w-28 max-w-full rounded-lg object-cover" src={item.src.first} alt={item.alt} />
+                                                                </div>
+                                                                <div className="relative flex flex-1 flex-col justify-between">
+                                                                    <div className="sm:col-gap-5 sm:grid sm:grid-cols-2">
+                                                                        <div className="pr-8 sm:pr-5">
+                                                                            <p className="text-lg font-semibold text-gray-900 dark:text-white">{item.name}</p>
+                                                                            <p className="mx-0 mt-1 mb-0 text-sm text-gray-400">{item.info}</p>
+                                                                            {/* <div className="flex items-center mt-2 mb-4">
+                                                                                <svg className="w-4 h-4 text-yellow-300" fill={item.star.first} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path
+                                                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <svg className="w-4 h-4 text-yellow-300" fill={item.star.second} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path
+                                                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <svg className="w-4 h-4 text-yellow-300" fill={item.star.third} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path
+                                                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <svg className="w-4 h-4 text-yellow-300" fill={item.star.four} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path
+                                                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <svg className="w-4 h-4 text-yellow-300" fill={item.star.five} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path
+                                                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2.5">{item.Review}.0</span>
+                                                                            </div> */}
+                                                                        </div>
+                                                                        <div className="mt-4 flex items-center justify-between sm:mt-0 sm:items-start sm:justify-end">
+                                                                            <p className="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right dark:text-white">{item.price}</p>
+                                                                            <div className="sm:order-1">
+                                                                                <div className="mx-auto flex h-8 items-stretch text-gray-600">
+                                                                                    <button
+                                                                                        onClick={() => { dispatch(Decrease(item.index)) }}
+                                                                                        className="flex items-center justify-center rounded-l-md bg-gray-900 text-white px-3 transition hover:bg-gray-700"
+                                                                                    >-</button>
+                                                                                    <div
+                                                                                        className="flex w-full items-center justify-center bg-gray-700 px-4 text-white text-xs uppercase transition"
+                                                                                    >{item.count}</div>
+                                                                                    <button
+                                                                                        onClick={() => { dispatch(Increase(item.index)) }}
+                                                                                        className="flex items-center justify-center rounded-r-md bg-gray-900 text-white px-3 transition hover:bg-gray-700"
+                                                                                    >+</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div className="absolute top-0 right-0 flex sm:bottom-0 sm:top-auto">
+                                                                        <button
+                                                                            type="button"
+                                                                            className="flex rounded p-2 text-center text-gray-500 transition-all duration-200 ease-in-out focus:shadow hover:text-gray-900"
+                                                                            onClick={() => { dispatch(RemoveDetailData(idx)) }}
+                                                                        >
+                                                                            <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" className=""></path>
+                                                                            </svg>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </React.Fragment>
+                                            )
+                                        })
+                                    }
+                                    {/* {
                                         StateArray && StateArray.map(function (item: any, idx: number) {
                                             return (
                                                 <React.Fragment key={idx}>
                                                     <div className="flex justify-start items-center text-center md:text-left flex-col xl:flex-row mt-12 overflow-hidden">
                                                         <div className="flex items-center w-full xl:w-1/4" onClick={() => { console.log(item) }}>
-                                                            <img src={item.src?.first} className="rounded-xl mx-auto xl:w-[200px] xl:h-[200px] object-cover" alt={item.alt} />
+                                                            <img src={item.src.first} className="rounded-xl mx-auto xl:w-[200px] xl:h-[200px] object-cover" alt={item.alt} />
                                                         </div>
                                                         <div className="flex flex-col ml-3 w-full xl:w-1/4">
                                                             <span className="md:text-md font-medium text-base">{item.name}</span>
@@ -153,11 +245,11 @@ export default function Cart(): JSX.Element {
                                             )
                                         })
 
-                                    }
+                                    } */}
                                 </div>
                             </div>
-                            <div className="flex flex-col w-full lg:w-7/12 p-10">
-                                <div className="pt-12 md:pt-0 2xl:ps-4 ml-2 lg:ml-10">
+                            <div className="flex flex-col w-full lg:w-3/5 p-10 shadow-md rounded-xl dark:bg-gray-900">
+                                <div className="pt-12 md:pt-0 2xl:ps-4">
                                     <div className="max-w-4xl">
                                         <form name="checkoutForm">
                                             <h3 className="text-lg font-bold mb-3">배송자 정보</h3>
@@ -269,52 +361,52 @@ export default function Cart(): JSX.Element {
                                         {
                                             shoe.slice(calc, calc + 4).map(function (item: SlideType, idx: number) {
                                                 return (
-                                                    <React.Fragment key={idx}>
+                                                    <React.Fragment key={item.index}>
                                                         <div
                                                             className="w-1/2 xl:w-1/4 px-0 lg:px-2 xl:px-0 mb-16"
-                                                            onClick={() => router.push(`/view/${item?.index}`)}
+                                                            onClick={() => router.push(`/view/${item.index}`)}
                                                         >
                                                             <div className="rounded-xl m-2 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
                                                                 <div className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition rounded-3xl'>
-                                                                    <Link href={`/view/${item?.index}`}>
+                                                                    <Link href={`/view/${item.index}`}>
                                                                         <Fade>
-                                                                            <img src={item?.src} alt={item?.alt} className="w-full max-h- lg:max-h-[450px] xl:max-h-[350px] rounded-3xl object-cover" />
+                                                                            <img src={item.src} alt={item.alt} className="w-full max-h- lg:max-h-[450px] xl:max-h-[350px] rounded-3xl object-cover" />
                                                                         </Fade>
                                                                     </Link>
                                                                 </div>
                                                                 <Fade bottom cascade>
                                                                     <div className="pt-5 px-2 flex flex-col gap-2">
 
-                                                                        <Link href={`/view/${item?.index}`}>
+                                                                        <Link href={`/view/${item.index}`}>
                                                                             <h2 className="tracking-tighter text-lg lg:text-base md:text-lg overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 md:mb-0 cursor-pointer hover:text-blue-300 transition text-left" title="Best Headphone Ever">
-                                                                                {item?.name}
+                                                                                {item.name}
                                                                             </h2>
                                                                         </Link>
 
                                                                         <div className='tracking-tighter text-left'>
-                                                                            <p className='pb-1 md:pb-2 text-base lg:text-sm text-gray-600 dark:text-white'>{item?.info}</p>
-                                                                            <span className="text-base 2xl:text-lg relative 2xl:absolute right-0 2xl:right-3 translate-y-0 2xl:-translate-y-[3.85rem]">{item?.price}</span>
+                                                                            <p className='pb-1 md:pb-2 text-base lg:text-sm text-gray-600 dark:text-white'>{item.info}</p>
+                                                                            <span className="text-base 2xl:text-lg relative 2xl:absolute right-0 2xl:right-3 translate-y-0 2xl:-translate-y-[3.85rem]">{item.price}</span>
                                                                         </div>
 
                                                                     </div>
                                                                     <div className="block md:flex pl-2 pb-2">
                                                                         <span className="flex items-center my-3 md:my-0">
-                                                                            <svg fill={item?.star?.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item?.Review} Reviews</span>
+                                                                            <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item.Review} Reviews</span>
                                                                         </span>
                                                                         <span className="hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3">
                                                                             <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
@@ -370,3 +462,5 @@ export default function Cart(): JSX.Element {
 //         },
 //     }
 // }
+
+export default Cart

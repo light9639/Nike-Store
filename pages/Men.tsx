@@ -5,15 +5,16 @@ import Dropdowns from "@components/Dropdowns";
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { SlideType } from '@lib/ShoeType';
-import Loading from './loading';
+import Loading from './Loading';
 import SideBar from '@components/SideBar/SideBar';
 import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination";
 import Mobile from '@components/Mobile';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { NextPage } from "next";
 
-export default function Men(): JSX.Element {
+const Men: NextPage = () => {
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -135,7 +136,7 @@ export default function Men(): JSX.Element {
                                                                         </div>
 
                                                                     </div>
-                                                                    <div className={`block md:flex pl-2 pb-2 ${side ? "md:flex-wrap": ""}`}>
+                                                                    <div className={`block md:flex pl-2 pb-2 ${side ? "md:flex-wrap" : ""}`}>
                                                                         <span className="flex items-center my-3 md:my-0">
                                                                             <svg fill={item?.star?.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
@@ -155,7 +156,7 @@ export default function Men(): JSX.Element {
                                                                             <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item?.Review} Reviews</span>
                                                                         </span>
                                                                         <span className={`hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3
-                                                                            ${side ? 'md:hidden': ''}
+                                                                            ${side ? 'md:hidden' : ''}
                                                                         `}>
                                                                             <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
                                                                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
@@ -203,3 +204,5 @@ export default function Men(): JSX.Element {
         </React.Fragment>
     )
 }
+
+export default Men;
