@@ -16,32 +16,30 @@ yarn dev
 ## :calendar: 개발인원 및 기간
 - 1인 개발 2022.09.01 ~ 2022.09.30(1달 소요)
 ## :dart: 개발 목적
-- Next.js를 이용하여 사이트를 만들기 위해 제작하였습니다.
+- `Next.js`를 이용하여 사이트를 만들기 위해 제작하였습니다.
 ## :black_nib: 구현기능
-- Next.js를 이용하여 사이트를 구축하였고 로그인 기능, 다크모드를 구현하였습니다.
+- `Next.js`를 이용하여 사이트를 구축하였고 로그인 기능, 다크모드를 구현하였습니다.
 ## :hammer_and_wrench: 적용 기술
 ### :zap: Next.js
-- Next.js를 이용하여 React-router-dom 없이도 라우트 페이지를 만들었습니다.
-- 
+- `Next.js`의 자동 라우팅 기능을 이용하여 `React-router-dom` 없이 라우트 페이지를 만들었습니다.
+- `getstaticprops`를 사용하여 `json` 파일의 데이터를 가져와 사용하였습니다.
 ### :zap: TypeScript
 - 타입스크립트를 이용하여 타입을 지정함으로써 오류 발생 가능성을 줄였습니다.
 ### :zap: Next-Auth
-- Next-Auth를 이용하여 구글, 페이스북, 깃허브, 네이버, 카카오 로그인을 구현하였고 Cart 페이지로 접속하려면 로그인을 하도록 사이트를 만들었습니다.
+- `Next-Auth`를 이용하여 <b>구글, 페이스북, 깃허브, 네이버, 카카오 로그인</b>을 구현하였고 Cart 페이지로 접속하려면 로그인을 하도록 사이트를 만들었습니다.
 
 ### :zap: Axios
-- axios를 이용하여 json 데이터를 가져왔습니다.
+- `axios`를 이용하여 `json` 데이터를 가져왔습니다.
 
-### :zap: Redux, Redux-Wrapper
-- Redux와 Redux-Wrapper를 이용하여 주문 버튼 클릭시 자료가 전송되도록 작성하였습니다.
+### :zap: Redux-Toolkit, Redux-Wrapper
+- `Redux-Toolkit`과 `Redux-Wrapper`를 이용하여 주문 버튼 클릭시 자료가 전송되도록 작성하였습니다.
 
 ### :zap: FontAwesome
-- FontAwesome를 이용하여 아이콘 부분을 활용하였습니다.
+- `FontAwesome`를 이용하여 아이콘 부분에 `SVG`를 사용하였습니다.
 
 ### :zap: Tailwind CSS
-- Tailwind CSS를 이용하여 반응형 웹이 가능한 사이트를 디자인하였습니다.
+- `ailwind CSS`를 이용하여 반응형 웹이 가능한 사이트를 디자인하였습니다.
 
 ## :tada: Vercel을 이용한 배포
-
-- Next.js를 배포하기 위해 [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)를 이용하여 더 쉽게 배포하였습니다.
-
+- `Next.js`를 배포하기 위해 [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)를 이용하여 더 쉽게 배포하였습니다.
 - 더 많은 내용을 보고 싶으시다면 [Next.js deployment documentation](https://nextjs.org/docs/deployment) 사이트를 참고하세요.
