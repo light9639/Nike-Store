@@ -12,19 +12,21 @@ import { faGithub, faFacebook, faGoogle, faTwitter } from '@fortawesome/free-bra
 import Fade from 'react-reveal/Fade';
 import type { NextPage } from "next";
 
-const Detail: NextPage = () => {
-    const [list, setList] = useState<DetailType[]>([]);
+interface PageType {
+    postData: DetailType[];
+    paramsID: any;
+}
+
+const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
     const [loading, setLoading] = useState<boolean>(true);
-    const DETAIL_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json';
-    const router = useRouter();
-    const ID: any = router.query.id;
+    const PostID: DetailType = postData[paramsID];
 
     function ScrollTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     function Before() {
-        if (ID == 0) {
+        if (paramsID == 0) {
             return (
                 <Link href="#void" className="w-1/2 bg-white dark:bg-slate-900 shadow text-left p-6 cursor-auto rounded-lg">
                     <p className="text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center align-middle"><FontAwesomeIcon icon={faArrowLeft} className="w-3.5 mr-2" /> 이전 기사</p>
@@ -33,16 +35,16 @@ const Detail: NextPage = () => {
             )
         } else {
             return (
-                <Link href={"/Detail/" + (parseInt(ID) - 1)} onClick={() => { scrollTo() }} className="w-1/2 bg-white dark:bg-slate-900 shadow hover:shadow-md text-left p-6 rounded-lg">
+                <Link href={"/Detail/" + (parseInt(paramsID) - 1)} onClick={() => { scrollTo() }} className="w-1/2 bg-white dark:bg-slate-900 shadow hover:shadow-md text-left p-6 rounded-lg">
                     <p className="text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center align-middle"><FontAwesomeIcon icon={faArrowLeft} className="w-3.5 mr-2" /> 이전 기사</p>
-                    <p className="pt-2 line-clamp-1">{list[parseInt(ID) - 1]?.h2}</p>
+                    <p className="pt-2 line-clamp-1">{postData[parseInt(paramsID) - 1]?.h2}</p>
                 </Link>
             )
         }
     }
 
     function Next() {
-        if ((parseInt(ID) + 1) == list.length) {
+        if ((parseInt(paramsID) + 1) == postData.length) {
             return (
                 <Link href="#void" className="w-1/2 bg-white dark:bg-slate-900 shadow text-right p-6 cursor-auto line-clamp-1 rounded-lg">
                     <p className="text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center justify-end align-middle">다음 기사 <FontAwesomeIcon icon={faArrowRight} className="w-3.5 ml-2" /></p>
@@ -51,19 +53,19 @@ const Detail: NextPage = () => {
             )
         } else {
             return (
-                <Link href={"/Detail/" + (parseInt(ID) + 1)} onClick={() => { scrollTo() }} className="w-1/2 bg-white dark:bg-slate-900 shadow hover:shadow-md text-right p-6 line-clamp-1 rounded-lg">
+                <Link href={"/Detail/" + (parseInt(paramsID) + 1)} onClick={() => { scrollTo() }} className="w-1/2 bg-white dark:bg-slate-900 shadow hover:shadow-md text-right p-6 line-clamp-1 rounded-lg">
                     <p className="text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center justify-end align-middle">다음 기사 <FontAwesomeIcon icon={faArrowRight} className="w-3.5 ml-2" /></p>
-                    <p className="pt-2 line-clamp-1">{list[parseInt(ID) + 1]?.h2}</p>
+                    <p className="pt-2 line-clamp-1">{postData[parseInt(paramsID) + 1]?.h2}</p>
                 </Link>
             )
         }
     }
 
     useEffect(() => {
-        axios.get(DETAIL_API_URL).then((res: any) => {
-            console.log(res);
-            setList(res.data.Post);
-        });
+        // axios.get(DETAIL_API_URL).then((res: any) => {
+        //     console.log(res);
+        //     setList(res.data.Post);
+        // });
         axios.get("").then((res) => {
             setLoading(false);
         });
@@ -71,7 +73,7 @@ const Detail: NextPage = () => {
 
     return (
         <React.Fragment>
-            <HeadInfo title={list[ID]?.h2} contents={list[ID]?.h2} />
+            <HeadInfo title={PostID.h2} contents={PostID.h2} />
 
             {loading
                 ? <Loading></Loading>
@@ -81,13 +83,13 @@ const Detail: NextPage = () => {
                         <section className="w-full lg:w-2/3 flex flex-col items-center px-3">
 
                             <article className="flex flex-col shadow my-4">
-                                <Fade><img src={list[ID]?.src} alt={list[ID]?.alt} /></Fade>
+                                <Fade><img src={PostID.src} alt={PostID.alt} /></Fade>
                                 <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
                                     <Fade duration={1500}>
                                         <a href="#void" className="text-gray-900 dark:text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
-                                        <a href="#void" className="text-3xl font-bold hover:text-gray-700 pb-4">{list[ID]?.h2}</a>
+                                        <a href="#void" className="text-3xl font-bold hover:text-gray-700 pb-4">{PostID.h2}</a>
                                         <p className="text-sm pb-8">
-                                            이 글은 <span className="font-semibold hover:text-gray-800">Lee dong ho</span>에 의해 {list[ID]?.date} 작성되었습니다.
+                                            이 글은 <span className="font-semibold hover:text-gray-800">Lee dong ho</span>에 의해 {PostID.date} 작성되었습니다.
                                         </p>
                                         <h1 className="text-2xl font-bold pb-3">1963년부터, 스토리와 스타일, 스포츠를 이끌다</h1>
                                         <p className="pb-3">스포츠는 건강을 지키며, 내면을 밝혀주고, 우리를 하나로 이어줍니다. 나이키는 스포츠를 통해 세상을 바꿀 수있다고 믿습니다. 세계무대를 빛내는 스포츠 선수에서, 평범한 사람들의 일상에 이르기까지, 우리는 최상의 테크놀로지로 최상의 퍼포먼스를 선사합니다. 러닝에서 바스켓볼, 축구, 피트니스까지. 나이키와 함께 새로운 나의 모습을 만나보세요. 가끔은 도시를 벗어나 아웃도어를 즐기고, 요가를 통해공동체와 하나가 되어보세요. 3-스트라이프의 헤리티지는 문화로까지 이어집니다. 스포츠는 물론, 음악과 일상의 스트릿까지 말이죠. 휘슬이 울리기 직전의 출발선으로부터, 질주의 순간, 마지막 결승선까지. 나이키는 모두를 위한 브랜드입니다. 스포츠와 당신의 삶, 그리고 세상을 바꿉니다.</p>
@@ -113,7 +115,7 @@ const Detail: NextPage = () => {
                                 <div className="flex-1 flex flex-col justify-center lg:justify-start">
                                     <Fade duration={1500}>
                                         <p className="font-semibold text-2xl">Lee dong ho</p>
-                                        <p className="pt-2">이 페이지를 읽어주셔서 감사합니다. <span className="font-semibold">{list[parseInt(ID)]?.h2}</span>은 <span className="font-semibold">Lee dong ho</span>에 의해 {list[ID]?.date} 작성되었습니다.</p>
+                                        <p className="pt-2">이 페이지를 읽어주셔서 감사합니다. <span className="font-semibold">{PostID.h2}</span>은 <span className="font-semibold">Lee dong ho</span>에 의해 {PostID.date} 작성되었습니다.</p>
                                     </Fade>
                                     <div className="flex items-center justify-center lg:justify-start text-2xl no-underline pt-4">
                                         <Fade duration={1500}>
@@ -142,6 +144,45 @@ const Detail: NextPage = () => {
             }
         </React.Fragment>
     )
+}
+
+export async function getStaticPaths() {
+    const DETAIL_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json';
+    const res = await axios.get(DETAIL_API_URL);
+    const data = res.data.Post;
+
+    const paths = data.map((post: DetailType) => ({
+        params: {
+            id: post.index.toString(),
+        },
+    }));
+
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+interface paramsType {
+    params: { id: number }
+}
+
+export async function getStaticProps({ params }: paramsType) {
+    // 각 페이지별 id
+    const paramsID = params.id
+
+    // 데이터 받아오기
+    const DETAIL_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json';
+    const res = await axios.get(DETAIL_API_URL);
+    const data = res.data;
+
+    return {
+        props: {
+            postData: data.Post,
+            paramsID,
+        },
+        revalidate: 20,
+    };
 }
 
 export default Detail;

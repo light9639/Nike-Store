@@ -14,7 +14,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from "next";
 
-const Women: NextPage = () => {
+interface WomenType {
+    WomenData: SlideType[];
+}
+
+const Women: NextPage<WomenType> = ({ WomenData }) => {
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -35,22 +39,21 @@ const Women: NextPage = () => {
     const LocalState = localStorage.getItem("Women_StateInLocal");
 
     // 신발 데이터 가져오기
-    async function getData() {
+    function getData() {
         try {
-            const response = await axios.get(Women_API_URL);
             if (JSON.parse(LocalState || '{}').length != 40) {
-                setData(response.data.Women);
+                setData(WomenData);
             }
             else if (JSON.parse(LocalState || '{}') == '') {
-                setData(response.data.Women);
-                setCopy(response.data.Women);
+                setData(WomenData);
+                setCopy(WomenData);
             }
             else if (LocalState) {
                 setData(JSON.parse(LocalState));
             }
             else {
-                setData(response.data.Women);
-                setCopy(response.data.Women);
+                setData(WomenData);
+                setCopy(WomenData);
             }
         } catch (error) {
             console.error(error);
@@ -202,6 +205,17 @@ const Women: NextPage = () => {
     )
 }
 
+export async function getStaticProps() {
+    const Women_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
+    const response = await axios.get(Women_API_URL);
+    const data = response.data;
 
+    return {
+        props: {
+            WomenData: data.Women,
+        },
+        revalidate: 20,
+    };
+}
 
 export default Women;

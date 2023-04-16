@@ -74,7 +74,7 @@ const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
                 <div className="max-w-screen-xl mx-auto p-5 mb-4">
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
                         {
-                            filtered.slice(0, 12).map(function (item: SlideType, idx: number) {
+                            filtered.map(function (item: SlideType, idx: number) {
                                 return (
                                     <Fade duration={500} key={item.index}>
                                         <div className="bg-white shadow-lg rounded-lg dark:bg-gray-800 dark:border-gray-700 my-5 mx-auto md:mx-3 max-w-sm relative overflow-hidden">

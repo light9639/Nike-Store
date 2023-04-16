@@ -68,12 +68,12 @@ $mobile767: 767px;
 
 .dark {
 
-    .swiper-button-prev.jsx-d0bdde867167693f,
-    .swiper-button-next.jsx-d0bdde867167693f {
-        background-color: white;
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: white !important;
 
         &::after {
-            color: #222;
+            color: #222 !important;
         }
     }
 }

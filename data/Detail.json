@@ -1,7 +1,7 @@
 {
     "Post": [
         {
-            "index": 1,
+            "index": 0,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner01.png",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-01.jpg",
             "alt": "mainBanner01",
@@ -11,7 +11,7 @@
             "date": "2022년 4월 19일"
         },
         {
-            "index": 2,
+            "index": 1,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner02.png",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-02.jpg",
             "alt": "mainBanner02",
@@ -21,7 +21,7 @@
             "date": "2022년 8월 20일"
         },
         {
-            "index": 3,
+            "index": 2,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner03.png",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-03.jpg",
             "alt": "mainBanner03",
@@ -31,7 +31,7 @@
             "date": "2022년 9월 10일"
         },
         {
-            "index": 4,
+            "index": 3,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner04.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-04.jpg",
             "alt": "mainBanner04",
@@ -41,7 +41,7 @@
             "date": "2022년 5월 5일"
         },
         {
-            "index": 5,
+            "index": 4,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Paris.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-05.jpg",
             "alt": "Dunk",
@@ -51,7 +51,7 @@
             "date": "2022년 1월 29일"
         },
         {
-            "index": 6,
+            "index": 5,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/4DFWD.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-06.jpg",
             "alt": "Adidas",
@@ -61,7 +61,7 @@
             "date": "2022년 1월 29일"
         },
         {
-            "index": 7,
+            "index": 6,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Exercise.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-07.jpg",
             "alt": "Exercise",
@@ -71,7 +71,7 @@
             "date": "2022년 10월 12일"
         },
         {
-            "index": 8,
+            "index": 7,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Kids_Detail.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-08.jpg",
             "alt": "Kids",
@@ -81,7 +81,7 @@
             "date": "2022년 8월 12일"
         },
         {
-            "index": 9,
+            "index": 8,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_Soccer.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-09.jpg",
             "alt": "Nike Soccer",
@@ -91,7 +91,7 @@
             "date": "2022년 7월 25일"
         },
         {
-            "index": 10,
+            "index": 9,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_Running.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-10.jpg",
             "alt": "Nike Running",
@@ -101,7 +101,7 @@
             "date": "2022년 7월 25일"
         },
         {
-            "index": 11,
+            "index": 10,
             "src": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/Nike_White_Shoes.jpg",
             "src2": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Detail/Detail-11.jpg",
             "alt": "Nike Running Shoes",

@@ -14,7 +14,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from "next";
 
-const Kids: NextPage = () => {
+interface KidsType {
+    KidsData: SlideType[];
+}
+
+const Kids: NextPage<KidsType> = ({ KidsData }) => {
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -37,22 +41,21 @@ const Kids: NextPage = () => {
     const LocalState = localStorage.getItem("Kids_StateInLocal");
 
     // 신발 데이터 가져오기
-    async function getData() {
+    function getData() {
         try {
-            const response = await axios.get(Kids_API_URL);
             if (JSON.parse(LocalState || '{}').length != 40) {
-                setData(response.data.Kids);
+                setData(KidsData);
             }
             else if (JSON.parse(LocalState || '{}') == '') {
-                setData(response.data.Kids);
-                setCopy(response.data.Kids);
+                setData(KidsData);
+                setCopy(KidsData);
             }
             else if (LocalState) {
                 setData(JSON.parse(LocalState));
             }
             else {
-                setData(response.data.Kids);
-                setCopy(response.data.Kids);
+                setData(KidsData);
+                setCopy(KidsData);
             }
         } catch (error) {
             console.error(error);
@@ -92,12 +95,12 @@ const Kids: NextPage = () => {
                                         </svg>
                                         필터 표시
                                     </a>
-                                    <Dropdowns data={data} setData={setData} Name={"Kids"} copy={copy}></Dropdowns>
+                                    <Dropdowns data={data} setData={setData} Name="Kids" copy={copy}></Dropdowns>
                                 </div>
                             </div>
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar side={side} Name={"Kids"}></SideBar>
+                                <SideBar side={side} Name="Kids"></SideBar>
 
                                 <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                     <div className='w-full flex flex-wrap '>
@@ -199,6 +202,19 @@ const Kids: NextPage = () => {
                 </React.Fragment>}
         </React.Fragment>
     )
+}
+
+export async function getStaticProps() {
+    const Kids_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
+    const response = await axios.get(Kids_API_URL);
+    const data = response.data;
+
+    return {
+        props: {
+            KidsData: data.Kids,
+        },
+        revalidate: 20,
+    };
 }
 
 export default Kids

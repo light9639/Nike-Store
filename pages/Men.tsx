@@ -14,7 +14,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from "next";
 
-const Men: NextPage = () => {
+interface MenType {
+    MenData: SlideType[];
+}
+
+const Men: NextPage<MenType> = ({ MenData }) => {
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -30,27 +34,36 @@ const Men: NextPage = () => {
 
     // 기타 자료들
     const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
-    const Men_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
     const LocalPage = localStorage.getItem("Men_pageNum");
     const LocalState = localStorage.getItem("Men_StateInLocal");
 
+    // 검색 조건
+    const filtered = data.filter((Search) => {
+        return Search.info.toLowerCase().includes("".toLowerCase()) && Search.name.toLowerCase().includes("".toLowerCase());
+    });
+
+    // function () {
+    //     if (filtered.length < 30) {
+
+    //     }
+    // }
+
     // 신발 데이터 가져오기
-    async function getData() {
+    function getData() {
         try {
-            const response = await axios.get(Men_API_URL);
             if (JSON.parse(LocalState || '{}').length != 40) {
-                setData(response.data.Men);
+                setData(MenData);
             }
             else if (JSON.parse(LocalState || '{}') == '') {
-                setData(response.data.Men);
-                setCopy(response.data.Men);
+                setData(MenData);
+                setCopy(MenData);
             }
             else if (LocalState) {
                 setData(JSON.parse(LocalState));
             }
             else {
-                setData(response.data.Men);
-                setCopy(response.data.Men);
+                setData(MenData);
+                setCopy(MenData);
             }
         } catch (error) {
             console.error(error);
@@ -103,7 +116,7 @@ const Men: NextPage = () => {
                                 <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                     <div className='w-full flex flex-wrap '>
                                         {
-                                            data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
+                                            filtered && filtered.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
                                                 return (
                                                     <React.Fragment key={idx}>
 
@@ -185,7 +198,7 @@ const Men: NextPage = () => {
                                     </div>
 
                                     <Pagination
-                                        total={data.length}
+                                        total={filtered.length}
                                         limit={limit}
                                         page={page}
                                         setPage={setPage}
@@ -203,6 +216,19 @@ const Men: NextPage = () => {
             }
         </React.Fragment>
     )
+}
+
+export async function getStaticProps() {
+    const Men_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
+    const response = await axios.get(Men_API_URL);
+    const data = response.data;
+
+    return {
+        props: {
+            MenData: data.Men,
+        },
+        revalidate: 20,
+    };
 }
 
 export default Men;

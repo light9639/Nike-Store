@@ -590,6 +590,21 @@ export default function Nav(): JSX.Element {
                         </div>
                     </div>
                 </div>
+                <div className={
+                    open
+                        ? "fixed top-0 w-screen h-screen bg-black opacity-80 z-[60] lg:hidden duration-700 opacity-100"
+                        : "opacity-0"
+                }>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true" className={
+                        open
+                            ? "fixed top-5 right-4 h-6 w-6 text-white lg:hidden hover:opacity-75 transition cursor-pointer"
+                            : "hidden"
+                    }
+                        onClick={() => setOpen(!open)}
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </div>
             </div>
         </div >
     )
