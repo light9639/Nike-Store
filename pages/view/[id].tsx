@@ -63,7 +63,8 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
         <React.Fragment>
             <HeadInfo title={`${FetchData.name} 페이지`} contents={`${FetchData.name} 페이지`} />
 
-            {loading ? <Loading></Loading>
+            {loading
+                ? <Loading></Loading>
                 : <React.Fragment>
                     {
                         Show == true ?
@@ -412,7 +413,11 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                     {data?.user ? (
                                         <span
                                             className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 dark:bg-blue-600 py-3 px-8 text-base font-medium text-white hover:bg-gray-900 dark:hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-blue-500 focus:ring-offset-2 cursor-pointer hover:opacity-75 duration-500"
-                                            onClick={() => { router.push('/Cart'); dispatch(addDetailData(FetchData)); }}
+                                            onClick={() => {
+                                                router.push('/Cart');
+                                                dispatch(addDetailData(FetchData));
+                                                
+                                            }}
                                         >
                                             카트에 추가
                                         </span>

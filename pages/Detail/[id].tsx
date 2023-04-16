@@ -62,10 +62,6 @@ const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
     }
 
     useEffect(() => {
-        // axios.get(DETAIL_API_URL).then((res: any) => {
-        //     console.log(res);
-        //     setList(res.data.Post);
-        // });
         axios.get("").then((res) => {
             setLoading(false);
         });

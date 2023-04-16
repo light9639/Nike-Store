@@ -92,10 +92,10 @@ const Cart: NextPage = () => {
             {loading ? <LoadingPage></LoadingPage>
                 : <React.Fragment>
                     <div className="container mx-auto my-24 ">
-                        <div className="block lg:flex my-10 p-4 md:p-0 mx-8">
+                        <div className="block lg:flex my-10 p-4 md:p-0 mx-0 xl:mx-8">
                             <div className="w-full shadow-md overflow-x-auto relative rounded-xl p-10 mr-10 dark:bg-gray-900">
                                 <div className="col-span-2">
-                                    <h1 className="text-lg font-semibold ">쇼핑 카트</h1>
+                                    <h1 className="text-center lg:text-left text-xl lg:text-lg font-semibold">쇼핑 카트</h1>
                                     {
                                         StateArray && StateArray.map(function (item: ShoeViewType, idx: number) {
                                             return (
@@ -104,14 +104,14 @@ const Cart: NextPage = () => {
                                                         <ul className="">
                                                             <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
                                                                 <div className="shrink-0">
-                                                                    <img className="h-28 w-28 max-w-full rounded-lg object-cover" src={item.src.first} alt={item.alt} />
+                                                                    <img className="w-full sm:h-28 sm:w-28 max-w-full rounded-lg object-cover" src={item.src.first} alt={item.alt} />
                                                                 </div>
                                                                 <div className="relative flex flex-1 flex-col justify-between">
                                                                     <div className="sm:col-gap-5 sm:grid sm:grid-cols-2">
                                                                         <div className="pr-8 sm:pr-5">
                                                                             <p className="text-lg font-semibold text-gray-900 dark:text-white">{item.name}</p>
                                                                             <p className="mx-0 mt-1 mb-0 text-sm text-gray-400">{item.info}</p>
-                                                                            {/* <div className="flex items-center mt-2 mb-4">
+                                                                            <div className="sm:absolute flex bottom-0 py-2 items-center">
                                                                                 <svg className="w-4 h-4 text-yellow-300" fill={item.star.first} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
                                                                                     xmlns="http://www.w3.org/2000/svg">
                                                                                     <path
@@ -143,22 +143,22 @@ const Cart: NextPage = () => {
                                                                                     </path>
                                                                                 </svg>
                                                                                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2.5">{item.Review}.0</span>
-                                                                            </div> */}
+                                                                            </div>
                                                                         </div>
-                                                                        <div className="mt-4 flex items-center justify-between sm:mt-0 sm:items-start sm:justify-end">
+                                                                        <div className="mt-2 flex items-center justify-between sm:mt-0 sm:items-start sm:justify-end">
                                                                             <p className="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right dark:text-white">{item.price}</p>
                                                                             <div className="sm:order-1">
-                                                                                <div className="mx-auto flex h-8 items-stretch text-gray-600">
+                                                                                <div className="mx-auto flex h-7 items-stretch text-gray-600">
                                                                                     <button
                                                                                         onClick={() => { dispatch(Decrease(item.index)) }}
-                                                                                        className="flex items-center justify-center rounded-l-md bg-gray-900 text-white px-3 transition hover:bg-gray-700"
+                                                                                        className="flex items-center justify-center rounded-l-md bg-gray-300 hover:text-white px-2.5 transition hover:bg-gray-700"
                                                                                     >-</button>
                                                                                     <div
-                                                                                        className="flex w-full items-center justify-center bg-gray-700 px-4 text-white text-xs uppercase transition"
+                                                                                        className="flex w-full items-center justify-center bg-gray-100 px-3 text-xs uppercase transition"
                                                                                     >{item.count}</div>
                                                                                     <button
                                                                                         onClick={() => { dispatch(Increase(item.index)) }}
-                                                                                        className="flex items-center justify-center rounded-r-md bg-gray-900 text-white px-3 transition hover:bg-gray-700"
+                                                                                        className="flex items-center justify-center rounded-r-md bg-gray-300 hover:text-white px-2.5 transition hover:bg-gray-700"
                                                                                     >+</button>
                                                                                 </div>
                                                                             </div>

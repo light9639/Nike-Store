@@ -3,7 +3,7 @@ export type CommonType = {
     alt: string;
     name: string;
     info: string;
-    price: string;
+    price: number;
     Gender: string;
     href: string;
     star: {

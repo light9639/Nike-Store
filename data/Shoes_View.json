@@ -13,7 +13,7 @@
             "alt": "나이키 에어맥스 AP",
             "name": "나이키 에어맥스 AP",
             "info": "남성 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -39,7 +39,7 @@
             "alt": "나이키 에어 포스 1 미드 ‘07",
             "name": "나이키 에어 포스 1 미드 ‘07",
             "info": "남성 신발",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -65,7 +65,7 @@
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
             "info": "남성 신발",
-            "price": "188,100원",
+            "price": 188100,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -91,7 +91,7 @@
             "alt": "나이키 와플 데뷰",
             "name": "나이키 와플 데뷰",
             "info": "남성 신발",
-            "price": "71,200원",
+            "price": 71200,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -117,7 +117,7 @@
             "alt": "에어 조던 1 미드 SE",
             "name": "에어 조던 1 미드 SE",
             "info": "남성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -143,7 +143,7 @@
             "alt": "나이키 에어맥스 페니",
             "name": "나이키 에어맥스 페니",
             "info": "남성 신발",
-            "price": "219,000원",
+            "price": 219000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -169,7 +169,7 @@
             "alt": "나이키 에어맥스 90 SE 한글날",
             "name": "나이키 에어맥스 90 SE 한글날",
             "info": "남성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -195,7 +195,7 @@
             "alt": "자이언 2 PF",
             "name": "자이언 2 PF",
             "info": "남성 농구화",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -221,7 +221,7 @@
             "alt": "나이키 블레이저 미드 프로 클럽",
             "name": "나이키 블레이저 미드 프로 클럽",
             "info": "남성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -247,7 +247,7 @@
             "alt": "나이키코트 줌 라이트 3",
             "name": "나이키코트 줌 라이트 3",
             "info": "남성 하드 코트 테니스화",
-            "price": "79,000원",
+            "price": 79000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -273,7 +273,7 @@
             "alt": "나이키코트 에어 줌 베이퍼 프로",
             "name": "나이키코트 에어 줌 베이퍼 프로",
             "info": "남성 하드 코트 테니스화",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -299,7 +299,7 @@
             "alt": "조던 맥스 아우라 4",
             "name": "조던 맥스 아우라 4",
             "info": "남성 신발",
-            "price": "149,000원",
+            "price": 149000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -325,7 +325,7 @@
             "alt": "나이키 에어 프레스토 x Hello Kitty®",
             "name": "나이키 에어 프레스토 x Hello Kitty®",
             "info": "남성 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -351,7 +351,7 @@
             "alt": "나이키 에어맥스 PRE-DAY",
             "name": "나이키 에어맥스 PRE-DAY",
             "info": "남성 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -377,7 +377,7 @@
             "alt": "르브론 위트니스 7 EP",
             "name": "르브론 위트니스 7 EP",
             "info": "농구화",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -391,7 +391,6 @@
             "count": 1
         },
         {
-
             "index": 15,
             "src": {
                 "first": "https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/Shoes/Men/Men_015/1.jpg",
@@ -404,7 +403,7 @@
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
             "info": "남성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -430,7 +429,7 @@
             "alt": "점프맨 투 트레이",
             "name": "점프맨 투 트레이",
             "info": "남성 신발",
-            "price": "179,000원",
+            "price": 179000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -456,7 +455,7 @@
             "alt": "에어 조던 OG 블랙 앤 다크 파우더 블루",
             "name": "에어 조던 OG 블랙 앤 다크 파우더 블루",
             "info": "남성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -482,7 +481,7 @@
             "alt": "나이키 덩크 로우 레트로",
             "name": "나이키 덩크 로우 레트로",
             "info": "남성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -508,7 +507,7 @@
             "alt": "나이키 에어 포스 1 미드 리액트",
             "name": "나이키 에어 포스 1 미드 리액트",
             "info": "남성 신발",
-            "price": "179,000원",
+            "price": 179000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -534,7 +533,7 @@
             "alt": "나이키 에어 모어 업템포 '96",
             "name": "나이키 에어 모어 업템포 '96",
             "info": "남성 신발",
-            "price": "189,000원",
+            "price": 189000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -560,7 +559,7 @@
             "alt": "나이키 프리미어 3 FG",
             "name": "나이키 프리미어 3 FG",
             "info": "천연 잔디 클리트 축구화",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -586,7 +585,7 @@
             "alt": "나이키 블레이저 미드 77 점보",
             "name": "나이키 블레이저 미드 77 점보",
             "info": "남성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -612,7 +611,7 @@
             "alt": "나이키 덩크 하이 레트로 SE",
             "name": "나이키 덩크 하이 레트로 SE",
             "info": "남성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -638,7 +637,7 @@
             "alt": "나이키 와플원 레더",
             "name": "나이키 와플원 레더",
             "info": "남성 신발",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -664,7 +663,7 @@
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
             "info": "남성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -690,7 +689,7 @@
             "alt": "나이키 에어 페가수스 83",
             "name": "나이키 에어 페가수스 83",
             "info": "남성 신발",
-            "price": "109,000원",
+            "price": 109000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -716,7 +715,7 @@
             "alt": "나이키 에어맥스 95 에센셜",
             "name": "나이키 에어맥스 95 에센셜",
             "info": "남성 신발",
-            "price": "189,000원",
+            "price": 189000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -742,7 +741,7 @@
             "alt": "나이키코트 베이퍼 라이트+",
             "name": "나이키코트 베이퍼 라이트+",
             "info": "남성 하드 코트 테니스화",
-            "price": "99,000원",
+            "price": 99000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -768,7 +767,7 @@
             "alt": "에어 조던 1 로우 SE 크래프트",
             "name": "에어 조던 1 로우 SE 크래프트",
             "info": "남성 신발",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -794,7 +793,7 @@
             "alt": "나이키 SB 줌 POGO 플러스",
             "name": "나이키 SB 줌 POGO 플러스",
             "info": "남성 스케이트보드화",
-            "price": "99,000원",
+            "price": 99000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -820,7 +819,7 @@
             "alt": "나이키 프리 테라 비스타 넥스트 네이처",
             "name": "나이키 프리 테라 비스타 넥스트 네이처",
             "info": "남성 신발",
-            "price": "143,100원",
+            "price": 143100,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -846,7 +845,7 @@
             "alt": "나이키 에어 모어 업템포 '96",
             "name": "나이키 에어 모어 업템포 '96",
             "info": "남성 신발",
-            "price": "209,000원",
+            "price": 209000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -872,7 +871,7 @@
             "alt": "나이키 에어맥스 프리데이",
             "name": "나이키 에어맥스 프리데이",
             "info": "남성 신발",
-            "price": "135,200원",
+            "price": 135200,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -898,7 +897,7 @@
             "alt": "르브론 XX EP",
             "name": "르브론 XX EP",
             "info": "농구화",
-            "price": "239,000원",
+            "price": 239000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -924,7 +923,7 @@
             "alt": "나이키 에어 줌 플라이트 95",
             "name": "나이키 에어 줌 플라이트 95",
             "info": "남성 신발",
-            "price": "189,000원",
+            "price": 189000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -950,7 +949,7 @@
             "alt": "나이키 에어 포스 1 07 LV8 한글날",
             "name": "나이키 에어 포스 1 07 LV8 한글날",
             "info": "남성 신발",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -976,7 +975,7 @@
             "alt": "나이키 코트 레거시 캔버스",
             "name": "나이키 코트 레거시 캔버스",
             "info": "남성 신발",
-            "price": "62,100원",
+            "price": 62100,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -1002,7 +1001,7 @@
             "alt": "자이언 2 PF",
             "name": "자이언 2 PF",
             "info": "남성 농구화",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -1028,7 +1027,7 @@
             "alt": "에어 조던 1 레트로 하이 OG",
             "name": "에어 조던 1 레트로 하이 OG",
             "info": "남성 신발",
-            "price": "209,000원",
+            "price": 209000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -1054,7 +1053,7 @@
             "alt": "나이키 디브레이크",
             "name": "나이키 디브레이크",
             "info": "여성 신발",
-            "price": "95,200원",
+            "price": 95200,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1080,7 +1079,7 @@
             "alt": "나이키 에어맥스 던 SE",
             "name": "나이키 에어맥스 던 SE",
             "info": "여성 신발",
-            "price": "97,300원",
+            "price": 97300,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1106,7 +1105,7 @@
             "alt": "나이키 페가수스 트레일 3 GORE-TEX",
             "name": "나이키 페가수스 트레일 3 GORE-TEX",
             "info": "여성 워터프루프 트레일 러닝화",
-            "price": "132,300원",
+            "price": 132300,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1132,7 +1131,7 @@
             "alt": "나이키 버로우 SE",
             "name": "나이키 버로우 SE",
             "info": "여성 슬리퍼",
-            "price": "79,000원",
+            "price": 79000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1158,7 +1157,7 @@
             "alt": "나이키 와플 원 SE",
             "name": "나이키 와플 원 SE",
             "info": "여성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1184,7 +1183,7 @@
             "alt": "나이키 덩크 하이 업",
             "name": "나이키 덩크 하이 업",
             "info": "여성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1210,7 +1209,7 @@
             "alt": "나이키 데이브레이크",
             "name": "나이키 데이브레이크",
             "info": "여성 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1236,7 +1235,7 @@
             "alt": "나이키 에어맥스 PRE-DAY",
             "name": "나이키 에어맥스 PRE-DAY",
             "info": "여성 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1262,7 +1261,7 @@
             "alt": "나이키 줌 플라이 5",
             "name": "나이키 줌 플라이 5",
             "info": "여성 로드 러닝화",
-            "price": "189,000원",
+            "price": 189000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1288,7 +1287,7 @@
             "alt": "나이키 에어 줌 알파플라이 넥스트 2",
             "name": "나이키 에어 줌 알파플라이 넥스트 2",
             "info": "여성 로드 레이싱화",
-            "price": "329,000원",
+            "price": 329000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1314,7 +1313,7 @@
             "alt": "나이키 스파크",
             "name": "나이키 스파크",
             "info": "여성 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1340,7 +1339,7 @@
             "alt": "조던 소피아",
             "name": "조던 소피아",
             "info": "여성 슬라이드",
-            "price": "99,000원",
+            "price": 99000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1366,7 +1365,7 @@
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
             "info": "여성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1392,7 +1391,7 @@
             "alt": "나이키 에어맥스 프리데이 SE",
             "name": "나이키 에어맥스 프리데이 SE",
             "info": "여성 신발",
-            "price": "125,300원",
+            "price": 125300,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1418,7 +1417,7 @@
             "alt": "나이키 데이브레이크",
             "name": "나이키 데이브레이크",
             "info": "여성 신발",
-            "price": "95,200원",
+            "price": 95200,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1444,7 +1443,7 @@
             "alt": "에어 조던 1 ACCLIMATE",
             "name": "에어 조던 1 ACCLIMATE",
             "info": "여성 신발",
-            "price": "179,000원",
+            "price": 179000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1470,7 +1469,7 @@
             "alt": "에어 조던 1 엘레베이트 로우",
             "name": "에어 조던 1 엘레베이트 로우",
             "info": "여성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1496,7 +1495,7 @@
             "alt": "나이키 에이스 서머라이트",
             "name": "나이키 에이스 서머라이트",
             "info": "여성 골프화(와이드)",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1522,7 +1521,7 @@
             "alt": "나이키 에어맥스 프리데이",
             "name": "나이키 에어맥스 프리데이",
             "info": "여성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1548,7 +1547,7 @@
             "alt": "나이키 줌 윈플로 8",
             "name": "나이키 줌 윈플로 8",
             "info": "여성 로드 러닝화",
-            "price": "109,000원",
+            "price": 109000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1574,7 +1573,7 @@
             "alt": "에어 조던 1 애클러메이트",
             "name": "에어 조던 1 애클러메이트",
             "info": "여성 신발",
-            "price": "179,000원",
+            "price": 179000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1600,7 +1599,7 @@
             "alt": "나이키 폰탄카 와플",
             "name": "나이키 폰탄카 와플",
             "info": "여성 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1626,7 +1625,7 @@
             "alt": "나이키 에어맥스 90 G",
             "name": "나이키 에어맥스 90 G",
             "info": "골프화",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1652,7 +1651,7 @@
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
             "info": "주니어 신발",
-            "price": "151,200원",
+            "price": 151200,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1678,7 +1677,7 @@
             "alt": "나이키 덩크 로우 에센셜",
             "name": "나이키 덩크 로우 에센셜",
             "info": "여성 신발",
-            "price": "103,200원",
+            "price": 103200,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1704,7 +1703,7 @@
             "alt": "나이키 덩크 로우",
             "name": "나이키 덩크 로우",
             "info": "여성 신발",
-            "price": "129,000원",
+            "price": 129000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1730,7 +1729,7 @@
             "alt": "나이키코트 줌 라이트 3",
             "name": "나이키코트 줌 라이트 3",
             "info": "여성 테니스화",
-            "price": "79,000원",
+            "price": 79000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1756,7 +1755,7 @@
             "alt": "나이키 줌X 인빈서블 런 플라이니트 2",
             "name": "나이키 줌X 인빈서블 런 플라이니트 2",
             "info": "여성 로드 러닝화",
-            "price": "199,000원",
+            "price": 199000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1782,7 +1781,7 @@
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
             "info": "여성 신발",
-            "price": "189,000원",
+            "price": 189000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1808,7 +1807,7 @@
             "alt": "나이키 줌 에어 파이어",
             "name": "나이키 줌 에어 파이어",
             "info": "여성 신발",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1834,7 +1833,7 @@
             "alt": "나이키 덩크 하이 1985",
             "name": "나이키 덩크 하이 1985",
             "info": "여성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1860,7 +1859,7 @@
             "alt": "나이키 에어맥스 90",
             "name": "나이키 에어맥스 90",
             "info": "여성 신발",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1886,7 +1885,7 @@
             "alt": "나이키 레볼루션 5",
             "name": "나이키 레볼루션 5",
             "info": "여성 로드 러닝화",
-            "price": "69,000원",
+            "price": 69000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1912,7 +1911,7 @@
             "alt": "나이키 줌X 베이퍼플라이 넥스트 2",
             "name": "나이키 줌X 베이퍼플라이 넥스트 2",
             "info": "여성 러닝화",
-            "price": "269,000원",
+            "price": 269000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1938,7 +1937,7 @@
             "alt": "나이키 레볼루션 5",
             "name": "나이키 레볼루션 5",
             "info": "여성 로드 러닝화",
-            "price": "69,000원",
+            "price": 69000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1964,7 +1963,7 @@
             "alt": "나이키 와플 데뷰",
             "name": "나이키 와플 데뷰",
             "info": "여성 신발",
-            "price": "89,000원",
+            "price": 89000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -1990,7 +1989,7 @@
             "alt": "나이키 에어맥스 SC",
             "name": "나이키 에어맥스 SC",
             "info": "여성 신발",
-            "price": "89,000원",
+            "price": 89000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -2016,7 +2015,7 @@
             "alt": "나이키 에어맥스 90 퓨추라",
             "name": "나이키 에어맥스 90 퓨추라",
             "info": "여성 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -2042,7 +2041,7 @@
             "alt": "나이키 에어 줌 슈퍼렙 3",
             "name": "나이키 에어 줌 슈퍼렙 3",
             "info": "여성 HIIT 클래스 신발",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -2068,7 +2067,7 @@
             "alt": "나이키 SB 줌 POGO 플러스",
             "name": "나이키 SB 줌 POGO 플러스",
             "info": "여성 스케이트보드화",
-            "price": "99,000원",
+            "price": 99000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -2094,7 +2093,7 @@
             "alt": "나이키 블레이저 로우 77",
             "name": "나이키 블레이저 로우 77",
             "info": "리틀키즈 신발",
-            "price": "44,900원",
+            "price": 44900,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2120,7 +2119,7 @@
             "alt": "나이키 블레이저 미드 '77",
             "name": "나이키 블레이저 미드 '77",
             "info": "리틀키즈 신발",
-            "price": "53,400원",
+            "price": 53400,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2146,7 +2145,7 @@
             "alt": "스카이 조던 1",
             "name": "스카이 조던 1",
             "info": "베이비 신발",
-            "price": "59,000원",
+            "price": 59000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2172,7 +2171,7 @@
             "alt": "나이키 포스 1 LE",
             "name": "나이키 포스 1 LE",
             "info": "리틀키즈 신발",
-            "price": "67,500원",
+            "price": 67500,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2198,7 +2197,7 @@
             "alt": "나이키 에어맥스 SC",
             "name": "나이키 에어맥스 SC",
             "info": "주니어 신발",
-            "price": "79,000원",
+            "price": 79000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2224,7 +2223,7 @@
             "alt": "조던 시리즈 ES",
             "name": "조던 시리즈 ES",
             "info": "주니어 신발",
-            "price": "89,000원",
+            "price": 89000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2250,7 +2249,7 @@
             "alt": "나이키 에어맥스 TW",
             "name": "나이키 에어맥스 TW",
             "info": "주니어 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2276,7 +2275,7 @@
             "alt": "나이키 블레이저 미드 '77 D",
             "name": "나이키 블레이저 미드 '77 D",
             "info": "주니어 신발",
-            "price": "109,000원",
+            "price": 109000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2302,7 +2301,7 @@
             "alt": "나이키 에어맥스 모티브",
             "name": "나이키 에어맥스 모티브",
             "info": "리틀키즈 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2328,7 +2327,7 @@
             "alt": "나이키 주니어 팬텀 GT2 아카데미 TF",
             "name": "나이키 주니어 팬텀 GT2 아카데미 TF",
             "info": "리틀키즈/주니어 인조 잔디 축구화",
-            "price": "69,000원",
+            "price": 69000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2354,7 +2353,7 @@
             "alt": "조던 델타 3 로우",
             "name": "조던 델타 3 로우",
             "info": "주니어 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2380,7 +2379,7 @@
             "alt": "조던 2 레트로 J Balvin",
             "name": "조던 2 레트로 J Balvin",
             "info": "리틀키즈 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2406,7 +2405,7 @@
             "alt": "나이키 에어맥스 인터락 라이트",
             "name": "나이키 에어맥스 인터락 라이트",
             "info": "리틀키즈 신발",
-            "price": "60,000원",
+            "price": 60000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2432,7 +2431,7 @@
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
             "info": "주니어 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2458,7 +2457,7 @@
             "alt": "나이키 플렉스 어드밴스",
             "name": "나이키 플렉스 어드밴스",
             "info": "리틀키즈 신발",
-            "price": "48,800원",
+            "price": 48800,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2484,7 +2483,7 @@
             "alt": "나이키 에어맥스 90 LTR SE",
             "name": "나이키 에어맥스 90 LTR SE",
             "info": "주니어 신발",
-            "price": "77,400원",
+            "price": 77400,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2510,7 +2509,7 @@
             "alt": "에어 조던 1 레트로 하이 OG",
             "name": "에어 조던 1 레트로 하이 OG",
             "info": "주니어 신발",
-            "price": "149,000원",
+            "price": 149000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2536,7 +2535,7 @@
             "alt": "나이키 에어 모어 업템포",
             "name": "나이키 에어 모어 업템포",
             "info": "주니어 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2562,7 +2561,7 @@
             "alt": "나이키 허라치 런",
             "name": "나이키 허라치 런",
             "info": "주니어 신발",
-            "price": "109,000원",
+            "price": 109000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2588,7 +2587,7 @@
             "alt": "나이키 에어 포스 1 미드 LE",
             "name": "나이키 에어 포스 1 미드 LE",
             "info": "주니어 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2614,7 +2613,7 @@
             "alt": "나이키 덩크 로우",
             "name": "나이키 덩크 로우",
             "info": "베이비 신발",
-            "price": "65,000원",
+            "price": 65000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2640,7 +2639,7 @@
             "alt": "나이키 피코 5 릴",
             "name": "나이키 피코 5 릴",
             "info": "베이비 신발",
-            "price": "49,000원",
+            "price": 49000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2666,7 +2665,7 @@
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
             "info": "리틀키즈 신발",
-            "price": "99,000원",
+            "price": 99000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2692,7 +2691,7 @@
             "alt": "나이키코트 레거시",
             "name": "나이키코트 레거시",
             "info": "베이비 신발",
-            "price": "39,000원",
+            "price": 39000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2718,7 +2717,7 @@
             "alt": "나이키 플렉스 플러스",
             "name": "나이키 플렉스 플러스",
             "info": "리틀키즈 신발",
-            "price": "55,000원",
+            "price": 55000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2744,7 +2743,7 @@
             "alt": "나이키 포스 1 LE",
             "name": "나이키 포스 1 LE",
             "info": "베이비 신발",
-            "price": "59,000원",
+            "price": 59000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2770,7 +2769,7 @@
             "alt": "나이키 탄준",
             "name": "나이키 탄준",
             "info": "리틀키즈 신발",
-            "price": "65,000원",
+            "price": 65000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2796,7 +2795,7 @@
             "alt": "조던 1 로우 ALT",
             "name": "조던 1 로우 ALT",
             "info": "베이비 신발",
-            "price": "55,200원",
+            "price": 55200,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2822,7 +2821,7 @@
             "alt": "나이키 코트 버로우 로우 2 SE",
             "name": "나이키 코트 버로우 로우 2 SE",
             "info": "베이비 신발",
-            "price": "45,000원",
+            "price": 45000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2848,7 +2847,7 @@
             "alt": "나이키 에어 모어 업템포",
             "name": "나이키 에어 모어 업템포",
             "info": "리틀키즈 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2874,7 +2873,7 @@
             "alt": "나이키 허라치 런",
             "name": "나이키 허라치 런",
             "info": "리틀키즈 신발",
-            "price": "89,000원",
+            "price": 89000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2900,7 +2899,7 @@
             "alt": "나이키 에어맥스 TW",
             "name": "나이키 에어맥스 TW",
             "info": "베이비 신발",
-            "price": "109,000원",
+            "price": 109000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2926,7 +2925,7 @@
             "alt": "나이키 에어맥스 SC",
             "name": "나이키 에어맥스 SC",
             "info": "리틀키즈 신발",
-            "price": "69,000원",
+            "price": 69000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2952,7 +2951,7 @@
             "alt": "나이키 다이나모 고",
             "name": "나이키 다이나모 고",
             "info": "베이비 이지 온/오프 신발",
-            "price": "65,000원",
+            "price": 65000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -2978,7 +2977,7 @@
             "alt": "나이키 에어맥스 90 LTR",
             "name": "나이키 에어맥스 90 LTR",
             "info": "리틀키즈 신발",
-            "price": "95,000원",
+            "price": 95000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3004,7 +3003,7 @@
             "alt": "나이키코트 레거시",
             "name": "나이키코트 레거시",
             "info": "베이비 신발",
-            "price": "23,400원",
+            "price": 23400,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3030,7 +3029,7 @@
             "alt": "나이키 덩크 로우 SE",
             "name": "나이키 덩크 로우 SE",
             "info": "리틀키즈 신발",
-            "price": "85,000원",
+            "price": 85000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3056,7 +3055,7 @@
             "alt": "나이키 플렉스 어드밴스",
             "name": "나이키 플렉스 어드밴스",
             "info": "베이비 신발",
-            "price": "53,100원",
+            "price": 53100,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3082,7 +3081,7 @@
             "alt": "조던 시리즈 ES",
             "name": "조던 시리즈 ES",
             "info": "주니어 신발",
-            "price": "57,900원",
+            "price": 57900,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3108,7 +3107,7 @@
             "alt": "조던 7 레트로",
             "name": "조던 7 레트로",
             "info": "리틀키즈 신발",
-            "price": "99,000원",
+            "price": 99000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3134,7 +3133,7 @@
             "alt": "나이키 에어모어 업템포",
             "name": "나이키 에어모어 업템포",
             "info": "남성 신발",
-            "price": "168,000원",
+            "price": 168000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -3160,7 +3159,7 @@
             "alt": "에어 조던 1 로우",
             "name": "에어 조던 1 로우",
             "info": "남성 신발",
-            "price": "189,000원",
+            "price": 189000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -3186,7 +3185,7 @@
             "alt": "나이키 에어 맥스 95",
             "name": "나이키 에어 맥스 95",
             "info": "남성 신발",
-            "price": "210,000원",
+            "price": 210000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -3212,7 +3211,7 @@
             "alt": "나이키 덩크 로우",
             "name": "나이키 덩크 로우",
             "info": "농구화",
-            "price": "132,000원",
+            "price": 132000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -3238,7 +3237,7 @@
             "alt": "에어 조던 1 미드",
             "name": "에어 조던 1 미드",
             "info": "남성 신발",
-            "price": "150,000원",
+            "price": 150000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -3264,7 +3263,7 @@
             "alt": "나이키 덩크 하이 레트로",
             "name": "나이키 덩크 하이 레트로",
             "info": "조던 시리즈",
-            "price": "150,000원",
+            "price": 150000,
             "Gender": "Men",
             "href": "/Men",
             "star": {
@@ -3290,7 +3289,7 @@
             "alt": "나이키 에어맥스 97",
             "name": "나이키 에어맥스 97",
             "info": "여성 신발",
-            "price": "189,000원",
+            "price": 189000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -3316,7 +3315,7 @@
             "alt": "나이키 덩크 하이 1985",
             "name": "나이키 덩크 하이 1985",
             "info": "여성 신발",
-            "price": "159,000원",
+            "price": 159000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -3342,7 +3341,7 @@
             "alt": "나이키코트 줌 라이트 3",
             "name": "나이키코트 줌 라이트 3",
             "info": "여성 테니스화",
-            "price": "79,000원",
+            "price": 79000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -3368,7 +3367,7 @@
             "alt": "나이키 에어맥스 PRE- DAY",
             "name": "나이키 에어맥스 PRE- DAY",
             "info": "여성 신발",
-            "price": "169,000원",
+            "price": 169000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -3394,7 +3393,7 @@
             "alt": "나이키코트 에어 줌 베이퍼 프로",
             "name": "나이키코트 에어 줌 베이퍼 프로",
             "info": "여성 하드 코트 테니스화",
-            "price": "139,000원",
+            "price": 139000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -3420,7 +3419,7 @@
             "alt": "나이키코트 베이퍼 라이트",
             "name": "나이키코트 베이퍼 라이트",
             "info": "여성 하드 코트 테니스화",
-            "price": "99,000원",
+            "price": 99000,
             "Gender": "Women",
             "href": "/Women",
             "star": {
@@ -3446,7 +3445,7 @@
             "alt": "나이키 덩크 하이 레트로 프리미엄",
             "name": "조던 1 미드 ALT",
             "info": "베이비 신발",
-            "price": "65,000원",
+            "price": 65000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3472,7 +3471,7 @@
             "alt": "나이키 에어맥스 던",
             "name": "나이키 에어맥스 던",
             "info": "주니어 신발",
-            "price": "119,000원",
+            "price": 119000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3498,7 +3497,7 @@
             "alt": "나이키 다이나모 고",
             "name": "나이키 다이나모 고",
             "info": "베이비 이지 온/ 오프 신발",
-            "price": "65,000원",
+            "price": 65000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3524,7 +3523,7 @@
             "alt": "나이키 에어맥스 90 LTR",
             "name": "나이키 에어맥스 90 LTR",
             "info": "리틀키즈 신발",
-            "price": "95,000원",
+            "price": 95000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3550,7 +3549,7 @@
             "alt": "에어 조던 36 루카",
             "name": "에어 조던 36 루카",
             "info": "주니어 신발",
-            "price": "65,000원",
+            "price": 65000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
@@ -3576,7 +3575,7 @@
             "alt": "조던 1 미드 ALT",
             "name": "조던 1 미드 ALT",
             "info": "베이비 신발",
-            "price": "65,000원",
+            "price": 65000,
             "Gender": "Kids",
             "href": "/Kids",
             "star": {
