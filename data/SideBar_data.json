@@ -6,19 +6,19 @@
         },
         {
             "name": "남성 신발",
-            "property": ""
+            "property": "남성 신발"
         },
         {
             "name": "남성 하드 코트 테니스화",
-            "property": ""
+            "property": "테니스화"
         },
         {
-            "name": "천연 잔디 클리트 축구화",
-            "property": ""
+            "name": "나이키 에어맥스",
+            "property": "에어"
         },
         {
-            "name": "농구화",
-            "property": ""
+            "name": "남성 농구화",
+            "property": "농구화"
         }
     ],
     "WomenData": [
@@ -32,15 +32,15 @@
         },
         {
             "name": "여성 슬리퍼",
-            "property": "여성 슬리퍼"
+            "property": "슬리퍼"
         },
         {
             "name": "여성 러닝화",
-            "property": "여성 러닝화"
+            "property": "러닝화"
         },
         {
-            "name": "여성 레이싱화",
-            "property": "여성 레이싱화"
+            "name": "여성 골프화",
+            "property": "골프화"
         }
     ],
     "KidsData": [
@@ -59,10 +59,6 @@
         {
             "name": "베이비 신발",
             "property": "베이비 신발"
-        },
-        {
-            "name": "베이비 이지 온/오프 신발",
-            "property": "베이비 이지 온/오프 신발"
         }
     ]
 }

@@ -115,6 +115,7 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
                                     ButtonData={ButtonData}
                                     setCategorySort={setCategorySort}
                                     setPriceSort={setPriceSort}
+                                    setPage={setPage}
                                 ></SideBar>
 
                                 {/* <div className={`${side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"} ${ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "" }`}> */}

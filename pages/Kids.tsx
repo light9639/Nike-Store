@@ -31,7 +31,7 @@ const Kids: NextPage<KidsType> = ({ ButtonData, KidsData }) => {
     const offset: number = (page - 1) * limit;
 
     // 필터 버튼 useState 모음
-    const [categorySort, setCategorySort] = useState(ButtonData[0].name);
+    const [categorySort, setCategorySort] = useState("");
     const [priceSort, setPriceSort] = useState({ priceLow: 0, priceHigh: 500000 });
 
     // 검색 조건
@@ -111,6 +111,7 @@ const Kids: NextPage<KidsType> = ({ ButtonData, KidsData }) => {
                                     ButtonData={ButtonData}
                                     setCategorySort={setCategorySort}
                                     setPriceSort={setPriceSort}
+                                    setPage={setPage}
                                 ></SideBar>
 
                                 <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>

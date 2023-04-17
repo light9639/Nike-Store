@@ -100,6 +100,7 @@ export type ReviewType = {
 
 export type ButtonData = {
     name: string;
+    property: string;
 }
 
 declare global {
