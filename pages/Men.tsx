@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback, use } from 'react'
 import HeadInfo from '@components/HeadInfo'
 import Dropdowns from "@components/Dropdowns";
 import axios from 'axios';
-import { useRouter } from 'next/router';
 import { SlideType } from '@lib/ShoeType';
 import Loading from './Loading';
 import SideBar from '@components/SideBar';
@@ -13,9 +12,10 @@ import Mobile from '@components/Mobile';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from "next";
+import { ButtonData } from "@lib/TypeBox";
 
 interface MenType {
-    ButtonData: { name: string; };
+    ButtonData: ButtonData[];
     MenData: SlideType[];
 }
 
@@ -30,21 +30,11 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
     const [mobile, setMobile] = useState<boolean>(true);
 
     // 필터 버튼 useState 모음
-    // const [category1, setCategory1] = useState(ButtonData[0].name);
-    // const [category2, setCategory2] = useState(ButtonData[1].name);
-    // const [category3, setCategory3] = useState(ButtonData[2].name);
-    // const [category4, setCategory4] = useState(ButtonData[3].name);
-    // const [category5, setCategory5] = useState(ButtonData[4].name);
-    const [price1, setPrice1] = useState({ priceLow: 50000, priceHigh: 100000 });
-    // const [price2, setPrice2] = useState({ priceLow: 100000, priceHigh: 150000 });
-    // const [price3, setPrice3] = useState({ priceLow: 150000, priceHigh: 200000 });
-    // const [price4, setPrice4] = useState({ priceLow: 200000, priceHigh: 500000 });
+    const [categorySort, setCategorySort] = useState("");
+    const [priceSort, setPriceSort] = useState({ priceLow: 0, priceHigh: 500000 });
 
     // pagination 계산
     const offset: number = (page - 1) * limit;
-
-    // 라우터 모음
-    const router = useRouter()
 
     // 기타 자료들
     const LocalPage = localStorage.getItem("Men_pageNum");
@@ -52,9 +42,9 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
 
     // 검색 조건
     const filtered = data.filter((Search) => {
-        return Search.info.toLowerCase().includes("남성 신발".toLowerCase())
-            && Search.price >= 0
-            && Search.price <= 200000;
+        return Search.info.toLowerCase().includes(categorySort.toLowerCase())
+            && Search.price >= priceSort.priceLow
+            && Search.price <= priceSort.priceHigh;
     });
 
     // 신발 데이터 가져오기
@@ -119,7 +109,13 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
 
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar side={side} Name={"Men"} ButtonData={ButtonData}></SideBar>
+                                <SideBar
+                                    side={side}
+                                    Name={"Men"}
+                                    ButtonData={ButtonData}
+                                    setCategorySort={setCategorySort}
+                                    setPriceSort={setPriceSort}
+                                ></SideBar>
 
                                 {/* <div className={`${side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"} ${ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "" }`}> */}
                                 <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
@@ -131,7 +127,6 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
 
                                                         <div
                                                             className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mb-16 lg:pr-2"
-                                                            onClick={() => router.push(`/view/${item.index}`)}
                                                         >
                                                             <div className="rounded-xl m-2 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
                                                                 <div className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition rounded-3xl'>
@@ -240,7 +235,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            ButtonData: data1.Men,
+            ButtonData: data1.MenData,
             MenData: data2.Men,
         },
         revalidate: 20,

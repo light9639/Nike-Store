@@ -98,6 +98,10 @@ export type ReviewType = {
     WriteDate: string;
 }
 
+export type ButtonData = {
+    name: string;
+}
+
 declare global {
     interface Window {
         kakao: any;

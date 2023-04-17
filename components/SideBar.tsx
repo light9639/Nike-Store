@@ -1,34 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import Fade from 'react-reveal/Fade';
-import { DropType } from "@lib/DropType";
-// import { MenData, WomenData, KidsData } from "./SideBar_data";
+import { ButtonData } from "@lib/TypeBox";
+
+type DropType = {
+    side: boolean;
+    Name: string;
+    ButtonData: ButtonData[]
+    setCategorySort: Function;
+    setPriceSort: Function;
+}
 
 type SideType = {
     name: string;
 }
 
-export default function SideBar(props: DropType): JSX.Element {
+export default function SideBar({ side, Name, ButtonData, setCategorySort, setPriceSort }: DropType): JSX.Element {
     const [toggle, setToggle] = useState<boolean>(true);
     const [kind, setKind] = useState<SideType[]>([]);
 
     function WhatKind() {
-        setKind(props.ButtonData)
+        setKind(ButtonData)
     }
 
     useEffect(() => {
         WhatKind()
-    }, [props.Name]);
+    }, [ButtonData]);
 
     return (
         <React.Fragment>
             <div
                 className={`h-full bg-white shadow-lg dark:bg-slate-900 dark:border-gray-700 rounded-xl mr-3 hidden lg:block
-                    ${props.side == true ? 'w-64 relative duration-[1.25s] top-0 left-0 z-40' : 'top-auto w-0 -ml-4 duration-[1.25s] opacity-0 -z-50'}`
+                    ${side == true ? 'w-64 relative duration-[1.25s] top-0 left-0 z-40' : 'top-auto w-0 -ml-4 duration-[1.25s] opacity-0 -z-50'}`
                 }
             >
                 <div
                     className={`h-full bg-white shadow-lg dark:bg-slate-900 dark:border-gray-700 rounded-xl mr-3 relative
-                        ${props.side == true ? 'w-64 duration-[1.25s]' : 'w-0 duration-[1.25s]'}
+                        ${side == true ? 'w-64 duration-[1.25s]' : 'w-0 duration-[1.25s]'}
                     `}>
                     <div className="py-5 px-3">
                         <ul className="space-y-2">
@@ -36,7 +43,9 @@ export default function SideBar(props: DropType): JSX.Element {
                                 kind.map((item: { name: string }, idx: number) => {
                                     return (
                                         <React.Fragment key={idx}>
-                                            <li>
+                                            <li
+                                                onClick={() => { setCategorySort(ButtonData[idx].name) }}
+                                            >
                                                 <a href="#void" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                                     <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" >
                                                         <path clipRule="evenodd" fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" />
@@ -50,7 +59,9 @@ export default function SideBar(props: DropType): JSX.Element {
                             }
                         </ul>
                         <ul className="py-5 mt-5 space-y-2 border-t border-b border-gray-200 dark:border-gray-700">
-                            <li>
+                            <li
+                                onClick={() => { setPriceSort({ priceLow: 50000, priceHigh: 100000 }) }}
+                            >
                                 <a href="#void" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                     <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className='flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'>
                                         <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
@@ -59,7 +70,9 @@ export default function SideBar(props: DropType): JSX.Element {
                                     <span className="ml-4 line-clamp-1">50,000 ~ 100,000원</span>
                                 </a>
                             </li>
-                            <li>
+                            <li
+                                onClick={() => { setPriceSort({ priceLow: 100000, priceHigh: 150000 }) }}
+                            >
                                 <a href="#void" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                     <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className='flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'>
                                         <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
@@ -68,7 +81,9 @@ export default function SideBar(props: DropType): JSX.Element {
                                     <span className="ml-3 line-clamp-1">100,000 ~ 150,000원</span>
                                 </a>
                             </li>
-                            <li>
+                            <li
+                                onClick={() => { setPriceSort({ priceLow: 150000, priceHigh: 200000 }) }}
+                            >
                                 <a href="#void" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                     <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className='flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'>
                                         <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
@@ -77,7 +92,9 @@ export default function SideBar(props: DropType): JSX.Element {
                                     <span className="ml-3 line-clamp-1">150,000 ~ 200,000원</span>
                                 </a>
                             </li>
-                            <li>
+                            <li
+                                onClick={() => { setPriceSort({ priceLow: 200000, priceHigh: 500000 }) }}
+                            >
                                 <a href="#void" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                     <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className='flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'>
                                         <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
@@ -90,23 +107,23 @@ export default function SideBar(props: DropType): JSX.Element {
                     </div>
                     <div
                         className={`justify-center p-4 pt-0 space-x-4 lg:flex bg-white dark:bg-slate-900 z-20 rounded-b-xl
-                                ${props.side == true ? 'w-64 duration-[1.25s]' : 'w-0 duration-[1.25s]'}
+                                ${side == true ? 'w-64 duration-[1.25s]' : 'w-0 duration-[1.25s]'}
                             `}
                     >
                         <a href="#void" className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600">
                             <svg aria-hidden="true" className={`
-                                    ${props.side == true ? 'w-6 h-6 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}
+                                    ${side == true ? 'w-6 h-6 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}
                                 `} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>
                         </a>
                         <a href="#void" data-tooltip-target="tooltip-settings" className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <svg aria-hidden="true" className={`${props.side == true ? 'w-6 h-6 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+                            <svg aria-hidden="true" className={`${side == true ? 'w-6 h-6 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
                         </a>
                         <div id="tooltip-settings" role="tooltip" className="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
                             Settings page
                             <div className="tooltip-arrow" data-popper-arrow></div>
                         </div>
                         <button type="button" data-dropdown-toggle="language-dropdown" className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600" onMouseEnter={() => { setToggle(!toggle) }}>
-                            <svg aria-hidden="true" className={`rounded-full mt-0.5 ${props.side == true ? 'h-5 w-5 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}`}
+                            <svg aria-hidden="true" className={`rounded-full mt-0.5 ${side == true ? 'h-5 w-5 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}`}
                                 xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900"><path fill="#b22234" d="M0 0h7410v3900H0z" /><path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300" /><path fill="#3c3b6e" d="M0 0h2964v2100H0z" /><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z" /><use xlinkHref="#a" y="420" /><use xlinkHref="#a" y="840" /><use xlinkHref="#a" y="1260" /></g><use xlinkHref="#a" y="1680" /></g><use xlinkHref="#b" x="247" y="210" /></g><use xlinkHref="#c" x="494" /></g><use xlinkHref="#d" x="988" /><use xlinkHref="#c" x="1976" /><use xlinkHref="#e" x="2470" /></g></svg>
                         </button>
 

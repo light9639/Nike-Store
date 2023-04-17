@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react'
 import HeadInfo from '@components/HeadInfo'
 import Dropdowns from "@components/Dropdowns";
-import { useRouter } from 'next/router';
 import axios from 'axios';
 import { SlideType } from '@lib/ShoeType';
 import Loading from './Loading';
@@ -13,9 +12,10 @@ import Mobile from '@components/Mobile';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from "next";
+import { ButtonData } from "@lib/TypeBox";
 
 interface KidsType {
-    ButtonData: { name: string; };
+    ButtonData: ButtonData[];
     KidsData: SlideType[];
 }
 
@@ -30,19 +30,15 @@ const Kids: NextPage<KidsType> = ({ ButtonData, KidsData }) => {
     const [mobile, setMobile] = useState<boolean>(true);
     const offset: number = (page - 1) * limit;
 
-    // 라우터 모음
-    const router = useRouter()
-
-    // 기타 자료들
-    const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
-    const Kids_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
+    // 필터 버튼 useState 모음
+    const [categorySort, setCategorySort] = useState(ButtonData[0].name);
+    const [priceSort, setPriceSort] = useState({ priceLow: 0, priceHigh: 500000 });
 
     // 검색 조건
     const filtered = data.filter((Search) => {
-        return Search.info.toLowerCase().includes("".toLowerCase())
-            && Search.name.toLowerCase().includes("".toLowerCase())
-            && Search.price >= 0
-        // && Search.price <= 200000;
+        return Search.info.toLowerCase().includes(categorySort.toLowerCase())
+            && Search.price >= priceSort.priceLow
+            && Search.price <= priceSort.priceHigh;
     });
 
     // 로컬 스토리지 변수
@@ -109,7 +105,13 @@ const Kids: NextPage<KidsType> = ({ ButtonData, KidsData }) => {
                             </div>
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar side={side} Name="Kids" ButtonData={ButtonData}></SideBar>
+                                <SideBar
+                                    side={side}
+                                    Name="Kids"
+                                    ButtonData={ButtonData}
+                                    setCategorySort={setCategorySort}
+                                    setPriceSort={setPriceSort}
+                                ></SideBar>
 
                                 <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                     <div className='w-full flex flex-wrap '>
@@ -225,7 +227,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            ButtonData: data1.Kids,
+            ButtonData: data1.KidsData,
             KidsData: data2.Kids,
         },
         revalidate: 20,
