@@ -7,7 +7,7 @@ import type { NextPage } from "next";
 
 const ServiceDetail: NextPage = () => {
     const router = useRouter();
-    const ID: any = router.query.id;
+    const ID = parseInt(router.query.id as string);
     let [flyer, setFlyer] = useState<boolean[]>([false, false, false, false, false, false]);
 
     function PressButton(e: number) {

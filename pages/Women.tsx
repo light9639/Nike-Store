@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import { SlideType } from '@lib/ShoeType';
 import Loading from './Loading';
-import SideBar from '@components/SideBar/SideBar';
+import SideBar from '@components/SideBar';
 import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination";
 import Mobile from '@components/Mobile';
@@ -15,10 +15,11 @@ import Image from 'next/image';
 import type { NextPage } from "next";
 
 interface WomenType {
+    ButtonData: { name: string; };
     WomenData: SlideType[];
 }
 
-const Women: NextPage<WomenType> = ({ WomenData }) => {
+const Women: NextPage<WomenType> = ({ ButtonData, WomenData }) => {
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -33,10 +34,18 @@ const Women: NextPage<WomenType> = ({ WomenData }) => {
     const router = useRouter()
 
     // 기타 자료들
-    const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
-    const Women_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
+    // const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
+    // const Women_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
     const LocalPage = localStorage.getItem("Women_pageNum")
     const LocalState = localStorage.getItem("Women_StateInLocal");
+
+    // 검색 조건
+    const filtered = data.filter((Search) => {
+        return Search.info.toLowerCase().includes("".toLowerCase())
+            && Search.name.toLowerCase().includes("".toLowerCase())
+            && Search.price >= 0
+        // && Search.price <= 200000;
+    });
 
     // 신발 데이터 가져오기
     function getData() {
@@ -100,12 +109,12 @@ const Women: NextPage<WomenType> = ({ WomenData }) => {
                             </div>
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar side={side} Name={"Women"}></SideBar>
+                                <SideBar side={side} Name={"Women"} ButtonData={ButtonData}></SideBar>
 
                                 <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                     <div className='w-full flex flex-wrap'>
                                         {
-                                            data && data.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
+                                            filtered && filtered.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
                                                 return (
                                                     <React.Fragment key={item.index}>
                                                         <div
@@ -132,7 +141,7 @@ const Women: NextPage<WomenType> = ({ WomenData }) => {
                                                                             <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{item.info}</p>
                                                                             <span
                                                                                 className={`${side != true ? 'text-base md:text-lg relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16' : 'xl:absolute xl:-translate-y-16 xl:mt-0.5 xl:right-0'}`}
-                                                                            >{item.price}</span>
+                                                                            >{(item.price).toLocaleString()}원</span>
                                                                         </div>
 
                                                                     </div>
@@ -185,7 +194,7 @@ const Women: NextPage<WomenType> = ({ WomenData }) => {
                                     </div>
 
                                     <Pagination
-                                        total={data.length}
+                                        total={filtered.length}
                                         limit={limit}
                                         page={page}
                                         setPage={setPage}
@@ -206,13 +215,19 @@ const Women: NextPage<WomenType> = ({ WomenData }) => {
 }
 
 export async function getStaticProps() {
+    const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/SideBar_data.json';
     const Women_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
-    const response = await axios.get(Women_API_URL);
-    const data = response.data;
+
+    const response1 = await axios.get(BUTTON_API_URL);
+    const response2 = await axios.get(Women_API_URL);
+
+    const data1 = response1.data;
+    const data2 = response2.data;
 
     return {
         props: {
-            WomenData: data.Women,
+            ButtonData: data1.Men,
+            WomenData: data2.Women,
         },
         revalidate: 20,
     };

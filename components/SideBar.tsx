@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Fade from 'react-reveal/Fade';
 import { DropType } from "@lib/DropType";
-import { MenData, WomenData, KidsData } from "./SideBar_data";
+// import { MenData, WomenData, KidsData } from "./SideBar_data";
 
 type SideType = {
     name: string;
@@ -9,29 +9,15 @@ type SideType = {
 
 export default function SideBar(props: DropType): JSX.Element {
     const [toggle, setToggle] = useState<boolean>(true);
-    const [kind, setKind] = useState<any>();
-    const [page, setPage] = useState();
-    const [price, setPrice] = useState();
+    const [kind, setKind] = useState<SideType[]>([]);
 
-    // switch (props.Name) {
-    //     case "Men":
-    //         setKind(MenData);
-    //         console.log(kind)
-    //         break;
-    //     case "Women":
-    //         setKind(WomenData);
-    //         console.log(kind)
-    //         break;
-    //     case "Kids":
-    //         setKind(KidsData);
-    //         console.log(kind)
-    //         break;
-    //     default:
-    //         console.log("ok")
-    //         break;
-    // }
+    function WhatKind() {
+        setKind(props.ButtonData)
+    }
 
-    // console.log(props.Name);
+    useEffect(() => {
+        WhatKind()
+    }, [props.Name]);
 
     return (
         <React.Fragment>
@@ -47,7 +33,7 @@ export default function SideBar(props: DropType): JSX.Element {
                     <div className="py-5 px-3">
                         <ul className="space-y-2">
                             {
-                                MenData.map((item: { name: string }, idx: number) => {
+                                kind.map((item: { name: string }, idx: number) => {
                                     return (
                                         <React.Fragment key={idx}>
                                             <li>
@@ -62,91 +48,6 @@ export default function SideBar(props: DropType): JSX.Element {
                                     )
                                 })
                             }
-                            {/* <li>
-                                    <a href="#void" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" >
-                                            <path clipRule="evenodd" fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" />
-                                        </svg>
-                                        <span className="ml-3">Overview</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <button type="button" className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" >
-                                            <path clipRule="evenodd" fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" />
-                                        </svg>
-                                        <span className="flex-1 ml-3 text-left whitespace-nowrap">Pages</span>
-                                        <svg aria-hidden="true" className={`${props.side === true ? 'w-6 h-6 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                    </button>
-                                    <ul id="dropdown-pages" className="hidden py-2 space-y-2">
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kanban</a>
-                                        </li>
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Calendar</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <button type="button" className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-sales" data-collapse-toggle="dropdown-sales">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" >
-                                            <path clipRule="evenodd" fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" />
-                                        </svg>
-                                        <span className="flex-1 ml-3 text-left whitespace-nowrap">Sales</span>
-                                        <svg aria-hidden="true" className={`${props.side === true ? 'w-6 h-6 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                    </button>
-                                    <ul id="dropdown-sales" className="hidden py-2 space-y-2">
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                                        </li>
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                                        </li>
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#void" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" >
-                                            <path clipRule="evenodd" fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" />
-                                        </svg>
-                                        <span className="flex-1 ml-3 whitespace-nowrap">Messages</span>
-                                        <span className="inline-flex justify-center items-center w-5 h-5 text-xs font-semibold rounded-full text-primary-800 bg-primary-100 dark:bg-primary-200 dark:text-primary-800">
-                                            6
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-authentication"
-                                        data-collapse-toggle="dropdown-authentication"
-                                        onClick={() => { }}
-                                    >
-                                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" >
-                                            <path clipRule="evenodd" fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" />
-                                        </svg>
-                                        <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
-                                        <span className="flex-1 ml-3 text-left whitespace-nowrap"></span>
-                                        <svg aria-hidden="true" className={`${props.side === true ? 'w-6 h-6 duration-[1.25s]' : 'w-0 h-0 duration-[1.25s]'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                    </button>
-                                    <ul id="dropdown-authentication" className="hidden py-2 space-y-2">
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sign In</a>
-                                        </li>
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sign Up</a>
-                                        </li>
-                                        <li>
-                                            <a href="#void" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Forgot Password</a>
-                                        </li>
-                                    </ul>
-                                </li> */}
                         </ul>
                         <ul className="py-5 mt-5 space-y-2 border-t border-b border-gray-200 dark:border-gray-700">
                             <li>

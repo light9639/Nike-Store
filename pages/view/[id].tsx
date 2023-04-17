@@ -266,7 +266,7 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{FetchData.name}</h1>
                             </div>
                             <div className="mt-4 lg:row-span-3 lg:mt-0">
-                                <p className="text-3xl tracking-tight text-gray-900 dark:text-white">{FetchData.price}</p>
+                                <p className="text-3xl tracking-tight text-gray-900 dark:text-white">{Number(FetchData.price).toLocaleString()}원</p>
                                 <div className="mt-6">
                                     <h3 className="sr-only">Reviews</h3>
                                     <div className="flex items-center">
@@ -416,7 +416,7 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                             onClick={() => {
                                                 router.push('/Cart');
                                                 dispatch(addDetailData(FetchData));
-                                                
+
                                             }}
                                         >
                                             카트에 추가

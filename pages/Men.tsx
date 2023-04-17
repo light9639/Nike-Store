@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { SlideType } from '@lib/ShoeType';
 import Loading from './Loading';
-import SideBar from '@components/SideBar/SideBar';
+import SideBar from '@components/SideBar';
 import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination";
 import Mobile from '@components/Mobile';
@@ -15,10 +15,11 @@ import Image from 'next/image';
 import type { NextPage } from "next";
 
 interface MenType {
+    ButtonData: { name: string; };
     MenData: SlideType[];
 }
 
-const Men: NextPage<MenType> = ({ MenData }) => {
+const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
     // useState 모음
     const [data, setData] = useState<SlideType[]>([]); // 데이터 저장된 곳
     const [copy, setCopy] = useState<SlideType[]>([]); // 데이터 카피
@@ -27,26 +28,34 @@ const Men: NextPage<MenType> = ({ MenData }) => {
     const [page, setPage] = useState<number>(1);
     const [limit, setLimit] = useState<number>(15);
     const [mobile, setMobile] = useState<boolean>(true);
+
+    // 필터 버튼 useState 모음
+    // const [category1, setCategory1] = useState(ButtonData[0].name);
+    // const [category2, setCategory2] = useState(ButtonData[1].name);
+    // const [category3, setCategory3] = useState(ButtonData[2].name);
+    // const [category4, setCategory4] = useState(ButtonData[3].name);
+    // const [category5, setCategory5] = useState(ButtonData[4].name);
+    const [price1, setPrice1] = useState({ priceLow: 50000, priceHigh: 100000 });
+    // const [price2, setPrice2] = useState({ priceLow: 100000, priceHigh: 150000 });
+    // const [price3, setPrice3] = useState({ priceLow: 150000, priceHigh: 200000 });
+    // const [price4, setPrice4] = useState({ priceLow: 200000, priceHigh: 500000 });
+
+    // pagination 계산
     const offset: number = (page - 1) * limit;
 
     // 라우터 모음
     const router = useRouter()
 
     // 기타 자료들
-    const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Data.json';
     const LocalPage = localStorage.getItem("Men_pageNum");
     const LocalState = localStorage.getItem("Men_StateInLocal");
 
     // 검색 조건
     const filtered = data.filter((Search) => {
-        return Search.info.toLowerCase().includes("".toLowerCase()) && Search.name.toLowerCase().includes("".toLowerCase());
+        return Search.info.toLowerCase().includes("남성 신발".toLowerCase())
+            && Search.price >= 0
+            && Search.price <= 200000;
     });
-
-    // function () {
-    //     if (filtered.length < 30) {
-
-    //     }
-    // }
 
     // 신발 데이터 가져오기
     function getData() {
@@ -110,7 +119,7 @@ const Men: NextPage<MenType> = ({ MenData }) => {
 
                             <div className='flex justify-between mt-10 h-full'>
 
-                                <SideBar side={side} Name={"Men"}></SideBar>
+                                <SideBar side={side} Name={"Men"} ButtonData={ButtonData}></SideBar>
 
                                 {/* <div className={`${side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"} ${ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "" }`}> */}
                                 <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
@@ -122,51 +131,51 @@ const Men: NextPage<MenType> = ({ MenData }) => {
 
                                                         <div
                                                             className="w-1/2 lg:w-1/3 pl-0 md:pl-5 lg:pl-2 mb-16 lg:pr-2"
-                                                            onClick={() => router.push(`/view/${item?.index}`)}
+                                                            onClick={() => router.push(`/view/${item.index}`)}
                                                         >
                                                             <div className="rounded-xl m-2 sm:ml-1 dark:hover:shadow-slate-700 transform duration-500">
                                                                 <div className='ImgBox hover:opacity-75 hover:shadow-xl dark:hover:opacity-95 dark:hover:shadow-gray-700 transition rounded-3xl'>
-                                                                    <Link href={`/view/${item?.index}`}>
+                                                                    <Link href={`/view/${item.index}`}>
                                                                         <Fade>
-                                                                            <Image src={item?.src} alt={item?.alt} className="w-full h-full object-cover rounded-3xl" width={592} height={592} />
+                                                                            <Image src={item.src} alt={item.alt} className="w-full h-full object-cover rounded-3xl" width={592} height={592} />
                                                                         </Fade>
                                                                     </Link>
                                                                 </div>
                                                                 <Fade bottom cascade>
                                                                     <div className="pt-5 px-2 flex flex-col gap-2">
 
-                                                                        <Link href={`/view/${item?.index}`}>
+                                                                        <Link href={`/view/${item.index}`}>
                                                                             <h2 className="tracking-tighter text-base md:text-lg overflow-ellipsis overflow-hidden whitespace-nowrap -mb-1 md:mb-0 cursor-pointer hover:text-blue-300 transition" title="Best Headphone Ever">
-                                                                                {item?.name}
+                                                                                {item.name}
                                                                             </h2>
                                                                         </Link>
 
                                                                         <div className='tracking-tighter'>
-                                                                            <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{item?.info}</p>
+                                                                            <p className='pb-1 md:pb-2 text-sm text-gray-600 dark:text-white'>{item.info}</p>
                                                                             <span
                                                                                 className={`${side != true ? 'text-base md:text-lg relative xl:absolute right-0 xl:right-3 translate-y-0 xl:-translate-y-16' : 'xl:absolute xl:-translate-y-16 xl:mt-0.5 xl:right-0'}`}
-                                                                            >{item?.price}</span>
+                                                                            >{(item.price).toLocaleString()}원</span>
                                                                         </div>
 
                                                                     </div>
                                                                     <div className={`block md:flex pl-2 pb-2 ${side ? "md:flex-wrap" : ""}`}>
                                                                         <span className="flex items-center my-3 md:my-0">
-                                                                            <svg fill={item?.star?.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.first} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.second} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.third} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.four} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <svg fill={item?.star?.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
+                                                                            <svg fill={item.star.five} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
                                                                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                                                             </svg>
-                                                                            <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item?.Review} Reviews</span>
+                                                                            <span className="bg-blue-100 text-blue-800 text-sm font-semibold ml-3 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{item.Review} Reviews</span>
                                                                         </span>
                                                                         <span className={`hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3
                                                                             ${side ? 'md:hidden' : ''}
@@ -219,13 +228,20 @@ const Men: NextPage<MenType> = ({ MenData }) => {
 }
 
 export async function getStaticProps() {
+    // 변수명
+    const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/SideBar_data.json';
     const Men_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
-    const response = await axios.get(Men_API_URL);
-    const data = response.data;
+
+    const response1 = await axios.get(BUTTON_API_URL);
+    const response2 = await axios.get(Men_API_URL);
+
+    const data1 = response1.data;
+    const data2 = response2.data;
 
     return {
         props: {
-            MenData: data.Men,
+            ButtonData: data1.Men,
+            MenData: data2.Men,
         },
         revalidate: 20,
     };

@@ -65,7 +65,7 @@ const DetailMain: NextPage<DetailPageType> = ({ DetailData }) => {
                                                     <a className="pb-6">{item.p2}..</a>
                                                 </Fade>
                                                 <Fade bottom duration={1350}>
-                                                    <Link href={`/Detail/${item.index - 1}`} className="uppercase text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-600 transition flex">
+                                                    <Link href={`/Detail/${item.index}`} className="uppercase text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-600 transition flex">
                                                         Continue Reading <FontAwesomeIcon icon={faArrowRight} className="w-3.5 ml-2 mt-0.5" />
                                                     </Link>
                                                 </Fade>

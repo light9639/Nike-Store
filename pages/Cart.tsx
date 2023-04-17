@@ -45,9 +45,15 @@ const Cart: NextPage = () => {
     // price 값 계산
     function PriceTotal() {
         let Price = 0;
+        // for (let i = 0; i < StateArray.length; i++) {
+        //     let result = StateArray[i].price.replace(/[^0-9]/g, "");
+        //     let PriceNumber = result.replace(/[^0-9]/g, "");
+        //     let multiplyPrice = PriceNumber * StateArray[i].count
+        //     Price = Price + multiplyPrice;
+        // }
         for (let i = 0; i < StateArray.length; i++) {
-            let result = StateArray[i].price.replace(/[^0-9]/g, "");
-            let PriceNumber = result.replace(/[^0-9]/g, "");
+            let result = StateArray[i].price;
+            let PriceNumber = result;
             let multiplyPrice = PriceNumber * StateArray[i].count
             Price = Price + multiplyPrice;
         }
@@ -146,7 +152,7 @@ const Cart: NextPage = () => {
                                                                             </div>
                                                                         </div>
                                                                         <div className="mt-2 flex items-center justify-between sm:mt-0 sm:items-start sm:justify-end">
-                                                                            <p className="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right dark:text-white">{item.price}</p>
+                                                                            <p className="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right dark:text-white">{item.price.toLocaleString()}원</p>
                                                                             <div className="sm:order-1">
                                                                                 <div className="mx-auto flex h-7 items-stretch text-gray-600">
                                                                                     <button
