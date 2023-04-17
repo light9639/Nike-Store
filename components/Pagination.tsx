@@ -19,7 +19,7 @@ export default function Pagination(props: PaginationType): JSX.Element {
 
     // 로컬스토리지에 저장
     function pageParams(children: number | string | null) {
-        if ( typeof children != 'number' ) {
+        if (typeof children != 'number') {
             const child = Number(children)
             localStorage.setItem(`${props.Name}_pageNum`, JSON.stringify(child));
         } else {
@@ -29,28 +29,28 @@ export default function Pagination(props: PaginationType): JSX.Element {
 
     // 왼쪽 버튼 클릭시 페이지 숫자 감소
     function pageMinusParams() {
-        if ( getItem == null)  {
+        if (getItem == null) {
             pageParams(1);
         }
-        else if ( parseInt(getItem) >= 1 ) {
-            pageParams( BestItem - 1 );
+        else if (parseInt(getItem) >= 1) {
+            pageParams(BestItem - 1);
         }
     }
 
     // 오른쪽 버튼 클릭시 페이지 숫자 증가
     function pagePlusParams() {
-        if ( getItem == null)  {
-            pageParams( props.page + 1 );
+        if (getItem == null) {
+            pageParams(props.page + 1);
         }
-        else if ( parseInt(getItem) <= props.page ) {
-            pageParams( BestItem + 1 )
+        else if (parseInt(getItem) <= props.page) {
+            pageParams(BestItem + 1)
         }
     }
 
     return (
-        <div className='w-fit mx-auto flex items-center py-8'>
+        <div className={`${props.total < 1 ? "hidden" : ""} w-fit mx-auto flex items-center py-8`}>
             <button
-                onClick={() => {pageMinusParams(); props.setPage(props.page - 1); ScrollTop(); }}
+                onClick={() => { pageMinusParams(); props.setPage(props.page - 1); ScrollTop(); }}
                 disabled={props.page === 1}
                 className="h-12 w-14 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white dark:bg-gray-200 dark:hover:bg-blue-600 text-sm flex items-center justify-center cursor-pointer rounded-lg border border-gray-200 dark:hover:border-blue-600 mr-3 transition"
             >
@@ -70,7 +70,7 @@ export default function Pagination(props: PaginationType): JSX.Element {
                 ))
             }
             <button
-                onClick={() => {pagePlusParams(); props.setPage(props.page + 1); ScrollTop(); }}
+                onClick={() => { pagePlusParams(); props.setPage(props.page + 1); ScrollTop(); }}
                 disabled={props.page === numPages}
                 className="h-12 w-14 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white text-sm flex items-center justify-center cursor-pointer rounded-lg border border-gray-200 dark:bg-gray-200 dark:hover:border-blue-600 dark:hover:bg-blue-600 transition"
             >

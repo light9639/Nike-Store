@@ -99,6 +99,7 @@ export type ReviewType = {
 }
 
 export type ButtonData = {
+    index: number;
     name: string;
     property: string;
 }

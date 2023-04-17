@@ -209,7 +209,14 @@ const Kids: NextPage<KidsType> = ({ ButtonData, KidsData }) => {
                         </div>
                     </div>
 
-                    <Mobile mobile={mobile} setMobile={setMobile}></Mobile>
+                    <Mobile
+                        mobile={mobile}
+                        setMobile={setMobile}
+                        ButtonData={ButtonData}
+                        setCategorySort={setCategorySort}
+                        setPriceSort={setPriceSort}
+                        setPage={setPage}
+                    ></Mobile>
 
                 </React.Fragment>}
         </React.Fragment>

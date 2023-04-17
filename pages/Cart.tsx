@@ -45,12 +45,6 @@ const Cart: NextPage = () => {
     // price 값 계산
     function PriceTotal() {
         let Price = 0;
-        // for (let i = 0; i < StateArray.length; i++) {
-        //     let result = StateArray[i].price.replace(/[^0-9]/g, "");
-        //     let PriceNumber = result.replace(/[^0-9]/g, "");
-        //     let multiplyPrice = PriceNumber * StateArray[i].count
-        //     Price = Price + multiplyPrice;
-        // }
         for (let i = 0; i < StateArray.length; i++) {
             let result = StateArray[i].price;
             let PriceNumber = result;

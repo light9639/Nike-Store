@@ -1,62 +1,71 @@
 {
     "MenData": [
         {
+            "index": 0,
             "name": "전체보기",
             "property": ""
         },
         {
+            "index": 1,
             "name": "남성 신발",
             "property": "남성 신발"
         },
         {
+            "index": 2,
             "name": "남성 하드 코트 테니스화",
             "property": "테니스화"
         },
         {
-            "name": "나이키 에어맥스",
-            "property": "에어"
-        },
-        {
+            "index": 3,
             "name": "남성 농구화",
             "property": "농구화"
         }
     ],
     "WomenData": [
         {
+            "index": 0,
             "name": "전체보기",
             "property": ""
         },
         {
+            "index": 1,
             "name": "여성 신발",
             "property": "여성 신발"
         },
         {
+            "index": 2,
             "name": "여성 슬리퍼",
             "property": "슬리퍼"
         },
         {
+            "index": 3,
             "name": "여성 러닝화",
             "property": "러닝화"
         },
         {
+            "index": 4,
             "name": "여성 골프화",
             "property": "골프화"
         }
     ],
     "KidsData": [
         {
+            "index": 0,
             "name": "전체보기",
             "property": ""
         },
         {
+            "index": 1,
             "name": "주니어 신발",
             "property": "주니어 신발"
         },
         {
+            "index": 2,
             "name": "리틀키즈 신발",
             "property": "리틀키즈 신발"
         },
         {
+            "index": 3,
             "name": "베이비 신발",
             "property": "베이비 신발"
         }
