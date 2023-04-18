@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeadInfo from '@components/HeadInfo';
 import { signIn, useSession, signOut } from "next-auth/react";
-import Loading from './LoadingPage';
+import Loading from './loading';
 import { LoginType } from '@lib/TypeBox';
 import Fade from 'react-reveal/Fade';
 import Slide from '@components/Slide/Slide';

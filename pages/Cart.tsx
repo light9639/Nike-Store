@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 import Link from 'next/link';
 import axios from 'axios';
 import { SlideType, ShoeViewType } from '@lib/ShoeType'
-import LoadingPage from './LoadingPage';
+import LoadingPage from './loading';
 import { useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { persistor } from "./_app";
