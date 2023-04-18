@@ -4,7 +4,7 @@ import HeadInfo from '@components/HeadInfo'
 import Dropdowns from "@components/Dropdowns";
 import axios from 'axios';
 import { SlideType } from '@lib/ShoeType';
-import Loading from './Loading';
+import Loading from './LoadingPage';
 import SideBar from '@components/SideBar';
 import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination";

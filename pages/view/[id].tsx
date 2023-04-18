@@ -6,7 +6,7 @@ import axios from 'axios';
 import { product, ReviewData1, ReviewData2 } from '@data/View_data';
 import { signIn, useSession, signOut } from "next-auth/react";
 import Modal from '@components/Modal';
-import Loading from '../Loading';
+import Loading from '../LoadingPage';
 import { ReviewType } from '@lib/TypeBox'
 import { productColors, productSize } from '@lib/ProductType'
 import { ShoeViewType, StarType } from '@lib/ShoeType'

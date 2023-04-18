@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import HeadInfo from '@components/HeadInfo'
 import DetailSide from '@components/DetailSide'
-import Loading from '../Loading';
+import Loading from '../LoadingPage';
 import { DetailType } from "@lib/TypeBox";
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
