@@ -9,7 +9,7 @@ const information: NextPage = () => {
             <HeadInfo title="Information Page" contents="Information Page"></HeadInfo>
 
             <div className='max-w-5xl mx-auto my-20 space-y-5 tracking-tighter px-5 sm:px-10 xl:p-0'>
-                <Fade><h1 className='text-4xl font-bold'>구매 이용약관</h1></Fade>
+                <Fade><h1 className='text-3xl md:text-4xl font-bold'>구매 이용약관</h1></Fade>
                 <br />
                 <Fade><h2 className='text-xl font-bold'>제1장 총칙</h2></Fade>
                 <div className='space-y-3'>

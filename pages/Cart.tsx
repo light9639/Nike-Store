@@ -91,8 +91,8 @@ const Cart: NextPage = () => {
 
             {loading ? <LoadingPage></LoadingPage>
                 : <React.Fragment>
-                    <div className="container mx-auto my-24 ">
-                        <div className="block lg:flex my-10 p-4 md:p-0 mx-0 xl:mx-8">
+                    <div className="container mx-auto mt-16 mb-24 md:my-24">
+                        <div className="block lg:flex mb-10 md:my-10 p-4 md:p-0 mx-0 xl:mx-8">
                             <div className="w-full shadow-md overflow-x-auto relative rounded-xl p-10 mr-10 dark:bg-gray-900">
                                 <div className="col-span-2">
                                     <h1 className="text-center lg:text-left text-xl lg:text-lg font-semibold">쇼핑 카트</h1>
@@ -104,9 +104,9 @@ const Cart: NextPage = () => {
                                                         <ul className="">
                                                             <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
                                                                 <div className="shrink-0">
-                                                                    <img className="w-full sm:h-28 sm:w-28 max-w-full rounded-lg object-cover" src={item.src.first} alt={item.alt} />
+                                                                    <img className="w-80 h-80 mx-auto sm:h-28 sm:w-28 max-w-full rounded-lg object-cover" src={item.src.first} alt={item.alt} />
                                                                 </div>
-                                                                <div className="relative flex flex-1 flex-col justify-between">
+                                                                <div className="relative flex flex-1 flex-col justify-between w-full xs:w-[19rem] md:w-full mx-auto">
                                                                     <div className="sm:col-gap-5 sm:grid sm:grid-cols-2">
                                                                         <div className="pr-8 sm:pr-5">
                                                                             <p className="text-lg font-semibold text-gray-900 dark:text-white">{item.name}</p>
@@ -248,7 +248,7 @@ const Cart: NextPage = () => {
                                     } */}
                                 </div>
                             </div>
-                            <div className="flex flex-col w-full lg:w-3/5 p-10 shadow-md rounded-xl dark:bg-gray-900">
+                            <div className="flex flex-col w-full lg:w-3/5 p-10 pt-0 md:pt-10 shadow-md rounded-xl dark:bg-gray-900 mt-10 md:mt-0">
                                 <div className="pt-12 md:pt-0 2xl:ps-4">
                                     <div className="max-w-4xl">
                                         <form name="checkoutForm">
@@ -257,7 +257,7 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="email">
                                                     이메일
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline font-semibold placeholder-gray-500 dark:placeholder-gray-400" id="email" type="email" placeholder="이메일을 입력해주세요" required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="email" type="email" placeholder="이메일을 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <EnvelopeIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -266,7 +266,7 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="email">
                                                     전화번호
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline font-semibold placeholder-gray-500 dark:placeholder-gray-400" id="phone" type="number" placeholder="전화번호를 입력해주세요" required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="phone" type="number" placeholder="전화번호를 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <PhoneIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -277,7 +277,7 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="name">
                                                     이름
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="name" type="text" placeholder="이름을 입력해주세요" required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="name" type="text" placeholder="이름을 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <UserCircleIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -286,7 +286,7 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="address">
                                                     주소
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="address" type="text" placeholder="주소를 입력해주세요" required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="address" type="text" placeholder="주소를 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <HomeIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -295,7 +295,7 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="city">
                                                     배송주소
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="city" type="text" placeholder="배송지를 입력해주세요" required />
+                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 " id="city" type="text" placeholder="배송지를 입력해주세요" required />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <TruckIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -303,7 +303,7 @@ const Cart: NextPage = () => {
                                             <div className="flex mb-4">
                                                 <div className="relative flex-1">
                                                     <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="country">배송도시</label>
-                                                    <select className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-gray-400 leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:placeholder-gray-400 font-semibold" id="country" required>
+                                                    <select className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-gray-400 leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="country" required>
                                                         <option>서울</option>
                                                         <option>부산</option>
                                                         <option>대구</option>
@@ -320,7 +320,7 @@ const Cart: NextPage = () => {
                                             </div>
                                             <div className="mb-4 ml-1 mt-5">
                                                 <label className="text-gray-700 dark:text-white font-semibold flex items-center">
-                                                    <input className="mr-2 leading-tight w-4 h-4 -mt-[0.09rem]" type="checkbox" required />
+                                                    <input className="mr-2 leading-tight w-4 h-4 -mt-[0.09rem] dark:bg-gray-700 dark:border-gray-600" type="checkbox" required />
                                                     <span className="">
                                                         이 정보를 다음에도 저장하겠습니다.
                                                     </span>
@@ -350,10 +350,10 @@ const Cart: NextPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center mb-16">
-                        <div className="container m-auto flex flex-wrap items-start">
+                    <div className="flex items-center mb-16 lg:mx-5">
+                        <div className="container mx-auto flex flex-wrap items-start">
                             <div className="w-full m-auto">
-                                <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold pl-6 text-center 2xl:text-left">
+                                <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold pl-2 text-center 2xl:text-left">
                                     Nike Best Sellers
                                 </h1>
                                 <div className='flex justify-between mt-7 h-full'>

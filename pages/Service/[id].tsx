@@ -24,9 +24,9 @@ const ServiceDetail: NextPage = () => {
 
                 <div className='mx-2 lg:mx-0'>
                     <Fade>
-                        <h2 className="text-4xl font-extrabold dark:text-white text-center">빠른 지원</h2>
+                        <h2 className="text-3xl md:text-4xl font-extrabold dark:text-white text-center">빠른 지원</h2>
                         <div className="flex justify-center mx-auto mt-3 mb-14">
-                            <span className="inline-block w-28 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
+                            <span className="inline-block w-20 md:w-28 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                             <span className="inline-block w-3 h-1 mx-1 bg-gray-900 dark:bg-white rounded-full"></span>
                             <span className="inline-block w-1 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                         </div>
@@ -368,9 +368,9 @@ const ServiceDetail: NextPage = () => {
 
                 <div className='mx-auto text-center mt-32 mb-16'>
                     <Fade>
-                        <h2 className="text-4xl font-extrabold dark:text-white">문의하기</h2>
+                        <h2 className="text-3xl md:text-4xl font-extrabold dark:text-white">문의하기</h2>
                         <div className="flex justify-center mx-auto mt-3 mb-12">
-                            <span className="inline-block w-24 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
+                            <span className="inline-block w-20 md:w-24 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                             <span className="inline-block w-3 h-1 mx-1 bg-gray-900 dark:bg-white rounded-full"></span>
                             <span className="inline-block w-1 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                         </div>

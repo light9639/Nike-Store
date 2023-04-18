@@ -621,7 +621,7 @@ export default function Nav(): JSX.Element {
                 </div>
                 <div className={
                     open
-                        ? "fixed top-0 w-screen h-screen bg-black z-[60] lg:hidden duration-700 opacity-100"
+                        ? "fixed top-0 w-screen h-screen bg-black z-[60] lg:hidden duration-700 opacity-80"
                         : "opacity-0"
                 }>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true" className={

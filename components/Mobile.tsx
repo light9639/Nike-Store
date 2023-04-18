@@ -33,6 +33,7 @@ export default function Mobile({ mobile, setMobile, ButtonData, setCategorySort,
         setPriceSort({ priceLow: a, priceHigh: b })
         setPage(1)
         PressPrice(idx)
+        setMobile(!mobile)
     }
 
     return (
@@ -64,6 +65,7 @@ export default function Mobile({ mobile, setMobile, ButtonData, setCategorySort,
                                             setCategorySort(ButtonData[idx].property)
                                             setPage(1)
                                             PressButton(idx)
+                                            setMobile(!mobile)
                                         }}
                                     >
                                         <div className={`${category[idx] ? "bg-gray-100 dark:bg-blue-500" : "bg-gray-200 dark:bg-gray-500"} flex justify-center items-center p-2 mx-auto mb-2 max-w-[48px] rounded-full w-18 h-18`}>

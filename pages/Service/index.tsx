@@ -20,16 +20,16 @@ const Service: NextPage = () => {
                             <div className="w-full px-4">
                                 <div className="text-center mx-auto mb-12 lg:mb-20">
                                     <Fade bottom>
-                                        <h2 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark" >
+                                        <h2 className="font-bold text-3xl md:text-4xl md:text-[40px] text-dark" >
                                             Nike FAQ Page
                                         </h2>
-                                        <div className="flex justify-center mx-auto mt-7">
+                                        <div className="flex justify-center mx-auto mt-5 md:mt-7">
                                             <span className="inline-block w-40 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                             <span className="inline-block w-3 h-1 mx-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                             <span className="inline-block w-1 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                         </div>
-                                        <p className="text-base text-body-color leading-7 mt-5">
-                                            원하는 것을 누구보다 빠르게, 새로운 영감으로 매일을 새롭게, 상상만 했던 경험을 현실로.<br />
+                                        <p className="text-sm md:text-base text-body-color leading-7 mt-5">
+                                            원하는 것을 누구보다 빠르게, 새로운 영감으로 매일을 새롭게, 상상만 했던 경험을 현실로. <br className='hidden md:block' />
                                             여러분의 매일을 나이키 스토어에서 체험해 보세요.
                                         </p>
                                     </Fade>
@@ -45,7 +45,7 @@ const Service: NextPage = () => {
                                                 bottom
                                                 duration={(((idx % 3 == 0 ? 0 : idx % 3 == 1 ? 1 : 2) + 1) * 500) + 1000}
                                             >
-                                                <div className="w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" key={idx} onClick={() => router.push(`/Service/${idx}`)}>
+                                                <div className="w-full md:w-1/2 lg:w-1/3 mx-5 md:m-0 px-4 cursor-pointer" key={idx} onClick={() => router.push(`/Service/${idx}`)}>
                                                     <div className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white hover:bg-gray-50 dark:bg-slate-900 hover:dark:bg-gray-800 shadow-md hover:shadow-lg mb-8 text-center transition">
                                                         <div className={`w-[70px] h-[70px] flex items-center justify-center rounded-full mb-8 mx-auto bg-gray-900 dark:bg-blue-600`} >
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="fill-white w-8 h-8">
@@ -54,10 +54,10 @@ const Service: NextPage = () => {
                                                                 <path d={item.svg3} />
                                                             </svg>
                                                         </div>
-                                                        <h4 className="font-semibold text-xl text-dark mb-3">
+                                                        <h4 className="font-semibold text-base md:text-xl text-dark mb-3">
                                                             {item.title}
                                                         </h4>
-                                                        <p className="text-body-color line-clamp-3">
+                                                        <p className="text-sm md:text-base line-clamp-3">
                                                             {item.content}
                                                         </p>
                                                     </div>

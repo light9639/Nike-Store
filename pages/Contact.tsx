@@ -15,17 +15,17 @@ const Contact: NextPage = () => {
                     <div className="-mx-4 flex flex-wrap lg:justify-between">
                         <div className="w-full px-4 sm:w-3/4 md:w-2/3 mx-auto lg:w-1/2 xl:w-6/12">
                             <div className="mb-12 max-w-[570px] lg:mb-0 text-center lg:text-left">
-                                <span className="text-primary mb-4 block text-base font-semibold text-gray-900 dark:text-gray-200">
+                                <span className="text-primary mb-4 block text-sm md:text-base font-semibold text-gray-900 dark:text-gray-200">
                                     <Fade bottom>Contact Us</Fade>
                                 </span>
                                 <h2
-                                    className="text-dark mb-6 text-[32px] font-bold uppercase md:text-[40px] lg:text-[36px] xl:text-[40px]"
+                                    className="text-dark mb-6 text-[28px] font-bold uppercase md:text-[40px] lg:text-[36px] xl:text-[40px]"
                                 >
                                     <Fade bottom>GET IN TOUCH WITH US</Fade>
                                 </h2>
                                 <Fade bottom>
-                                    <p className="text-body-color text-base leading-relaxed">Nike 사이트에 오신 것을 환영합니다.</p>
-                                    <p className="text-body-color mb-9 text-base leading-relaxed">연락을 원하시거나 궁금한 점이 있다면 언제든지 문의 부탁드립니다.</p>
+                                    <p className="text-body-color text-sm md:text-base leading-relaxed">Nike 사이트에 오신 것을 환영합니다.</p>
+                                    <p className="text-body-color mb-9 text-sm md:text-base leading-relaxed">연락을 원하시거나 궁금한 점이 있다면 언제든지 문의 부탁드립니다.</p>
                                 </Fade>
                                 <div className="mb-8 block lg:flex w-full max-w-[370px] mx-auto lg:mx-0">
                                     <Fade>
@@ -46,8 +46,8 @@ const Contact: NextPage = () => {
                                     </Fade>
                                     <div className="w-full mt-3 lg:mt-0">
                                         <Fade bottom>
-                                            <h4 className="text-dark mb-1 text-xl font-bold">Our Location</h4>
-                                            <p className="text-body-color text-sm lg:text-base tracking-tighter">서울특별시 강남구 역삼1동 테헤란로 152</p>
+                                            <h4 className="text-dark mb-1 text-lg md:text-xl font-bold">Our Location</h4>
+                                            <p className="text-body-color text-xs md:text-base tracking-tighter">서울특별시 강남구 역삼1동 테헤란로 152</p>
                                         </Fade>
                                     </div>
                                 </div>
@@ -76,8 +76,8 @@ const Contact: NextPage = () => {
                                     </Fade>
                                     <div className="w-full mt-3 lg:mt-0">
                                         <Fade bottom>
-                                            <h4 className="text-dark mb-1 text-xl font-bold">Phone Number</h4>
-                                            <p className="text-body-color text-sm lg:text-base tracking-tighter">080-022-0182</p>
+                                            <h4 className="text-dark mb-1 text-lg md:text-xl font-bold">Phone Number</h4>
+                                            <p className="text-body-color text-xs md:text-base tracking-tighter">080-022-0182</p>
                                         </Fade>
                                     </div>
                                 </div>
@@ -100,14 +100,14 @@ const Contact: NextPage = () => {
                                     </Fade>
                                     <div className="w-full mt-3 lg:mt-0">
                                         <Fade bottom>
-                                            <h4 className="text-dark mb-1 text-xl font-bold">Email Address</h4>
-                                            <p className="text-body-color text-sm lg:text-base tracking-tighter">dong963939@gmail.com</p>
+                                            <h4 className="text-dark mb-1 text-lg md:text-xl font-bold">Email Address</h4>
+                                            <p className="text-body-color text-xs md:text-base tracking-tighter">dong963939@gmail.com</p>
                                         </Fade>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full px-4 md:w-3/4 mx-auto lg:w-1/2 xl:w-5/12">
+                        <div className="w-full md:px-4 md:w-3/4 mx-auto lg:w-1/2 xl:w-5/12">
                             <div className="relative rounded-lg bg-white dark:bg-gray-900 p-8 shadow-lg sm:p-12">
                                 <form>
                                     <div className="mb-6">

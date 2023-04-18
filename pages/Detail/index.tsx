@@ -37,56 +37,58 @@ const DetailMain: NextPage<DetailPageType> = ({ DetailData }) => {
 
             {loading ? <Loading></Loading>
                 : <React.Fragment>
-                    <div className="container mx-auto flex flex-wrap py-6">
+                    <div className='lg:mx-5'>
+                        <div className="container mx-auto flex flex-wrap py-6">
 
-                        <section className="w-full lg:w-2/3 flex flex-col items-center px-3">
+                            <section className="w-full lg:w-2/3 flex flex-col items-center px-3">
 
-                            {
-                                DetailData.slice(offset, offset + limit).map(function (item: DetailType, idx: number) {
-                                    return (
-                                        <article className="flex flex-col shadow my-4 w-full" key={item.index}>
-                                            <Link href={`/Detail/${item.index - 1}`} className="hover:opacity-75 w-full max-h-[520px] h-full overflow-hidden">
-                                                <Fade><Image src={item.src} alt={item.alt} width={1443} height={750} className="w-full" /></Fade>
-                                            </Link>
+                                {
+                                    DetailData.slice(offset, offset + limit).map(function (item: DetailType, idx: number) {
+                                        return (
+                                            <article className="flex flex-col shadow my-4 w-full" key={item.index}>
+                                                <Link href={`/Detail/${item.index - 1}`} className="hover:opacity-75 w-full max-h-[520px] h-full overflow-hidden">
+                                                    <Fade><Image src={item.src} alt={item.alt} width={1443} height={750} className="w-full" /></Fade>
+                                                </Link>
 
-                                            <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
-                                                <Fade bottom duration={750}>
-                                                    <a className="text-gray-900 dark:text-blue-700 text-sm font-bold uppercase pb-4">Sports</a>
-                                                </Fade>
-                                                <Fade bottom duration={900}>
-                                                    <a className="text-[1.75rem] md:text-3xl font-bold pb-4">{item.h2}</a>
-                                                </Fade>
-                                                <Fade bottom duration={1050}>
-                                                    <p className="text-sm pb-3">
-                                                        이 글은 <a className="font-semibold">Lee dong ho</a>에 의해 {item.date} 작성되었습니다.
-                                                    </p>
-                                                </Fade>
-                                                <Fade bottom duration={1200}>
-                                                    <a className="pb-6">{item.p2}..</a>
-                                                </Fade>
-                                                <Fade bottom duration={1350}>
-                                                    <Link href={`/Detail/${item.index}`} className="uppercase text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-600 transition flex">
-                                                        Continue Reading <FontAwesomeIcon icon={faArrowRight} className="w-3.5 ml-2 mt-0.5" />
-                                                    </Link>
-                                                </Fade>
-                                            </div>
-                                        </article>
-                                    )
-                                })
-                            }
+                                                <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
+                                                    <Fade bottom duration={750}>
+                                                        <a className="text-gray-900 dark:text-blue-700 text-xs md:text-sm font-bold uppercase pb-4">Sports</a>
+                                                    </Fade>
+                                                    <Fade bottom duration={900}>
+                                                        <a className="text-2xl md:text-3xl font-bold pb-4">{item.h2}</a>
+                                                    </Fade>
+                                                    <Fade bottom duration={1050}>
+                                                        <p className="text-xs md:text-sm pb-3">
+                                                            이 글은 <a className="font-semibold">Lee dong ho</a>에 의해 {item.date} 작성되었습니다.
+                                                        </p>
+                                                    </Fade>
+                                                    <Fade bottom duration={1200}>
+                                                        <a className="text-base md:text-lg pt-2 pb-4 md:pt-3 md:pb-6">{item.p2}..</a>
+                                                    </Fade>
+                                                    <Fade bottom duration={1350}>
+                                                        <Link href={`/Detail/${item.index}`} className="uppercase text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-600 transition flex text-xs md:text-sm">
+                                                            Continue Reading <FontAwesomeIcon icon={faArrowRight} className="w-2.5 md:w-3.5 ml-2 md:mt-0.5" />
+                                                        </Link>
+                                                    </Fade>
+                                                </div>
+                                            </article>
+                                        )
+                                    })
+                                }
 
-                            <Pagination
-                                total={DetailData.length}
-                                limit={limit}
-                                page={page}
-                                setPage={setPage}
-                                Name={"Detail"}
-                            />
+                                <Pagination
+                                    total={DetailData.length}
+                                    limit={limit}
+                                    page={page}
+                                    setPage={setPage}
+                                    Name={"Detail"}
+                                />
 
-                        </section>
+                            </section>
 
-                        <DetailSide></DetailSide>
+                            <DetailSide></DetailSide>
 
+                        </div>
                     </div>
                 </React.Fragment>
             }
