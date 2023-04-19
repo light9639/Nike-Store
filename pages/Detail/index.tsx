@@ -37,7 +37,7 @@ const DetailMain: NextPage<DetailPageType> = ({ DetailData }) => {
 
             {loading ? <Loading></Loading>
                 : <React.Fragment>
-                    <div className='lg:mx-5'>
+                    <div className='xl:mx-8'>
                         <div className="container mx-auto flex flex-wrap py-6">
 
                             <section className="w-full lg:w-2/3 flex flex-col items-center px-3">

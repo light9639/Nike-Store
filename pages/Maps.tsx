@@ -65,7 +65,7 @@ const Maps: NextPage = () => {
 
             <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold text-center mt-20">Nike 매장 찾기</h1>
 
-            <div className='lg:mx-5'>
+            <div className='xl:mx-8'>
                 <div className='flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-between max-w-screen-2xl mx-auto my-10 lg:my-20 p-5 md:p-4 2xl:p-0 border-none md:border'>
                     <div className='w-full lg:w-2/5 xl:w-1/3 h-full lg:h-[600px] xl:h-[800px] overflow-hidden lg:overflow-scroll dark:bg-gray-900 rounded-2xl mt-10 lg:mt-0 border dark:border-none'>
                         <form onSubmit={handleSubmit} className="mx-auto p-7 md:p-3">

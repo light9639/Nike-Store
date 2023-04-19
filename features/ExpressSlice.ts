@@ -10,6 +10,7 @@ interface initialType {
     address: string;
     detailAddress: string;
     city: string;
+    totalPrice: string;
 }
 
 const initialState: initialType[] = []

@@ -15,6 +15,7 @@ export type CommonType = {
     };
     Review: number;
     count: number;
+    size: string;
 }
 
 export type SlideType = CommonType & {

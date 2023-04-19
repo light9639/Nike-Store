@@ -12,7 +12,7 @@ const About: NextPage = () => {
 
             <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
                 <div>
-                    <div className="container px-6 py-10 mx-auto">
+                    <div className="container px-6 py-10 lg:px-16 lg:py-10 mx-auto">
                         <Fade>
                             <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white text-center">Welcome To Nike Page</h1>
 
@@ -25,7 +25,7 @@ const About: NextPage = () => {
 
                         <div className="mt-8 xl:mt-12 flex items-center flex-col-reverse lg:flex-row">
                             <Fade>
-                                <div className="grid w-full grid-cols-1 gap-8 lg:w-1/2 xl:gap-16 md:grid-cols-2">
+                                <div className="grid w-full grid-cols-1 gap-8 lg:w-1/2 xl:gap-10 md:grid-cols-2">
                                     <div className="space-y-3 text-center lg:text-left">
                                         <span className="inline-block p-3 text-gray-500 bg-gray-100 rounded-xl dark:text-white dark:bg-blue-500">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
@@ -77,7 +77,7 @@ const About: NextPage = () => {
                             </Fade>
 
                             <div className="flex mb-12 lg:mb-0 lg:w-1/2 lg:justify-end">
-                                <Fade><img className="w-[22rem] h-[22rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full" src="https://wallpapers.com/images/featured/g2tprt4w49a0ps3t.jpg" alt="NikeImg" /></Fade>
+                                <Fade><img className="w-[22rem] h-[22rem] object-cover xl:w-[32rem] xl:h-[32rem] rounded-full" src="https://wallpapers.com/images/featured/g2tprt4w49a0ps3t.jpg" alt="NikeImg" /></Fade>
                             </div>
                         </div>
                     </div>

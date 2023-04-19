@@ -403,7 +403,7 @@ export default function Nav(): JSX.Element {
                     <div
                         className={
                             open
-                                ? "fixed flex flex-col top-0 left-0 w-64 bg-white dark:bg-gray-900 h-full border-r dark:border-none duration-700 lg:duration-1000 z-[65]"
+                                ? "fixed flex flex-col top-0 left-0 w-64 bg-white dark:bg-gray-900 h-full border-r dark:border-none duration-500 lg:duration-1000 z-[65]"
                                 : "fixed flex flex-col top-0 -left-full w-64 bg-white dark:bg-gray-900 h-full border-r dark:border-none duration-[1.5s] lg:duration-[3s] z-[65]"
                         }
                     >

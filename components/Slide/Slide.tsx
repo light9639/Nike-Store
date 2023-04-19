@@ -41,7 +41,7 @@ export default function Slide({ name }: GreetingsProps): JSX.Element {
     }, []);
 
     return (
-        <div className="lg:mx-5">
+        <div className="xl:mx-8">
             <div className='max-w-screen-2xl my-24 mx-auto p-6 lg:p-0'>
                 <Swiper
                     slidesPerView={1.25}

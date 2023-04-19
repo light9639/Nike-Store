@@ -12,7 +12,7 @@ import { productColors, productSize } from '@lib/ProductType'
 import { ShoeViewType, StarType } from '@lib/ShoeType'
 import Image from 'next/image';
 import { useAppDispatch } from 'app/hooks';
-import { addDetailData } from 'features/DataSlice';
+import { addDetailData, addSizeData } from 'features/DataSlice';
 import type { NextPage } from "next";
 
 interface PageType {
@@ -26,6 +26,7 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
     const [Show, setShow] = useState<boolean>(false)
     const [number, setNumber] = useState<number>(0)
     const [loading, setLoading] = useState<boolean>(true);
+    const [buttonSize, setButtonSize] = useState<string>("");
 
     // 리덕스 함수
     const dispatch = useAppDispatch();
@@ -58,6 +59,10 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
             setLoading(false);
         });
     }, []);
+
+    useEffect(() => {
+        console.log(buttonSize);
+    }, [buttonSize]);
 
     return (
         <React.Fragment>
@@ -364,6 +369,9 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                                         <RadioGroup.Option
                                                             key={size.name}
                                                             value={size}
+                                                            onClick={() => {
+                                                                setButtonSize(size.name)
+                                                            }}
                                                             disabled={!size.inStock}
                                                             className={({ active }) =>
                                                                 classNames(
@@ -416,7 +424,7 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                             onClick={() => {
                                                 router.push('/Cart');
                                                 dispatch(addDetailData(FetchData));
-
+                                                dispatch(addSizeData(buttonSize));
                                             }}
                                         >
                                             카트에 추가

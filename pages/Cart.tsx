@@ -44,10 +44,9 @@ const Cart: NextPage = () => {
     const Data_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json'
 
     // redux 함수들
-    const state = useAppSelector((state) => state);
+    const state = useAppSelector((state) => state.data);
     const userList = useAppSelector((state) => state.Login);
     const dispatch = useAppDispatch();
-    const StateArray: any = state.data;
 
     // redux-persist 초기화
     const purge = async () => {
@@ -58,10 +57,10 @@ const Cart: NextPage = () => {
     // price 값 계산
     function PriceTotal() {
         let Price = 0;
-        for (let i = 0; i < StateArray.length; i++) {
-            let result = StateArray[i].price;
+        for (let i = 0; i < state.length; i++) {
+            let result = state[i].price;
             let PriceNumber = result;
-            let multiplyPrice = PriceNumber * StateArray[i].count
+            let multiplyPrice = PriceNumber * state[i].count
             Price = Price + multiplyPrice;
         }
         setPriceNum(Price)
@@ -98,6 +97,32 @@ const Cart: NextPage = () => {
         });
     }, []);
 
+    useEffect(() => {
+        console.log(userList);
+        // console.log(userList.id);
+    }, [userList]);
+
+    function sendExpress(e: React.ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+
+        dispatch(
+            addExpress({
+                id: userList.length + 1,
+                email,
+                telephone,
+                name,
+                address,
+                detailAddress,
+                city,
+                totalPrice: priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice),
+            })
+        );
+
+        alert('배송접수가 완료되었습니다.')
+
+        e.target.reset()
+    }
+
     return (
         <React.Fragment>
             <HeadInfo title="Cart Page" contents="Cart Page"></HeadInfo>
@@ -110,7 +135,7 @@ const Cart: NextPage = () => {
                                 <div className="col-span-2">
                                     <h1 className="text-center lg:text-left text-xl lg:text-lg font-semibold">쇼핑 카트</h1>
                                     {
-                                        StateArray && StateArray.map(function (item: ShoeViewType, idx: number) {
+                                        state && state.map(function (item: ShoeViewType, idx: number) {
                                             return (
                                                 <React.Fragment key={item.index}>
                                                     <div className="flow-root">
@@ -124,6 +149,7 @@ const Cart: NextPage = () => {
                                                                         <div className="pr-8 sm:pr-5">
                                                                             <p className="text-lg font-semibold text-gray-900 dark:text-white">{item.name}</p>
                                                                             <p className="mx-0 mt-1 mb-0 text-sm text-gray-400">{item.info}</p>
+                                                                            <p className='mx-0 mt-1.5 mb-0 text-xs text-gray-400'>사이즈 : 250</p>
                                                                             <div className="sm:absolute flex bottom-0 py-2 items-center">
                                                                                 <svg className="w-4 h-4 text-yellow-300" fill={item.star.first} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
                                                                                     xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +245,10 @@ const Cart: NextPage = () => {
                             <div className="flex flex-col w-full lg:w-3/5 p-10 pt-0 md:pt-10 shadow-md rounded-xl dark:bg-gray-900 mt-10 md:mt-0">
                                 <div className="pt-12 md:pt-0 2xl:ps-4">
                                     <div className="max-w-4xl">
-                                        <form name="checkoutForm">
+                                        <form
+                                            name="checkoutForm"
+                                            onSubmit={sendExpress}
+                                        >
                                             <h3 className="text-lg font-bold mb-3">배송자 정보</h3>
                                             <div className="relative mb-4">
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="email">
@@ -246,7 +275,7 @@ const Cart: NextPage = () => {
                                                 <input
                                                     className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                                     id="phone"
-                                                    type="number"
+                                                    type="text"
                                                     placeholder="전화번호를 입력해주세요"
                                                     required
                                                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -341,7 +370,13 @@ const Cart: NextPage = () => {
                                             </div>
                                             <div className="mb-4 ml-1 mt-5">
                                                 <label className="text-gray-700 dark:text-white font-semibold flex items-center">
-                                                    <input className="mr-2 leading-tight w-4 h-4 -mt-[0.09rem] dark:bg-gray-700 dark:border-gray-600" type="checkbox" required />
+                                                    <input
+                                                        className="mr-2 leading-tight w-4 h-4 -mt-[0.09rem] dark:bg-gray-700 dark:border-gray-600"
+                                                        type="checkbox"
+                                                    // disabled={disabled}
+                                                    // checked={checked}
+                                                    // onChange={({ target: { checked } }) => onChange(checked)}
+                                                    />
                                                     <span className="">
                                                         이 정보를 다음에도 저장하겠습니다.
                                                     </span>
@@ -363,20 +398,7 @@ const Cart: NextPage = () => {
                                                 <button
                                                     className="block w-full px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-75 duration-500"
                                                     type="submit"
-                                                    id="submitted"
-                                                    onClick={() => {
-                                                        dispatch(
-                                                            addExpress({
-                                                                id: userList[userList.length - 1].id + 1,
-                                                                email,
-                                                                telephone,
-                                                                name,
-                                                                address,
-                                                                detailAddress,
-                                                                city,
-                                                            })
-                                                        );
-                                                    }}
+                                                // id="submitted"
                                                 >
                                                     결제하기
                                                 </button>
@@ -388,7 +410,7 @@ const Cart: NextPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center mb-16 lg:mx-5">
+                    <div className="flex items-center mb-16 xl:mx-8">
                         <div className="container mx-auto flex flex-wrap items-start">
                             <div className="w-full m-auto">
                                 <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold pl-2 text-center 2xl:text-left">
