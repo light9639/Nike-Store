@@ -3,31 +3,45 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 import { PURGE } from "redux-persist";
 
 interface initialType {
+    id: number;
     email: string;
-    phone: string;
-    fullName: string;
+    telephone: number;
+    name: string;
     address: string;
+    detailAddress: string;
     city: string;
-    country: string;
 }
 
 const initialState: initialType = {
+    id: 0,
     email: '',
-    phone: '',
-    fullName: '',
+    telephone: 0,
+    name: '',
     address: '',
-    city: '',
-    country: ''
+    detailAddress: '',
+    city: ''
 }
 
 //상품 상세페이지에 데이터 전달
 const ExpressData = createSlice({
     name: 'detailData',
-    initialState,
+    initialState: {value: initialState},
     reducers: {
-        // addDetailData(state, action) {
-        //     state.push(action.payload)
-        // }
+        addUser: (state, action) => {
+            state.value.push(action.payload);
+        },
+
+        deleteUser: (state, action) => {
+            state.value = state.value.filter((user) => user.id !== action.payload.id);
+        },
+
+        updateUsername: (state, action) => {
+            state.value.map((user) => {
+                if (user.id === action.payload.id) {
+                    user.username = action.payload.username;
+                }
+            });
+        },
     },
     extraReducers: builder => {
         builder.addCase(PURGE, () => initialState);
@@ -36,6 +50,6 @@ const ExpressData = createSlice({
 
 const { actions, reducer: ExpressReducer } = ExpressData;
 
-// export const { addDetailData } = actions;
+export const { addUser, deleteUser, updateUsername } = actions;
 
 export default ExpressReducer;

@@ -17,7 +17,7 @@ const About: NextPage = () => {
                             <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white text-center">Welcome To Nike Page</h1>
 
                             <div className="mt-2 text-center">
-                                <span className="inline-block w-40 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
+                                <span className="inline-block w-28 md:w-40 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                 <span className="inline-block w-3 h-1 ml-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                 <span className="inline-block w-1 h-1 ml-1 bg-gray-900 dark:bg-white rounded-full"></span>
                             </div>
@@ -77,7 +77,7 @@ const About: NextPage = () => {
                             </Fade>
 
                             <div className="flex mb-12 lg:mb-0 lg:w-1/2 lg:justify-end">
-                                <Fade><img className="w-[28rem] h-[28rem] flex-shrink-0 object-cover xl:w-[34rem] xl:h-[34rem] rounded-full" src="https://wallpapers.com/images/featured/g2tprt4w49a0ps3t.jpg" alt="NikeImg" /></Fade>
+                                <Fade><img className="w-[22rem] h-[22rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full" src="https://wallpapers.com/images/featured/g2tprt4w49a0ps3t.jpg" alt="NikeImg" /></Fade>
                             </div>
                         </div>
                     </div>

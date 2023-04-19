@@ -104,8 +104,8 @@ export default function Nav(): JSX.Element {
                                 </svg>
                             </button>
                         </div>
-                        <nav className="hidden lg:flex space-x-10">
-                            <div className="relative">
+                        <nav className="hidden lg:flex gap-10 ">
+                            <div className="relative -ml-10">
                                 <button
                                     type="button"
                                     className="group bg-white dark:bg-slate-900 rounded-md text-gray-500 dark:text-white inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-blue-500 pb-8'"

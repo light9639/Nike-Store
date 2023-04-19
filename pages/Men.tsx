@@ -86,9 +86,9 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
 
             {loading ? <Loading></Loading>
                 : <React.Fragment>
-                    <div className="flex items-center justify-center lg:w-screen min-h-screen my-16">
+                    <div className="flex items-center justify-center lg:w-screen my-16">
                         <div className='lg:mx-5'>
-                            <div className="container mx-auto flex flex-wrap items-start">
+                            <div className="container mx-auto flex flex-wrap w-screen items-start">
                                 <div className="w-full pl-0 lg:pl-2 mb-0 lg:mb-4 mt-4 m-auto text-center">
                                     <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold float-none lg:float-left">
                                         Men Best Sellers
@@ -111,7 +111,7 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
                                     </div>
                                 </div>
 
-                                <div className='flex justify-between mt-10 h-full'>
+                                <div className='flex justify-between mt-10 w-full h-full'>
 
                                     <SideBar
                                         side={side}
@@ -122,7 +122,6 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
                                         setPage={setPage}
                                     ></SideBar>
 
-                                    {/* <div className={`${side ? "lg:w-[calc(100%_-_16rem)]" : "w-full"} ${ScrollActive ? "lg:w-[calc(100%_-_16rem)]" : "" }`}> */}
                                     <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                         <div className='w-full flex flex-wrap '>
                                             {
@@ -203,6 +202,21 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
                                                         </React.Fragment>
                                                     )
                                                 })
+                                            }
+                                            {
+                                                filtered.length == 0
+                                                    ? <React.Fragment>
+                                                        <div className="flex flex-col items-center justify-center px-16 md:px-5 mx-auto mt-10 lg:mt-52">
+                                                            <div className="max-w-md text-center">
+                                                                <h2 className="pb-8 font-extrabold text-7xl md:text-8xl dark:text-white text-gray-900">
+                                                                    Sorry
+                                                                </h2>
+                                                                <p className="text-xl font-semibold md:text-3xl">존재하는 상품이 없습니다.</p>
+                                                                <p className="mt-4 mb-8 text-sm md:text-base dark:text-gray-400">선택하신 카테고리의 제품이 존재하지 않습니다. 원래대로 돌아가려면 전체보기를 눌러주세요</p>
+                                                            </div>
+                                                        </div>
+                                                    </React.Fragment>
+                                                    : null
                                             }
                                         </div>
 

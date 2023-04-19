@@ -45,12 +45,12 @@ const DetailMain: NextPage<DetailPageType> = ({ DetailData }) => {
                                 {
                                     DetailData.slice(offset, offset + limit).map(function (item: DetailType, idx: number) {
                                         return (
-                                            <article className="flex flex-col shadow my-4 w-full" key={item.index}>
+                                            <div className="flex flex-col shadow my-4 w-full rounded-lg" key={item.index}>
                                                 <Link href={`/Detail/${item.index - 1}`} className="hover:opacity-75 w-full max-h-[520px] h-full overflow-hidden">
-                                                    <Fade><Image src={item.src} alt={item.alt} width={1443} height={750} className="w-full" /></Fade>
+                                                    <Fade><Image src={item.src} alt={item.alt} width={1443} height={750} className="w-full rounded-t-lg" /></Fade>
                                                 </Link>
 
-                                                <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
+                                                <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6 rounded-b-lg">
                                                     <Fade bottom duration={750}>
                                                         <a className="text-gray-900 dark:text-blue-700 text-xs md:text-sm font-bold uppercase pb-4">Sports</a>
                                                     </Fade>
@@ -71,7 +71,7 @@ const DetailMain: NextPage<DetailPageType> = ({ DetailData }) => {
                                                         </Link>
                                                     </Fade>
                                                 </div>
-                                            </article>
+                                            </div>
                                         )
                                     })
                                 }

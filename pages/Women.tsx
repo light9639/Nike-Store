@@ -84,9 +84,10 @@ const Women: NextPage<WomenType> = ({ ButtonData, WomenData }) => {
 
             {loading ? <Loading></Loading>
                 : <React.Fragment>
-                    <div className="flex items-center justify-center lg:w-screen min-h-screen my-16">
+                    <div className="flex items-center justify-center lg:w-screen my-16">
                         <div className="lg:mx-5">
-                            <div className="container m-auto flex flex-wrap items-start">
+                            <div className="container m-auto flex flex-wrap w-screen items-start">
+
                                 <div className="w-full pl-0 lg:pl-2 mb-0 lg:mb-4 mt-4 m-auto text-center">
                                     <h1 className="text-3xl lg:text-4xl text-gray-700 dark:text-white font-bold float-none lg:float-left">
                                         Women Best Sellers
@@ -106,7 +107,7 @@ const Women: NextPage<WomenType> = ({ ButtonData, WomenData }) => {
 
                                     </div>
                                 </div>
-                                <div className='flex justify-between mt-10 h-full'>
+                                <div className='flex justify-between mt-10 w-full h-full'>
 
                                     <SideBar
                                         side={side}
@@ -120,7 +121,7 @@ const Women: NextPage<WomenType> = ({ ButtonData, WomenData }) => {
                                     <div className={side ? "lg:w-[calc(100%_-_16rem)] duration-[1.25s]" : "w-full"}>
                                         <div className='w-full flex flex-wrap'>
                                             {
-                                                filtered && filtered.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
+                                                filtered.slice(offset, offset + limit).map(function (item: SlideType, idx: number) {
                                                     return (
                                                         <React.Fragment key={item.index}>
                                                             <div
@@ -171,8 +172,8 @@ const Women: NextPage<WomenType> = ({ ButtonData, WomenData }) => {
                                                                                 <span className="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{item.Review} Reviews</span>
                                                                             </span>
                                                                             <span className={`hidden md:flex md:ml-3 md:pl-3 md:py-2 md:border-l-2 border-gray-200 space-x-2s gap-1 md:gap-3
-                                                                                ${side ? 'md:hidden' : ''}
-                                                                            `}>
+                                                                                        ${side ? 'md:hidden' : ''}
+                                                                                    `}>
                                                                                 <a href='https://ko-kr.facebook.com/' className="text-gray-500 dark:text-white transition hover:text-blue-600 dark:hover:text-blue-600">
                                                                                     <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                                                                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -196,6 +197,21 @@ const Women: NextPage<WomenType> = ({ ButtonData, WomenData }) => {
                                                         </React.Fragment>
                                                     )
                                                 })
+                                            }
+                                            {
+                                                filtered.length == 0
+                                                    ? <React.Fragment>
+                                                        <div className="flex flex-col items-center justify-center px-16 md:px-5 mx-auto mt-10 lg:mt-52">
+                                                            <div className="max-w-md text-center">
+                                                                <h2 className="pb-8 font-extrabold text-7xl md:text-8xl dark:text-white text-gray-900">
+                                                                    Sorry
+                                                                </h2>
+                                                                <p className="text-xl font-semibold md:text-3xl">존재하는 상품이 없습니다.</p>
+                                                                <p className="mt-4 mb-8 text-sm md:text-base dark:text-gray-400">선택하신 카테고리의 제품이 존재하지 않습니다. 원래대로 돌아가려면 전체보기를 눌러주세요</p>
+                                                            </div>
+                                                        </div>
+                                                    </React.Fragment>
+                                                    : null
                                             }
                                         </div>
 

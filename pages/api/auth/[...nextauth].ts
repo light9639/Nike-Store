@@ -9,24 +9,24 @@ import NaverProvider from "next-auth/providers/naver";
 export const authOptions: NextAuthOptions = {
     providers: [
         GitHubProvider({
-            clientId: process.env.GITHUB_ID as string,
-            clientSecret: process.env.GITHUB_SECRET as string,
+            clientId: process.env.NEXT_PUBLIC_GITHUB_ID as string,
+            clientSecret: process.env.NEXT_PUBLIC_GITHUB_SECRET as string,
         }),
         GoogleProvider({
-            clientId: process.env.GOOGLE_ID as string,
-            clientSecret: process.env.GOOGLE_SECRET as string,
+            clientId: process.env.NEXT_PUBLIC_GOOGLE_ID as string,
+            clientSecret: process.env.NEXT_PUBLIC_GOOGLE_SECRET as string,
         }),
         NaverProvider({
-            clientId: process.env.NAVER_ID as string,
-            clientSecret: process.env.NAVER_SECRET as string,
+            clientId: process.env.NEXT_PUBLIC_NAVER_ID as string,
+            clientSecret: process.env.NEXT_PUBLIC_NAVER_SECRET as string,
         }),
         KakaoProvider({
-            clientId: process.env.KAKAO_ID as string,
-            clientSecret: process.env.KAKAO_SECRET as string,
+            clientId: process.env.NEXT_PUBLIC_KAKAO_ID as string,
+            clientSecret: process.env.NEXT_PUBLIC_KAKAO_SECRET as string,
         }),
         FacebookProvider({
-            clientId: process.env.FACEBOOK_ID as string,
-            clientSecret: process.env.FACEBOOK_SECRET as string,
+            clientId: process.env.NEXT_PUBLIC_FACEBOOK_ID as string,
+            clientSecret: process.env.NEXT_PUBLIC_FACEBOOK_SECRET as string,
         }),
     ],
     callbacks: {

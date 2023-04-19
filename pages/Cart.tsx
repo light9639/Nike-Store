@@ -23,6 +23,15 @@ const Cart: NextPage = () => {
     const [totalPrice, setTotalPrice] = useState<string>(''); // 총 금액 3자리마다 ',' 들어간 데이터
     const [priceNum, setPriceNum] = useState<number>(0); // 총 금액 숫자 함수
 
+    // redux 배송정보
+    const [addList, setAddList] = useState<(string | number)[]>([]);
+    const [email, setEmail] = useState<string>("");
+    const [telephone, setTelephone] = useState<number>(0);
+    const [name, setName] = useState<string>("");
+    const [address, setAddress] = useState<string>("");
+    const [detailAddress, setDetailAddress] = useState<string>("");
+    const [city, setCity] = useState<string>("");
+
     // Nike Best Sellers 생성 숫자들
     const Number: number = Math.random()
     const calc: number = Math.ceil(Number * 10)
@@ -148,18 +157,32 @@ const Cart: NextPage = () => {
                                                                         <div className="mt-2 flex items-center justify-between sm:mt-0 sm:items-start sm:justify-end">
                                                                             <p className="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right dark:text-white">{item.price.toLocaleString()}원</p>
                                                                             <div className="sm:order-1">
-                                                                                <div className="mx-auto flex h-7 items-stretch text-gray-600">
-                                                                                    <button
+                                                                                <div className="mx-auto flex h-7 items-center text-gray-600 border border-gray-200 dark:bg-gray-100 rounded-md">
+                                                                                    <svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        fill="none"
+                                                                                        viewBox="0 0 24 24"
+                                                                                        strokeWidth={2}
+                                                                                        stroke="currentColor"
+                                                                                        className="w-6 h-6 ml-2 cursor-pointer hover:stroke-blue-500 transition"
                                                                                         onClick={() => { dispatch(Decrease(item.index)) }}
-                                                                                        className="flex items-center justify-center rounded-l-md bg-gray-300 hover:text-white px-2.5 transition hover:bg-gray-700"
-                                                                                    >-</button>
-                                                                                    <div
-                                                                                        className="flex w-full items-center justify-center bg-gray-100 px-3 text-xs uppercase transition"
-                                                                                    >{item.count}</div>
-                                                                                    <button
+                                                                                    >
+                                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                                                                    </svg>
+                                                                                    <span
+                                                                                        className="flex w-full items-center justify-center mx-0.5 text-sm uppercase transition select-none"
+                                                                                    >{item.count}</span>
+                                                                                    <svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        fill="none"
+                                                                                        viewBox="0 0 24 24"
+                                                                                        strokeWidth={2}
+                                                                                        stroke="currentColor"
+                                                                                        className="w-6 h-6 mr-2 cursor-pointer hover:stroke-blue-500 transition"
                                                                                         onClick={() => { dispatch(Increase(item.index)) }}
-                                                                                        className="flex items-center justify-center rounded-r-md bg-gray-300 hover:text-white px-2.5 transition hover:bg-gray-700"
-                                                                                    >+</button>
+                                                                                    >
+                                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                                                                    </svg>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -171,7 +194,7 @@ const Cart: NextPage = () => {
                                                                     <div className="absolute top-0 right-0 flex sm:bottom-0 sm:top-auto">
                                                                         <button
                                                                             type="button"
-                                                                            className="flex rounded p-2 text-center text-gray-500 transition-all duration-200 ease-in-out focus:shadow hover:text-gray-900"
+                                                                            className="flex rounded p-2 text-center text-gray-500 dark:text-white dark:hover:text-gray-500 transition-all duration-200 ease-in-out focus:shadow hover:text-gray-900"
                                                                             onClick={() => { dispatch(RemoveDetailData(idx)) }}
                                                                         >
                                                                             <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -187,65 +210,6 @@ const Cart: NextPage = () => {
                                             )
                                         })
                                     }
-                                    {/* {
-                                        StateArray && StateArray.map(function (item: any, idx: number) {
-                                            return (
-                                                <React.Fragment key={idx}>
-                                                    <div className="flex justify-start items-center text-center md:text-left flex-col xl:flex-row mt-12 overflow-hidden">
-                                                        <div className="flex items-center w-full xl:w-1/4" onClick={() => { console.log(item) }}>
-                                                            <img src={item.src.first} className="rounded-xl mx-auto xl:w-[200px] xl:h-[200px] object-cover" alt={item.alt} />
-                                                        </div>
-                                                        <div className="flex flex-col ml-3 w-full xl:w-1/4">
-                                                            <span className="md:text-md font-medium text-base">{item.name}</span>
-                                                            <span className="text-xs leading-7 font-light text-gray-400">{item.info}</span>
-                                                            <p className="leading-7">
-                                                                <a
-                                                                    onClick={() => { dispatch(RemoveDetailData(idx)) }}
-                                                                    href="#void"
-                                                                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm"
-                                                                >Remove</a>
-                                                            </p>
-                                                        </div>
-                                                        <div className="w-full xl:w-1/4">
-                                                            <div className='flex justify-center gap-2'>
-                                                                <button
-                                                                    onClick={() => { dispatch(Decrease(item.index)) }}
-                                                                    className={`inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 ${item.count == 1 ? 'cursor-not-allowed' : ''}`}
-                                                                    type="button"
-                                                                >
-                                                                    <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                                                                </button>
-                                                                <div>
-                                                                    <input
-                                                                        className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center"
-                                                                        placeholder={item.count}
-                                                                        required
-                                                                        readOnly
-                                                                    />
-                                                                </div>
-                                                                <button
-                                                                    onClick={() => { dispatch(Increase(item.index)) }}
-                                                                    className="inline-flex items-center p-1 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                                    <svg className="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                                                </button>
-                                                            </div>
-                                                            <button
-                                                                onClick={() => { dispatch(ChangeZero(item.index)) }}
-                                                                className="flex mx-auto mt-3 py-1 px-3 text-sm font-medium text-gray-500 bg-white rounded-full border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
-                                                                reset
-                                                            </button>
-                                                        </div>
-                                                        <div className="flex justify-center items-center w-full xl:w-1/4">
-                                                            <p className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
-                                                                Price : {item.price}
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </React.Fragment>
-                                            )
-                                        })
-
-                                    } */}
                                 </div>
                             </div>
                             <div className="flex flex-col w-full lg:w-3/5 p-10 pt-0 md:pt-10 shadow-md rounded-xl dark:bg-gray-900 mt-10 md:mt-0">
@@ -303,7 +267,14 @@ const Cart: NextPage = () => {
                                             <div className="flex mb-4">
                                                 <div className="relative flex-1">
                                                     <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="country">배송도시</label>
-                                                    <select className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-gray-400 leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="country" required>
+                                                    <select
+                                                        className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-gray-400 leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                                        id="country"
+                                                        required
+                                                        onChange={(event) => {
+                                                            setUsername(event.target.value);
+                                                        }}
+                                                    >
                                                         <option>서울</option>
                                                         <option>부산</option>
                                                         <option>대구</option>
@@ -339,7 +310,24 @@ const Cart: NextPage = () => {
                                                 결제 비용 : <span className="ml-2">{priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice)}원</span>
                                             </div>
                                             <div className="mt-8">
-                                                <button className="block w-full px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-75 duration-500" type="submit" id="submitted">
+                                                <button
+                                                    className="block w-full px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-75 duration-500"
+                                                    type="submit"
+                                                    id="submitted"
+                                                    onClick={() => {
+                                                        dispatch(
+                                                            addUser({
+                                                                id: userList[userList.length - 1].id + 1,
+                                                                email,
+                                                                telephone,
+                                                                name,
+                                                                address,
+                                                                detailAddress,
+                                                                city,
+                                                            })
+                                                        );
+                                                    }}
+                                                >
                                                     결제하기
                                                 </button>
                                             </div>

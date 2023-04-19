@@ -10,7 +10,7 @@ export default function Footer(): JSX.Element {
                         <div className="flex justify-center text-gray-900 dark:text-gray-100 md:justify-start text-2xl font-bold">
                             <Link href="/" className='hover:opacity-75 transition'>Nike Store</Link>
                         </div>
-                        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-600 dark:text-gray-200 md:mx-0 md:max-w-xs md:text-left">
+                        <p className="text-sm md:text-base mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-600 dark:text-gray-200 md:mx-0 md:max-w-xs md:text-left">
                             Nike 사이트에 오신 것을 환영합니다.
                             연락을 원하시거나 궁금한 점이 있다면 언제든지 문의 부탁드립니다.
                         </p>

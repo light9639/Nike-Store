@@ -29,14 +29,14 @@ const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
         if (paramsID == 0) {
             return (
                 <Link href="#void" className="w-1/2 bg-white dark:bg-slate-900 shadow text-left p-6 cursor-auto rounded-lg">
-                    <p className="text-base md:text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center align-middle"><FontAwesomeIcon icon={faArrowLeft} className="w-2.5 md:w-3.5 mr-2" /> 이전 기사</p>
+                    <p className="text-base md:text-lg text-gray-900 dark:text-white font-bold flex items-center align-middle"><FontAwesomeIcon icon={faArrowLeft} className="w-2.5 md:w-3.5 mr-2" /> 이전 기사</p>
                     <p className="text-sm md:text-base pt-2 line-clamp-1">더 이상의 기사가 없습니다.</p>
                 </Link>
             )
         } else {
             return (
                 <Link href={"/Detail/" + (parseInt(paramsID) - 1)} onClick={() => { scrollTo() }} className="w-1/2 bg-white dark:bg-slate-900 shadow hover:shadow-md text-left p-6 rounded-lg">
-                    <p className="text-base md:text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center align-middle"><FontAwesomeIcon icon={faArrowLeft} className="w-2.5 md:w-3.5 mr-2" /> 이전 기사</p>
+                    <p className="text-base md:text-lg text-gray-900 dark:text-white font-bold flex items-center align-middle"><FontAwesomeIcon icon={faArrowLeft} className="w-2.5 md:w-3.5 mr-2" /> 이전 기사</p>
                     <p className="text-sm md:text-base pt-2 line-clamp-1">{postData[parseInt(paramsID) - 1]?.h2}</p>
                 </Link>
             )
@@ -47,14 +47,14 @@ const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
         if ((parseInt(paramsID) + 1) == postData.length) {
             return (
                 <Link href="#void" className="w-1/2 bg-white dark:bg-slate-900 shadow text-right p-6 cursor-auto line-clamp-1 rounded-lg">
-                    <p className="text-base md:text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center justify-end align-middle">다음 기사 <FontAwesomeIcon icon={faArrowRight} className="w-2.5 md:w-3.5 ml-2" /></p>
+                    <p className="text-base md:text-lg text-gray-900 dark:text-white font-bold flex items-center justify-end align-middle">다음 기사 <FontAwesomeIcon icon={faArrowRight} className="w-2.5 md:w-3.5 ml-2" /></p>
                     <p className="text-sm md:text-base pt-2 line-clamp-1">더 이상의 기사가 없습니다.</p>
                 </Link>
             )
         } else {
             return (
                 <Link href={"/Detail/" + (parseInt(paramsID) + 1)} onClick={() => { scrollTo() }} className="w-1/2 bg-white dark:bg-slate-900 shadow hover:shadow-md text-right p-6 line-clamp-1 rounded-lg">
-                    <p className="text-base md:text-lg text-gray-900 dark:text-blue-800 font-bold flex items-center justify-end align-middle">다음 기사 <FontAwesomeIcon icon={faArrowRight} className="w-2.5 md:w-3.5 ml-2" /></p>
+                    <p className="text-base md:text-lg text-gray-900 dark:text-white font-bold flex items-center justify-end align-middle">다음 기사 <FontAwesomeIcon icon={faArrowRight} className="w-2.5 md:w-3.5 ml-2" /></p>
                     <p className="text-sm md:text-base pt-2 line-clamp-1">{postData[parseInt(paramsID) + 1]?.h2}</p>
                 </Link>
             )
@@ -77,11 +77,11 @@ const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
                     <div className='lg:mx-5'>
                         <div className="container mx-auto flex flex-wrap py-6">
 
-                            <section className="w-full lg:w-2/3 flex flex-col items-center px-3">
+                            <div className="w-full lg:w-2/3 flex flex-col items-center px-3">
 
-                                <article className="flex flex-col shadow my-4">
-                                    <Fade><img src={PostID.src} alt={PostID.alt} /></Fade>
-                                    <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6">
+                                <div className="flex flex-col shadow my-4 rounded-lg">
+                                    <Fade><img src={PostID.src} alt={PostID.alt} className='rounded-t-lg' /></Fade>
+                                    <div className="bg-white dark:bg-slate-900 flex flex-col justify-start p-6 rounded-b-lg">
                                         <Fade duration={1500}>
                                             <a href="#void" className="text-gray-900 dark:text-blue-700 text-xs md:text-sm font-bold uppercase pb-4">Sports</a>
                                             <a href="#void" className="text-2xl md:text-3xl font-bold hover:text-gray-700 pb-4">{PostID.h2}</a>
@@ -98,7 +98,7 @@ const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
                                             <p className="text-sm md:text-base pb-3">디지털 미디어 아이즈매거진과의 만남을 통해 나이키 오리지널스의 상징적인 스니커즈를 조명하고, 다양한 분야에서 활약하고 있는 인물들과 조우해 개개인이 가진 오리지널리티에 대한 시선을 담아냈다. 어떤 이에게 오리지널리티는 ‘자연스러움에서 나오는 멋’일 수 있지만, 또 어떤 이에게는 정해진 형식이나 틀을 벗어난 것일 수 있다. 슈퍼스타, 스탠 스미스, 포럼, 가젤, 삼바, 캠퍼스를 둘러싼 다양한 시선들과 함께 오리지널리티의 본질을 들여다 본다.</p>
                                         </Fade>
                                     </div>
-                                </article>
+                                </div>
 
                                 <div className="w-full flex pt-6 gap-2">
                                     <Before></Before>
@@ -132,7 +132,7 @@ const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
                                         </div>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
 
                             <DetailSide></DetailSide>
 

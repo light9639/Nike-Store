@@ -4,8 +4,31 @@ import Fade from 'react-reveal/Fade';
 import { RightData, LeftData } from "@data/Contact_data";
 import { ContactType } from "@lib/TypeBox";
 import type { NextPage } from "next";
+import emailjs from '@emailjs/browser';
 
 const Contact: NextPage = () => {
+    const form = React.useRef(null);
+
+    // env 변수 선언
+    const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
+    const USER_ID = process.env.NEXT_PUBLIC_USER_ID as string;
+
+    function sendEmail(e: React.ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, USER_ID)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+                console.log('FAILED...', err);
+            });
+
+        alert('메세지를 dong963939@gmail.com으로 전송했습니다.')
+
+        e.target.reset()
+    }
+
     return (
         <React.Fragment>
             <HeadInfo title="Contact Page" contents="Contact Page"></HeadInfo>
@@ -109,13 +132,14 @@ const Contact: NextPage = () => {
                         </div>
                         <div className="w-full md:px-4 md:w-3/4 mx-auto lg:w-1/2 xl:w-5/12">
                             <div className="relative rounded-lg bg-white dark:bg-gray-900 p-8 shadow-lg sm:p-12">
-                                <form>
+                                <form ref={form} onSubmit={sendEmail}>
                                     <div className="mb-6">
                                         <Fade bottom>
                                             <input
                                                 type="text"
                                                 placeholder="이름을 작성해주세요."
                                                 className="dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-900 w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                                                name="name"
                                             />
                                         </Fade>
                                     </div>
@@ -137,6 +161,7 @@ const Contact: NextPage = () => {
                                                 type="text"
                                                 placeholder="전화번호를 작성해주세요."
                                                 className="dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-900 w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                                                name="telephone"
                                             />
                                         </Fade>
                                     </div>
@@ -146,6 +171,7 @@ const Contact: NextPage = () => {
                                                 rows={6}
                                                 placeholder="메세지를 작성해주세요."
                                                 className="dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-900 w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                                                name="message"
                                             ></textarea>
                                         </Fade>
                                     </div>

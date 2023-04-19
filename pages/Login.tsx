@@ -61,7 +61,7 @@ const Login: NextPage = () => {
                                     <button
                                         onClick={() => LogOutAlert()}
                                         type="button"
-                                        className="inline-block text-white bg-black hover:bg-black/75 dark:bg-blue-600 hover:dark:bg-blue-600/75 font-medium rounded-md text-sm px-5 py-2.5 text-center mx-auto my-5 transition"
+                                        className="inline-block text-white bg-black hover:bg-black/75 dark:bg-blue-600 hover:dark:bg-blue-600/75 font-medium rounded-md text-xs md:text-sm px-5 py-2.5 text-center mx-auto my-5 transition"
                                     >
                                         Logout
                                     </button>
@@ -69,23 +69,23 @@ const Login: NextPage = () => {
                                 <div className="w-full lg:w-4/12 px-4 lg:order-1">
                                     <div className="flex justify-center">
                                         <div className="mr-4 p-3 text-center">
-                                            <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">14</span><span className="text-sm text-blueGray-400">Friends</span>
+                                            <span className="text-lg md:text-xl font-bold block uppercase tracking-wide text-blueGray-600">14</span><span className="text-xs md:text-sm text-blueGray-400">Friends</span>
                                         </div>
                                         <div className="mr-4 p-3 text-center">
-                                            <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">11</span><span className="text-sm text-blueGray-400">Photos</span>
+                                            <span className="text-lg md:text-xl font-bold block uppercase tracking-wide text-blueGray-600">11</span><span className="text-xs md:text-sm text-blueGray-400">Photos</span>
                                         </div>
                                         <div className="lg:mr-4 p-3 text-center">
-                                            <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">53</span><span className="text-sm text-blueGray-400">Comments</span>
+                                            <span className="text-lg md:text-xl font-bold block uppercase tracking-wide text-blueGray-600">53</span><span className="text-xs md:text-sm text-blueGray-400">Comments</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="text-center mt-12">
                                 <img alt="Logo" src={`${data?.user?.image}`} className="shadow-xl rounded-full h-auto align-middle mx-auto mb-10 border-none max-w-[200px] w-full" />
-                                <h3 className="text-2xl font-semibold leading-normal mb-2">
+                                <h3 className="text-xl md:text-2xl font-semibold leading-normal mb-2">
                                     {data?.user?.name}
                                 </h3>
-                                <div className="flex justify-center align-center items-center text-sm leading-normal mt-0 mb-2 font-bold">
+                                <div className="flex justify-center align-center items-center text-xs md:text-sm leading-normal mt-0 mb-2 font-bold">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mt-0.5 shrink-0 text-gray-900 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                     </svg>
@@ -93,17 +93,17 @@ const Login: NextPage = () => {
                                         {data?.user?.email}
                                     </span>
                                 </div>
-                                <div className="mb-2 mt-5">
+                                <div className="mb-2 mt-5 text-sm md:text-base">
                                     {data?.user?.name} 회원님 로그인해주셔서 감사합니다.
                                 </div>
-                                <div className="mb-2">
+                                <div className="mb-2 text-sm md:text-base">
                                     즐거운 쇼핑 되시길 바랍니다.
                                 </div>
                             </div>
                             <div className="mt-10 pt-10 border-t border-blueGray-200 text-center">
                                 <div className="flex flex-wrap justify-center">
                                     <div className="w-full">
-                                        <p className="lg:mb-4 text-lg leading-relaxed px-10">
+                                        <p className="lg:mb-4 text-sm md:text-base leading-relaxed px-10">
                                             나이키는 모두의 스포츠 브랜드입니다. 새로움을 추구하는 크리에이터의 브랜드입니다.
                                             관습에 도전하고, 새로운 룰을 만들며, 창조적인 파격을 거듭합니다.
                                             우리는 단순한 스포츠 제품, 그 이상을 만듭니다.
@@ -133,7 +133,7 @@ const Login: NextPage = () => {
                                     list && list.slice(0, 3).map(function (item: DetailType, idx: number) {
                                         return (
                                             <React.Fragment key={item.index}>
-                                                <div className="shadow-lg dark:bg-gray-900 p-3 rounded-xl text-center lg:text-left">
+                                                <div className="shadow-lg dark:bg-gray-900 p-5 rounded-xl text-center lg:text-left">
                                                     <div className="relative">
                                                         <img className="object-cover object-center w-full h-64 rounded-lg lg:h-80" src={item.src} alt={item.alt} />
 
@@ -147,17 +147,17 @@ const Login: NextPage = () => {
                                                         </div>
                                                     </div>
 
-                                                    <h1 className="mt-6 text-xl font-semibold text-gray-800 dark:text-white">
+                                                    <h1 className="mt-6 text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
                                                         {item.h2}
                                                     </h1>
 
                                                     <hr className="w-32 my-4 lg:my-6 text-blue-500 mx-auto lg:mx-0" />
 
-                                                    <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
+                                                    <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
                                                         {item.p1} {item.p2}
                                                     </p>
 
-                                                    <Link href={`/Detail/${item.index - 1}`} className="inline-block text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-sm px-5 py-3 mt-5 hover:opacity-75 duration-500">자세히 보기</Link>
+                                                    <Link href={`/Detail/${item.index - 1}`} className="inline-block text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-xs md:text-sm px-5 py-3 mt-5 hover:opacity-75 duration-500">자세히 보기</Link>
                                                 </div>
 
                                             </React.Fragment>

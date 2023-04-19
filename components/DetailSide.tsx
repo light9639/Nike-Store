@@ -34,7 +34,7 @@ export default function DetailSide(): JSX.Element {
                                 return (
                                     <React.Fragment key={item.index}>
                                         <Link href={"/Detail/" + idx}>
-                                            <Image className="hover:opacity-75 cursor-pointer" src={item?.src2} alt={item?.alt} width={300} height={300} />
+                                            <Image className="hover:opacity-75 cursor-pointer rounded" src={item?.src2} alt={item?.alt} width={300} height={300} />
                                         </Link>
                                     </React.Fragment>
                                 )

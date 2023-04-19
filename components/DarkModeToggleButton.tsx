@@ -8,7 +8,7 @@ export default function DarkModeToggleButton(): JSX.Element {
         <React.Fragment>
             <button
                 className="
-                inline-flex items-center py-1.5 px-2 mr-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200
+                inline-flex items-center py-1 md:py-1.5 px-1.5 md:px-2 mr-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200
                 toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500
                 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700
                 "
