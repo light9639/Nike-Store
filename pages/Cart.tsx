@@ -12,6 +12,7 @@ import { useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { persistor } from "./_app";
 import { RemoveDetailData, Increase, Decrease, ChangeZero } from 'features/DataSlice';
+import { addExpress, deleteExpress } from "features/ExpressSlice";
 import { EnvelopeIcon, PhoneIcon, UserCircleIcon, HomeIcon, TruckIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import type { NextPage } from "next";
 
@@ -25,11 +26,13 @@ const Cart: NextPage = () => {
 
     // redux 배송정보
     const [addList, setAddList] = useState<(string | number)[]>([]);
+    const [id, setID] = useState<number>(0);
     const [email, setEmail] = useState<string>("");
-    const [telephone, setTelephone] = useState<number>(0);
+    const [telephone, setTelephone] = useState<string>("");
     const [name, setName] = useState<string>("");
     const [address, setAddress] = useState<string>("");
     const [detailAddress, setDetailAddress] = useState<string>("");
+    const cityList = ["서울", "부산", "대구", "경기도", "강원도"];
     const [city, setCity] = useState<string>("");
 
     // Nike Best Sellers 생성 숫자들
@@ -42,6 +45,7 @@ const Cart: NextPage = () => {
 
     // redux 함수들
     const state = useAppSelector((state) => state);
+    const userList = useAppSelector((state) => state.Login);
     const dispatch = useAppDispatch();
     const StateArray: any = state.data;
 
@@ -221,7 +225,16 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="email">
                                                     이메일
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="email" type="email" placeholder="이메일을 입력해주세요" required />
+                                                <input
+                                                    className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                                    id="email"
+                                                    type="email"
+                                                    placeholder="이메일을 입력해주세요"
+                                                    required
+                                                    onChange={(event) => {
+                                                        setEmail(event.target.value);
+                                                    }}
+                                                />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <EnvelopeIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -230,7 +243,16 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="email">
                                                     전화번호
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="phone" type="number" placeholder="전화번호를 입력해주세요" required />
+                                                <input
+                                                    className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                                    id="phone"
+                                                    type="number"
+                                                    placeholder="전화번호를 입력해주세요"
+                                                    required
+                                                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                                                        setTelephone(event.target.value);
+                                                    }}
+                                                />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <PhoneIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -241,7 +263,16 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="name">
                                                     이름
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="name" type="text" placeholder="이름을 입력해주세요" required />
+                                                <input
+                                                    className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                                    id="name"
+                                                    type="text"
+                                                    placeholder="이름을 입력해주세요"
+                                                    required
+                                                    onChange={(event) => {
+                                                        setName(event.target.value);
+                                                    }}
+                                                />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <UserCircleIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -250,7 +281,16 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="address">
                                                     주소
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="address" type="text" placeholder="주소를 입력해주세요" required />
+                                                <input
+                                                    className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                                    id="address"
+                                                    type="text"
+                                                    placeholder="주소를 입력해주세요"
+                                                    required
+                                                    onChange={(event) => {
+                                                        setAddress(event.target.value);
+                                                    }}
+                                                />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <HomeIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -259,7 +299,16 @@ const Cart: NextPage = () => {
                                                 <label className="block text-gray-700 dark:text-white text-sm font-semibold mb-2" htmlFor="city">
                                                     배송주소
                                                 </label>
-                                                <input className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 " id="city" type="text" placeholder="배송지를 입력해주세요" required />
+                                                <input
+                                                    className="appearance-none border rounded-lg w-full py-3 pl-9 text-gray-700 dark:text-white leading-tight border-gray-300 focus:outline-none focus:shadow-outline placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 "
+                                                    id="city"
+                                                    type="text"
+                                                    placeholder="배송지를 입력해주세요"
+                                                    required
+                                                    onChange={(event) => {
+                                                        setDetailAddress(event.target.value);
+                                                    }}
+                                                />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <TruckIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
                                                 </div>
@@ -272,14 +321,15 @@ const Cart: NextPage = () => {
                                                         id="country"
                                                         required
                                                         onChange={(event) => {
-                                                            setUsername(event.target.value);
+                                                            setCity(event.target.value);
                                                         }}
+                                                        value={city}
                                                     >
-                                                        <option>서울</option>
-                                                        <option>부산</option>
-                                                        <option>대구</option>
-                                                        <option>경기도</option>
-                                                        <option>강원도</option>
+                                                        {cityList.map((item: string) => (
+                                                            <option value={item} key={item}>
+                                                                {item}
+                                                            </option>
+                                                        ))}
                                                     </select>
                                                     <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-5">
                                                         <TruckIcon className="w-5 h-5 text-gray-500 dark:text-gray-400   mt-2" />
@@ -316,7 +366,7 @@ const Cart: NextPage = () => {
                                                     id="submitted"
                                                     onClick={() => {
                                                         dispatch(
-                                                            addUser({
+                                                            addExpress({
                                                                 id: userList[userList.length - 1].id + 1,
                                                                 email,
                                                                 telephone,

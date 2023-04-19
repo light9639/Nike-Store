@@ -5,43 +5,33 @@ import { PURGE } from "redux-persist";
 interface initialType {
     id: number;
     email: string;
-    telephone: number;
+    telephone: string;
     name: string;
     address: string;
     detailAddress: string;
     city: string;
 }
 
-const initialState: initialType = {
-    id: 0,
-    email: '',
-    telephone: 0,
-    name: '',
-    address: '',
-    detailAddress: '',
-    city: ''
-}
+const initialState: initialType[] = []
 
 //상품 상세페이지에 데이터 전달
 const ExpressData = createSlice({
-    name: 'detailData',
-    initialState: {value: initialState},
+    name: 'ExpressData',
+    initialState,
     reducers: {
-        addUser: (state, action) => {
-            state.value.push(action.payload);
+        addExpress: (state, action) => {
+            state.push(action.payload);
         },
-
-        deleteUser: (state, action) => {
-            state.value = state.value.filter((user) => user.id !== action.payload.id);
+        deleteExpress: (state, action) => {
+            state = state.filter((user) => user.id !== action.payload.id);
         },
-
-        updateUsername: (state, action) => {
-            state.value.map((user) => {
-                if (user.id === action.payload.id) {
-                    user.username = action.payload.username;
-                }
-            });
-        },
+        // updateUsername: (state, action) => {
+        //     state.map((user) => {
+        //         if (user.id === action.payload.id) {
+        //             user.username = action.payload.username;
+        //         }
+        //     });
+        // },
     },
     extraReducers: builder => {
         builder.addCase(PURGE, () => initialState);
@@ -50,6 +40,6 @@ const ExpressData = createSlice({
 
 const { actions, reducer: ExpressReducer } = ExpressData;
 
-export const { addUser, deleteUser, updateUsername } = actions;
+export const { addExpress, deleteExpress } = actions;
 
 export default ExpressReducer;

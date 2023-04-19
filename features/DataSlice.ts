@@ -13,7 +13,7 @@ const detailData = createSlice({
             state.push(action.payload)
         },
         RemoveDetailData(state, action) {
-            state.splice(action.payload, action.payload+1)
+            state.splice(action.payload, action.payload + 1)
         },
         Increase(state, action) {
             let Number = state.findIndex((a)=>{ return a.index === action.payload })
