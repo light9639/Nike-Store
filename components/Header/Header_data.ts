@@ -60,16 +60,16 @@ export const Second = [
 
 export const Recent = [
     {
-        href: "/Detail/1",
-        text: "South Korea national football team jersey"
+        href: "/Detail/0",
+        text: "한계 없는 플레이, 끝 없는 즐거움"
     },
     {
-        href: "/Detail/2",
-        text: "Nike zoom x jema"
+        href: "/Detail/1",
+        text: "나이키 줌 X 제가마"
     },
     {
         href: "/Detail/4",
-        text: "Jordan X Paris Saint-Germain Collection"
+        text: "조던 X 파리 생제르맹 컬렉션"
     },
 ]
 

@@ -13,6 +13,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from "next";
 import { ButtonData } from "@lib/TypeBox";
+import { GetStaticProps } from 'next'
 
 interface MenType {
     ButtonData: ButtonData[];
@@ -247,7 +248,7 @@ const Men: NextPage<MenType> = ({ ButtonData, MenData }) => {
     )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
     // 변수명
     const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/SideBar_data.json';
     const Men_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';

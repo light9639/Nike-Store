@@ -28,10 +28,6 @@ export const store = configureStore({
     middleware: [thunk],
 });
 
-// 리덕스 사용함수 선언
-export const useAppDispatch = () => useDispatch();
-export const useAppSelector = useSelector;
-
 // 리덕스 타입 지정
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

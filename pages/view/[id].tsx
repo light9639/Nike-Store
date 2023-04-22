@@ -12,8 +12,9 @@ import { productColors, productSize } from '@lib/ProductType'
 import { ShoeViewType, StarType } from '@lib/ShoeType'
 import Image from 'next/image';
 import { useAppDispatch } from 'app/hooks';
-import { addDetailData, addSizeData } from 'features/DataSlice';
+import { addDetailData } from 'features/DataSlice';
 import type { NextPage } from "next";
+import { GetStaticProps, GetStaticPaths } from 'next'
 
 interface PageType {
     postData: { Every: ShoeViewType[]; };
@@ -26,7 +27,7 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
     const [Show, setShow] = useState<boolean>(false)
     const [number, setNumber] = useState<number>(0)
     const [loading, setLoading] = useState<boolean>(true);
-    const [buttonSize, setButtonSize] = useState<string>("");
+    const [buttonSize, setButtonSize] = useState<string>("240");
 
     // 리덕스 함수
     const dispatch = useAppDispatch();
@@ -58,11 +59,8 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
         axios.get("").then((res) => {
             setLoading(false);
         });
+        FetchData.size = "240"
     }, []);
-
-    useEffect(() => {
-        console.log(buttonSize);
-    }, [buttonSize]);
 
     return (
         <React.Fragment>
@@ -370,7 +368,7 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                                             key={size.name}
                                                             value={size}
                                                             onClick={() => {
-                                                                setButtonSize(size.name)
+                                                                FetchData.size = size.name
                                                             }}
                                                             disabled={!size.inStock}
                                                             className={({ active }) =>
@@ -424,7 +422,6 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                             onClick={() => {
                                                 router.push('/Cart');
                                                 dispatch(addDetailData(FetchData));
-                                                dispatch(addSizeData(buttonSize));
                                             }}
                                         >
                                             카트에 추가
@@ -606,7 +603,7 @@ function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const Data_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes_View.json'
     const res = await fetch(Data_URL);
     const allPostsData = await res.json();

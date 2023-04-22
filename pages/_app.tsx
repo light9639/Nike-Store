@@ -26,19 +26,18 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
   } else {
     return (
       <ThemeProvider attribute="class">
-        <SessionProvider session={pageProps.session}>
-          <Provider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <SessionProvider session={pageProps.session}>
               <Layout>
                 <Component {...pageProps} />
               </Layout>
-            </PersistGate>
-          </Provider>
-        </SessionProvider>
+            </SessionProvider>
+          </PersistGate>
+        </Provider>
       </ThemeProvider>
     )
   }
 }
 
 export default App
-// export default wrapper.withRedux(MyApp)

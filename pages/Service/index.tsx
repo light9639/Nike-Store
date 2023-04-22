@@ -28,7 +28,7 @@ const Service: NextPage = () => {
                                             <span className="inline-block w-3 h-1 mx-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                             <span className="inline-block w-1 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                         </div>
-                                        <p className="text-sm md:text-base text-body-color leading-7 mt-5">
+                                        <p className="text-sm md:text-base text-body-color mx-5 md:mx-0 md:leading-7 mt-5">
                                             원하는 것을 누구보다 빠르게, 새로운 영감으로 매일을 새롭게, 상상만 했던 경험을 현실로. <br className='hidden md:block' />
                                             여러분의 매일을 나이키 스토어에서 체험해 보세요.
                                         </p>

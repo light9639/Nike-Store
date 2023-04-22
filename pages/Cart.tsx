@@ -3,6 +3,7 @@ import HeadInfo from '@components/HeadInfo'
 import { useRouter } from 'next/router';
 import { authOptions } from './api/auth/[...nextauth]'
 import { unstable_getServerSession } from "next-auth/next"
+import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import Fade from 'react-reveal/Fade';
 import Link from 'next/link';
 import axios from 'axios';
@@ -11,10 +12,11 @@ import LoadingPage from './loading';
 import { useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { persistor } from "./_app";
-import { RemoveDetailData, Increase, Decrease, ChangeZero } from 'features/DataSlice';
-import { addExpress, deleteExpress } from "features/ExpressSlice";
+import { RemoveDetailData, Increase, Decrease, ChangeZero, RemoveAllData } from 'features/DataSlice';
+import { addExpress, deleteExpress, deleteAllExpress } from "features/ExpressSlice";
 import { EnvelopeIcon, PhoneIcon, UserCircleIcon, HomeIcon, TruckIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import type { NextPage } from "next";
+import { useSession } from "next-auth/react";
 
 const Cart: NextPage = () => {
     // useState 모음
@@ -33,7 +35,9 @@ const Cart: NextPage = () => {
     const [address, setAddress] = useState<string>("");
     const [detailAddress, setDetailAddress] = useState<string>("");
     const cityList = ["서울", "부산", "대구", "경기도", "강원도"];
-    const [city, setCity] = useState<string>("");
+    const [city, setCity] = useState<string>("서울");
+    const [productList, setProductList] = useState<ShoeViewType[]>([]);
+    const [checkCart, setCheckCart] = useState<boolean>(false);
 
     // Nike Best Sellers 생성 숫자들
     const Number: number = Math.random()
@@ -43,10 +47,22 @@ const Cart: NextPage = () => {
     const router = useRouter()
     const Data_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json'
 
+    // 로그인 여부
+    const { data, status } = useSession();
+
     // redux 함수들
-    const state = useAppSelector((state) => state.data);
+    const CartList = useAppSelector((state) => state.data);
     const userList = useAppSelector((state) => state.Login);
     const dispatch = useAppDispatch();
+
+    // 겹치는 항목 제거하는 필터
+    const MyCartList = CartList.filter((item, i) => {
+        return (
+            CartList.findIndex((item2, j) => {
+                return (item.index === item2.index);
+            }) === i
+        );
+    });
 
     // redux-persist 초기화
     const purge = async () => {
@@ -57,10 +73,10 @@ const Cart: NextPage = () => {
     // price 값 계산
     function PriceTotal() {
         let Price = 0;
-        for (let i = 0; i < state.length; i++) {
-            let result = state[i].price;
+        for (let i = 0; i < CartList.length; i++) {
+            let result = CartList[i].price;
             let PriceNumber = result;
-            let multiplyPrice = PriceNumber * state[i].count
+            let multiplyPrice = PriceNumber * CartList[i].count
             Price = Price + multiplyPrice;
         }
         setPriceNum(Price)
@@ -74,7 +90,7 @@ const Cart: NextPage = () => {
     // price 값 계산, 결제비용 실행
     useEffect(() => {
         PriceTotal()
-    }, [totalPrice, priceNum, state]);
+    }, [totalPrice, priceNum, CartList]);
 
     // 자료 가져오는 함수
     function getData() {
@@ -95,16 +111,20 @@ const Cart: NextPage = () => {
         axios.get("").then((res) => {
             setLoading(false);
         });
+        setTimeout(() => {
+            if (status != "authenticated") {
+                router.push('/NotLogin')
+            }
+        }, 2000);
     }, []);
 
-    useEffect(() => {
-        console.log(userList);
-        // console.log(userList.id);
-    }, [userList]);
-
-    function sendExpress(e: React.ChangeEvent<HTMLFormElement>) {
+    // form에 입력한 데이터 전송
+    async function sendExpress(e: React.ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
 
+        dispatch(deleteAllExpress())
+
+        // 배송 정보에 넣기
         dispatch(
             addExpress({
                 id: userList.length + 1,
@@ -114,20 +134,41 @@ const Cart: NextPage = () => {
                 address,
                 detailAddress,
                 city,
+                productList: CartList,
                 totalPrice: priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice),
             })
         );
 
+        // 카트 자료 삭제
+        dispatch(RemoveAllData());
+
         alert('배송접수가 완료되었습니다.')
 
         e.target.reset()
+
+        setTimeout(() => {
+            router.push('/Delivery')
+        }, 1000)
     }
+
+    // myCart 체크
+    function isEmptyArr() {
+        if (Array.isArray(MyCartList) && MyCartList.length === 0) {
+            return setCheckCart(true);
+        }
+
+        return setCheckCart(false);
+    }
+
+    useEffect(() => {
+        isEmptyArr()
+    }, [MyCartList]);
 
     return (
         <React.Fragment>
             <HeadInfo title="Cart Page" contents="Cart Page"></HeadInfo>
 
-            {loading ? <LoadingPage></LoadingPage>
+            {data?.user == null || loading ? <LoadingPage></LoadingPage>
                 : <React.Fragment>
                     <div className="container mx-auto mt-16 mb-24 md:my-24">
                         <div className="block lg:flex mb-10 md:my-10 p-4 md:p-0 mx-0 xl:mx-8">
@@ -135,7 +176,7 @@ const Cart: NextPage = () => {
                                 <div className="col-span-2">
                                     <h1 className="text-center lg:text-left text-xl lg:text-lg font-semibold">쇼핑 카트</h1>
                                     {
-                                        state && state.map(function (item: ShoeViewType, idx: number) {
+                                        MyCartList && MyCartList.map(function (item: ShoeViewType, idx: number) {
                                             return (
                                                 <React.Fragment key={item.index}>
                                                     <div className="flow-root">
@@ -149,7 +190,7 @@ const Cart: NextPage = () => {
                                                                         <div className="pr-8 sm:pr-5">
                                                                             <p className="text-lg font-semibold text-gray-900 dark:text-white">{item.name}</p>
                                                                             <p className="mx-0 mt-1 mb-0 text-sm text-gray-400">{item.info}</p>
-                                                                            <p className='mx-0 mt-1.5 mb-0 text-xs text-gray-400'>사이즈 : 250</p>
+                                                                            <p className='mx-0 mt-1.5 mb-0 text-xs text-gray-400'>사이즈 : {item.size}</p>
                                                                             <div className="sm:absolute flex bottom-0 py-2 items-center">
                                                                                 <svg className="w-4 h-4 text-yellow-300" fill={item.star.first} viewBox="0 0 20 20" stroke-width="2" stroke="currentColor"
                                                                                     xmlns="http://www.w3.org/2000/svg">
@@ -279,8 +320,12 @@ const Cart: NextPage = () => {
                                                     placeholder="전화번호를 입력해주세요"
                                                     required
                                                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                                                        event.target.value = event.target.value
+                                                            .replace(/[^0-9]/g, '')
+                                                            .replace(/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, "$1-$2-$3");
                                                         setTelephone(event.target.value);
                                                     }}
+                                                    maxLength={14}
                                                 />
                                                 <div className="absolute inset-y-0 left-0 flex items-center px-2 py-1 mt-7">
                                                     <PhoneIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
@@ -352,7 +397,6 @@ const Cart: NextPage = () => {
                                                         onChange={(event) => {
                                                             setCity(event.target.value);
                                                         }}
-                                                        value={city}
                                                     >
                                                         {cityList.map((item: string) => (
                                                             <option value={item} key={item}>
@@ -368,20 +412,6 @@ const Cart: NextPage = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="mb-4 ml-1 mt-5">
-                                                <label className="text-gray-700 dark:text-white font-semibold flex items-center">
-                                                    <input
-                                                        className="mr-2 leading-tight w-4 h-4 -mt-[0.09rem] dark:bg-gray-700 dark:border-gray-600"
-                                                        type="checkbox"
-                                                    // disabled={disabled}
-                                                    // checked={checked}
-                                                    // onChange={({ target: { checked } }) => onChange(checked)}
-                                                    />
-                                                    <span className="">
-                                                        이 정보를 다음에도 저장하겠습니다.
-                                                    </span>
-                                                </label>
-                                            </div>
                                             <div className="flex py-4 pl-1 mt-4">
                                                 <h2 className="text-xl font-bold">ITEMS 2</h2>
                                             </div>
@@ -395,13 +425,26 @@ const Cart: NextPage = () => {
                                                 결제 비용 : <span className="ml-2">{priceNum > 100000 ? totalPrice : (priceNum == 0 ? '0' : UpPrice)}원</span>
                                             </div>
                                             <div className="mt-8">
-                                                <button
-                                                    className="block w-full px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-75 duration-500"
-                                                    type="submit"
-                                                // id="submitted"
-                                                >
-                                                    결제하기
-                                                </button>
+                                                {
+                                                    checkCart == false
+                                                        ? <React.Fragment>
+                                                            <button
+                                                                className="block w-full px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-75 duration-500"
+                                                                type="submit"
+                                                            >
+                                                                결제하기
+                                                            </button>
+                                                        </React.Fragment>
+                                                        : <React.Fragment>
+                                                            <button
+                                                                className="block w-full px-8 py-3 bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-75 duration-500"
+                                                                type="button"
+                                                                onClick={() => { alert('배송상품을 선택해주세요.') }}
+                                                            >
+                                                                결제하기
+                                                            </button>
+                                                        </React.Fragment>
+                                                }
                                             </div>
                                         </form>
                                     </div>
@@ -445,7 +488,7 @@ const Cart: NextPage = () => {
 
                                                                         <div className='tracking-tighter text-left'>
                                                                             <p className='pb-1 md:pb-2 text-base lg:text-sm text-gray-600 dark:text-white'>{item.info}</p>
-                                                                            <span className="text-base 2xl:text-lg relative 2xl:absolute right-0 2xl:right-3 translate-y-0 2xl:-translate-y-[3.85rem]">{item.price}</span>
+                                                                            <span className="text-base 2xl:text-lg relative 2xl:absolute right-0 2xl:right-3 translate-y-0 2xl:-translate-y-[3.85rem]">{item.price.toLocaleString()}원</span>
                                                                         </div>
 
                                                                     </div>
@@ -498,29 +541,10 @@ const Cart: NextPage = () => {
                             </div>
                         </div>
                     </div>
-                </React.Fragment>
+                </React.Fragment >
             }
-        </React.Fragment>
+        </React.Fragment >
     )
 }
-
-// export async function getServerSideProps(context: any) {
-//     const session = await unstable_getServerSession(context.req, context.res, authOptions)
-
-//     if ( !session ) {
-//         return {
-//             redirect: {
-//                 destination: '/NotLogin',
-//                 permanent: false,
-//             },
-//         }
-//     }
-
-//     return {
-//         props: {
-//             session,
-//         },
-//     }
-// }
 
 export default Cart

@@ -1,8 +1,8 @@
 import { ShoeViewType } from '@lib/ShoeType';
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { PURGE } from "redux-persist";
 
-interface initialType {
+export interface initialType {
     id: number;
     email: string;
     telephone: string;
@@ -10,6 +10,7 @@ interface initialType {
     address: string;
     detailAddress: string;
     city: string;
+    productList: ShoeViewType[];
     totalPrice: string;
 }
 
@@ -26,13 +27,9 @@ const ExpressData = createSlice({
         deleteExpress: (state, action) => {
             state = state.filter((user) => user.id !== action.payload.id);
         },
-        // updateUsername: (state, action) => {
-        //     state.map((user) => {
-        //         if (user.id === action.payload.id) {
-        //             user.username = action.payload.username;
-        //         }
-        //     });
-        // },
+        deleteAllExpress: (state) => {
+            state.splice(0, state.length)
+        },
     },
     extraReducers: builder => {
         builder.addCase(PURGE, () => initialState);
@@ -41,6 +38,6 @@ const ExpressData = createSlice({
 
 const { actions, reducer: ExpressReducer } = ExpressData;
 
-export const { addExpress, deleteExpress } = actions;
+export const { addExpress, deleteExpress, deleteAllExpress } = actions;
 
 export default ExpressReducer;

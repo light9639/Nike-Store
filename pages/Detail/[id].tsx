@@ -11,6 +11,7 @@ import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Fade from 'react-reveal/Fade';
 import type { NextPage } from "next";
+import { GetStaticProps, GetStaticPaths } from 'next'
 
 interface PageType {
     postData: DetailType[];
@@ -144,7 +145,7 @@ const Detail: NextPage<PageType> = ({ postData, paramsID }) => {
     )
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const DETAIL_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json';
     const res = await axios.get(DETAIL_API_URL);
     const data = res.data.Post;

@@ -12,18 +12,18 @@ const About: NextPage = () => {
 
             <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
                 <div>
-                    <div className="container px-6 py-10 lg:px-16 lg:py-10 mx-auto">
+                    <div className="container px-6 py-10 lg:px-20 lg:py-10 mx-auto">
                         <Fade>
-                            <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white text-center">Welcome To Nike Page</h1>
+                            <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white text-center">Nike Page</h1>
 
-                            <div className="mt-2 text-center">
+                            <div className="mt-1 text-center">
                                 <span className="inline-block w-28 md:w-40 h-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                 <span className="inline-block w-3 h-1 ml-1 bg-gray-900 dark:bg-white rounded-full"></span>
                                 <span className="inline-block w-1 h-1 ml-1 bg-gray-900 dark:bg-white rounded-full"></span>
                             </div>
                         </Fade>
 
-                        <div className="mt-8 xl:mt-12 flex items-center flex-col-reverse lg:flex-row">
+                        <div className="mt-8 xl:mt-16 flex items-center flex-col-reverse lg:flex-row">
                             <Fade>
                                 <div className="grid w-full grid-cols-1 gap-8 lg:w-1/2 xl:gap-10 md:grid-cols-2">
                                     <div className="space-y-3 text-center lg:text-left">

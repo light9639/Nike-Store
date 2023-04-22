@@ -9,6 +9,7 @@ import Fade from 'react-reveal/Fade';
 import type { NextPage } from "next";
 import { useAppDispatch, useAppSelector } from '@app/hooks';
 import { changeValue } from 'features/SearchSlice';
+import { GetStaticProps } from 'next'
 
 interface PropsType {
     Men: SlideType[];
@@ -136,7 +137,7 @@ const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
     )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
     const ShoeList_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json'
     const res = await fetch(ShoeList_URL);
     const data = await res.json();

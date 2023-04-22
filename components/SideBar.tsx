@@ -26,7 +26,6 @@ export default function SideBar({ side, Name, ButtonData, setCategorySort, setPr
         category.map((item) => {
             return false
         })
-        console.log(category)
     }
 
     // 상품명 추출

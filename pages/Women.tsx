@@ -13,6 +13,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from "next";
 import { ButtonData } from "@lib/TypeBox";
+import { GetStaticProps } from 'next'
 
 interface WomenType {
     ButtonData: ButtonData[];
@@ -243,7 +244,7 @@ const Women: NextPage<WomenType> = ({ ButtonData, WomenData }) => {
     )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
     const BUTTON_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/SideBar_data.json';
     const Women_API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Shoes.json';
 

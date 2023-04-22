@@ -23,8 +23,8 @@ const Login: NextPage = () => {
 
     async function LogOutAlert() {
         if (confirm("정말 로그아웃 하시겠습니까?")) {
-            await sleep(250);
             signOut();
+            await sleep(250);
             purge();
         } else {
             alert("취소를 누르셨습니다.");
@@ -58,12 +58,18 @@ const Login: NextPage = () => {
                                     </div>
                                 </div>
                                 <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center hidden lg:block">
+                                    <Link
+                                        href="/Delivery"
+                                        className="text-white bg-black dark:bg-blue-600 font-medium rounded-md text-sm px-5 py-2.5 text-center mx-auto my-5 mr-2"
+                                    >
+                                        배송정보
+                                    </Link>
                                     <button
-                                        onClick={() => LogOutAlert()}
+                                        onClick={() => { LogOutAlert(); }}
                                         type="button"
                                         className="inline-block text-white bg-black hover:bg-black/75 dark:bg-blue-600 hover:dark:bg-blue-600/75 font-medium rounded-md text-xs md:text-sm px-5 py-2.5 text-center mx-auto my-5 transition"
                                     >
-                                        Logout
+                                        로그아웃
                                     </button>
                                 </div>
                                 <div className="w-full lg:w-4/12 px-4 lg:order-1">
@@ -113,12 +119,18 @@ const Login: NextPage = () => {
                                 </div>
                             </div>
                             <div className="w-full text-center block lg:hidden pt-3">
+                                <Link
+                                    href="/Delivery"
+                                    className="text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-auto my-5 mr-2"
+                                >
+                                    배송정보
+                                </Link>
                                 <button
-                                    onClick={() => LogOutAlert()}
+                                    onClick={() => { LogOutAlert(); }}
                                     type="button"
                                     className="text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-auto my-5"
                                 >
-                                    Logout
+                                    로그아웃
                                 </button>
                             </div>
                         </div>
@@ -157,7 +169,7 @@ const Login: NextPage = () => {
                                                         {item.p1} {item.p2}
                                                     </p>
 
-                                                    <Link href={`/Detail/${item.index - 1}`} className="inline-block text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-xs md:text-sm px-5 py-3 mt-5 hover:opacity-75 duration-500">자세히 보기</Link>
+                                                    <Link href={`/Detail/${item.index}`} className="inline-block text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-xs md:text-sm px-5 py-3 mt-5 hover:opacity-75 duration-500">자세히 보기</Link>
                                                 </div>
 
                                             </React.Fragment>

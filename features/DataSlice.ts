@@ -1,7 +1,6 @@
 import { ShoeViewType } from '@lib/ShoeType';
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { PURGE } from "redux-persist";
-
 
 const initialState: ShoeViewType[] = []
 
@@ -26,9 +25,8 @@ const detailData = createSlice({
                 state[Number].count--
             }
         },
-        addSizeData(state, action) {
-            let Number = state.findIndex((a)=>{ return a.index === action.payload })
-            state[Number].size = action.payload;
+        RemoveAllData(state) {
+            state.splice(0, state.length)
         },
         ChangeZero(state, action) {
             let Number = state.findIndex((a)=>{ return a.index === action.payload })
@@ -42,6 +40,6 @@ const detailData = createSlice({
 
 const { actions, reducer: DataReducer } = detailData;
 
-export const { addDetailData, RemoveDetailData, Increase, Decrease, addSizeData, ChangeZero } = actions;
+export const { addDetailData, RemoveDetailData, Increase, Decrease, RemoveAllData, ChangeZero } = actions;
 
 export default DataReducer;

@@ -46,8 +46,8 @@ export default function Nav(): JSX.Element {
 
     async function LogOutAlert() {
         if (confirm("정말 로그아웃 하시겠습니까?")) {
-            await sleep(250);
             signOut();
+            await sleep(250);
             purge();
         } else {
             alert("취소를 누르셨습니다.");
@@ -320,7 +320,7 @@ export default function Nav(): JSX.Element {
                                         <div className="px-5 py-5 bg-gray-50 dark:bg-slate-900 sm:px-8 sm:py-8">
                                             <div>
                                                 <h3 className="text-sm tracking-wide font-medium text-gray-500 dark:text-white uppercase">
-                                                    Recent Posts
+                                                    최근 발행된 포스팅
                                                 </h3>
                                                 <ul className="mt-4 space-y-4">
                                                     {
@@ -338,7 +338,7 @@ export default function Nav(): JSX.Element {
                                             </div>
                                             <div className="mt-5 text-sm">
                                                 <Link href="/Detail" className="font-medium text-blue-600 hover:text-blue-500">
-                                                    View all posts <span aria-hidden="true">→</span>
+                                                    전체보기 <span aria-hidden="true">→</span>
                                                 </Link>
                                             </div>
                                         </div>

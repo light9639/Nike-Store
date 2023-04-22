@@ -1,4 +1,4 @@
-import { configureStore, createSlice, PayloadAction  } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
 import { PURGE } from "redux-persist";
 
 interface SearchType {

@@ -11,6 +11,7 @@ import Fade from 'react-reveal/Fade';
 import Pagination from "@components/Pagination";
 import Image from 'next/image';
 import type { NextPage } from "next";
+import { GetStaticProps } from 'next'
 
 interface DetailPageType {
     DetailData: DetailType[];
@@ -96,7 +97,7 @@ const DetailMain: NextPage<DetailPageType> = ({ DetailData }) => {
     )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
     const API_URL = 'https://raw.githubusercontent.com/light9639/Shoe-Store/main/data/Detail.json';
     const response = await axios.get(API_URL);
     const data = response.data.Post;
