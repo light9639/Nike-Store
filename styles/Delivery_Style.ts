@@ -6,8 +6,6 @@ export const Delivery_Style = css`
     max-width: 750px;
     padding: 4vh 0;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-top: 3px solid rgb(0,0,0);
-    border-bottom: 3px solid rgb(0,0,0);
     border-left: none;
     border-right: none;
     border-radius: 5px;
@@ -30,7 +28,6 @@ export const Delivery_Style = css`
     line-height: 6vh;
 }
 .pricing{
-    background-color: #ddd3;
     padding: 2vh 8%;
     font-weight: 400;
     line-height: 2.5;

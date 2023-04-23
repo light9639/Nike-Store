@@ -71,7 +71,7 @@ const Delivery: NextPage = () => {
                                         배송 현황
                                     </h2>
                                 </div>
-                                <div className="card">
+                                <div className="card dark:bg-slate-900 border-[3px] border-t-black dark:border-t-white border-b-black dark:border-b-white">
                                     <div className="font-semibold mb-5 text-xl px-[8%] md:text-2xl">
                                         <h2 className='mt-2 mb-7 md:mb-10 text-2xl md:text-2xl'>배송 상품 목록</h2>
                                         {
@@ -87,25 +87,25 @@ const Delivery: NextPage = () => {
                                                             <div className="border-b border-gray-200 md:flex-row flex-col flex justify-between items-start w-full  pb-8 space-y-4 md:space-y-0">
                                                                 <div className="w-full flex flex-col justify-start items-start space-y-14">
                                                                     <Link href={`/view/${item.index}`}>
-                                                                        <h3 className="text-xl md:text-lg font-semibold leading-6 md:-mt-1 text-gray-800 line-clamp-1 hover:opacity-75">{item.name}</h3>
+                                                                        <h3 className="text-xl md:text-lg font-semibold leading-6 md:-mt-1 text-gray-800 line-clamp-1 hover:opacity-75 dark:text-white">{item.name}</h3>
                                                                     </Link>
                                                                     <div className="flex justify-start items-start flex-col space-y-2">
                                                                         <p className="text-sm md:text-xs leading-none text-gray-800">
-                                                                            <span className="text-gray-300">Kind : </span> {item.info}
+                                                                            <span className="text-gray-300">Kind : </span> <span className='dark:text-gray-500'>{item.info}</span>
                                                                         </p>
                                                                         <p className="text-sm md:text-xs leading-none text-gray-800">
-                                                                            <span className="text-gray-300">Size : </span> {item.size}
+                                                                            <span className="text-gray-300">Size : </span> <span className='dark:text-gray-500'>{item.size}</span>
                                                                         </p>
                                                                         <p className="text-sm md:text-xs leading-none text-gray-800">
-                                                                            <span className="text-gray-300">Gender : </span> {item.Gender}
+                                                                            <span className="text-gray-300">Gender : </span> <span className='dark:text-gray-500'>{item.Gender}</span>
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                                 <div className="flex justify-between md:justify-end space-x-8 items-start w-full">
                                                                     <p className="text-base md:text-sm">
-                                                                        {Number(item.price).toLocaleString()}원 <span className="text-gray-300 block line-through"> {Number(item.price * 1.1).toLocaleString()}원</span>
+                                                                        {Number(item.price).toLocaleString()}원 <span className="text-gray-300 block line-through dark:text-gray-500"> {Number(item.price * 1.1).toLocaleString()}원</span>
                                                                     </p>
-                                                                    <p className="text-base md:text-sm text-gray-800">{item.count}개</p>
+                                                                    <p className="text-base md:text-sm text-gray-800 dark:text-white">{item.count}개</p>
                                                                     <p className="text-base md:text-sm">{Number(item.price * item.count).toLocaleString()}원</p>
                                                                 </div>
                                                             </div>
@@ -131,7 +131,7 @@ const Delivery: NextPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="pricing">
+                                    <div className="pricing bg-[#ddd3] dark:bg-gray-800">
                                         <div className="grid-flow-col">
                                             <div className="grid-cols-9 font-semibold">
                                                 <span id="name">배송지 주소</span>
@@ -151,8 +151,8 @@ const Delivery: NextPage = () => {
                                     </div>
                                     <div className="total">
                                         <div className="grid-flow-col">
-                                            <div className="grid-cols-9 mb-2 text-sm md:text-base">결제 가격</div>
-                                            <div className="grid-cols-3 text-lg md:text-2xl">{ExpressData[0]?.totalPrice}원</div>
+                                            <div className="grid-cols-9 mb-2 text-sm md:text-base dark:text-gray-100">결제 가격</div>
+                                            <div className="grid-cols-3 text-lg md:text-2xl dark:text-white">{ExpressData[0]?.totalPrice}원</div>
                                         </div>
                                     </div>
 
@@ -190,7 +190,7 @@ const Delivery: NextPage = () => {
                                                     </React.Fragment>
                                             }
                                         </div>
-                                        <p className="text-xs md:text-sm mt-5 text-center md:text-left">그 외에 궁금하신 사안이 있다면 <Link href="/Contact"><b className='hover:opacity-75'>Contact Us</b></Link> 페이지에서 문의해주세요</p>
+                                        <p className="text-xs md:text-sm mt-5 text-center md:text-left dark:text-gray-100">그 외에 궁금하신 사안이 있다면 <Link href="/Contact"><b className='hover:opacity-75'>Contact Us</b></Link> 페이지에서 문의해주세요</p>
                                     </div>
                                 </div>
                             </div>
