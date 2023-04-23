@@ -53,7 +53,7 @@ const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
                             <input
                                 type="search"
                                 id="default-search"
-                                className="block w-full py-3 md:py-4 pl-10 pr-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="block w-full py-3 md:py-4 pl-10 pr-4 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="원하시는 제품명을 입력해주세요."
                                 required
                                 value={state}
@@ -65,7 +65,7 @@ const Search: NextPage<PropsType> = ({ Men, Women, Kids }) => {
                                 }}
                             />
                             <input type="text" style={{ display: "none" }} />
-                            <button type="button" className="text-gray-100 absolute right-0 bottom-0 bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-r-lg border border-gray-300 text-sm p-4 w-24 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                            <button type="button" className="text-gray-100 absolute right-0 bottom-0 bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-r-full border border-gray-300 dark:border-blue-600 text-sm py-3 md:p-4 w-24 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                         </div>
                     </form>
                 </Fade>
