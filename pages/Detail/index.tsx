@@ -64,7 +64,7 @@ const DetailMain: NextPage<DetailPageType> = ({ DetailData }) => {
                                                         </p>
                                                     </Fade>
                                                     <Fade bottom duration={1200}>
-                                                        <a className="text-base md:text-lg pt-2 pb-4 md:pt-3 md:pb-6">{item.p2}..</a>
+                                                        <a className="text-sm md:text-lg pt-2 pb-4 md:pt-3 md:pb-6">{item.p2}..</a>
                                                     </Fade>
                                                     <Fade bottom duration={1350}>
                                                         <Link href={`/Detail/${item.index}`} className="uppercase text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-600 transition flex text-xs md:text-sm">

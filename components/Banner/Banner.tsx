@@ -43,7 +43,7 @@ export default function Section(): JSX.Element {
                                 <SwiperSlide key={item.index}>
                                     <div className="Banner w-screen">
                                         <img src={item.src} alt={item.alt} />
-                                        <div className="Banner_text absolute left-[20%] lg:left-[15%] bottom-[47%] md:bottom-[45%] lg:bottom-1/2 xl:bottom-[45.5%] z-20 w-1/2 lg:w-full">
+                                        <div className="Banner_text absolute left-[10%] md:left-[20%] lg:left-[15%] bottom-[47%] md:bottom-[45%] lg:bottom-1/2 xl:bottom-[45.5%] z-20 w-3/4 md:w-1/2 lg:w-full">
                                             <Fade bottom>
                                                 <h2 className="text-white text-left text-3xl md:text-4xl xl:text-5xl font-semibold mb-10 tracking-tighter line-clamp-1">{item.h2}</h2>
                                                 <p className="text-white text-left text-sm xl:text-lg tracking-tighter line-clamp-2 lg:line-clamp-none">{item.p1}<br className="hidden lg:block" />{item.p2}</p>
