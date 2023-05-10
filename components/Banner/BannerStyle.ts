@@ -28,7 +28,7 @@ export default css`
     }
 
     .w-screen img {
-        max-height: 650px;
+        max-height: 600px;
         min-height: 480px;
     }
 
