@@ -585,7 +585,7 @@ export default function Nav(): JSX.Element {
                                 {data?.user ? (
                                     <Link
                                         href="#void"
-                                        onClick={() => { LogOutAlert(); setOpen(!open) }}
+                                        onClick={() => { LogOutAlert(); setOpen(!open); signOut(); }}
                                     >
                                         <li>
                                             <a className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-800 border-l-4 border-transparent hover:border-gray-500 dark:hover:border-blue-500 pr-6 cursor-pointer transition">

@@ -126,7 +126,7 @@ const Login: NextPage = () => {
                                     배송정보
                                 </Link>
                                 <button
-                                    onClick={() => { LogOutAlert(); }}
+                                    onClick={() => { LogOutAlert(); signOut(); }}
                                     type="button"
                                     className="text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-auto my-5"
                                 >
