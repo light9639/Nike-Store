@@ -46,9 +46,8 @@ export default function Nav(): JSX.Element {
 
     async function LogOutAlert() {
         if (confirm("정말 로그아웃 하시겠습니까?")) {
-            signOut();
-            await sleep(250);
             purge();
+            signOut();
         } else {
             alert("취소를 누르셨습니다.");
         }

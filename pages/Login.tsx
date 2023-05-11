@@ -24,7 +24,6 @@ const Login: NextPage = () => {
     async function LogOutAlert() {
         if (confirm("정말 로그아웃 하시겠습니까?")) {
             purge();
-            await sleep(250);
             signOut();
         } else {
             alert("취소를 누르셨습니다.");
