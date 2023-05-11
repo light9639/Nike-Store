@@ -7,12 +7,6 @@ import type { NextPage } from "next";
 const NotLogin: NextPage = () => {
     const router = useRouter()
 
-    useEffect(() => {
-        setTimeout(() => {
-            router.push('/Login')
-        }, 3000)
-    }, [])
-
     return (
         <React.Fragment>
             <HeadInfo title="Not Login" contents="Not Login" />
@@ -24,7 +18,7 @@ const NotLogin: NextPage = () => {
                             Sorry
                         </h2>
                         <p className="text-2xl font-semibold md:text-3xl">You have been logged out.</p>
-                        <p className="mt-4 mb-8 dark:text-gray-400">Go to the Login Page after 3 seconds...</p>
+                        <p className="mt-4 mb-8 dark:text-gray-400">Please Go to the Login Page...</p>
                         <Link href="/Login"><span className="px-8 py-3 font-semibold rounded bg-gray-900 dark:bg-blue-600 text-white cursor-pointer transition hover:opacity-75">Go to Login Page</span></Link>
                     </div>
                 </div>

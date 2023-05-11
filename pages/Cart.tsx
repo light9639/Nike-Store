@@ -112,7 +112,7 @@ const Cart: NextPage = () => {
             setLoading(false);
         });
         setTimeout(() => {
-            if (status != "authenticated") {
+            if (status == "unauthenticated") {
                 router.push('/NotLogin')
             }
         }, 2000);
