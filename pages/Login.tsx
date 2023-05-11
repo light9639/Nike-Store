@@ -23,9 +23,9 @@ const Login: NextPage = () => {
 
     async function LogOutAlert() {
         if (confirm("정말 로그아웃 하시겠습니까?")) {
-            signOut();
-            await sleep(250);
             purge();
+            await sleep(250);
+            signOut();
         } else {
             alert("취소를 누르셨습니다.");
         }
@@ -126,7 +126,7 @@ const Login: NextPage = () => {
                                     배송정보
                                 </Link>
                                 <button
-                                    onClick={() => { LogOutAlert(); signOut(); }}
+                                    onClick={() => { LogOutAlert(); }}
                                     type="button"
                                     className="text-white bg-black dark:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-auto my-5"
                                 >
