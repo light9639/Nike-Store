@@ -11,15 +11,15 @@ const Introduce: NextPage = () => {
 
             <div className="text-center mt-28">
                 <Fade duration={1000} >
-                    <p className="text-sm md:text-base text-blue-500 font-bold">25 January 1964 <span className="text-gray-900">/</span> GETTING STARTED</p>
+                    <p className="text-sm md:text-base text-gray-500 dark:text-gray-300 font-bold">25 January 1964 <span className="text-gray-900">/</span> GETTING STARTED</p>
                 </Fade>
                 <Fade duration={1000} >
                     <h1 className="font-bold break-normal text-2xl md:text-4xl mt-4">나이키 스토어에 오신 것을 환영합니다.</h1>
                 </Fade>
             </div>
 
-            <div className="container max-w-6xl mx-auto bg-white bg-cover mt-8 rounded relative -z-50 h-3/4" >
-                <Fade duration={1000}><img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner01.png" alt="Img" /></Fade>
+            <div className="container max-w-6xl mx-auto bg-white bg-cover mt-8 relative -z-50 h-3/4 rounded-lg" >
+                <Fade duration={1000}><img src="https://raw.githubusercontent.com/light9639/ImgStorage/main/shoestore/index/mainBanner01.png" alt="Img" className='rounded-lg' /></Fade>
             </div>
             <div className="container max-w-5xl mx-auto mt-10 lg:-mt-32">
                 <div className="mx-0 sm:mx-6">

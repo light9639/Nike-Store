@@ -484,39 +484,39 @@ const View: NextPage<PageType> = ({ postData, paramsID }) => {
                                 </div>
                                 <p className="text-sm font-medium text-gray-500 dark:text-gray-400">2 global ratings</p>
                                 <div className="flex items-center mt-4">
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">5 star</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">5 star</span>
                                     <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
                                         <div className={`h-5 bg-yellow-400 rounded ${FetchData.Review == 5 ? 'w-full' : 'w-0'}`}></div>
                                     </div>
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">{FetchData.Review == 5 ? '100%' : '0%'}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">{FetchData.Review == 5 ? '100%' : '0%'}</span>
                                 </div>
                                 <div className="flex items-center mt-4">
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">4 star</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">4 star</span>
                                     <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
                                         <div className={`h-5 bg-yellow-400 rounded ${FetchData.Review == 4 ? 'w-full' : 'w-0'}`}></div>
                                     </div>
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">{FetchData.Review == 4 ? '100%' : '0%'}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">{FetchData.Review == 4 ? '100%' : '0%'}</span>
                                 </div>
                                 <div className="flex items-center mt-4">
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">3 star</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">3 star</span>
                                     <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
                                         <div className={`h-5 bg-yellow-400 rounded ${FetchData.Review == 3 ? 'w-full' : 'w-0'}`}></div>
                                     </div>
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">{FetchData.Review == 3 ? '100%' : '0%'}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">{FetchData.Review == 3 ? '100%' : '0%'}</span>
                                 </div>
                                 <div className="flex items-center mt-4">
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">2 star</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">2 star</span>
                                     <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
                                         <div className={`h-5 bg-yellow-400 rounded ${FetchData.Review == 2 ? 'w-full' : 'w-0'}`}></div>
                                     </div>
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">{FetchData.Review == 2 ? '100%' : '0%'}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">{FetchData.Review == 2 ? '100%' : '0%'}</span>
                                 </div>
                                 <div className="flex items-center mt-4">
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">1 star</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">1 star</span>
                                     <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
                                         <div className={`h-5 bg-yellow-400 rounded ${FetchData.Review == 1 ? 'w-full' : 'w-0'}`}></div>
                                     </div>
-                                    <span className="text-sm font-medium text-blue-600 dark:text-blue-500">{FetchData.Review == 1 ? '100%' : '0%'}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-blue-500">{FetchData.Review == 1 ? '100%' : '0%'}</span>
                                 </div>
                             </div>
 
